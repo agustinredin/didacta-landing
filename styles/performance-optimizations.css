@@ -1,0 +1,48 @@
+/* Performance optimizations for glassmorphism effects */
+
+/* Enable hardware acceleration for animated elements */
+.animate-pulse {
+  will-change: opacity;
+  transform: translateZ(0);
+}
+
+/* Optimize backdrop blur performance */
+.backdrop-blur-sm {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* Reduce paint operations for gradients */
+.bg-gradient-to-r,
+.bg-gradient-to-br {
+  background-attachment: fixed;
+}
+
+/* Optimize shadow rendering */
+.shadow-lg,
+.shadow-xl,
+.shadow-2xl {
+  filter: drop-shadow(0 0 0 transparent);
+  transition: filter 0.3s ease;
+}
+
+/* Container queries for better performance */
+@container (min-width: 768px) {
+  .responsive-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Reduce repaints on hover */
+.hover\:scale-105:hover {
+  transform: scale(1.05) translateZ(0);
+}
+
+/* Optimize text rendering */
+.bg-clip-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  paint-order: stroke fill;
+}
