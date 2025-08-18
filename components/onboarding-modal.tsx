@@ -127,15 +127,17 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
               </div>
             </div>
             <div>
-              <h2 className="text-3xl font-bold mb-4 text-black uppercase tracking-wide">BIENVENIDO_A_AI_LEARN</h2>
-              <div className="mono-code max-w-md mx-auto">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 text-black uppercase tracking-wide">
+                BIENVENIDO_A_AI_LEARN
+              </h2>
+              <div className="mono-code max-w-xs sm:max-w-sm mx-auto">
                 <div className="text-xs text-gray-600 mb-2">// DESCRIPCIÓN</div>
                 <p className="text-sm text-black leading-relaxed">
                   Convierte tus grabaciones en aprendizaje personalizado con el poder de la inteligencia artificial
                 </p>
               </div>
             </div>
-            <div className="grid grid-cols-3 gap-4 max-w-sm mx-auto">
+            <div className="grid grid-cols-3 gap-2 sm:gap-4 max-w-xs sm:max-w-sm mx-auto">
               <div className="text-center mono-card p-3">
                 <div className="w-8 h-8 bg-black mx-auto mb-2 flex items-center justify-center">
                   <span className="text-white text-lg">🎤</span>
@@ -162,7 +164,9 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
         return (
           <div className="space-y-6">
             <div className="text-center mb-8">
-              <h2 className="text-2xl font-bold mb-2 text-black uppercase tracking-wide">CUÉNTANOS_SOBRE_TI</h2>
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2 text-black uppercase tracking-wide">
+                CUÉNTANOS_SOBRE_TI
+              </h2>
               <div className="mono-code">
                 <div className="text-xs text-gray-600 mb-1">// ENTRADA_REQUERIDA</div>
                 <p className="text-sm text-black">Necesitamos algunos datos básicos para personalizar tu experiencia</p>
@@ -205,13 +209,15 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
         return (
           <div className="space-y-6">
             <div className="text-center mb-8">
-              <h2 className="text-2xl font-bold mb-2 text-black uppercase tracking-wide">¿QUÉ_TE_INTERESA_APRENDER?</h2>
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2 text-black uppercase tracking-wide">
+                ¿QUÉ_TE_INTERESA_APRENDER?
+              </h2>
               <div className="mono-code">
                 <div className="text-xs text-gray-600 mb-1">// SELECCIONAR_TEMAS</div>
                 <p className="text-sm text-black">Selecciona tus áreas de interés para personalizar tu contenido</p>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {INTERESTS.map((interest) => (
                 <button
                   key={interest.id}
@@ -240,7 +246,9 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
         return (
           <div className="space-y-6">
             <div className="text-center mb-8">
-              <h2 className="text-2xl font-bold mb-2 text-black uppercase tracking-wide">PROTEGE_TU_CUENTA</h2>
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2 text-black uppercase tracking-wide">
+                PROTEGE_TU_CUENTA
+              </h2>
               <div className="mono-code">
                 <div className="text-xs text-gray-600 mb-1">// SEGURIDAD</div>
                 <p className="text-sm text-black">Crea una contraseña segura para mantener tus datos protegidos</p>
@@ -321,7 +329,9 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
               </div>
             </div>
             <div>
-              <h2 className="text-3xl font-bold mb-4 text-black uppercase tracking-wide">¡TU_CUENTA_ESTÁ_LISTA!</h2>
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 text-black uppercase tracking-wide">
+                ¡TU_CUENTA_ESTÁ_LISTA!
+              </h2>
               <div className="mono-code max-w-md mx-auto mb-8">
                 <div className="text-xs text-gray-600 mb-2">// ÉXITO</div>
                 <p className="text-sm text-black leading-relaxed">
@@ -357,10 +367,10 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
 
   return (
     <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-      <Card className="w-full max-w-2xl bg-white border-4 border-black">
+      <Card className="w-full max-w-sm sm:max-w-lg lg:max-w-2xl bg-white border-4 border-black mx-4">
         <CardContent className="p-0">
           {/* Header */}
-          <div className="flex items-center justify-between p-6 border-b-2 border-black bg-black text-white">
+          <div className="flex items-center justify-between p-4 sm:p-6 border-b-2 border-black bg-black text-white">
             <div className="flex items-center space-x-4">
               <div className="w-8 h-8 bg-white flex items-center justify-center">
                 <Brain className="h-5 w-5 text-black" />
@@ -382,7 +392,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
           </div>
 
           {/* Progress Bar */}
-          <div className="px-6 py-4 bg-gray-50 border-b-2 border-black">
+          <div className="px-4 sm:px-6 py-3 sm:py-4 bg-gray-50 border-b-2 border-black">
             <div className="flex items-center justify-between mb-2">
               {STEPS.map((step, index) => (
                 <div key={step.id} className="flex items-center">
@@ -414,12 +424,12 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
           </div>
 
           {/* Content */}
-          <div className="p-8 min-h-[400px] flex items-center">
+          <div className="p-4 sm:p-6 lg:p-8 min-h-[300px] sm:min-h-[400px] flex items-center">
             <div className="w-full">{renderStep()}</div>
           </div>
 
           {/* Footer */}
-          <div className="flex items-center justify-between p-6 border-t-2 border-black bg-gray-50">
+          <div className="flex items-center justify-between p-4 sm:p-6 border-t-2 border-black bg-gray-50">
             <Button
               onClick={prevStep}
               disabled={currentStep === 1 || isSubmitting}

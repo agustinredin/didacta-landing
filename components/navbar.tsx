@@ -13,18 +13,18 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b-2 border-black">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <div className="w-8 h-8 bg-black flex items-center justify-center">
               <Brain className="h-5 w-5 text-white" />
             </div>
-            <span className="text-xl font-bold text-black uppercase tracking-wider">AI_LEARN</span>
+            <span className="text-lg sm:text-xl font-bold text-black uppercase tracking-wider">AI_LEARN</span>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-4 xl:space-x-8">
             <a
               href="#features"
               className="text-black hover:bg-black hover:text-white px-3 py-2 transition-colors font-medium uppercase tracking-wide"
@@ -49,6 +49,10 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
             >
               PRECIOS
             </a>
+          </div>
+
+          {/* Medium screen navigation */}
+          <div className="hidden md:flex lg:hidden items-center">
             <Button size="sm" onClick={() => setIsOnboardingOpen?.(true)} className="mono-button-primary">
               <Zap className="mr-2 h-4 w-4" />
               PRUEBA_GRATIS
@@ -56,7 +60,7 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-black hover:bg-black hover:text-white p-2 transition-colors"

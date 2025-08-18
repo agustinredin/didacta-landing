@@ -44,7 +44,7 @@ export function ContactForm() {
   if (isSubmitted) {
     return (
       <Card className="mono-card border-2 border-black">
-        <CardContent className="p-12 text-center">
+        <CardContent className="p-6 sm:p-8 lg:p-12 text-center">
           <div className="w-16 h-16 bg-black mx-auto mb-6 flex items-center justify-center">
             <CheckCircle className="h-8 w-8 text-white" />
           </div>
@@ -62,9 +62,9 @@ export function ContactForm() {
 
   return (
     <Card className="mono-card border-2 border-black">
-      <CardContent className="p-8">
+      <CardContent className="p-4 sm:p-6 lg:p-8">
         <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             <div>
               <label htmlFor="name" className="block text-sm font-bold text-black mb-2 uppercase tracking-wide">
                 NOMBRE_COMPLETO *

@@ -38,9 +38,9 @@ export default function Component() {
         <Navbar setIsOnboardingOpen={setIsOnboardingOpen} />
 
         {/* Header/Hero Section */}
-        <section className="relative px-4 pt-32 pb-20 min-h-screen flex items-center">
+        <section className="relative px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-white">
           <div className="max-w-7xl mx-auto w-full">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
               {/* Left Content */}
               <div className="space-y-8">
                 <AnimatedSection animation="fadeIn" delay={200}>
@@ -50,7 +50,7 @@ export default function Component() {
                 </AnimatedSection>
 
                 <AnimatedSection animation="fadeInUp" delay={400}>
-                  <h1 className="text-4xl md:text-6xl font-bold leading-tight text-black tracking-tight uppercase">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-black tracking-tight uppercase">
                     CONVIERTE AUDIO EN <span className="bg-black text-white px-2">CONOCIMIENTO</span> FÁCILMENTE.
                   </h1>
                 </AnimatedSection>
@@ -58,7 +58,7 @@ export default function Component() {
                 <AnimatedSection animation="fadeInUp" delay={600}>
                   <div className="mono-code">
                     <div className="text-sm text-gray-600 mb-2">// DESCRIPCIÓN</div>
-                    <p className="text-lg text-black leading-relaxed">
+                    <p className="text-base sm:text-lg text-black leading-relaxed">
                       Transforma cualquier conversación o grabación en aprendizaje estructurado sin necesidad de
                       conocimientos técnicos profundos.
                     </p>
@@ -66,7 +66,7 @@ export default function Component() {
                 </AnimatedSection>
 
                 <AnimatedSection animation="fadeInUp" delay={800}>
-                  <div className="flex flex-col sm:flex-row gap-4">
+                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                     <Button
                       size="lg"
                       onClick={() => setIsOnboardingOpen(true)}
@@ -82,7 +82,7 @@ export default function Component() {
               </div>
 
               {/* Right Terminal-style Scene */}
-              <div className="relative h-[600px] lg:h-[700px]">
+              <div className="relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] mt-8 lg:mt-0">
                 <AnimatedSection animation="fadeInRight" delay={600}>
                   {/* Main Terminal Window */}
                   <div className="absolute inset-0 bg-white border-4 border-black">
@@ -99,7 +99,7 @@ export default function Component() {
                     </div>
 
                     {/* Terminal Content */}
-                    <div className="p-6 space-y-4 text-sm">
+                    <div className="p-3 sm:p-4 lg:p-6 space-y-2 sm:space-y-4 text-xs sm:text-sm terminal-content">
                       <div>
                         <span className="text-gray-600">$</span> ai-learn --procesar audio.mp3
                       </div>
@@ -112,8 +112,51 @@ export default function Component() {
                       </div>
                     </div>
 
+                    {/* Mobile Terminal Cards */}
+                    <div className="md:hidden mt-6 space-y-4 terminal-cards">
+                      <div className="mono-card p-4 bg-white floating-card">
+                        <div className="flex items-center space-x-2 mb-2">
+                          <div className="w-6 h-6 bg-black flex items-center justify-center">
+                            <Brain className="h-4 w-4 text-white" />
+                          </div>
+                          <span className="font-bold text-xs uppercase">MOTOR_IA</span>
+                        </div>
+                        <p className="text-xs text-gray-700">Algoritmos avanzados para procesamiento inteligente.</p>
+                      </div>
+
+                      <div className="mono-card p-4 bg-white floating-card">
+                        <div className="flex items-center space-x-2 mb-2">
+                          <div className="w-6 h-6 bg-black flex items-center justify-center">
+                            <Zap className="h-4 w-4 text-white" />
+                          </div>
+                          <span className="font-bold text-xs uppercase">ANÁLISIS</span>
+                        </div>
+                        <p className="text-xs text-gray-700">Insights de datos en tiempo real.</p>
+                      </div>
+
+                      <div className="mono-card p-4 bg-white floating-card">
+                        <div className="flex items-center space-x-2 mb-2">
+                          <div className="w-6 h-6 bg-black flex items-center justify-center">
+                            <Users className="h-4 w-4 text-white" />
+                          </div>
+                          <span className="font-bold text-xs uppercase">COMUNIDAD</span>
+                        </div>
+                        <p className="text-xs text-gray-700">Únete a una comunidad activa de estudiantes.</p>
+                      </div>
+
+                      <div className="mono-card p-4 bg-white floating-card">
+                        <div className="flex items-center space-x-2 mb-2">
+                          <div className="w-6 h-6 bg-black flex items-center justify-center">
+                            <Laptop className="h-4 w-4 text-white" />
+                          </div>
+                          <span className="font-bold text-xs uppercase">DESARROLLO</span>
+                        </div>
+                        <p className="text-xs text-gray-700">Mejores ciclos de desarrollo.</p>
+                      </div>
+                    </div>
+
                     {/* Floating Feature Cards */}
-                    <div className="absolute inset-0 p-8">
+                    <div className="absolute inset-0 p-4 sm:p-6 lg:p-8 hidden md:block">
                       {/* AI Card */}
                       <AnimatedSection animation="scaleIn" delay={1000}>
                         <div className="absolute top-24 left-8 w-48 mono-card p-4 bg-white">
@@ -173,7 +216,7 @@ export default function Component() {
 
             {/* Stats */}
             <AnimatedSection animation="fadeInUp" delay={1800}>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mt-20 pt-16 border-t-2 border-black">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto mt-12 sm:mt-20 pt-8 sm:pt-16 border-t-2 border-black">
                 <div className="text-center mono-card p-6">
                   <div className="text-3xl font-bold text-black mb-2">10,000+</div>
                   <div className="text-gray-600 uppercase tracking-wide text-sm">USUARIOS_ACTIVOS</div>
@@ -192,23 +235,23 @@ export default function Component() {
         </section>
 
         {/* Features Section */}
-        <section id="features" className="relative px-4 py-32 bg-white">
+        <section id="features" className="relative px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-white">
           <div className="max-w-6xl mx-auto">
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-20">
-                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black tracking-tight uppercase">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-black tracking-tight uppercase">
                   CARACTERÍSTICAS_PRINCIPALES
                 </h2>
                 <div className="mono-code max-w-3xl mx-auto">
                   <div className="text-sm text-gray-600 mb-2">// DESCRIPCIÓN</div>
-                  <p className="text-lg text-black">
+                  <p className="text-sm text-black">
                     Descubre cómo nuestra tecnología de IA revoluciona la forma en que aprendes y procesas información
                   </p>
                 </div>
               </div>
             </AnimatedSection>
 
-            <div className="grid md:grid-cols-3 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
               <AnimatedSection animation="fadeInLeft" delay={200}>
                 <Card className="mono-card h-full">
                   <CardContent className="p-8 text-center">
@@ -300,15 +343,15 @@ export default function Component() {
                     </div>
                     <ul className="text-xs text-gray-600 space-y-2 text-left">
                       <li className="flex items-center">
-                        <div className="w-2 h-2 bg-black mr-2"></div>
+                        <div className="w-3 h-3 bg-black mr-3"></div>
                         PREGUNTAS ADAPTATIVAS
                       </li>
                       <li className="flex items-center">
-                        <div className="w-2 h-2 bg-black mr-2"></div>
+                        <div className="w-3 h-3 bg-black mr-3"></div>
                         RETROALIMENTACIÓN INSTANTÁNEA
                       </li>
                       <li className="flex items-center">
-                        <div className="w-2 h-2 bg-black mr-2"></div>
+                        <div className="w-3 h-3 bg-black mr-3"></div>
                         SEGUIMIENTO DE PROGRESO
                       </li>
                     </ul>
@@ -320,17 +363,17 @@ export default function Component() {
         </section>
 
         {/* Benefits Section */}
-        <section className="relative px-4 py-32 bg-gray-50">
+        <section className="relative px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-gray-50">
           <div className="max-w-6xl mx-auto">
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-20">
-                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black tracking-tight uppercase">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-black tracking-tight uppercase">
                   ¿POR_QUÉ_ELEGIR_AI_LEARN?
                 </h2>
               </div>
             </AnimatedSection>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
               <AnimatedSection animation="scaleIn" delay={200}>
                 <div className="text-center mono-card p-6">
                   <div className="w-12 h-12 mx-auto mb-4 bg-black flex items-center justify-center">
@@ -379,23 +422,23 @@ export default function Component() {
         </section>
 
         {/* How it Works Section */}
-        <section id="how-it-works" className="relative px-4 py-32 bg-white">
+        <section id="how-it-works" className="relative px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-white">
           <div className="max-w-6xl mx-auto">
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-20">
-                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black tracking-tight uppercase">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-black tracking-tight uppercase">
                   CÓMO_FUNCIONA
                 </h2>
                 <div className="mono-code max-w-3xl mx-auto">
                   <div className="text-sm text-gray-600 mb-2">// PROCESO</div>
-                  <p className="text-lg text-black">
+                  <p className="text-sm text-black">
                     Tres simples pasos para transformar tu audio en conocimiento estructurado
                   </p>
                 </div>
               </div>
             </AnimatedSection>
 
-            <div className="grid md:grid-cols-3 gap-12 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-center">
               <AnimatedSection animation="fadeInLeft" delay={200}>
                 <div className="text-center mono-card p-8">
                   <div className="w-20 h-20 mx-auto bg-black flex items-center justify-center mb-6">
@@ -408,12 +451,15 @@ export default function Component() {
                       Sube tu archivo de audio, graba directamente o conecta tu micrófono para sesiones en vivo
                     </p>
                   </div>
+                  <div className="flex lg:hidden justify-center my-4">
+                    <div className="text-2xl font-bold text-black rotate-90">→</div>
+                  </div>
                 </div>
               </AnimatedSection>
 
-              <div className="hidden md:flex justify-center">
+              <div className="hidden lg:flex justify-center">
                 <AnimatedSection animation="fadeIn" delay={400}>
-                  <div className="text-4xl font-bold text-black">→</div>
+                  <div className="text-2xl lg:text-4xl font-bold text-black">→</div>
                 </AnimatedSection>
               </div>
 
@@ -429,12 +475,15 @@ export default function Component() {
                       Nuestra IA transcribe, analiza el contenido y extrae las ideas clave usando algoritmos avanzados
                     </p>
                   </div>
+                  <div className="flex lg:hidden justify-center my-4">
+                    <div className="text-2xl font-bold text-black rotate-90">→</div>
+                  </div>
                 </div>
               </AnimatedSection>
 
-              <div className="hidden md:flex justify-center">
+              <div className="hidden lg:flex justify-center">
                 <AnimatedSection animation="fadeIn" delay={800}>
-                  <div className="text-4xl font-bold text-black">→</div>
+                  <div className="text-2xl lg:text-4xl font-bold text-black">→</div>
                 </AnimatedSection>
               </div>
 
@@ -450,6 +499,9 @@ export default function Component() {
                       Recibe resúmenes estructurados, quizzes personalizados y material de estudio optimizado
                     </p>
                   </div>
+                  <div className="flex lg:hidden justify-center my-4">
+                    <div className="text-2xl font-bold text-black rotate-90">→</div>
+                  </div>
                 </div>
               </AnimatedSection>
             </div>
@@ -457,17 +509,17 @@ export default function Component() {
         </section>
 
         {/* Testimonials Section */}
-        <section id="testimonials" className="relative px-4 py-32 bg-gray-50">
+        <section id="testimonials" className="relative px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-gray-50">
           <div className="max-w-6xl mx-auto">
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-20">
-                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black tracking-tight uppercase">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-black tracking-tight uppercase">
                   TESTIMONIOS_DE_USUARIOS
                 </h2>
               </div>
             </AnimatedSection>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               <AnimatedSection animation="fadeInLeft" delay={200}>
                 <Card className="mono-card h-full">
                   <CardContent className="p-6">
@@ -550,23 +602,23 @@ export default function Component() {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="relative px-4 py-32 bg-white">
+        <section id="pricing" className="relative px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-white">
           <div className="max-w-5xl mx-auto">
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-20">
-                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black tracking-tight uppercase">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-black tracking-tight uppercase">
                   PLANES_DE_PRECIOS
                 </h2>
                 <div className="mono-code max-w-3xl mx-auto">
                   <div className="text-sm text-gray-600 mb-2">// OPCIONES</div>
-                  <p className="text-lg text-black">
+                  <p className="text-sm text-black">
                     Elige el plan perfecto para tu nivel de uso y comienza a transformar tu aprendizaje hoy mismo
                   </p>
                 </div>
               </div>
             </AnimatedSection>
 
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto">
               <AnimatedSection animation="fadeInLeft" delay={200}>
                 <Card className="mono-card border-4 border-black relative">
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-black text-white px-6 py-2 text-sm font-bold uppercase tracking-wide">
@@ -667,21 +719,23 @@ export default function Component() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="relative px-4 py-32 bg-gray-50">
+        <section id="contact" className="relative px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-gray-50">
           <div className="max-w-6xl mx-auto">
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-20">
-                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black tracking-tight uppercase">CONTÁCTANOS</h2>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-black tracking-tight uppercase">
+                  CONTÁCTANOS
+                </h2>
                 <div className="mono-code max-w-3xl mx-auto">
                   <div className="text-sm text-gray-600 mb-2">// SOPORTE</div>
-                  <p className="text-lg text-black">
+                  <p className="text-sm text-black">
                     Nuestro equipo está aquí para ayudarte. Envíanos un mensaje y te responderemos lo antes posible.
                   </p>
                 </div>
               </div>
             </AnimatedSection>
 
-            <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
               <AnimatedSection animation="fadeInLeft" delay={200}>
                 <div className="space-y-6">
                   <div className="mono-card p-6">
@@ -741,24 +795,24 @@ export default function Component() {
         </section>
 
         {/* Final CTA Section */}
-        <section className="relative px-4 py-32 bg-white">
+        <section className="relative px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-white">
           <div className="max-w-4xl mx-auto text-center">
             <AnimatedSection animation="scaleIn">
               <div className="mono-card p-16 border-4 border-black">
                 <div className="w-16 h-16 mx-auto mb-8 bg-black flex items-center justify-center">
                   <Sparkles className="h-8 w-8 text-white" />
                 </div>
-                <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight uppercase">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 tracking-tight uppercase">
                   CONVIERTE_CONVERSACIONES_EN_CONOCIMIENTO
                 </h2>
                 <div className="mono-code mb-12 max-w-3xl mx-auto">
                   <div className="text-sm text-gray-600 mb-2">// LLAMADA_A_LA_ACCIÓN</div>
-                  <p className="text-lg text-black leading-relaxed">
+                  <p className="text-sm text-black leading-relaxed">
                     Únete a miles de estudiantes y profesionales que ya están transformando su forma de aprender con IA.
                     El futuro del aprendizaje personalizado está aquí.
                   </p>
                 </div>
-                <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
                   <Button
                     size="lg"
                     onClick={() => setIsOnboardingOpen(true)}
@@ -778,9 +832,9 @@ export default function Component() {
         </section>
 
         {/* Footer */}
-        <footer className="relative px-4 py-16 border-t-2 border-black bg-gray-50">
+        <footer className="relative px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 border-t-2 border-black bg-gray-50">
           <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-4 gap-8 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8">
               <div>
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="w-8 h-8 bg-black flex items-center justify-center">

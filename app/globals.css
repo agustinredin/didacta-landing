@@ -302,3 +302,173 @@ section[id] {
 .rounded-full {
   border-radius: 0 !important;
 }
+
+/* Responsive utilities */
+@media (max-width: 640px) {
+  .mono-card {
+    box-shadow: 2px 2px 0px black;
+  }
+
+  .mono-card:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 3px 3px 0px black;
+  }
+
+  /* Reduce terminal content on mobile */
+  .terminal-content {
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Adjust floating cards positioning for mobile */
+  .floating-card {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    margin: 0.5rem 0;
+    width: 100% !important;
+  }
+
+  /* Stack terminal cards vertically on mobile */
+  .terminal-cards {
+    position: relative !important;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+}
+
+/* Improve touch targets on mobile */
+@media (hover: none) and (pointer: coarse) {
+  .mono-button,
+  .mono-button-primary {
+    min-height: 44px;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .mono-input {
+    min-height: 44px;
+    padding: 0.75rem 1rem;
+  }
+
+  /* Improve navbar touch targets */
+  nav a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* Responsive typography */
+@media (max-width: 640px) {
+  .mono-code {
+    padding: 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  /* Smaller cards on mobile */
+  .mono-card {
+    padding: 1rem;
+  }
+}
+
+/* Improve readability on small screens */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .text-xs {
+    font-size: 0.6875rem;
+  }
+
+  .text-sm {
+    font-size: 0.8125rem;
+  }
+}
+
+/* Landscape mobile optimization */
+@media (max-height: 500px) and (orientation: landscape) {
+  section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .min-h-screen {
+    min-height: auto;
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Large screen optimizations */
+@media (min-width: 1920px) {
+  .max-w-7xl {
+    max-width: 90rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .fixed,
+  .sticky {
+    position: static !important;
+  }
+
+  .mono-card {
+    box-shadow: none !important;
+    border: 1px solid black !important;
+  }
+
+  .bg-black {
+    background: white !important;
+    color: black !important;
+    border: 1px solid black !important;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .animate-pulse,
+  .animate-spin,
+  .animate-fade-in-up,
+  .animate-fade-in-left,
+  .animate-fade-in-right,
+  .animate-fade-in,
+  .animate-scale-in {
+    animation: none !important;
+  }
+
+  .transition-all,
+  .transition-colors,
+  .transition-transform {
+    transition: none !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .mono-card {
+    border-width: 3px;
+  }
+
+  .text-gray-600 {
+    color: #333333;
+  }
+
+  .bg-gray-50 {
+    background-color: #f8f8f8;
+  }
+}
