@@ -48,7 +48,7 @@ export function ContactForm() {
           <div className="w-16 h-16 bg-black mx-auto mb-6 flex items-center justify-center">
             <CheckCircle className="h-8 w-8 text-white" />
           </div>
-          <h3 className="text-2xl font-bold text-black mb-4 uppercase tracking-wide">¡MENSAJE_ENVIADO!</h3>
+          <h3 className="text-2xl font-bold text-black mb-4 uppercase tracking-wide">¡MENSAJE ENVIADO!</h3>
           <div className="mono-code">
             <div className="text-xs text-gray-600 mb-1">// ÉXITO</div>
             <p className="text-sm text-black">
@@ -67,7 +67,7 @@ export function ContactForm() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             <div>
               <label htmlFor="name" className="block text-sm font-bold text-black mb-2 uppercase tracking-wide">
-                NOMBRE_COMPLETO *
+                NOMBRE COMPLETO *
               </label>
               <input
                 type="text"
@@ -77,7 +77,7 @@ export function ContactForm() {
                 value={formData.name}
                 onChange={handleChange}
                 className="w-full px-4 py-3 mono-input transition-all duration-200"
-                placeholder="TU_NOMBRE"
+                placeholder="TU NOMBRE"
               />
             </div>
             <div>
@@ -108,7 +108,7 @@ export function ContactForm() {
               value={formData.company}
               onChange={handleChange}
               className="w-full px-4 py-3 mono-input transition-all duration-200"
-              placeholder="NOMBRE_DE_TU_EMPRESA"
+              placeholder="NOMBRE DE TU EMPRESA"
             />
           </div>
 
@@ -124,7 +124,7 @@ export function ContactForm() {
               value={formData.message}
               onChange={handleChange}
               className="w-full px-4 py-3 mono-input resize-none transition-all duration-200"
-              placeholder="CUÉNTANOS_CÓMO_PODEMOS_AYUDARTE..."
+              placeholder="CUÉNTANOS CÓMO PODEMOS AYUDARTE..."
             />
           </div>
 
@@ -137,7 +137,7 @@ export function ContactForm() {
             ) : (
               <>
                 <Send className="mr-2 h-5 w-5" />
-                ENVIAR_MENSAJE
+                ENVIAR MENSAJE
               </>
             )}
           </Button>

@@ -20,7 +20,7 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
             <div className="w-8 h-8 bg-black flex items-center justify-center">
               <Brain className="h-5 w-5 text-white" />
             </div>
-            <span className="text-lg sm:text-xl font-bold text-black uppercase tracking-wider">AI_LEARN</span>
+            <span className="text-lg sm:text-xl font-bold text-black uppercase tracking-wider">AI LEARN</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -35,7 +35,7 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
               href="#how-it-works"
               className="text-black hover:bg-black hover:text-white px-3 py-2 transition-colors font-medium uppercase tracking-wide"
             >
-              CÓMO_FUNCIONA
+              CÓMO FUNCIONA
             </a>
             <a
               href="#testimonials"
@@ -55,7 +55,7 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
           <div className="hidden md:flex lg:hidden items-center">
             <Button size="sm" onClick={() => setIsOnboardingOpen?.(true)} className="mono-button-primary">
               <Zap className="mr-2 h-4 w-4" />
-              PRUEBA_GRATIS
+              PRUEBA GRATIS
             </Button>
           </div>
 
@@ -86,7 +86,7 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
                 className="block px-3 py-2 text-black hover:bg-black hover:text-white transition-colors font-medium uppercase tracking-wide"
                 onClick={() => setIsOpen(false)}
               >
-                CÓMO_FUNCIONA
+                CÓMO FUNCIONA
               </a>
               <a
                 href="#testimonials"
@@ -112,7 +112,7 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
                   className="w-full mono-button-primary"
                 >
                   <Zap className="mr-2 h-4 w-4" />
-                  PRUEBA_GRATIS
+                  PRUEBA GRATIS
                 </Button>
               </div>
             </div>
