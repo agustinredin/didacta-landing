@@ -29,29 +29,29 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
               href="#features"
               className="text-black hover:bg-black hover:text-white px-3 py-2 transition-colors font-medium uppercase tracking-wide"
             >
-              FEATURES
+              CARACTERÍSTICAS
             </a>
             <a
               href="#how-it-works"
               className="text-black hover:bg-black hover:text-white px-3 py-2 transition-colors font-medium uppercase tracking-wide"
             >
-              HOW_IT_WORKS
+              CÓMO_FUNCIONA
             </a>
             <a
               href="#testimonials"
               className="text-black hover:bg-black hover:text-white px-3 py-2 transition-colors font-medium uppercase tracking-wide"
             >
-              TESTIMONIALS
+              TESTIMONIOS
             </a>
             <a
               href="#pricing"
               className="text-black hover:bg-black hover:text-white px-3 py-2 transition-colors font-medium uppercase tracking-wide"
             >
-              PRICING
+              PRECIOS
             </a>
             <Button size="sm" onClick={() => setIsOnboardingOpen?.(true)} className="mono-button-primary">
               <Zap className="mr-2 h-4 w-4" />
-              START_FREE
+              PRUEBA_GRATIS
             </Button>
           </div>
 
@@ -75,28 +75,28 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
                 className="block px-3 py-2 text-black hover:bg-black hover:text-white transition-colors font-medium uppercase tracking-wide"
                 onClick={() => setIsOpen(false)}
               >
-                FEATURES
+                CARACTERÍSTICAS
               </a>
               <a
                 href="#how-it-works"
                 className="block px-3 py-2 text-black hover:bg-black hover:text-white transition-colors font-medium uppercase tracking-wide"
                 onClick={() => setIsOpen(false)}
               >
-                HOW_IT_WORKS
+                CÓMO_FUNCIONA
               </a>
               <a
                 href="#testimonials"
                 className="block px-3 py-2 text-black hover:bg-black hover:text-white transition-colors font-medium uppercase tracking-wide"
                 onClick={() => setIsOpen(false)}
               >
-                TESTIMONIALS
+                TESTIMONIOS
               </a>
               <a
                 href="#pricing"
                 className="block px-3 py-2 text-black hover:bg-black hover:text-white transition-colors font-medium uppercase tracking-wide"
                 onClick={() => setIsOpen(false)}
               >
-                PRICING
+                PRECIOS
               </a>
               <div className="px-3 py-2">
                 <Button
@@ -108,7 +108,7 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
                   className="w-full mono-button-primary"
                 >
                   <Zap className="mr-2 h-4 w-4" />
-                  START_FREE
+                  PRUEBA_GRATIS
                 </Button>
               </div>
             </div>

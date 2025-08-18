@@ -45,21 +45,22 @@ export default function Component() {
               <div className="space-y-8">
                 <AnimatedSection animation="fadeIn" delay={200}>
                   <div className="text-sm font-medium text-black mb-6 tracking-widest uppercase border-2 border-black bg-white px-4 py-2 inline-block">
-                    01. TRANSFORM_YOUR_LEARNING
+                    01. TRANSFORMA_TU_APRENDIZAJE
                   </div>
                 </AnimatedSection>
 
                 <AnimatedSection animation="fadeInUp" delay={400}>
                   <h1 className="text-4xl md:text-6xl font-bold leading-tight text-black tracking-tight uppercase">
-                    TURN AUDIO INTO <span className="bg-black text-white px-2">KNOWLEDGE</span> EASILY.
+                    CONVIERTE AUDIO EN <span className="bg-black text-white px-2">CONOCIMIENTO</span> FÁCILMENTE.
                   </h1>
                 </AnimatedSection>
 
                 <AnimatedSection animation="fadeInUp" delay={600}>
                   <div className="mono-code">
-                    <div className="text-sm text-gray-600 mb-2">// DESCRIPTION</div>
+                    <div className="text-sm text-gray-600 mb-2">// DESCRIPCIÓN</div>
                     <p className="text-lg text-black leading-relaxed">
-                      Transform any conversation or recording into structured learning without deep technical knowledge.
+                      Transforma cualquier conversación o grabación en aprendizaje estructurado sin necesidad de
+                      conocimientos técnicos profundos.
                     </p>
                   </div>
                 </AnimatedSection>
@@ -71,10 +72,10 @@ export default function Component() {
                       onClick={() => setIsOnboardingOpen(true)}
                       className="text-lg px-8 py-4 mono-button-primary"
                     >
-                      START_FREE
+                      EMPEZAR_GRATIS
                     </Button>
                     <Button size="lg" className="text-lg px-8 py-4 mono-button">
-                      LEARN_MORE
+                      SABER_MÁS
                     </Button>
                   </div>
                 </AnimatedSection>
@@ -88,7 +89,7 @@ export default function Component() {
                     {/* Terminal Header */}
                     <div className="bg-black text-white p-4 font-mono text-sm">
                       <div className="flex items-center justify-between">
-                        <span>AI_LEARN_TERMINAL</span>
+                        <span>TERMINAL_AI_LEARN</span>
                         <div className="flex space-x-2">
                           <div className="w-3 h-3 bg-white"></div>
                           <div className="w-3 h-3 bg-white"></div>
@@ -100,12 +101,12 @@ export default function Component() {
                     {/* Terminal Content */}
                     <div className="p-6 space-y-4 text-sm">
                       <div>
-                        <span className="text-gray-600">$</span> ai-learn --process audio.mp3
+                        <span className="text-gray-600">$</span> ai-learn --procesar audio.mp3
                       </div>
-                      <div className="text-gray-600">[INFO] Processing audio file...</div>
-                      <div className="text-gray-600">[SUCCESS] Transcription complete: 98% accuracy</div>
-                      <div className="text-gray-600">[SUCCESS] Summary generated: 5 key concepts</div>
-                      <div className="text-gray-600">[SUCCESS] Quiz created: 10 questions</div>
+                      <div className="text-gray-600">[INFO] Procesando archivo de audio...</div>
+                      <div className="text-gray-600">[ÉXITO] Transcripción completa: 98% precisión</div>
+                      <div className="text-gray-600">[ÉXITO] Resumen generado: 5 conceptos clave</div>
+                      <div className="text-gray-600">[ÉXITO] Quiz creado: 10 preguntas</div>
                       <div>
                         <span className="text-gray-600">$</span> <span className="animate-pulse">_</span>
                       </div>
@@ -120,9 +121,9 @@ export default function Component() {
                             <div className="w-6 h-6 bg-black flex items-center justify-center">
                               <Brain className="h-4 w-4 text-white" />
                             </div>
-                            <span className="font-bold text-xs uppercase">AI_ENGINE</span>
+                            <span className="font-bold text-xs uppercase">MOTOR_IA</span>
                           </div>
-                          <p className="text-xs text-gray-700">Advanced algorithms for intelligent processing.</p>
+                          <p className="text-xs text-gray-700">Algoritmos avanzados para procesamiento inteligente.</p>
                         </div>
                       </AnimatedSection>
 
@@ -133,9 +134,9 @@ export default function Component() {
                             <div className="w-6 h-6 bg-black flex items-center justify-center">
                               <Zap className="h-4 w-4 text-white" />
                             </div>
-                            <span className="font-bold text-xs uppercase">ANALYTICS</span>
+                            <span className="font-bold text-xs uppercase">ANÁLISIS</span>
                           </div>
-                          <p className="text-xs text-gray-700">Real-time data insights.</p>
+                          <p className="text-xs text-gray-700">Insights de datos en tiempo real.</p>
                         </div>
                       </AnimatedSection>
 
@@ -146,9 +147,9 @@ export default function Component() {
                             <div className="w-6 h-6 bg-black flex items-center justify-center">
                               <Users className="h-4 w-4 text-white" />
                             </div>
-                            <span className="font-bold text-xs uppercase">COMMUNITY</span>
+                            <span className="font-bold text-xs uppercase">COMUNIDAD</span>
                           </div>
-                          <p className="text-xs text-gray-700">Active community of learners.</p>
+                          <p className="text-xs text-gray-700">Únete a una comunidad activa de estudiantes.</p>
                         </div>
                       </AnimatedSection>
 
@@ -159,9 +160,9 @@ export default function Component() {
                             <div className="w-6 h-6 bg-black flex items-center justify-center">
                               <Laptop className="h-4 w-4 text-white" />
                             </div>
-                            <span className="font-bold text-xs uppercase">DEV_TOOLS</span>
+                            <span className="font-bold text-xs uppercase">DESARROLLO</span>
                           </div>
-                          <p className="text-xs text-gray-700">Better development cycles.</p>
+                          <p className="text-xs text-gray-700">Mejores ciclos de desarrollo.</p>
                         </div>
                       </AnimatedSection>
                     </div>
@@ -175,15 +176,15 @@ export default function Component() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mt-20 pt-16 border-t-2 border-black">
                 <div className="text-center mono-card p-6">
                   <div className="text-3xl font-bold text-black mb-2">10,000+</div>
-                  <div className="text-gray-600 uppercase tracking-wide text-sm">ACTIVE_USERS</div>
+                  <div className="text-gray-600 uppercase tracking-wide text-sm">USUARIOS_ACTIVOS</div>
                 </div>
                 <div className="text-center mono-card p-6">
                   <div className="text-3xl font-bold text-black mb-2">50M+</div>
-                  <div className="text-gray-600 uppercase tracking-wide text-sm">MINUTES_PROCESSED</div>
+                  <div className="text-gray-600 uppercase tracking-wide text-sm">MINUTOS_PROCESADOS</div>
                 </div>
                 <div className="text-center mono-card p-6">
                   <div className="text-3xl font-bold text-black mb-2">98%</div>
-                  <div className="text-gray-600 uppercase tracking-wide text-sm">AI_ACCURACY</div>
+                  <div className="text-gray-600 uppercase tracking-wide text-sm">PRECISIÓN_IA</div>
                 </div>
               </div>
             </AnimatedSection>
@@ -196,12 +197,12 @@ export default function Component() {
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-20">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black tracking-tight uppercase">
-                  MAIN_FEATURES
+                  CARACTERÍSTICAS_PRINCIPALES
                 </h2>
                 <div className="mono-code max-w-3xl mx-auto">
-                  <div className="text-sm text-gray-600 mb-2">// DESCRIPTION</div>
+                  <div className="text-sm text-gray-600 mb-2">// DESCRIPCIÓN</div>
                   <p className="text-lg text-black">
-                    Discover how our AI technology revolutionizes learning and information processing
+                    Descubre cómo nuestra tecnología de IA revoluciona la forma en que aprendes y procesas información
                   </p>
                 </div>
               </div>
@@ -217,25 +218,28 @@ export default function Component() {
                       </div>
                       <div className="w-4 h-4 bg-black mx-auto"></div>
                     </div>
-                    <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">SMART_TRANSCRIPTION</h3>
+                    <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">
+                      TRANSCRIPCIÓN_INTELIGENTE
+                    </h3>
                     <div className="mono-code text-left mb-4">
-                      <div className="text-xs text-gray-600 mb-1">// FEATURES</div>
+                      <div className="text-xs text-gray-600 mb-1">// CARACTERÍSTICAS</div>
                       <p className="text-sm text-black">
-                        Convert audio to precise text using advanced AI voice recognition technology.
+                        Convierte automáticamente cualquier audio en texto preciso usando tecnología de reconocimiento
+                        de voz avanzada con IA.
                       </p>
                     </div>
                     <ul className="text-xs text-gray-600 space-y-2 text-left">
                       <li className="flex items-center">
                         <div className="w-2 h-2 bg-black mr-2"></div>
-                        50+ LANGUAGES SUPPORTED
+                        SOPORTE PARA 50+ IDIOMAS
                       </li>
                       <li className="flex items-center">
                         <div className="w-2 h-2 bg-black mr-2"></div>
-                        98% ACCURACY RATE
+                        98% DE PRECISIÓN
                       </li>
                       <li className="flex items-center">
                         <div className="w-2 h-2 bg-black mr-2"></div>
-                        REAL-TIME PROCESSING
+                        PROCESAMIENTO EN TIEMPO REAL
                       </li>
                     </ul>
                   </CardContent>
@@ -251,25 +255,26 @@ export default function Component() {
                       </div>
                       <div className="w-4 h-4 bg-black mx-auto"></div>
                     </div>
-                    <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">AI_SUMMARY</h3>
+                    <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">RESUMEN_CON_IA</h3>
                     <div className="mono-code text-left mb-4">
-                      <div className="text-xs text-gray-600 mb-1">// FEATURES</div>
+                      <div className="text-xs text-gray-600 mb-1">// CARACTERÍSTICAS</div>
                       <p className="text-sm text-black">
-                        Extract key ideas and concepts using cutting-edge language models.
+                        Extrae automáticamente las ideas clave y conceptos importantes usando modelos de lenguaje de
+                        última generación.
                       </p>
                     </div>
                     <ul className="text-xs text-gray-600 space-y-2 text-left">
                       <li className="flex items-center">
                         <div className="w-2 h-2 bg-black mr-2"></div>
-                        PERSONALIZED SUMMARIES
+                        RESÚMENES PERSONALIZADOS
                       </li>
                       <li className="flex items-center">
                         <div className="w-2 h-2 bg-black mr-2"></div>
-                        KEY CONCEPT EXTRACTION
+                        EXTRACCIÓN DE CONCEPTOS CLAVE
                       </li>
                       <li className="flex items-center">
                         <div className="w-2 h-2 bg-black mr-2"></div>
-                        SENTIMENT ANALYSIS
+                        ANÁLISIS DE SENTIMIENTOS
                       </li>
                     </ul>
                   </CardContent>
@@ -285,25 +290,26 @@ export default function Component() {
                       </div>
                       <div className="w-4 h-4 bg-black mx-auto"></div>
                     </div>
-                    <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">INTERACTIVE_QUIZZES</h3>
+                    <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">QUIZZES_INTERACTIVOS</h3>
                     <div className="mono-code text-left mb-4">
-                      <div className="text-xs text-gray-600 mb-1">// FEATURES</div>
+                      <div className="text-xs text-gray-600 mb-1">// CARACTERÍSTICAS</div>
                       <p className="text-sm text-black">
-                        Generate personalized quizzes that reinforce learning and assess comprehension.
+                        Genera automáticamente cuestionarios personalizados que refuerzan el aprendizaje y evalúan la
+                        comprensión.
                       </p>
                     </div>
                     <ul className="text-xs text-gray-600 space-y-2 text-left">
                       <li className="flex items-center">
                         <div className="w-2 h-2 bg-black mr-2"></div>
-                        ADAPTIVE QUESTIONS
+                        PREGUNTAS ADAPTATIVAS
                       </li>
                       <li className="flex items-center">
                         <div className="w-2 h-2 bg-black mr-2"></div>
-                        INSTANT FEEDBACK
+                        RETROALIMENTACIÓN INSTANTÁNEA
                       </li>
                       <li className="flex items-center">
                         <div className="w-2 h-2 bg-black mr-2"></div>
-                        PROGRESS TRACKING
+                        SEGUIMIENTO DE PROGRESO
                       </li>
                     </ul>
                   </CardContent>
@@ -319,7 +325,7 @@ export default function Component() {
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-20">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black tracking-tight uppercase">
-                  WHY_CHOOSE_AI_LEARN?
+                  ¿POR_QUÉ_ELEGIR_AI_LEARN?
                 </h2>
               </div>
             </AnimatedSection>
@@ -330,8 +336,10 @@ export default function Component() {
                   <div className="w-12 h-12 mx-auto mb-4 bg-black flex items-center justify-center">
                     <Clock className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="text-lg font-bold mb-3 text-black uppercase tracking-wide">SAVE_TIME</h3>
-                  <p className="text-sm text-gray-600">Process hours of audio in minutes and get instant summaries</p>
+                  <h3 className="text-lg font-bold mb-3 text-black uppercase tracking-wide">AHORRA_TIEMPO</h3>
+                  <p className="text-sm text-gray-600">
+                    Procesa horas de audio en minutos y obtén resúmenes instantáneos
+                  </p>
                 </div>
               </AnimatedSection>
 
@@ -340,8 +348,10 @@ export default function Component() {
                   <div className="w-12 h-12 mx-auto mb-4 bg-black flex items-center justify-center">
                     <Shield className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="text-lg font-bold mb-3 text-black uppercase tracking-wide">SECURE_PRIVATE</h3>
-                  <p className="text-sm text-gray-600">Your data is protected with enterprise-level encryption</p>
+                  <h3 className="text-lg font-bold mb-3 text-black uppercase tracking-wide">SEGURO_Y_PRIVADO</h3>
+                  <p className="text-sm text-gray-600">
+                    Tus datos están protegidos con encriptación de nivel empresarial
+                  </p>
                 </div>
               </AnimatedSection>
 
@@ -350,8 +360,8 @@ export default function Component() {
                   <div className="w-12 h-12 mx-auto mb-4 bg-black flex items-center justify-center">
                     <Users className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="text-lg font-bold mb-3 text-black uppercase tracking-wide">COLLABORATIVE</h3>
-                  <p className="text-sm text-gray-600">Share and collaborate on learning projects with your team</p>
+                  <h3 className="text-lg font-bold mb-3 text-black uppercase tracking-wide">COLABORATIVO</h3>
+                  <p className="text-sm text-gray-600">Comparte y colabora en proyectos de aprendizaje con tu equipo</p>
                 </div>
               </AnimatedSection>
 
@@ -360,8 +370,8 @@ export default function Component() {
                   <div className="w-12 h-12 mx-auto mb-4 bg-black flex items-center justify-center">
                     <Globe className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="text-lg font-bold mb-3 text-black uppercase tracking-wide">CROSS_PLATFORM</h3>
-                  <p className="text-sm text-gray-600">Access from any device, anywhere</p>
+                  <h3 className="text-lg font-bold mb-3 text-black uppercase tracking-wide">MULTIPLATAFORMA</h3>
+                  <p className="text-sm text-gray-600">Accede desde cualquier dispositivo, en cualquier lugar</p>
                 </div>
               </AnimatedSection>
             </div>
@@ -374,12 +384,12 @@ export default function Component() {
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-20">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black tracking-tight uppercase">
-                  HOW_IT_WORKS
+                  CÓMO_FUNCIONA
                 </h2>
                 <div className="mono-code max-w-3xl mx-auto">
-                  <div className="text-sm text-gray-600 mb-2">// PROCESS</div>
+                  <div className="text-sm text-gray-600 mb-2">// PROCESO</div>
                   <p className="text-lg text-black">
-                    Three simple steps to transform your audio into structured knowledge
+                    Tres simples pasos para transformar tu audio en conocimiento estructurado
                   </p>
                 </div>
               </div>
@@ -391,11 +401,11 @@ export default function Component() {
                   <div className="w-20 h-20 mx-auto bg-black flex items-center justify-center mb-6">
                     <span className="text-2xl font-bold text-white">1</span>
                   </div>
-                  <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">PROVIDE_AUDIO</h3>
+                  <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">PROPORCIONA_AUDIO</h3>
                   <div className="mono-code text-left">
-                    <div className="text-xs text-gray-600 mb-1">// INPUT</div>
+                    <div className="text-xs text-gray-600 mb-1">// ENTRADA</div>
                     <p className="text-sm text-black">
-                      Upload audio file, record directly, or connect microphone for live sessions
+                      Sube tu archivo de audio, graba directamente o conecta tu micrófono para sesiones en vivo
                     </p>
                   </div>
                 </div>
@@ -412,11 +422,11 @@ export default function Component() {
                   <div className="w-20 h-20 mx-auto bg-black flex items-center justify-center mb-6">
                     <span className="text-2xl font-bold text-white">2</span>
                   </div>
-                  <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">AI_PROCESSES</h3>
+                  <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">IA_PROCESA</h3>
                   <div className="mono-code text-left">
-                    <div className="text-xs text-gray-600 mb-1">// PROCESSING</div>
+                    <div className="text-xs text-gray-600 mb-1">// PROCESAMIENTO</div>
                     <p className="text-sm text-black">
-                      Our AI transcribes, analyzes content and extracts key ideas using advanced algorithms
+                      Nuestra IA transcribe, analiza el contenido y extrae las ideas clave usando algoritmos avanzados
                     </p>
                   </div>
                 </div>
@@ -433,11 +443,11 @@ export default function Component() {
                   <div className="w-20 h-20 mx-auto bg-black flex items-center justify-center mb-6">
                     <span className="text-2xl font-bold text-white">3</span>
                   </div>
-                  <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">LEARN_ACTIVELY</h3>
+                  <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">APRENDE_ACTIVAMENTE</h3>
                   <div className="mono-code text-left">
-                    <div className="text-xs text-gray-600 mb-1">// OUTPUT</div>
+                    <div className="text-xs text-gray-600 mb-1">// SALIDA</div>
                     <p className="text-sm text-black">
-                      Receive structured summaries, personalized quizzes and optimized study material
+                      Recibe resúmenes estructurados, quizzes personalizados y material de estudio optimizado
                     </p>
                   </div>
                 </div>
@@ -452,7 +462,7 @@ export default function Component() {
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-20">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black tracking-tight uppercase">
-                  USER_TESTIMONIALS
+                  TESTIMONIOS_DE_USUARIOS
                 </h2>
               </div>
             </AnimatedSection>
@@ -465,10 +475,10 @@ export default function Component() {
                       <div className="text-black text-lg">★★★★★</div>
                     </div>
                     <div className="mono-code mb-4">
-                      <div className="text-xs text-gray-600 mb-1">// REVIEW</div>
+                      <div className="text-xs text-gray-600 mb-1">// RESEÑA</div>
                       <p className="text-sm text-black">
-                        "AI Learn has revolutionized how I process lectures. I can now convert hours of audio into
-                        useful summaries in minutes."
+                        "AI Learn ha revolucionado la forma en que proceso las conferencias. Ahora puedo convertir horas
+                        de audio en resúmenes útiles en minutos."
                       </p>
                     </div>
                     <div className="flex items-center">
@@ -476,8 +486,8 @@ export default function Component() {
                         <span className="text-white font-bold text-sm">MR</span>
                       </div>
                       <div>
-                        <div className="font-bold text-black text-sm uppercase">MARIA_RODRIGUEZ</div>
-                        <div className="text-gray-600 text-xs uppercase">MEDICAL_STUDENT</div>
+                        <div className="font-bold text-black text-sm uppercase">MARÍA_RODRÍGUEZ</div>
+                        <div className="text-gray-600 text-xs uppercase">ESTUDIANTE_DE_MEDICINA</div>
                       </div>
                     </div>
                   </CardContent>
@@ -491,10 +501,10 @@ export default function Component() {
                       <div className="text-black text-lg">★★★★★</div>
                     </div>
                     <div className="mono-code mb-4">
-                      <div className="text-xs text-gray-600 mb-1">// REVIEW</div>
+                      <div className="text-xs text-gray-600 mb-1">// RESEÑA</div>
                       <p className="text-sm text-black">
-                        "As a professor, I use AI Learn to create study material from my classes. The generated quizzes
-                        are incredibly accurate."
+                        "Como profesor, uso AI Learn para crear material de estudio a partir de mis clases. Los quizzes
+                        generados son increíblemente precisos."
                       </p>
                     </div>
                     <div className="flex items-center">
@@ -502,8 +512,8 @@ export default function Component() {
                         <span className="text-white font-bold text-sm">CL</span>
                       </div>
                       <div>
-                        <div className="font-bold text-black text-sm uppercase">CARLOS_LOPEZ</div>
-                        <div className="text-gray-600 text-xs uppercase">UNIVERSITY_PROFESSOR</div>
+                        <div className="font-bold text-black text-sm uppercase">CARLOS_LÓPEZ</div>
+                        <div className="text-gray-600 text-xs uppercase">PROFESOR_UNIVERSITARIO</div>
                       </div>
                     </div>
                   </CardContent>
@@ -517,10 +527,10 @@ export default function Component() {
                       <div className="text-black text-lg">★★★★★</div>
                     </div>
                     <div className="mono-code mb-4">
-                      <div className="text-xs text-gray-600 mb-1">// REVIEW</div>
+                      <div className="text-xs text-gray-600 mb-1">// RESEÑA</div>
                       <p className="text-sm text-black">
-                        "The transcription accuracy is impressive. I've improved my productivity by 300% since using AI
-                        Learn."
+                        "La precisión de la transcripción es impresionante. He mejorado mi productividad en un 300%
+                        desde que uso AI Learn."
                       </p>
                     </div>
                     <div className="flex items-center">
@@ -529,7 +539,7 @@ export default function Component() {
                       </div>
                       <div>
                         <div className="font-bold text-black text-sm uppercase">ANA_SILVA</div>
-                        <div className="text-gray-600 text-xs uppercase">BUSINESS_CONSULTANT</div>
+                        <div className="text-gray-600 text-xs uppercase">CONSULTORA_EMPRESARIAL</div>
                       </div>
                     </div>
                   </CardContent>
@@ -545,12 +555,12 @@ export default function Component() {
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-20">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black tracking-tight uppercase">
-                  PRICING_PLANS
+                  PLANES_DE_PRECIOS
                 </h2>
                 <div className="mono-code max-w-3xl mx-auto">
-                  <div className="text-sm text-gray-600 mb-2">// OPTIONS</div>
+                  <div className="text-sm text-gray-600 mb-2">// OPCIONES</div>
                   <p className="text-lg text-black">
-                    Choose the perfect plan for your usage level and start transforming your learning today
+                    Elige el plan perfecto para tu nivel de uso y comienza a transformar tu aprendizaje hoy mismo
                   </p>
                 </div>
               </div>
@@ -560,50 +570,52 @@ export default function Component() {
               <AnimatedSection animation="fadeInLeft" delay={200}>
                 <Card className="mono-card border-4 border-black relative">
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-black text-white px-6 py-2 text-sm font-bold uppercase tracking-wide">
-                    MOST_POPULAR
+                    MÁS_POPULAR
                   </div>
                   <CardContent className="p-8 text-center">
-                    <h3 className="text-2xl font-bold mb-4 text-black uppercase tracking-wide">PRO_PLAN</h3>
+                    <h3 className="text-2xl font-bold mb-4 text-black uppercase tracking-wide">PLAN_PRO</h3>
                     <div className="text-4xl font-bold mb-6 text-black">
-                      $19<span className="text-lg text-gray-600">/MONTH</span>
+                      $19<span className="text-lg text-gray-600">/MES</span>
                     </div>
                     <div className="mono-code mb-6">
-                      <div className="text-xs text-gray-600 mb-1">// TARGET</div>
-                      <p className="text-sm text-black">Perfect for students and professionals</p>
+                      <div className="text-xs text-gray-600 mb-1">// OBJETIVO</div>
+                      <p className="text-sm text-black">Perfecto para estudiantes y profesionales</p>
                     </div>
                     <ul className="space-y-3 mb-8 text-left text-sm">
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        50 HOURS AUDIO/MONTH
+                        50 HORAS DE AUDIO/MES
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        ADVANCED AI TRANSCRIPTION
+                        TRANSCRIPCIÓN AVANZADA CON IA
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        PERSONALIZED SUMMARIES
+                        RESÚMENES INTELIGENTES PERSONALIZADOS
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        UNLIMITED ADAPTIVE QUIZZES
+                        QUIZZES ILIMITADOS ADAPTATIVOS
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        24/7 PRIORITY SUPPORT
+                        SOPORTE PRIORITARIO 24/7
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        MULTI-FORMAT EXPORT
+                        EXPORTACIÓN EN MÚLTIPLES FORMATOS
                       </li>
                     </ul>
                     <Button
                       onClick={() => setIsOnboardingOpen(true)}
                       className="w-full mono-button-primary py-4 text-lg font-medium"
                     >
-                      START_FREE_TRIAL
+                      COMENZAR_PRUEBA_GRATIS
                     </Button>
-                    <p className="text-xs text-gray-500 mt-4 uppercase tracking-wide">14_DAYS_FREE_CANCEL_ANYTIME</p>
+                    <p className="text-xs text-gray-500 mt-4 uppercase tracking-wide">
+                      14_DÍAS_GRATIS_CANCELA_CUANDO_QUIERAS
+                    </p>
                   </CardContent>
                 </Card>
               </AnimatedSection>
@@ -611,42 +623,42 @@ export default function Component() {
               <AnimatedSection animation="fadeInRight" delay={400}>
                 <Card className="mono-card">
                   <CardContent className="p-8 text-center">
-                    <h3 className="text-2xl font-bold mb-4 text-black uppercase tracking-wide">ENTERPRISE_PLAN</h3>
+                    <h3 className="text-2xl font-bold mb-4 text-black uppercase tracking-wide">PLAN_EMPRESA</h3>
                     <div className="text-4xl font-bold mb-6 text-black">
-                      $99<span className="text-lg text-gray-600">/MONTH</span>
+                      $99<span className="text-lg text-gray-600">/MES</span>
                     </div>
                     <div className="mono-code mb-6">
-                      <div className="text-xs text-gray-600 mb-1">// TARGET</div>
-                      <p className="text-sm text-black">For teams and organizations</p>
+                      <div className="text-xs text-gray-600 mb-1">// OBJETIVO</div>
+                      <p className="text-sm text-black">Para equipos y organizaciones</p>
                     </div>
                     <ul className="space-y-3 mb-8 text-left text-sm">
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        UNLIMITED AUDIO FOR TEAM
+                        AUDIO ILIMITADO PARA TODO EL EQUIPO
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        CUSTOM AI FOR INDUSTRY
+                        IA PERSONALIZADA PARA TU INDUSTRIA
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        COMPLETE API INTEGRATIONS
+                        INTEGRACIONES API COMPLETAS
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        UNLIMITED TEAM COLLABORATION
+                        EQUIPOS Y COLABORACIÓN ILIMITADA
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        DEDICATED SUPPORT & ONBOARDING
+                        SOPORTE DEDICADO Y ONBOARDING
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        ADVANCED ANALYTICS & REPORTS
+                        ANÁLISIS AVANZADOS Y REPORTES
                       </li>
                     </ul>
-                    <Button className="w-full mono-button py-4 text-lg font-medium">CONTACT_SALES</Button>
-                    <p className="text-xs text-gray-500 mt-4 uppercase tracking-wide">CUSTOM_DEMO_INCLUDED</p>
+                    <Button className="w-full mono-button py-4 text-lg font-medium">CONTACTAR_VENTAS</Button>
+                    <p className="text-xs text-gray-500 mt-4 uppercase tracking-wide">DEMO_PERSONALIZADA_INCLUIDA</p>
                   </CardContent>
                 </Card>
               </AnimatedSection>
@@ -659,11 +671,11 @@ export default function Component() {
           <div className="max-w-6xl mx-auto">
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-20">
-                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black tracking-tight uppercase">CONTACT_US</h2>
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black tracking-tight uppercase">CONTÁCTANOS</h2>
                 <div className="mono-code max-w-3xl mx-auto">
-                  <div className="text-sm text-gray-600 mb-2">// SUPPORT</div>
+                  <div className="text-sm text-gray-600 mb-2">// SOPORTE</div>
                   <p className="text-lg text-black">
-                    Our team is here to help. Send us a message and we'll respond as soon as possible.
+                    Nuestro equipo está aquí para ayudarte. Envíanos un mensaje y te responderemos lo antes posible.
                   </p>
                 </div>
               </div>
@@ -679,8 +691,8 @@ export default function Component() {
                       </div>
                       <div>
                         <h3 className="text-lg font-bold text-black mb-2 uppercase">EMAIL</h3>
-                        <p className="text-gray-600 font-mono">hello@ailearn.com</p>
-                        <p className="text-gray-600 font-mono">support@ailearn.com</p>
+                        <p className="text-gray-600 font-mono">hola@ailearn.com</p>
+                        <p className="text-gray-600 font-mono">soporte@ailearn.com</p>
                       </div>
                     </div>
                   </div>
@@ -691,9 +703,9 @@ export default function Component() {
                         <Phone className="h-5 w-5 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-lg font-bold text-black mb-2 uppercase">PHONE</h3>
+                        <h3 className="text-lg font-bold text-black mb-2 uppercase">TELÉFONO</h3>
                         <p className="text-gray-600 font-mono">+1 (555) 123-4567</p>
-                        <p className="text-gray-500 text-sm uppercase">MON-FRI, 9:00-18:00</p>
+                        <p className="text-gray-500 text-sm uppercase">LUN-VIE, 9:00-18:00</p>
                       </div>
                     </div>
                   </div>
@@ -704,7 +716,7 @@ export default function Component() {
                         <MapPin className="h-5 w-5 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-lg font-bold text-black mb-2 uppercase">OFFICE</h3>
+                        <h3 className="text-lg font-bold text-black mb-2 uppercase">OFICINA</h3>
                         <p className="text-gray-600 font-mono">123 Innovation Street</p>
                         <p className="text-gray-600 font-mono">Tech Valley, CA 94000</p>
                       </div>
@@ -712,11 +724,11 @@ export default function Component() {
                   </div>
 
                   <div className="mono-card p-6">
-                    <h3 className="text-lg font-bold text-black mb-3 uppercase">NEED_IMMEDIATE_HELP?</h3>
+                    <h3 className="text-lg font-bold text-black mb-3 uppercase">¿NECESITAS_AYUDA_INMEDIATA?</h3>
                     <p className="text-gray-600 mb-4 text-sm">
-                      Visit our help center to find answers to frequently asked questions.
+                      Visita nuestro centro de ayuda para encontrar respuestas a las preguntas más frecuentes.
                     </p>
-                    <Button className="mono-button">HELP_CENTER</Button>
+                    <Button className="mono-button">CENTRO_DE_AYUDA</Button>
                   </div>
                 </div>
               </AnimatedSection>
@@ -737,13 +749,13 @@ export default function Component() {
                   <Sparkles className="h-8 w-8 text-white" />
                 </div>
                 <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight uppercase">
-                  TURN_CONVERSATIONS_INTO_KNOWLEDGE
+                  CONVIERTE_CONVERSACIONES_EN_CONOCIMIENTO
                 </h2>
                 <div className="mono-code mb-12 max-w-3xl mx-auto">
-                  <div className="text-sm text-gray-600 mb-2">// CALL_TO_ACTION</div>
+                  <div className="text-sm text-gray-600 mb-2">// LLAMADA_A_LA_ACCIÓN</div>
                   <p className="text-lg text-black leading-relaxed">
-                    Join thousands of students and professionals already transforming their learning with AI. The future
-                    of personalized learning is here.
+                    Únete a miles de estudiantes y profesionales que ya están transformando su forma de aprender con IA.
+                    El futuro del aprendizaje personalizado está aquí.
                   </p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -753,11 +765,11 @@ export default function Component() {
                     className="text-lg px-12 py-6 mono-button-primary"
                   >
                     <Target className="mr-2 h-5 w-5" />
-                    START_LEARNING_FREE
+                    EMPEZAR_A_APRENDER_GRATIS
                   </Button>
                   <Button size="lg" className="text-lg px-12 py-6 mono-button">
                     <Download className="mr-2 h-5 w-5" />
-                    DOWNLOAD_APP
+                    DESCARGAR_APP
                   </Button>
                 </div>
               </div>
@@ -777,9 +789,9 @@ export default function Component() {
                   <span className="text-xl font-bold text-black uppercase tracking-wider">AI_LEARN</span>
                 </div>
                 <div className="mono-code mb-4">
-                  <div className="text-xs text-gray-600 mb-1">// MISSION</div>
+                  <div className="text-xs text-gray-600 mb-1">// MISIÓN</div>
                   <p className="text-sm text-black">
-                    Transforming the future of learning with advanced artificial intelligence.
+                    Transformando el futuro del aprendizaje con inteligencia artificial avanzada.
                   </p>
                 </div>
                 <div className="flex space-x-4">
@@ -796,16 +808,16 @@ export default function Component() {
               </div>
 
               <div>
-                <h4 className="font-bold text-black mb-4 uppercase tracking-wide">PRODUCT</h4>
+                <h4 className="font-bold text-black mb-4 uppercase tracking-wide">PRODUCTO</h4>
                 <ul className="space-y-2 text-gray-600 text-sm">
                   <li>
                     <a href="#features" className="hover:text-black transition-colors uppercase">
-                      FEATURES
+                      CARACTERÍSTICAS
                     </a>
                   </li>
                   <li>
                     <a href="#pricing" className="hover:text-black transition-colors uppercase">
-                      PRICING
+                      PRECIOS
                     </a>
                   </li>
                   <li>
@@ -815,23 +827,23 @@ export default function Component() {
                   </li>
                   <li>
                     <a href="#" className="hover:text-black transition-colors uppercase">
-                      INTEGRATIONS
+                      INTEGRACIONES
                     </a>
                   </li>
                 </ul>
               </div>
 
               <div>
-                <h4 className="font-bold text-black mb-4 uppercase tracking-wide">RESOURCES</h4>
+                <h4 className="font-bold text-black mb-4 uppercase tracking-wide">RECURSOS</h4>
                 <ul className="space-y-2 text-gray-600 text-sm">
                   <li>
                     <a href="#" className="hover:text-black transition-colors uppercase">
-                      DOCUMENTATION
+                      DOCUMENTACIÓN
                     </a>
                   </li>
                   <li>
                     <a href="#" className="hover:text-black transition-colors uppercase">
-                      TUTORIALS
+                      TUTORIALES
                     </a>
                   </li>
                   <li>
@@ -841,33 +853,33 @@ export default function Component() {
                   </li>
                   <li>
                     <a href="#" className="hover:text-black transition-colors uppercase">
-                      COMMUNITY
+                      COMUNIDAD
                     </a>
                   </li>
                 </ul>
               </div>
 
               <div>
-                <h4 className="font-bold text-black mb-4 uppercase tracking-wide">SUPPORT</h4>
+                <h4 className="font-bold text-black mb-4 uppercase tracking-wide">SOPORTE</h4>
                 <ul className="space-y-2 text-gray-600 text-sm">
                   <li>
                     <a href="#" className="hover:text-black transition-colors uppercase">
-                      HELP_CENTER
+                      CENTRO_DE_AYUDA
                     </a>
                   </li>
                   <li>
                     <a href="#contact" className="hover:text-black transition-colors uppercase">
-                      CONTACT
+                      CONTACTO
                     </a>
                   </li>
                   <li>
                     <a href="#" className="hover:text-black transition-colors uppercase">
-                      SYSTEM_STATUS
+                      ESTADO_DEL_SISTEMA
                     </a>
                   </li>
                   <li>
                     <a href="#" className="hover:text-black transition-colors uppercase">
-                      TERMS_OF_SERVICE
+                      TÉRMINOS_DE_SERVICIO
                     </a>
                   </li>
                 </ul>
@@ -878,7 +890,7 @@ export default function Component() {
               <div className="mono-code">
                 <div className="text-xs text-gray-600 mb-1">// COPYRIGHT</div>
                 <p className="text-sm text-black uppercase tracking-wide">
-                  © 2024 AI_LEARNING_PLATFORM. TRANSFORMING_THE_FUTURE_OF_LEARNING.
+                  © 2024 AI_LEARNING_PLATFORM. TRANSFORMANDO_EL_FUTURO_DEL_APRENDIZAJE.
                 </p>
               </div>
             </div>
