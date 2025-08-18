@@ -20,8 +20,7 @@ export default function RootLayout({
         <style>{`
 html {
   font-family: ${GeistSans.style.fontFamily};
-  --font-sans: ${GeistSans.variable};
-  --font-mono: ${GeistMono.variable};
+  --font-mono: ${GeistMono.style.fontFamily};
 }
         `}</style>
       </head>

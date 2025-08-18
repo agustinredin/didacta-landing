@@ -82,10 +82,10 @@ export default function Component() {
               </div>
 
               {/* Right Terminal-style Scene */}
-              <div className="relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] mt-8 lg:mt-0">
-                <AnimatedSection animation="fadeInRight" delay={600}>
+              <div className="flex flex-col justify-center h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] mt-8 lg:mt-0">
+                <AnimatedSection animation="fadeInRight" className="relative top-12" delay={600}>
                   {/* Main Terminal Window */}
-                  <div className="absolute inset-0 bg-white border-4 border-black">
+                  <div className=" bg-white border-4 border-black">
                     {/* Terminal Header */}
                     <div className="bg-black text-white p-4 font-mono text-sm">
                       <div className="flex items-center justify-between">

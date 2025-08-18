@@ -18,9 +18,9 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <div className="w-8 h-8 bg-black flex items-center justify-center">
-              <Brain className="h-5 w-5 text-white" />
+              <Brain className="h-5 w-5 text-white" /> 
             </div>
-            <span className="text-lg sm:text-xl font-bold text-black uppercase tracking-wider">AI LEARN</span>
+            <span className="text-lg sm:text-xl font-bold text-black uppercase tracking-wider">A DEFINIR</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -52,10 +52,10 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
           </div>
 
           {/* Medium screen navigation */}
-          <div className="hidden md:flex lg:hidden items-center">
+          <div className="hidden md:flex items-center">
             <Button size="sm" onClick={() => setIsOnboardingOpen?.(true)} className="mono-button-primary">
               <Zap className="mr-2 h-4 w-4" />
-              PRUEBA GRATIS
+              PROBAR GRATIS
             </Button>
           </div>
 
@@ -112,7 +112,7 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
                   className="w-full mono-button-primary"
                 >
                   <Zap className="mr-2 h-4 w-4" />
-                  PRUEBA GRATIS
+                  PROBAR GRATIS
                 </Button>
               </div>
             </div>
