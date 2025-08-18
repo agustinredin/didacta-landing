@@ -84,7 +84,7 @@ export default function Component() {
               {/* Right Terminal-style Scene */}
               <div className="flex flex-col justify-center h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] mt-8 lg:mt-0">
                 <AnimatedSection animation="fadeInRight" className="relative top-12" delay={600}>
-                  {/* Main Terminal Window */}
+                  {/* Main Terminal Window    */}
                   <div className=" bg-white border-4 border-black">
                     {/* Terminal Header */}
                     <div className="bg-black text-white p-4 font-mono text-sm">
