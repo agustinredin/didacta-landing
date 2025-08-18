@@ -43,26 +43,29 @@ export function ContactForm() {
 
   if (isSubmitted) {
     return (
-      <Card className="glass-card border border-white/70 shadow-xl">
+      <Card className="mono-card border-2 border-black">
         <CardContent className="p-12 text-center">
-          <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-6" />
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">¡Mensaje Enviado!</h3>
-          <p className="text-gray-600">
-            Gracias por contactarnos. Nuestro equipo se pondrá en contacto contigo pronto.
-          </p>
+          <div className="w-16 h-16 bg-black mx-auto mb-6 flex items-center justify-center">
+            <CheckCircle className="h-8 w-8 text-white" />
+          </div>
+          <h3 className="text-2xl font-bold text-black mb-4 uppercase tracking-wide">MESSAGE_SENT!</h3>
+          <div className="mono-code">
+            <div className="text-xs text-gray-600 mb-1">// SUCCESS</div>
+            <p className="text-sm text-black">Thanks for contacting us. Our team will get in touch with you soon.</p>
+          </div>
         </CardContent>
       </Card>
     )
   }
 
   return (
-    <Card className="glass-card border border-white/70 shadow-xl">
+    <Card className="mono-card border-2 border-black">
       <CardContent className="p-8">
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                Nombre completo *
+              <label htmlFor="name" className="block text-sm font-bold text-black mb-2 uppercase tracking-wide">
+                FULL_NAME *
               </label>
               <input
                 type="text"
@@ -71,13 +74,13 @@ export function ContactForm() {
                 required
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white/80 backdrop-blur-sm transition-all duration-200"
-                placeholder="Tu nombre"
+                className="w-full px-4 py-3 mono-input transition-all duration-200"
+                placeholder="YOUR_NAME"
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                Email *
+              <label htmlFor="email" className="block text-sm font-bold text-black mb-2 uppercase tracking-wide">
+                EMAIL *
               </label>
               <input
                 type="email"
@@ -86,15 +89,15 @@ export function ContactForm() {
                 required
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white/80 backdrop-blur-sm transition-all duration-200"
-                placeholder="tu@email.com"
+                className="w-full px-4 py-3 mono-input transition-all duration-200"
+                placeholder="YOUR@EMAIL.COM"
               />
             </div>
           </div>
 
           <div>
-            <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-              Empresa (opcional)
+            <label htmlFor="company" className="block text-sm font-bold text-black mb-2 uppercase tracking-wide">
+              COMPANY (OPTIONAL)
             </label>
             <input
               type="text"
@@ -102,14 +105,14 @@ export function ContactForm() {
               name="company"
               value={formData.company}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white/80 backdrop-blur-sm transition-all duration-200"
-              placeholder="Nombre de tu empresa"
+              className="w-full px-4 py-3 mono-input transition-all duration-200"
+              placeholder="YOUR_COMPANY_NAME"
             />
           </div>
 
           <div>
-            <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-              Mensaje *
+            <label htmlFor="message" className="block text-sm font-bold text-black mb-2 uppercase tracking-wide">
+              MESSAGE *
             </label>
             <textarea
               id="message"
@@ -118,25 +121,21 @@ export function ContactForm() {
               rows={5}
               value={formData.message}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white/80 backdrop-blur-sm transition-all duration-200 resize-none"
-              placeholder="Cuéntanos cómo podemos ayudarte..."
+              className="w-full px-4 py-3 mono-input resize-none transition-all duration-200"
+              placeholder="TELL_US_HOW_WE_CAN_HELP..."
             />
           </div>
 
-          <Button
-            type="submit"
-            disabled={isSubmitting}
-            className="w-full bg-gradient-to-r from-blue-600 to-purple-700 hover:from-blue-700 hover:to-purple-800 text-white py-4 text-lg font-medium transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
-          >
+          <Button type="submit" disabled={isSubmitting} className="w-full mono-button-primary py-4 text-lg font-medium">
             {isSubmitting ? (
               <div className="flex items-center justify-center">
-                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                Enviando...
+                <div className="animate-spin w-5 h-5 border-2 border-white border-t-transparent mr-2"></div>
+                SENDING...
               </div>
             ) : (
               <>
                 <Send className="mr-2 h-5 w-5" />
-                Enviar Mensaje
+                SEND_MESSAGE
               </>
             )}
           </Button>
