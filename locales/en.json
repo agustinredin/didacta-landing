@@ -1,0 +1,24 @@
+{
+  "navbar": {
+    "logo": "TBD",
+    "features": "Features",
+    "howItWorks": "How It Works",
+    "testimonials": "Testimonials",
+    "pricing": "Pricing",
+    "tryFree": "Try for Free"
+  },
+  "hero": {
+    "sectionLabel": "01. Transform your learning",
+    "title": "Turn audio into knowledge easily.",
+    "descriptionLabel": "// Description",
+    "description": "Transform any conversation or recording into structured learning without deep technical knowledge.",
+    "startFree": "Start for free",
+    "learnMore": "Learn more",
+    "terminalTitle": "AI Learn Terminal",
+    "cmd": "ai-learn --process audio.mp3",
+    "info": "[Info] Processing audio file...",
+    "transcription": "[Success] Transcription complete: 98% accuracy",
+    "summary": "[Success] Summary generated: 5 key concepts",
+    "quiz": "[Success] Quiz created: 10 questions"
+  }
+}
