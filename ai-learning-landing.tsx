@@ -99,7 +99,7 @@ export default function Component() {
                     </div>
 
                     {/* Terminal Content */}
-                    <div className="p-3 sm:p-4 lg:p-6 space-y-2 sm:space-y-4 text-xs sm:text-sm terminal-content">
+                    <div className="p-3 sm:p-4 lg:p-6 space-y-2 sm:space-y-4 text-xs sm:text-sm terminal-content" style={{ textTransform: 'none' }}>
                       <div>
                         <span className="text-gray-600">$</span> ai-learn --procesar audio.mp3
                       </div>
