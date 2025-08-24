@@ -20,22 +20,9 @@ interface FormData {
 const STEPS = [
   { id: 1, title: "BIENVENIDA", description: "COMIENZA TU VIAJE DE APRENDIZAJE" },
   { id: 2, title: "INFORMACIÓN", description: "CUÉNTANOS SOBRE TI" },
-  { id: 3, title: "INTERESES", description: "PERSONALIZA TU EXPERIENCIA" },
-  { id: 4, title: "SEGURIDAD", description: "PROTEGE TU CUENTA" },
-  { id: 5, title: "CONFIRMACIÓN", description: "REVISA Y CONFIRMA" },
+  { id: 3, title: "SEGURIDAD", description: "PROTEGE TU CUENTA" },
+  { id: 4, title: "CONFIRMACIÓN", description: "REVISA Y CONFIRMA" },
 ]
-
-const INTERESTS = [
-  { id: "tech", label: "TECNOLOGÍA", icon: "💻" },
-  { id: "science", label: "CIENCIAS", icon: "🔬" },
-  { id: "business", label: "NEGOCIOS", icon: "📊" },
-  { id: "languages", label: "IDIOMAS", icon: "🌍" },
-  { id: "arts", label: "ARTE Y DISEÑO", icon: "🎨" },
-  { id: "health", label: "SALUD", icon: "🏥" },
-  { id: "education", label: "EDUCACIÓN", icon: "📚" },
-  { id: "music", label: "MÚSICA", icon: "🎵" },
-]
-
 export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
   const [currentStep, setCurrentStep] = useState(1)
   const [formData, setFormData] = useState<FormData>({
@@ -137,26 +124,6 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
                 </p>
               </div>
             </div>
-            <div className="grid grid-cols-3 gap-2 sm:gap-4 max-w-xs sm:max-w-sm mx-auto">
-              <div className="text-center mono-card p-3">
-                <div className="w-8 h-8 bg-black mx-auto mb-2 flex items-center justify-center">
-                  <span className="text-white text-lg">🎤</span>
-                </div>
-                <p className="text-xs text-black uppercase">TRANSCRIBE</p>
-              </div>
-              <div className="text-center mono-card p-3">
-                <div className="w-8 h-8 bg-black mx-auto mb-2 flex items-center justify-center">
-                  <span className="text-white text-lg">🧠</span>
-                </div>
-                <p className="text-xs text-black uppercase">ANALIZA</p>
-              </div>
-              <div className="text-center mono-card p-3">
-                <div className="w-8 h-8 bg-black mx-auto mb-2 flex items-center justify-center">
-                  <span className="text-white text-lg">📚</span>
-                </div>
-                <p className="text-xs text-black uppercase">APRENDE</p>
-              </div>
-            </div>
           </div>
         )
 
@@ -206,43 +173,6 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
         )
 
       case 3:
-        return (
-          <div className="space-y-6">
-            <div className="text-center mb-8">
-              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2 text-black uppercase tracking-wide">
-                ¿QUÉ TE INTERESA APRENDER?
-              </h2>
-              <div className="mono-code">
-                <div className="text-xs text-gray-600 mb-1">// SELECCIONAR TEMAS</div>
-                <p className="text-sm text-black">Selecciona tus áreas de interés para personalizar tu contenido</p>
-              </div>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {INTERESTS.map((interest) => (
-                <button
-                  key={interest.id}
-                  onClick={() => handleInterestToggle(interest.id)}
-                  className={`p-4 border-2 transition-all duration-200 text-left hover:translate-x-1 hover:translate-y-1 ${
-                    formData.interests.includes(interest.id)
-                      ? "border-black bg-black text-white"
-                      : "border-black bg-white text-black hover:bg-gray-50"
-                  }`}
-                >
-                  <div className="flex items-center space-x-3">
-                    <span className="text-xl">{interest.icon}</span>
-                    <span className="font-bold text-sm uppercase tracking-wide">{interest.label}</span>
-                  </div>
-                  {formData.interests.includes(interest.id) && <Check className="h-4 w-4 text-white ml-auto mt-2" />}
-                </button>
-              ))}
-            </div>
-            {errors.interests && (
-              <p className="text-red-500 text-sm text-center font-mono uppercase">{errors.interests}</p>
-            )}
-          </div>
-        )
-
-      case 4:
         return (
           <div className="space-y-6">
             <div className="text-center mb-8">
@@ -317,7 +247,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
           </div>
         )
 
-      case 5:
+      case 4:
         return (
           <div className="text-center space-y-8">
             <div className="relative">

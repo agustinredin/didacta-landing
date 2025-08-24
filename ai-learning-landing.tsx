@@ -33,16 +33,16 @@ export default function Component() {
   return (
     <>
       <SEOHead />
-      <div className="min-h-screen bg-gray-50 text-black font-mono">
+      <div className="min-h-screen bg-white text-black font-mono">
         {/* Navbar */}
         <Navbar setIsOnboardingOpen={setIsOnboardingOpen} />
 
         {/* Header/Hero Section */}
-        <section className="relative px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-white">
-          <div className="max-w-7xl mx-auto w-full">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+        <section className="relative mx-8 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-white">
+          <div className="max-w-7xl mx-auto my-16 lg:my-2 w-full">
+            <div className="flex flex-wrap gap-8 lg:gap-16 items-center">
               {/* Left Content */}
-              <div className="space-y-8">
+              <div className="space-y-8 lg:w-1/2">
                 <AnimatedSection animation="fadeIn" delay={200}>
                   <div className="text-sm font-medium text-black mb-6 tracking-widest uppercase border-2 border-black bg-white px-4 py-2 inline-block">
                     01. TRANSFORMA TU APRENDIZAJE
@@ -82,8 +82,8 @@ export default function Component() {
               </div>
 
               {/* Right Terminal-style Scene */}
-              <div className="flex flex-col justify-center h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] mt-8 lg:mt-0">
-                <AnimatedSection animation="fadeInRight" className="relative top-12" delay={600}>
+              <div className="flex-1 flex flex-col justify-center">
+                <AnimatedSection animation="fadeInRight" className="relative" delay={600}>
                   {/* Main Terminal Window    */}
                   <div className=" bg-white border-4 border-black">
                     {/* Terminal Header */}
@@ -113,7 +113,7 @@ export default function Component() {
                     </div>
 
                     {/* Mobile Terminal Cards */}
-                    <div className="md:hidden mt-6 space-y-4 terminal-cards">
+                    <div className="lg:hidden px-4 my-8 space-y-4 terminal-cards">
                       <div className="mono-card p-4 bg-white floating-card">
                         <div className="flex items-center space-x-2 mb-2">
                           <div className="w-6 h-6 bg-black flex items-center justify-center">
@@ -156,10 +156,10 @@ export default function Component() {
                     </div>
 
                     {/* Floating Feature Cards */}
-                    <div className="absolute inset-0 p-4 sm:p-6 lg:p-8 hidden md:block">
+                    <div className="absolute inset-0 p-4 sm:p-6 lg:p-8 hidden lg:block">
                       {/* AI Card */}
-                      <AnimatedSection animation="scaleIn" delay={1000}>
-                        <div className="absolute top-24 left-8 w-48 mono-card p-4 bg-white">
+                      <AnimatedSection className="relative" animation="scaleIn" delay={1000}>
+                        <div className="absolute top-56 left-0 w-48 mono-card p-4 bg-white">
                           <div className="flex items-center space-x-2 mb-2">
                             <div className="w-6 h-6 bg-black flex items-center justify-center">
                               <Brain className="h-4 w-4 text-white" />
@@ -172,7 +172,7 @@ export default function Component() {
 
                       {/* Analytics Card */}
                       <AnimatedSection animation="scaleIn" delay={1200}>
-                        <div className="absolute top-48 right-4 w-44 mono-card p-4 bg-white">
+                        <div className="absolute top-72 right-0 w-44 mono-card p-4 bg-white">
                           <div className="flex items-center space-x-2 mb-2">
                             <div className="w-6 h-6 bg-black flex items-center justify-center">
                               <Zap className="h-4 w-4 text-white" />
@@ -185,7 +185,7 @@ export default function Component() {
 
                       {/* Community Card */}
                       <AnimatedSection animation="scaleIn" delay={1400}>
-                        <div className="absolute bottom-20 left-4 w-48 mono-card p-4 bg-white">
+                        <div className="absolute -top-40 left-2 w-48 mono-card p-4 bg-white">
                           <div className="flex items-center space-x-2 mb-2">
                             <div className="w-6 h-6 bg-black flex items-center justify-center">
                               <Users className="h-4 w-4 text-white" />
@@ -198,7 +198,7 @@ export default function Component() {
 
                       {/* Development Card */}
                       <AnimatedSection animation="scaleIn" delay={1600}>
-                        <div className="absolute bottom-8 right-8 w-44 mono-card p-4 bg-white">
+                        <div className="absolute -top-24 -right-12 w-44 mono-card p-4 bg-white">
                           <div className="flex items-center space-x-2 mb-2">
                             <div className="w-6 h-6 bg-black flex items-center justify-center">
                               <Laptop className="h-4 w-4 text-white" />
@@ -214,8 +214,8 @@ export default function Component() {
               </div>
             </div>
 
-            {/* Stats */}
-            <AnimatedSection animation="fadeInUp" delay={1800}>
+            {/* Stats - TODO: Real stats */}
+            <AnimatedSection animation="fadeInUp" delay={1800} className="hidden">
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto mt-12 sm:mt-20 pt-8 sm:pt-16 border-t-2 border-black">
                 <div className="text-center mono-card p-6">
                   <div className="text-3xl font-bold text-black mb-2">10,000+</div>
@@ -235,7 +235,7 @@ export default function Component() {
         </section>
 
         {/* Features Section */}
-        <section id="features" className="relative px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-white">
+        <section id="features" className="relative mx-8 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-white">
           <div className="max-w-6xl mx-auto">
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-20">
@@ -363,7 +363,7 @@ export default function Component() {
         </section>
 
         {/* Benefits Section */}
-        <section className="relative px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-gray-50">
+        <section className="relative mx-8 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-gray-50">
           <div className="max-w-6xl mx-auto">
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-20">
@@ -422,7 +422,7 @@ export default function Component() {
         </section>
 
         {/* How it Works Section */}
-        <section id="how-it-works" className="relative px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-white">
+        <section id="how-it-works" className="relative mx-8 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-white">
           <div className="max-w-6xl mx-auto">
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-20">
@@ -438,7 +438,7 @@ export default function Component() {
               </div>
             </AnimatedSection>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12 items-center">
               <AnimatedSection animation="fadeInLeft" delay={200}>
                 <div className="text-center mono-card p-8">
                   <div className="w-20 h-20 mx-auto bg-black flex items-center justify-center mb-6">
@@ -508,8 +508,8 @@ export default function Component() {
           </div>
         </section>
 
-        {/* Testimonials Section */}
-        <section id="testimonials" className="relative px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-gray-50">
+        {/* Testimonials Section - TODO: Real testimonials */}
+        <section id="testimonials" className="relative hidden mx-8 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-gray-50">
           <div className="max-w-6xl mx-auto">
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-20">
@@ -602,7 +602,7 @@ export default function Component() {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="relative px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-white">
+        <section id="pricing" className="relative mx-8 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-white">
           <div className="max-w-5xl mx-auto">
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-20">
@@ -719,7 +719,7 @@ export default function Component() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="relative px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-gray-50">
+        <section id="contact" className="relative mx-8 not-last:px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-gray-50">
           <div className="max-w-6xl mx-auto">
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-20">
@@ -795,7 +795,7 @@ export default function Component() {
         </section>
 
         {/* Final CTA Section */}
-        <section className="relative px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-white">
+        <section className="relative mx-8 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-white">
           <div className="max-w-4xl mx-auto text-center">
             <AnimatedSection animation="scaleIn">
               <div className="mono-card p-8 sm:p-12 lg:p-16 border-4 border-black">
@@ -812,7 +812,7 @@ export default function Component() {
                     El futuro del aprendizaje personalizado está aquí.
                   </p>
                 </div>
-                <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
+                <div className="flex flex-wrap flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
                   <Button
                     size="lg"
                     onClick={() => setIsOnboardingOpen(true)}
@@ -832,7 +832,7 @@ export default function Component() {
         </section>
 
         {/* Footer */}
-        <footer className="relative px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 border-t-2 border-black bg-gray-50">
+        <footer className="relative mx-8 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 border-t-2 border-black bg-gray-50">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8">
               <div>

@@ -4,8 +4,8 @@ import { BrowserCompatibilityNotice } from "../components/browser-compatibility-
 export default function Page() {
   return (
     <>
-      <BrowserCompatibilityNotice />
       <Component />
+      <BrowserCompatibilityNotice />
     </>
   )
 }
