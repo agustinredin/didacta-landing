@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X, Zap, Brain } from "lucide-react"
+import { useI18n } from "@/lib/i18n"
 
 interface NavbarProps {
   setIsOnboardingOpen?: (open: boolean) => void
@@ -10,6 +11,7 @@ interface NavbarProps {
 
 export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false)
+  const { t, lang, switchLang } = useI18n()
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b-2 border-black">
@@ -20,7 +22,9 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
             <div className="w-8 h-8 bg-black flex items-center justify-center">
               <Brain className="h-5 w-5 text-white" /> 
             </div>
-            <span className="text-lg sm:text-xl font-bold text-black uppercase tracking-wider">A DEFINIR</span>
+            <span className="text-lg sm:text-xl font-bold text-black uppercase tracking-wider">
+              {t("navbar.logo")}
+            </span>
           </div>
 
           {/* Desktop Navigation */}
@@ -29,44 +33,50 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
               href="#features"
               className="text-black hover:bg-black hover:text-white px-3 py-2 transition-colors font-medium uppercase tracking-wide"
             >
-              CARACTERÍSTICAS
+              {t("navbar.features")}
             </a>
             <a
               href="#how-it-works"
               className="text-black hover:bg-black hover:text-white px-3 py-2 transition-colors font-medium uppercase tracking-wide"
             >
-              CÓMO FUNCIONA
+              {t("navbar.howItWorks")}
             </a>
             <a
               href="#testimonials"
               className="text-black hover:bg-black hover:text-white px-3 py-2 transition-colors font-medium uppercase tracking-wide"
             >
-              TESTIMONIOS
+              {t("navbar.testimonials")}
             </a>
             <a
               href="#pricing"
               className="text-black hover:bg-black hover:text-white px-3 py-2 transition-colors font-medium uppercase tracking-wide"
             >
-              PRECIOS
+              {t("navbar.pricing")}
             </a>
           </div>
 
           {/* Medium screen navigation */}
-          <div className="hidden md:flex items-center">
-            <Button size="sm" onClick={() => setIsOnboardingOpen?.(true)} className="mono-button-primary">
-              <Zap className="mr-2 h-4 w-4" />
-              PROBAR GRATIS
-            </Button>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:lg:hidden">
+          <div className="flex items-center space-x-2">
+            <div className="hidden md:flex items-center">
+              <Button size="sm" onClick={() => setIsOnboardingOpen?.(true)} className="mono-button-primary">
+                <Zap className="mr-2 h-4 w-4" />
+                {t("navbar.tryFree")}
+              </Button>
+            </div>
             <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-black hover:bg-black hover:text-white p-2 transition-colors"
+              onClick={() => switchLang(lang === "en" ? "es" : "en")}
+              className="text-xs border border-black px-2 py-1 uppercase"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {lang === "en" ? "ES" : "EN"}
             </button>
+            <div className="md:lg:hidden">
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="text-black hover:bg-black hover:text-white p-2 transition-colors"
+              >
+                {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              </button>
+            </div>
           </div>
         </div>
 
@@ -79,28 +89,28 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
                 className="block px-3 py-2 text-black hover:bg-black hover:text-white transition-colors font-medium uppercase tracking-wide"
                 onClick={() => setIsOpen(false)}
               >
-                CARACTERÍSTICAS
+                {t("navbar.features")}
               </a>
               <a
                 href="#how-it-works"
                 className="block px-3 py-2 text-black hover:bg-black hover:text-white transition-colors font-medium uppercase tracking-wide"
                 onClick={() => setIsOpen(false)}
               >
-                CÓMO FUNCIONA
+                {t("navbar.howItWorks")}
               </a>
               <a
                 href="#testimonials"
                 className="block px-3 py-2 text-black hover:bg-black hover:text-white transition-colors font-medium uppercase tracking-wide"
                 onClick={() => setIsOpen(false)}
               >
-                TESTIMONIOS
+                {t("navbar.testimonials")}
               </a>
               <a
                 href="#pricing"
                 className="block px-3 py-2 text-black hover:bg-black hover:text-white transition-colors font-medium uppercase tracking-wide"
                 onClick={() => setIsOpen(false)}
               >
-                PRECIOS
+                {t("navbar.pricing")}
               </a>
               <div className="px-3 py-2">
                 <Button
@@ -112,8 +122,16 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
                   className="w-full mono-button-primary"
                 >
                   <Zap className="mr-2 h-4 w-4" />
-                  PROBAR GRATIS
+                  {t("navbar.tryFree")}
                 </Button>
+              </div>
+              <div className="px-3 py-2">
+                <button
+                  onClick={() => switchLang(lang === "en" ? "es" : "en")}
+                  className="w-full border border-black px-3 py-2 text-black uppercase text-sm"
+                >
+                  {lang === "en" ? "ES" : "EN"}
+                </button>
               </div>
             </div>
           </div>
