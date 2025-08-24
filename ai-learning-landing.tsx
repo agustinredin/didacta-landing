@@ -26,9 +26,11 @@ import {
   MapPin,
 } from "lucide-react"
 import { useState } from "react"
+import { useI18n } from "@/lib/i18n"
 
 export default function Component() {
   const [isOnboardingOpen, setIsOnboardingOpen] = useState(false)
+  const { t } = useI18n()
 
   return (
     <>
@@ -45,22 +47,21 @@ export default function Component() {
               <div className="space-y-8">
                 <AnimatedSection animation="fadeIn" delay={200}>
                   <div className="text-sm font-medium text-black mb-6 tracking-widest uppercase border-2 border-black bg-white px-4 py-2 inline-block">
-                    01. TRANSFORMA TU APRENDIZAJE
+                    {t("hero.sectionLabel")}
                   </div>
                 </AnimatedSection>
 
                 <AnimatedSection animation="fadeInUp" delay={400}>
                   <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-black tracking-tight uppercase">
-                    CONVIERTE AUDIO EN <span className="bg-black text-white px-2">CONOCIMIENTO</span> FÁCILMENTE.
+                    {t("hero.title")}
                   </h1>
                 </AnimatedSection>
 
                 <AnimatedSection animation="fadeInUp" delay={600}>
                   <div className="mono-code">
-                    <div className="text-sm text-gray-600 mb-2">// DESCRIPCIÓN</div>
+                    <div className="text-sm text-gray-600 mb-2">{t("hero.descriptionLabel")}</div>
                     <p className="text-base sm:text-lg text-black leading-relaxed">
-                      Transforma cualquier conversación o grabación en aprendizaje estructurado sin necesidad de
-                      conocimientos técnicos profundos.
+                      {t("hero.description")}
                     </p>
                   </div>
                 </AnimatedSection>
@@ -72,10 +73,10 @@ export default function Component() {
                       onClick={() => setIsOnboardingOpen(true)}
                       className="text-lg px-8 py-4 mono-button-primary"
                     >
-                      EMPEZAR GRATIS
+                      {t("hero.startFree")}
                     </Button>
                     <Button size="lg" className="text-lg px-8 py-4 mono-button">
-                      SABER MÁS
+                      {t("hero.learnMore")}
                     </Button>
                   </div>
                 </AnimatedSection>
@@ -89,7 +90,7 @@ export default function Component() {
                     {/* Terminal Header */}
                     <div className="bg-black text-white p-4 font-mono text-sm">
                       <div className="flex items-center justify-between">
-                        <span>TERMINAL AI LEARN</span>
+                        <span>{t("hero.terminalTitle")}</span>
                         <div className="flex space-x-2">
                           <div className="w-3 h-3 bg-white"></div>
                           <div className="w-3 h-3 bg-white"></div>
@@ -101,12 +102,12 @@ export default function Component() {
                     {/* Terminal Content */}
                     <div className="p-3 sm:p-4 lg:p-6 space-y-2 sm:space-y-4 text-xs sm:text-sm terminal-content" style={{ textTransform: 'none' }}>
                       <div>
-                        <span className="text-gray-600">$</span> ai-learn --procesar audio.mp3
+                        <span className="text-gray-600">$</span> {t("hero.cmd")}
                       </div>
-                      <div className="text-gray-600">[INFO] Procesando archivo de audio...</div>
-                      <div className="text-gray-600">[ÉXITO] Transcripción completa: 98% precisión</div>
-                      <div className="text-gray-600">[ÉXITO] Resumen generado: 5 conceptos clave</div>
-                      <div className="text-gray-600">[ÉXITO] Quiz creado: 10 preguntas</div>
+                      <div className="text-gray-600">{t("hero.info")}</div>
+                      <div className="text-gray-600">{t("hero.transcription")}</div>
+                      <div className="text-gray-600">{t("hero.summary")}</div>
+                      <div className="text-gray-600">{t("hero.quiz")}</div>
                       <div>
                         <span className="text-gray-600">$</span> <span className="animate-pulse">_</span>
                       </div>
