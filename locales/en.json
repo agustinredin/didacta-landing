@@ -1,5 +1,30 @@
 {
   "navbar": {
+    "features": "Features",
+    "howItWorks": "How it works",
+    "testimonials": "Testimonials",
+    "pricing": "Pricing",
+    "tryForFree": "Try for free"
+  },
+  "footer": {
+    "product": "Product",
+    "resources": "Resources",
+    "support": "Support",
+    "documentation": "Documentation",
+    "tutorials": "Tutorials",
+    "blog": "Blog",
+    "community": "Community",
+    "helpCenter": "Help center",
+    "contact": "Contact",
+    "systemStatus": "System status",
+    "termsOfService": "Terms of service",
+    "copyright": "© 2024 AI learning platform. Transforming the future of learning."
+  },
+  "commands": {
+    "processing": "[INFO] Processing audio file...",
+    "transcription": "[SUCCESS] Transcription complete: 98% accuracy",
+    "summary": "[SUCCESS] Summary generated: 5 key concepts",
+    "quiz": "[SUCCESS] Quiz created: 10 questions"
     "logo": "TBD",
     "features": "Features",
     "howItWorks": "How It Works",

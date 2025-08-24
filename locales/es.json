@@ -5,6 +5,27 @@
     "howItWorks": "Cómo funciona",
     "testimonials": "Testimonios",
     "pricing": "Precios",
+    "tryForFree": "Probar gratis"
+  },
+  "footer": {
+    "product": "Producto",
+    "resources": "Recursos",
+    "support": "Soporte",
+    "documentation": "Documentación",
+    "tutorials": "Tutoriales",
+    "blog": "Blog",
+    "community": "Comunidad",
+    "helpCenter": "Centro de ayuda",
+    "contact": "Contacto",
+    "systemStatus": "Estado del sistema",
+    "termsOfService": "Términos de servicio",
+    "copyright": "© 2024 Plataforma de aprendizaje con IA. Transformando el futuro del aprendizaje."
+  },
+  "commands": {
+    "processing": "[INFO] Procesando archivo de audio...",
+    "transcription": "[ÉXITO] Transcripción completa: 98% precisión",
+    "summary": "[ÉXITO] Resumen generado: 5 conceptos clave",
+    "quiz": "[ÉXITO] Quiz creado: 10 preguntas"
     "tryFree": "Probar gratis"
   },
   "hero": {
