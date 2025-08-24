@@ -5,7 +5,7 @@
     "howItWorks": "Cómo funciona",
     "testimonials": "Testimonios",
     "pricing": "Precios",
-    "tryForFree": "Probar gratis"
+    "tryForFree": "Probar gratis" 
   },
   "footer": {
     "product": "Producto",
@@ -23,22 +23,27 @@
   },
   "commands": {
     "processing": "[INFO] Procesando archivo de audio...",
-    "transcription": "[ÉXITO] Transcripción completa: 98% precisión",
+    "transcription": "[ÉXITO] Transcripción completa: 98% de precisión",
     "summary": "[ÉXITO] Resumen generado: 5 conceptos clave",
-    "quiz": "[ÉXITO] Quiz creado: 10 preguntas"
+    "quiz": "[ÉXITO] Quiz creado: 10 preguntas",
+    "logo": "A definir",
+    "features": "Características",
+    "howItWorks": "Cómo funciona",
+    "testimonials": "Testimonios",
+    "pricing": "Precios",
     "tryFree": "Probar gratis"
   },
   "hero": {
     "sectionLabel": "01. Transforma tu aprendizaje",
-    "title": "Convierte audio en conocimiento fácilmente.",
+    "title": "Convierte audio en conocimiento fácilmente",
     "descriptionLabel": "// Descripción",
-    "description": "Transforma cualquier conversación o grabación en aprendizaje estructurado sin necesidad de conocimientos técnicos profundos.",
+    "description": "Transforma cualquier conversación o grabación en aprendizaje estructurado sin necesidad de conocimientos técnicos avanzados.",
     "startFree": "Empezar gratis",
     "learnMore": "Saber más",
     "terminalTitle": "Terminal AI Learn",
     "cmd": "ai-learn --procesar audio.mp3",
     "info": "[Info] Procesando archivo de audio...",
-    "transcription": "[Éxito] Transcripción completa: 98% precisión",
+    "transcription": "[Éxito] Transcripción completa: 98% de precisión",
     "summary": "[Éxito] Resumen generado: 5 conceptos clave",
     "quiz": "[Éxito] Quiz creado: 10 preguntas"
   }
