@@ -5,21 +5,7 @@
     "howItWorks": "Cómo funciona",
     "testimonials": "Testimonios",
     "pricing": "Precios",
-    "tryForFree": "Probar gratis" 
-  },
-  "footer": {
-    "product": "Producto",
-    "resources": "Recursos",
-    "support": "Soporte",
-    "documentation": "Documentación",
-    "tutorials": "Tutoriales",
-    "blog": "Blog",
-    "community": "Comunidad",
-    "helpCenter": "Centro de ayuda",
-    "contact": "Contacto",
-    "systemStatus": "Estado del sistema",
-    "termsOfService": "Términos de servicio",
-    "copyright": "© 2024 Plataforma de aprendizaje con IA. Transformando el futuro del aprendizaje."
+    "tryForFree": "Probar gratis"
   },
   "commands": {
     "processing": "[INFO] Procesando archivo de audio...",
@@ -45,6 +31,190 @@
     "info": "[Info] Procesando archivo de audio...",
     "transcription": "[Éxito] Transcripción completa: 98% de precisión",
     "summary": "[Éxito] Resumen generado: 5 conceptos clave",
-    "quiz": "[Éxito] Quiz creado: 10 preguntas"
+    "quiz": "[Éxito] Quiz creado: 10 preguntas",
+    "motor": "MOTOR IA",
+    "motorDesc": "Algoritmos avanzados para procesamiento inteligente.",
+    "insights": "ANÁLISIS",
+    "insightsDesc": "Insights de datos en tiempo real.",
+    "community": "COMUNIDAD",
+    "communityDesc": "Únete a una comunidad activa de estudiantes.",
+    "development": "DESARROLLO",
+    "developmentDesc": "Mejores ciclos de desarrollo.",
+    "motorDesk": "MOTOR IA",
+    "motorDescDesk": "Algoritmos avanzados para procesamiento inteligente.",
+    "insightsDesk": "ANÁLISIS",
+    "insightsDescDesk": "Insights de datos en tiempo real.",
+    "communityDesk": "COMUNIDAD",
+    "communityDescDesk": "Únete a una comunidad activa de estudiantes.",
+    "developmentDesk": "DESARROLLO",
+    "developmentDescDesk": "Mejores ciclos de desarrollo."
+  },
+  "featureSection": {
+    "title": "CARACTERÍSTICAS PRINCIPALES",
+    "description": "Descubre cómo nuestra tecnología de IA revoluciona la forma en que aprendes y procesas información",
+    "cardOne": {
+      "title": "TRANSCRIPCIÓN INTELIGENTE",
+      "description": "Convierte automáticamente cualquier audio en texto preciso usando tecnología de reconocimientode voz avanzada con IA.",
+      "bulletPoint1": "SOPORTE PARA 50+ IDIOMAS",
+      "bulletPoint2": "98% DE PRECISIÓN",
+      "bulletPoint3": "PROCESAMIENTO EN TIEMPO REAL"
+    },
+    "cardTwo": {
+      "title": "RESUMEN CON IA",
+      "description": "Extrae automáticamente las ideas clave y conceptos importantes usando modelos de lenguaje deúltima generación.",
+      "bulletPoint1": "RESÚMENES PERSONALIZADOS",
+      "bulletPoint2": "EXTRACCIÓN DE CONCEPTOS CLAVE",
+      "bulletPoint3": "ANÁLISIS DE SENTIMIENTOS"
+    },
+    "cardThree": {
+      "title": "QUIZZES INTERACTIVOS",
+      "description": "Genera automáticamente cuestionarios personalizados que refuerzan el aprendizaje y evalúan lacomprensión.",
+      "bulletPoint1": "PREGUNTAS ADAPTATIVAS",
+      "bulletPoint2": "RETROALIMENTACIÓN INSTANTÁNEA",
+      "bulletPoint3": "SEGUIMIENTO DE PROGRESO"
+    }
+  },
+  "benefitsSection": {
+    "title": "¿POR QUÉ ELEGIR AI LEARN?",
+    "cardOne": {
+      "title": "AHORRA TIEMPO",
+      "description": "Procesa horas de audio en minutos y obtén resúmenes instantáneos"
+    },
+    "cardTwo": {
+      "title": "SEGURO Y PRIVADO",
+      "description": "Tus datos están protegidos con encriptación de nivel empresarial"
+    },
+    "cardThree": {
+      "title": "COLABORATIVO",
+      "description": "Comparte y colabora en proyectos de aprendizaje con tu equipo"
+    },
+    "cardFour": {
+      "title": "MULTIPLATAFORMA",
+      "description": "Accede desde cualquier dispositivo, en cualquier lugar"
+    }
+  },
+  "howItWorksSection": {
+    "title": "¿CÓMO FUNCIONA?",
+    "description": "Tres simples pasos para transformar tu audio en conocimiento estructurado",
+    "cardOne": {
+      "title": "PROPORCIONA AUDIO",
+      "description": "Sube tu archivo de audio, graba directamente o conecta tu micrófono para sesiones en vivo"
+    },
+    "cardTwo": {
+      "title": "IA PROCESA",
+      "description": "Nuestra IA transcribe, analiza el contenido y extrae las ideas clave usando algoritmos avanzados"
+    },
+    "cardThree": {
+      "title": "APRENDE ACTIVAMENTE",
+      "description": "Recibe resúmenes estructurados, quizzes personalizados y material de estudio optimizado"
+    }
+  },
+  "pricingSection": {
+    "title": "PLANES DE PRECIOS",
+    "description": "Elige el plan perfecto para tu nivel de uso y comienza a transformar tu aprendizaje hoy mismo",
+    "popularity": "MÁS POPULAR",
+    "cardOne": {
+      "title": "PLAN PRO",
+      "description": "Perfecto para estudiantes y profesionales",
+      "bulletPoint1": "50 HORAS DE AUDIO/MES",
+      "bulletPoint2": "TRANSCRIPCIÓN AVANZADA CON IA",
+      "bulletPoint3": "RESÚMENES INTELIGENTES PERSONALIZADOS",
+      "bulletPoint4": "QUIZZES ILIMITADOS ADAPTATIVOS",
+      "bulletPoint5": "SOPORTE PRIORITARIO 24/7",
+      "bulletPoint6": "EXPORTACIÓN EN MÚLTIPLES FORMATOS",
+      "button": "COMENZAR PRUEBA GRATIS",
+      "info": "14 DÍAS GRATIS CANCELA CUANDO QUIERAS"
+    },
+    "cardTwo": {
+      "title": "PLAN EMPRESA",
+      "description": "Para equipos y organizaciones",
+      "bulletPoint1": "AUDIO ILIMITADO PARA TODO EL EQUIPO",
+      "bulletPoint2": "IA PERSONALIZADA PARA TU INDUSTRIA",
+      "bulletPoint3": "INTEGRACIONES API COMPLETAS",
+      "bulletPoint4": "EQUIPOS Y COLABORACIÓN ILIMITADA",
+      "bulletPoint5": "SOPORTE DEDICADO Y ONBOARDING",
+      "bulletPoint6": "ANÁLISIS AVANZADOS Y REPORTES",
+      "button": "CONTACTAR VENTAS",
+      "info": "DEMO PERSONALIZADA INCLUIDA"
+    }
+  },
+  "contactSection": {
+    "title": "CONTACTÁNOS",
+    "description": "Nuestro equipo está aquí para ayudarte. Envíanos un mensaje y te responderemos lo antes posible.",
+    "cardOne": {
+      "title": "EMAIL",
+      "description": "hola@ailearn.com",
+      "detail": "soporte@ailearn.com"
+    },
+    "cardTwo": {
+      "title": "TELÉFONO",
+      "description": "+1 (555) 123-4567",
+      "detail": "LUN-VIE, 9:00-18:00"
+    },
+    "cardThree": {
+      "title": "OFICINA",
+      "description": "123 Innovation Street",
+      "detail": "Tech Valley, CA 94000"
+    },
+    "cardFour": {
+      "title": "¿NECESITAS AYUDA INMEDIATA?",
+      "description": "Visita nuestro centro de ayuda para encontrar respuestas a las preguntas más frecuentes",
+      "button": "CENTRO DE AYUDA"
+    }
+  },
+  "contactForm": {
+    "inputOne": {
+      "label": "NOMBRE COMPLETO *",
+      "placeHolder": "TU NOMBRE"
+    },
+    "inputTwo": {
+      "label": "EMAIL *",
+      "placeHolder": "TU@EMAIL.COM"
+    },
+    "inputThree": {
+      "label": "EMPRESA (OPCIONAL)",
+      "placeHolder": "NOMBRE DE TU EMPRESA"
+    },
+    "inputFour": {
+      "label": "MENSAJE *",
+      "placeHolder": "CUÉNTANOS CÓMO PODEMOS AYUDARTE..."
+    },
+    "isSubmiting": "ENVIANDO...",
+    "button": "ENVIAR MENSAJE"
+  },
+  "learnHowToUseSection": {
+    "description": "Únete a miles de estudiantes y profesionales que ya están transformando su forma de aprender con IA. El futuro del aprendizaje personalizado está aquí.",
+    "cta": "EMPEZAR A APRENDER GRATIS",
+    "downloadButton": "DESCARGAR APP",
+    "title": "ARRANCÁ A USAR NUESTRO ASISTENTE HOY"
+  },
+  "footer": {
+    "colOne": {
+      "title": "AI LEARN",
+      "description": "Transformando el futuro del aprendizaje con inteligencia artificial avanzada."
+    },
+    "colTwo": {
+      "title": "PRODUCTO",
+      "rowOne": "CARACTERÍSTICAS",
+      "rowTwo": "PRECIOS",
+      "rowThree": "API",
+      "rowFour": "INTEGRACIONES"
+    },
+    "colThree": {
+      "title": "RECURSOS",
+      "rowOne": "DOCUMENTACIÓN",
+      "rowTwo": "TUTORIALES",
+      "rowThree": "BLOG",
+      "rowFour": "COMUNIDAD"
+    },
+    "colFour": {
+      "title": "SOPORTE",
+      "rowOne": "CENTRO DE AYUDA",
+      "rowTwo": "CONTACTO",
+      "rowThree": "ESTADO DEL SISTEMA",
+      "rowFour": "TÉRMINOS DE SERVICIO"
+    },
+    "copyright": "© 2024 AI LEARNING PLATFORM. TRANSFORMANDO EL FUTURO DEL APRENDIZAJE."
   }
+
 }

@@ -1,4 +1,4 @@
-"use client"
+// "use client" Me tiraba error, me pidió removerlo
 
 import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
