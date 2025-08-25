@@ -113,16 +113,6 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
-
-.tst { 
-  font-size: 4rem;
-  font-weight: 900;
-  background: linear-gradient(45deg, #ff6b00, #ffb84d);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
-}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -136,8 +126,8 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
-    text-transform: uppercase;
+    font-family: var(--font-sans);
+    /* text-transform: uppercase; */
   }
 
   code, pre {
@@ -237,7 +227,7 @@
   border: 2px solid black;
   color: black;
   font-weight: 600;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 0.05em;
 }
 
@@ -251,7 +241,7 @@
   border: 2px solid black;
   color: white;
   font-weight: 600;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 0.05em;
 }
 
@@ -264,7 +254,8 @@
 .mono-input {
   background: white;
   border: 2px solid black;
-  font-family: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+  font-family: var(--font-sans);
+  font-weight: 500;
 }
 
 .mono-input:focus {
@@ -276,7 +267,7 @@
 .mono-code {
   background: #f5f5f5;
   border: 2px solid black;
-  font-family: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+  font-family: var(--font-sans);
   padding: 1rem;
   text-transform: none;
 }

@@ -20,12 +20,16 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center space-x-3 h-48">
-            <div className="w-12 flex items-center justify-center">
+            <div className="w-60 flex items-center justify-center">
+              <Logo className="text-white" /> 
+            </div>
+
+            {/* <div className="w-12 flex items-center justify-center">
               <Logo className="text-white" /> 
             </div>
             <span className="text-lg sm:text-xl font-bold text-black uppercase tracking-wider">
               {t("navbar.logo")}
-            </span>
+            </span> */}
           </div>
 
           {/* Desktop Navigation */}

@@ -77,7 +77,7 @@ export function ContactForm() {
                 value={formData.name}
                 onChange={handleChange}
                 className="w-full px-4 py-3 mono-input transition-all duration-200"
-                placeholder="TU NOMBRE"
+                placeholder="Tu nombre"
               />
             </div>
             <div>
@@ -92,7 +92,7 @@ export function ContactForm() {
                 value={formData.email}
                 onChange={handleChange}
                 className="w-full px-4 py-3 mono-input transition-all duration-200"
-                placeholder="TU@EMAIL.COM"
+                placeholder="tu@email.com"
               />
             </div>
           </div>
@@ -108,7 +108,7 @@ export function ContactForm() {
               value={formData.company}
               onChange={handleChange}
               className="w-full px-4 py-3 mono-input transition-all duration-200"
-              placeholder="NOMBRE DE TU EMPRESA"
+              placeholder="Nombre de tu empresa"
             />
           </div>
 
@@ -124,7 +124,7 @@ export function ContactForm() {
               value={formData.message}
               onChange={handleChange}
               className="w-full px-4 py-3 mono-input resize-none transition-all duration-200"
-              placeholder="CUÉNTANOS CÓMO PODEMOS AYUDARTE..."
+              placeholder="Cuéntanos cómo podemos ayudarte..."
             />
           </div>
 
