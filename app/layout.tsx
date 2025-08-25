@@ -1,9 +1,8 @@
-"use client"
-
 import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import './globals.css'
+import '@/styles/performance-optimizations.css'
 import { I18nProvider } from '@/lib/i18n'
 
 export const metadata: Metadata = {

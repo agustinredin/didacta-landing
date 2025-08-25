@@ -113,6 +113,16 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+
+.tst { 
+  font-size: 4rem;
+  font-weight: 900;
+  background: linear-gradient(45deg, #ff6b00, #ffb84d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -214,6 +224,7 @@
   background: white;
   border: 2px solid black;
   box-shadow: 4px 4px 0px black;
+  border-radius: 1rem;
 }
 
 .mono-card:hover {
