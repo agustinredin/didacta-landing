@@ -267,7 +267,7 @@
 .mono-code {
   background: #f5f5f5;
   border: 2px solid black;
-  font-family: var(--font-sans);
+  /* font-family: var(--font-sans); */
   padding: 1rem;
   text-transform: none;
 }
