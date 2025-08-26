@@ -26,6 +26,7 @@ import {
 } from "lucide-react"
 import { useState } from "react"
 import { useI18n } from "@/lib/i18n"
+import Phone3D from "./components/phone"
 
 export default function Component() {
   const [isOnboardingOpen, setIsOnboardingOpen] = useState(false)
@@ -58,9 +59,8 @@ export default function Component() {
 
                 <AnimatedSection animation="fadeInUp" delay={600}>
                   <div className="mono-code">
-                    <div className="text-sm text-gray-600 mb-2">{t("hero.descriptionLabel")}</div>
-                    <p className="text-base sm:text-lg text-black leading-relaxed">
-                      {t("hero.description")}
+                    <p className="text-base sm:text-md text-black leading-relaxed">
+                      {t("hero.description")} 
                     </p>
                   </div>
                 </AnimatedSection>
@@ -947,6 +947,9 @@ export default function Component() {
         {/* Onboarding Modal */}
         <OnboardingModal isOpen={isOnboardingOpen} onClose={() => setIsOnboardingOpen(false)} />
       </div>
+          {/* <div>
+      <Phone3D imageUrl='step1.png' />
+    </div> */}
     </>
   )
 }

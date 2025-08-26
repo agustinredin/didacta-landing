@@ -484,3 +484,33 @@ section[id] {
     background-color: #f8f8f8;
   }
 }
+
+/* .phone-container {
+  perspective: 950px; 
+  width: 250px;
+  margin: 50px auto;
+}
+
+.phone-frame {
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+  transform: rotateY(-15deg) rotateX(5deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.phone-screen {
+  width: 96%;
+  height: 92%;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.phone-screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
