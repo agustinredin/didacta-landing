@@ -27,6 +27,7 @@ import {
 import { useState } from "react"
 import { useI18n } from "@/lib/i18n"
 import Phone3D from "./components/phone"
+import Link from "next/link"
 
 export default function Component() {
   const [isOnboardingOpen, setIsOnboardingOpen] = useState(false)
@@ -74,9 +75,12 @@ export default function Component() {
                     >
                       {t("hero.startFree")}
                     </Button>
+                    {/* TEMPORALMENTE LINKEADO A MENU */}
+                    <Link href="/menu-page" target="_blank" rel="noopener noreferrer">
                     <Button size="lg" className="text-lg px-8 py-4 mono-button">
                       {t("hero.learnMore")}
                     </Button>
+                    </Link>
                   </div>
                 </AnimatedSection>
               </div>
