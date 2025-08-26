@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X, Zap, Brain } from "lucide-react"
 import { useI18n } from "@/lib/i18n"
+import Logo from "./Logo"
 
 interface NavbarProps {
   setIsOnboardingOpen?: (open: boolean) => void
@@ -18,9 +19,9 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 bg-black flex items-center justify-center">
-              <Brain className="h-5 w-5 text-white" /> 
+          <div className="flex items-center space-x-3 h-48">
+            <div className="w-12 flex items-center justify-center">
+              <Logo className="text-white" /> 
             </div>
             <span className="text-lg sm:text-xl font-bold text-black uppercase tracking-wider">
               {t("navbar.logo")}
@@ -67,7 +68,7 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
               onClick={() => switchLang(lang === "en" ? "es" : "en")}
               className="text-xs border border-black px-2 py-1 uppercase"
             >
-              {lang === "en" ? "ES" : "EN"}
+              {lang === "en" ? "EN" : "ES"}
             </button>
             <div className="md:lg:hidden">
               <button

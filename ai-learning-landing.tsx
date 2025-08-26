@@ -17,7 +17,6 @@ import {
   Users,
   Clock,
   Shield,
-  Download,
   Globe,
   Smartphone,
   Laptop,
@@ -494,7 +493,7 @@ export default function Component() {
                     </p>
                   </div>
                   <div className="flex lg:hidden justify-center my-4">
-                    <div className="text-2xl font-bold text-black rotate-90">→</div>
+                    <div className="text-2xl font-bold text-black rotate-90">&nbsp;</div>
                   </div>
                 </div>
               </AnimatedSection>
@@ -814,10 +813,12 @@ export default function Component() {
                     <Target className="mr-2 h-5 w-5" />
                     {t("learnHowToUseSection.cta")}
                   </Button>
-                  <Button size="lg" className="text-lg px-12 py-6 mono-button">
+                  {/* TODO <Button size="lg" className="text-lg px-12 py-6 mono-button">
                     <Download className="mr-2 h-5 w-5" />
                     {t("learnHowToUseSection.downloadButton")}
                   </Button>
+                    DESCARGAR APP
+                  </Button> */}
                 </div>
               </div>
             </AnimatedSection>
