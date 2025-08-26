@@ -119,9 +119,9 @@ export default function Component() {
                           <div className="w-6 h-6 bg-black flex items-center justify-center">
                             <Brain className="h-4 w-4 text-white" />
                           </div>
-                          <span className="font-bold text-xs uppercase">MOTOR IA</span>
+                          <div className="font-bold text-xs uppercase">{t("hero.motor")}</div>
                         </div>
-                        <p className="text-xs text-gray-700">Algoritmos avanzados para procesamiento inteligente.</p>
+                        <p className="text-xs text-gray-700">{t("hero.motorDesc")}</p>
                       </div>
 
                       <div className="mono-card p-4 bg-white floating-card">
@@ -129,9 +129,9 @@ export default function Component() {
                           <div className="w-6 h-6 bg-black flex items-center justify-center">
                             <Zap className="h-4 w-4 text-white" />
                           </div>
-                          <span className="font-bold text-xs uppercase">ANÁLISIS</span>
+                          <span className="font-bold text-xs uppercase">{t("hero.insights")}</span>
                         </div>
-                        <p className="text-xs text-gray-700">Insights de datos en tiempo real.</p>
+                        <p className="text-xs text-gray-700">{t("hero.insightsDesc")}</p>
                       </div>
 
                       <div className="mono-card p-4 bg-white floating-card">
@@ -139,9 +139,9 @@ export default function Component() {
                           <div className="w-6 h-6 bg-black flex items-center justify-center">
                             <Users className="h-4 w-4 text-white" />
                           </div>
-                          <span className="font-bold text-xs uppercase">COMUNIDAD</span>
+                          <span className="font-bold text-xs uppercase">{t("hero.community")}</span>
                         </div>
-                        <p className="text-xs text-gray-700">Únete a una comunidad activa de estudiantes.</p>
+                        <p className="text-xs text-gray-700">{t("hero.communityDesc")}</p>
                       </div>
 
                       <div className="mono-card p-4 bg-white floating-card">
@@ -149,9 +149,9 @@ export default function Component() {
                           <div className="w-6 h-6 bg-black flex items-center justify-center">
                             <Laptop className="h-4 w-4 text-white" />
                           </div>
-                          <span className="font-bold text-xs uppercase">DESARROLLO</span>
+                          <span className="font-bold text-xs uppercase">{t("hero.development")}</span>
                         </div>
-                        <p className="text-xs text-gray-700">Mejores ciclos de desarrollo.</p>
+                        <p className="text-xs text-gray-700">{t("hero.developmentDesc")}</p>
                       </div>
                     </div>
 
@@ -164,9 +164,9 @@ export default function Component() {
                             <div className="w-6 h-6 bg-black flex items-center justify-center">
                               <Brain className="h-4 w-4 text-white" />
                             </div>
-                            <span className="font-bold text-xs uppercase">MOTOR IA</span>
+                            <span className="font-bold text-xs uppercase">{t("hero.motorDesk")}</span>
                           </div>
-                          <p className="text-xs text-gray-700">Algoritmos avanzados para procesamiento inteligente.</p>
+                          <p className="text-xs text-gray-700">{t("hero.motorDescDesk")}</p>
                         </div>
                       </AnimatedSection>
 
@@ -177,9 +177,9 @@ export default function Component() {
                             <div className="w-6 h-6 bg-black flex items-center justify-center">
                               <Zap className="h-4 w-4 text-white" />
                             </div>
-                            <span className="font-bold text-xs uppercase">ANÁLISIS</span>
+                            <span className="font-bold text-xs uppercase">{t("hero.insightsDesk")}</span>
                           </div>
-                          <p className="text-xs text-gray-700">Insights de datos en tiempo real.</p>
+                          <p className="text-xs text-gray-700">{t("hero.insightsDescDesk")}</p>
                         </div>
                       </AnimatedSection>
 
@@ -190,9 +190,9 @@ export default function Component() {
                             <div className="w-6 h-6 bg-black flex items-center justify-center">
                               <Users className="h-4 w-4 text-white" />
                             </div>
-                            <span className="font-bold text-xs uppercase">COMUNIDAD</span>
+                            <span className="font-bold text-xs uppercase">{t("hero.communityDesk")}</span>
                           </div>
-                          <p className="text-xs text-gray-700">Únete a una comunidad activa de estudiantes.</p>
+                          <p className="text-xs text-gray-700">{t("hero.communityDescDesk")}</p>
                         </div>
                       </AnimatedSection>
 
@@ -203,9 +203,9 @@ export default function Component() {
                             <div className="w-6 h-6 bg-black flex items-center justify-center">
                               <Laptop className="h-4 w-4 text-white" />
                             </div>
-                            <span className="font-bold text-xs uppercase">DESARROLLO</span>
+                            <span className="font-bold text-xs uppercase">{t("hero.developmentDesk")}</span>
                           </div>
-                          <p className="text-xs text-gray-700">Mejores ciclos de desarrollo.</p>
+                          <p className="text-xs text-gray-700">{t("hero.developmentDescDesk")}</p>
                         </div>
                       </AnimatedSection>
                     </div>
@@ -214,7 +214,7 @@ export default function Component() {
               </div>
             </div>
 
-            {/* Stats - TODO: Real stats */}
+            {/* Stats - TODO: Real stats (No se renderiza?)*/}
             <AnimatedSection animation="fadeInUp" delay={1800} className="hidden">
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto mt-12 sm:mt-20 pt-8 sm:pt-16 border-t-2 border-black">
                 <div className="text-center mono-card p-6">
@@ -240,12 +240,11 @@ export default function Component() {
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-20">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-black tracking-tight uppercase">
-                  CARACTERÍSTICAS PRINCIPALES
+                  {t("featureSection.title")}
                 </h2>
                 <div className="mono-code max-w-3xl mx-auto">
-                  <div className="text-sm text-gray-600 mb-2">// DESCRIPCIÓN</div>
                   <p className="text-sm text-black">
-                    Descubre cómo nuestra tecnología de IA revoluciona la forma en que aprendes y procesas información
+                    {t("featureSection.description")}
                   </p>
                 </div>
               </div>
@@ -262,27 +261,25 @@ export default function Component() {
                       <div className="w-4 h-4 bg-black mx-auto"></div>
                     </div>
                     <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">
-                      TRANSCRIPCIÓN INTELIGENTE
+                      {t("featureSection.cardOne.title")}
                     </h3>
                     <div className="mono-code text-left mb-4">
-                      <div className="text-xs text-gray-600 mb-1">// CARACTERÍSTICAS</div>
                       <p className="text-sm text-black">
-                        Convierte automáticamente cualquier audio en texto preciso usando tecnología de reconocimiento
-                        de voz avanzada con IA.
+                        {t("featureSection.cardOne.description")}
                       </p>
                     </div>
                     <ul className="text-xs text-gray-600 space-y-2 text-left">
                       <li className="flex items-center">
                         <div className="w-2 h-2 bg-black mr-2"></div>
-                        SOPORTE PARA 50+ IDIOMAS
+                        {t("featureSection.cardOne.bulletPoint1")}
                       </li>
                       <li className="flex items-center">
                         <div className="w-2 h-2 bg-black mr-2"></div>
-                        98% DE PRECISIÓN
+                        {t("featureSection.cardOne.bulletPoint2")}
                       </li>
                       <li className="flex items-center">
                         <div className="w-2 h-2 bg-black mr-2"></div>
-                        PROCESAMIENTO EN TIEMPO REAL
+                        {t("featureSection.cardOne.bulletPoint3")}
                       </li>
                     </ul>
                   </CardContent>
@@ -298,26 +295,24 @@ export default function Component() {
                       </div>
                       <div className="w-4 h-4 bg-black mx-auto"></div>
                     </div>
-                    <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">RESUMEN CON IA</h3>
+                    <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">{t("featureSection.cardTwo.title")}</h3>
                     <div className="mono-code text-left mb-4">
-                      <div className="text-xs text-gray-600 mb-1">// CARACTERÍSTICAS</div>
                       <p className="text-sm text-black">
-                        Extrae automáticamente las ideas clave y conceptos importantes usando modelos de lenguaje de
-                        última generación.
+                        {t("featureSection.cardTwo.description")}
                       </p>
                     </div>
                     <ul className="text-xs text-gray-600 space-y-2 text-left">
                       <li className="flex items-center">
                         <div className="w-2 h-2 bg-black mr-2"></div>
-                        RESÚMENES PERSONALIZADOS
+                        {t("featureSection.cardTwo.bulletPoint1")}
                       </li>
                       <li className="flex items-center">
                         <div className="w-2 h-2 bg-black mr-2"></div>
-                        EXTRACCIÓN DE CONCEPTOS CLAVE
+                        {t("featureSection.cardTwo.bulletPoint2")}
                       </li>
                       <li className="flex items-center">
                         <div className="w-2 h-2 bg-black mr-2"></div>
-                        ANÁLISIS DE SENTIMIENTOS
+                        {t("featureSection.cardTwo.bulletPoint3")}
                       </li>
                     </ul>
                   </CardContent>
@@ -333,26 +328,24 @@ export default function Component() {
                       </div>
                       <div className="w-4 h-4 bg-black mx-auto"></div>
                     </div>
-                    <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">QUIZZES INTERACTIVOS</h3>
+                    <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">{t("featureSection.cardThree.title")}</h3>
                     <div className="mono-code text-left mb-4">
-                      <div className="text-xs text-gray-600 mb-1">// CARACTERÍSTICAS</div>
                       <p className="text-sm text-black">
-                        Genera automáticamente cuestionarios personalizados que refuerzan el aprendizaje y evalúan la
-                        comprensión.
+                        {t("featureSection.cardThree.description")}
                       </p>
                     </div>
                     <ul className="text-xs text-gray-600 space-y-2 text-left">
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        PREGUNTAS ADAPTATIVAS
+                        {t("featureSection.cardThree.bulletPoint1")}
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        RETROALIMENTACIÓN INSTANTÁNEA
+                        {t("featureSection.cardThree.bulletPoint2")}
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        SEGUIMIENTO DE PROGRESO
+                        {t("featureSection.cardThree.bulletPoint3")}
                       </li>
                     </ul>
                   </CardContent>
@@ -368,7 +361,7 @@ export default function Component() {
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-20">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-black tracking-tight uppercase">
-                  ¿POR QUÉ ELEGIR AI LEARN?
+                  {t("benefitsSection.title")}
                 </h2>
               </div>
             </AnimatedSection>
@@ -379,9 +372,9 @@ export default function Component() {
                   <div className="w-12 h-12 mx-auto mb-4 bg-black flex items-center justify-center">
                     <Clock className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="text-lg font-bold mb-3 text-black uppercase tracking-wide">AHORRA TIEMPO</h3>
+                  <h3 className="text-lg font-bold mb-3 text-black uppercase tracking-wide">{t("benefitsSection.cardOne.title")}</h3>
                   <p className="text-sm text-gray-600">
-                    Procesa horas de audio en minutos y obtén resúmenes instantáneos
+                    {t("benefitsSection.cardOne.description")}
                   </p>
                 </div>
               </AnimatedSection>
@@ -391,9 +384,9 @@ export default function Component() {
                   <div className="w-12 h-12 mx-auto mb-4 bg-black flex items-center justify-center">
                     <Shield className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="text-lg font-bold mb-3 text-black uppercase tracking-wide">SEGURO Y PRIVADO</h3>
+                  <h3 className="text-lg font-bold mb-3 text-black uppercase tracking-wide">{t("benefitsSection.cardTwo.title")}</h3>
                   <p className="text-sm text-gray-600">
-                    Tus datos están protegidos con encriptación de nivel empresarial
+                    {t("benefitsSection.cardTwo.description")}
                   </p>
                 </div>
               </AnimatedSection>
@@ -403,8 +396,8 @@ export default function Component() {
                   <div className="w-12 h-12 mx-auto mb-4 bg-black flex items-center justify-center">
                     <Users className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="text-lg font-bold mb-3 text-black uppercase tracking-wide">COLABORATIVO</h3>
-                  <p className="text-sm text-gray-600">Comparte y colabora en proyectos de aprendizaje con tu equipo</p>
+                  <h3 className="text-lg font-bold mb-3 text-black uppercase tracking-wide">{t("benefitsSection.cardThree.title")}</h3>
+                  <p className="text-sm text-gray-600">{t("benefitsSection.cardThree.description")}</p>
                 </div>
               </AnimatedSection>
 
@@ -413,8 +406,8 @@ export default function Component() {
                   <div className="w-12 h-12 mx-auto mb-4 bg-black flex items-center justify-center">
                     <Globe className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="text-lg font-bold mb-3 text-black uppercase tracking-wide">MULTIPLATAFORMA</h3>
-                  <p className="text-sm text-gray-600">Accede desde cualquier dispositivo, en cualquier lugar</p>
+                  <h3 className="text-lg font-bold mb-3 text-black uppercase tracking-wide">{t("benefitsSection.cardFour.title")}</h3>
+                  <p className="text-sm text-gray-600">{t("benefitsSection.cardFour.description")}</p>
                 </div>
               </AnimatedSection>
             </div>
@@ -427,12 +420,12 @@ export default function Component() {
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-20">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-black tracking-tight uppercase">
-                  CÓMO FUNCIONA
+                  {t("howItWorksSection.title")}
                 </h2>
                 <div className="mono-code max-w-3xl mx-auto">
                   <div className="text-sm text-gray-600 mb-2">// PROCESO</div>
                   <p className="text-sm text-black">
-                    Tres simples pasos para transformar tu audio en conocimiento estructurado
+                    {t("howItWorksSection.description")}
                   </p>
                 </div>
               </div>
@@ -444,11 +437,11 @@ export default function Component() {
                   <div className="w-20 h-20 mx-auto bg-black flex items-center justify-center mb-6">
                     <span className="text-2xl font-bold text-white">1</span>
                   </div>
-                  <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">PROPORCIONA AUDIO</h3>
+                  <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">{t("howItWorksSection.cardOne.title")}</h3>
                   <div className="mono-code text-left">
                     <div className="text-xs text-gray-600 mb-1">// ENTRADA</div>
                     <p className="text-sm text-black">
-                      Sube tu archivo de audio, graba directamente o conecta tu micrófono para sesiones en vivo
+                      {t("howItWorksSection.cardOne.description")}
                     </p>
                   </div>
                   <div className="flex lg:hidden justify-center my-4">
@@ -468,11 +461,11 @@ export default function Component() {
                   <div className="w-20 h-20 mx-auto bg-black flex items-center justify-center mb-6">
                     <span className="text-2xl font-bold text-white">2</span>
                   </div>
-                  <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">IA PROCESA</h3>
+                  <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">{t("howItWorksSection.cardTwo.title")}</h3>
                   <div className="mono-code text-left">
                     <div className="text-xs text-gray-600 mb-1">// PROCESAMIENTO</div>
                     <p className="text-sm text-black">
-                      Nuestra IA transcribe, analiza el contenido y extrae las ideas clave usando algoritmos avanzados
+                      {t("howItWorksSection.cardTwo.description")}
                     </p>
                   </div>
                   <div className="flex lg:hidden justify-center my-4">
@@ -492,11 +485,11 @@ export default function Component() {
                   <div className="w-20 h-20 mx-auto bg-black flex items-center justify-center mb-6">
                     <span className="text-2xl font-bold text-white">3</span>
                   </div>
-                  <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">APRENDE ACTIVAMENTE</h3>
+                  <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">{t("howItWorksSection.cardThree.title")}</h3>
                   <div className="mono-code text-left">
                     <div className="text-xs text-gray-600 mb-1">// SALIDA</div>
                     <p className="text-sm text-black">
-                      Recibe resúmenes estructurados, quizzes personalizados y material de estudio optimizado
+                      {t("howItWorksSection.cardThree.description")}
                     </p>
                   </div>
                   <div className="flex lg:hidden justify-center my-4">
@@ -508,7 +501,7 @@ export default function Component() {
           </div>
         </section>
 
-        {/* Testimonials Section - TODO: Real testimonials */}
+        {/* Testimonials Section - TODO: Real testimonials (No se está renderizando actualmente) */}
         <section id="testimonials" className="relative hidden mx-8 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-gray-50">
           <div className="max-w-6xl mx-auto">
             <AnimatedSection animation="fadeInUp">
@@ -607,12 +600,12 @@ export default function Component() {
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-20">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-black tracking-tight uppercase">
-                  PLANES DE PRECIOS
+                  {t("pricingSection.title")}
                 </h2>
                 <div className="mono-code max-w-3xl mx-auto">
                   <div className="text-sm text-gray-600 mb-2">// OPCIONES</div>
                   <p className="text-sm text-black">
-                    Elige el plan perfecto para tu nivel de uso y comienza a transformar tu aprendizaje hoy mismo
+                    {t("pricingSection.description")}
                   </p>
                 </div>
               </div>
@@ -622,51 +615,51 @@ export default function Component() {
               <AnimatedSection animation="fadeInLeft" delay={200}>
                 <Card className="mono-card border-4 border-black relative">
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-black text-white px-6 py-2 text-sm font-bold uppercase tracking-wide">
-                    MÁS POPULAR
+                    {t("pricingSection.popularity")}
                   </div>
                   <CardContent className="p-8 text-center">
-                    <h3 className="text-2xl font-bold mb-4 text-black uppercase tracking-wide">PLAN PRO</h3>
+                    <h3 className="text-2xl font-bold mb-4 text-black uppercase tracking-wide">{t("pricingSection.cardOne.title")}</h3>
                     <div className="text-4xl font-bold mb-6 text-black">
                       $19<span className="text-lg text-gray-600">/MES</span>
                     </div>
                     <div className="mono-code mb-6">
                       <div className="text-xs text-gray-600 mb-1">// OBJETIVO</div>
-                      <p className="text-sm text-black">Perfecto para estudiantes y profesionales</p>
+                      <p className="text-sm text-black">{t("pricingSection.cardOne.description")}</p>
                     </div>
                     <ul className="space-y-3 mb-8 text-left text-sm">
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        50 HORAS DE AUDIO/MES
+                        {t("pricingSection.cardOne.bulletPoint1")}
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        TRANSCRIPCIÓN AVANZADA CON IA
+                        {t("pricingSection.cardOne.bulletPoint2")}
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        RESÚMENES INTELIGENTES PERSONALIZADOS
+                        {t("pricingSection.cardOne.bulletPoint3")}
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        QUIZZES ILIMITADOS ADAPTATIVOS
+                        {t("pricingSection.cardOne.bulletPoint4")}
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        SOPORTE PRIORITARIO 24/7
+                        {t("pricingSection.cardOne.bulletPoint5")}
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        EXPORTACIÓN EN MÚLTIPLES FORMATOS
+                        {t("pricingSection.cardOne.bulletPoint6")}
                       </li>
                     </ul>
                     <Button
                       onClick={() => setIsOnboardingOpen(true)}
                       className="w-full mono-button-primary py-4 text-lg font-medium"
                     >
-                      COMENZAR PRUEBA GRATIS
+                      {t("pricingSection.cardOne.button")}
                     </Button>
                     <p className="text-xs text-gray-500 mt-4 uppercase tracking-wide">
-                      14 DÍAS GRATIS CANCELA CUANDO QUIERAS
+                      {t("pricingSection.cardOne.info")}
                     </p>
                   </CardContent>
                 </Card>
@@ -675,42 +668,42 @@ export default function Component() {
               <AnimatedSection animation="fadeInRight" delay={400}>
                 <Card className="mono-card">
                   <CardContent className="p-8 text-center">
-                    <h3 className="text-2xl font-bold mb-4 text-black uppercase tracking-wide">PLAN EMPRESA</h3>
+                    <h3 className="text-2xl font-bold mb-4 text-black uppercase tracking-wide">{t("pricingSection.cardTwo.title")}</h3>
                     <div className="text-4xl font-bold mb-6 text-black">
                       $99<span className="text-lg text-gray-600">/MES</span>
                     </div>
                     <div className="mono-code mb-6">
                       <div className="text-xs text-gray-600 mb-1">// OBJETIVO</div>
-                      <p className="text-sm text-black">Para equipos y organizaciones</p>
+                      <p className="text-sm text-black">{t("pricingSection.cardTwo.description")}</p>
                     </div>
                     <ul className="space-y-3 mb-8 text-left text-sm">
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        AUDIO ILIMITADO PARA TODO EL EQUIPO
+                        {t("pricingSection.cardTwo.bulletPoint1")}
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        IA PERSONALIZADA PARA TU INDUSTRIA
+                        {t("pricingSection.cardTwo.bulletPoint2")}
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        INTEGRACIONES API COMPLETAS
+                        {t("pricingSection.cardTwo.bulletPoint3")}
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        EQUIPOS Y COLABORACIÓN ILIMITADA
+                        {t("pricingSection.cardTwo.bulletPoint4")}
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        SOPORTE DEDICADO Y ONBOARDING
+                        {t("pricingSection.cardTwo.bulletPoint5")}
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        ANÁLISIS AVANZADOS Y REPORTES
+                        {t("pricingSection.cardTwo.bulletPoint6")}
                       </li>
                     </ul>
-                    <Button className="w-full mono-button py-4 text-lg font-medium">CONTACTAR VENTAS</Button>
-                    <p className="text-xs text-gray-500 mt-4 uppercase tracking-wide">DEMO PERSONALIZADA INCLUIDA</p>
+                    <Button className="w-full mono-button py-4 text-lg font-medium">{t("pricingSection.cardTwo.button")}</Button>
+                    <p className="text-xs text-gray-500 mt-4 uppercase tracking-wide">{t("pricingSection.cardTwo.info")}</p>
                   </CardContent>
                 </Card>
               </AnimatedSection>
@@ -724,12 +717,12 @@ export default function Component() {
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-20">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-black tracking-tight uppercase">
-                  CONTÁCTANOS
+                  {t("contactSection.title")}
                 </h2>
                 <div className="mono-code max-w-3xl mx-auto">
                   <div className="text-sm text-gray-600 mb-2">// SOPORTE</div>
                   <p className="text-sm text-black">
-                    Nuestro equipo está aquí para ayudarte. Envíanos un mensaje y te responderemos lo antes posible.
+                    {t("contactSection.description")}
                   </p>
                 </div>
               </div>
@@ -744,9 +737,9 @@ export default function Component() {
                         <Mail className="h-5 w-5 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-lg font-bold text-black mb-2 uppercase">EMAIL</h3>
-                        <p className="text-gray-600 font-mono">hola@ailearn.com</p>
-                        <p className="text-gray-600 font-mono">soporte@ailearn.com</p>
+                        <h3 className="text-lg font-bold text-black mb-2 uppercase">{t("contactSection.cardOne.title")}</h3>
+                        <p className="text-gray-600 font-mono">{t("contactSection.cardOne.description")}</p>
+                        <p className="text-gray-600 font-mono">{t("contactSection.cardOne.detail")}</p>
                       </div>
                     </div>
                   </div>
@@ -757,9 +750,9 @@ export default function Component() {
                         <Phone className="h-5 w-5 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-lg font-bold text-black mb-2 uppercase">TELÉFONO</h3>
-                        <p className="text-gray-600 font-mono">+1 (555) 123-4567</p>
-                        <p className="text-gray-500 text-sm uppercase">LUN-VIE, 9:00-18:00</p>
+                        <h3 className="text-lg font-bold text-black mb-2 uppercase">{t("contactSection.cardTwo.title")}</h3>
+                        <p className="text-gray-600 font-mono">{t("contactSection.cardTwo.description")}</p>
+                        <p className="text-gray-500 text-sm uppercase">{t("contactSection.cardTwo.detail")}</p>
                       </div>
                     </div>
                   </div>
@@ -770,19 +763,19 @@ export default function Component() {
                         <MapPin className="h-5 w-5 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-lg font-bold text-black mb-2 uppercase">OFICINA</h3>
-                        <p className="text-gray-600 font-mono">123 Innovation Street</p>
-                        <p className="text-gray-600 font-mono">Tech Valley, CA 94000</p>
+                        <h3 className="text-lg font-bold text-black mb-2 uppercase">{t("contactSection.cardThree.title")}</h3>
+                        <p className="text-gray-600 font-mono">{t("contactSection.cardThree.description")}</p>
+                        <p className="text-gray-600 font-mono">{t("contactSection.cardThree.detail")}</p>
                       </div>
                     </div>
                   </div>
 
                   <div className="mono-card p-6">
-                    <h3 className="text-lg font-bold text-black mb-3 uppercase">¿NECESITAS AYUDA INMEDIATA?</h3>
+                    <h3 className="text-lg font-bold text-black mb-3 uppercase">{t("contactSection.cardFour.title")}</h3>
                     <p className="text-gray-600 mb-4 text-sm">
-                      Visita nuestro centro de ayuda para encontrar respuestas a las preguntas más frecuentes.
+                      {t("contactSection.cardFour.description")}
                     </p>
-                    <Button className="mono-button">CENTRO DE AYUDA</Button>
+                    <Button className="mono-button">{t("contactSection.cardFour.button")}</Button>
                   </div>
                 </div>
               </AnimatedSection>
@@ -803,13 +796,12 @@ export default function Component() {
                   <Sparkles className="h-8 w-8 text-white" />
                 </div>
                 <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-8 tracking-tight uppercase">
-                  ARRANCÁ A USAR NUESTRO ASISTENTE HOY
+                  {t("learnHowToUseSection.title")}
                 </h2>
                 <div className="mono-code mb-12 max-w-3xl mx-auto">
                   <div className="text-sm text-gray-600 mb-2">// LLAMADA A LA ACCIÓN</div>
                   <p className="text-sm text-black leading-relaxed">
-                    Únete a miles de estudiantes y profesionales que ya están transformando su forma de aprender con IA.
-                    El futuro del aprendizaje personalizado está aquí.
+                    {t("learnHowToUseSection.description")}
                   </p>
                 </div>
                 <div className="flex flex-wrap flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
@@ -819,10 +811,12 @@ export default function Component() {
                     className="text-lg px-12 py-6 mono-button-primary"
                   >
                     <Target className="mr-2 h-5 w-5" />
-                    EMPEZAR
+                    {t("learnHowToUseSection.cta")}
                   </Button>
                   {/* TODO <Button size="lg" className="text-lg px-12 py-6 mono-button">
                     <Download className="mr-2 h-5 w-5" />
+                    {t("learnHowToUseSection.downloadButton")}
+                  </Button>
                     DESCARGAR APP
                   </Button> */}
                 </div>
@@ -840,12 +834,12 @@ export default function Component() {
                   <div className="w-8 h-8 bg-black flex items-center justify-center">
                     <Brain className="h-5 w-5 text-white" />
                   </div>
-                  <span className="text-xl font-bold text-black uppercase tracking-wider">AI LEARN</span>
+                  <span className="text-xl font-bold text-black uppercase tracking-wider">{t("footer.colOne.title")}</span>
                 </div>
                 <div className="mono-code mb-4">
                   <div className="text-xs text-gray-600 mb-1">// MISIÓN</div>
                   <p className="text-sm text-black">
-                    Transformando el futuro del aprendizaje con inteligencia artificial avanzada.
+                    {t("footer.colOne.description")}
                   </p>
                 </div>
                 <div className="flex space-x-4">
@@ -862,78 +856,78 @@ export default function Component() {
               </div>
 
               <div>
-                <h4 className="font-bold text-black mb-4 uppercase tracking-wide">PRODUCTO</h4>
+                <h4 className="font-bold text-black mb-4 uppercase tracking-wide">{t("footer.colTwo.title")}</h4>
                 <ul className="space-y-2 text-gray-600 text-sm">
                   <li>
                     <a href="#features" className="hover:text-black transition-colors uppercase">
-                      CARACTERÍSTICAS
+                      {t("footer.colTwo.rowOne")}
                     </a>
                   </li>
                   <li>
                     <a href="#pricing" className="hover:text-black transition-colors uppercase">
-                      PRECIOS
+                      {t("footer.colTwo.rowTwo")}
                     </a>
                   </li>
                   <li>
                     <a href="#" className="hover:text-black transition-colors uppercase">
-                      API
+                      {t("footer.colTwo.rowThree")}
                     </a>
                   </li>
                   <li>
                     <a href="#" className="hover:text-black transition-colors uppercase">
-                      INTEGRACIONES
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h4 className="font-bold text-black mb-4 uppercase tracking-wide">RECURSOS</h4>
-                <ul className="space-y-2 text-gray-600 text-sm">
-                  <li>
-                    <a href="#" className="hover:text-black transition-colors uppercase">
-                      DOCUMENTACIÓN
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-black transition-colors uppercase">
-                      TUTORIALES
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-black transition-colors uppercase">
-                      BLOG
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-black transition-colors uppercase">
-                      COMUNIDAD
+                      {t("footer.colTwo.rowFour")}
                     </a>
                   </li>
                 </ul>
               </div>
 
               <div>
-                <h4 className="font-bold text-black mb-4 uppercase tracking-wide">SOPORTE</h4>
+                <h4 className="font-bold text-black mb-4 uppercase tracking-wide">{t("footer.colThree.title")}</h4>
                 <ul className="space-y-2 text-gray-600 text-sm">
                   <li>
                     <a href="#" className="hover:text-black transition-colors uppercase">
-                      CENTRO DE AYUDA
+                      {t("footer.colThree.rowOne")}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="hover:text-black transition-colors uppercase">
+                      {t("footer.colThree.rowTwo")}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="hover:text-black transition-colors uppercase">
+                      {t("footer.colThree.rowThree")}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="hover:text-black transition-colors uppercase">
+                      {t("footer.colThree.rowFour")}
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="font-bold text-black mb-4 uppercase tracking-wide">{t("footer.colFour.title")}</h4>
+                <ul className="space-y-2 text-gray-600 text-sm">
+                  <li>
+                    <a href="#" className="hover:text-black transition-colors uppercase">
+                      {t("footer.colFour.rowOne")}
                     </a>
                   </li>
                   <li>
                     <a href="#contact" className="hover:text-black transition-colors uppercase">
-                      CONTACTO
+                      {t("footer.colFour.rowTwo")}
                     </a>
                   </li>
                   <li>
                     <a href="#" className="hover:text-black transition-colors uppercase">
-                      ESTADO DEL SISTEMA
+                      {t("footer.colFour.rowThree")}
                     </a>
                   </li>
                   <li>
                     <a href="#" className="hover:text-black transition-colors uppercase">
-                      TÉRMINOS DE SERVICIO
+                      {t("footer.colFour.rowFour")}
                     </a>
                   </li>
                 </ul>
@@ -942,9 +936,8 @@ export default function Component() {
 
             <div className="border-t-2 border-black pt-8 text-center">
               <div className="mono-code">
-                <div className="text-xs text-gray-600 mb-1">// COPYRIGHT</div>
                 <p className="text-sm text-black uppercase tracking-wide">
-                  © 2024 AI LEARNING PLATFORM. TRANSFORMANDO EL FUTURO DEL APRENDIZAJE.
+                  {t("footer.copyright")}
                 </p>
               </div>
             </div>
