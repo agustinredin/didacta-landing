@@ -1,4 +1,4 @@
-{
+export const dictionary = {
   "navbar": {
     "logo": "A definir",
     "features": "Características",
@@ -215,4 +215,7 @@
     },
     "copyright": "© 2024 AI LEARNING PLATFORM. TRANSFORMANDO EL FUTURO DEL APRENDIZAJE."
   }
-}
+} as const
+
+export type Dictionary = typeof dictionary
+
