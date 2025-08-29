@@ -1,18 +1,18 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Menu, X, Zap, Brain } from "lucide-react"
-import { useI18n } from "@/lib/i18n"
-import Logo from "./Logo"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Menu, X, Zap, Brain } from "lucide-react";
+import { useI18n } from "@/lib/i18n";
+import Logo from "./Logo";
 
 interface NavbarProps {
-  setIsOnboardingOpen?: (open: boolean) => void
+  setIsOnboardingOpen?: (open: boolean) => void;
 }
 
 export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
-  const [isOpen, setIsOpen] = useState(false)
-  const { t, lang, switchLang } = useI18n()
+  const [isOpen, setIsOpen] = useState(false);
+  const { t, lang, switchLang } = useI18n();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b-2 border-black">
@@ -21,7 +21,7 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
           {/* Logo */}
           <div className="flex items-center space-x-3 h-48">
             <div className="w-60 flex items-center justify-center">
-              <Logo className="text-white" /> 
+              <Logo className="text-white" />
             </div>
 
             {/* <div className="w-12 flex items-center justify-center">
@@ -62,24 +62,33 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
 
           {/* Medium screen navigation */}
           <div className="flex items-center space-x-2">
-            <div className="hidden md:flex items-center">
-              <Button size="sm" onClick={() => setIsOnboardingOpen?.(true)} className="mono-button-primary">
+            <div className="hidden md:flex items-center gap-4">
+              <Button
+                size="sm"
+                onClick={() => setIsOnboardingOpen?.(true)}
+                className="mono-button-primary"
+              >
                 <Zap className="mr-2 h-4 w-4" />
                 {t("navbar.tryFree")}
               </Button>
+              <Button
+                size="sm"
+                onClick={() => switchLang(lang === "en" ? "es" : "en")}
+                className="mono-button"
+              >
+                {lang === "en" ? "EN" : "ES"}
+              </Button>
             </div>
-            <button
-              onClick={() => switchLang(lang === "en" ? "es" : "en")}
-              className="text-xs border border-black px-2 py-1 uppercase"
-            >
-              {lang === "en" ? "EN" : "ES"}
-            </button>
             <div className="md:lg:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="text-black hover:bg-black hover:text-white p-2 transition-colors"
               >
-                {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                {isOpen ? (
+                  <X className="h-6 w-6" />
+                ) : (
+                  <Menu className="h-6 w-6" />
+                )}
               </button>
             </div>
           </div>
@@ -121,8 +130,8 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
                 <Button
                   size="sm"
                   onClick={() => {
-                    setIsOnboardingOpen?.(true)
-                    setIsOpen(false)
+                    setIsOnboardingOpen?.(true);
+                    setIsOpen(false);
                   }}
                   className="w-full mono-button-primary"
                 >
@@ -130,7 +139,7 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
                   {t("navbar.tryFree")}
                 </Button>
               </div>
-              <div className="px-3 py-2">
+              <div className="md:hidden px-3 py-2">
                 <button
                   onClick={() => switchLang(lang === "en" ? "es" : "en")}
                   className="w-full border border-black px-3 py-2 text-black uppercase text-sm"
@@ -143,5 +152,5 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
         )}
       </div>
     </nav>
-  )
+  );
 }

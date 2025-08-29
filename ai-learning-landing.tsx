@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Navbar } from "./components/navbar"
-import { AnimatedSection } from "./components/animated-section"
-import { ContactForm } from "./components/contact-form"
-import { SEOHead } from "./components/seo-head"
-import { OnboardingModal } from "./components/onboarding-modal"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Navbar } from "./components/navbar";
+import { AnimatedSection } from "./components/animated-section";
+import { ContactForm } from "./components/contact-form";
+import { SEOHead } from "./components/seo-head";
+import { OnboardingModal } from "./components/onboarding-modal";
 import {
   Mic,
   Brain,
@@ -23,14 +23,14 @@ import {
   Mail,
   Phone,
   MapPin,
-} from "lucide-react"
-import { useState } from "react"
-import { useI18n } from "@/lib/i18n"
-import Phone3D from "./components/phone"
+} from "lucide-react";
+import { useState } from "react";
+import { useI18n } from "@/lib/i18n";
+import Phone3D from "./components/phone";
 
 export default function Component() {
-  const [isOnboardingOpen, setIsOnboardingOpen] = useState(false)
-  const { t } = useI18n()
+  const [isOnboardingOpen, setIsOnboardingOpen] = useState(false);
+  const { t } = useI18n();
 
   return (
     <>
@@ -40,8 +40,8 @@ export default function Component() {
         <Navbar setIsOnboardingOpen={setIsOnboardingOpen} />
 
         {/* Header/Hero Section */}
-        <section className="relative mx-8 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-white">
-          <div className="max-w-7xl mx-auto my-16 lg:my-2 w-full">
+        <section className="relative mx-8 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:pb-32 lg:pt-48 bg-white">
+          <div className="max-w-7xl mx-auto my-16 lg:my-12 w-full">
             <div className="flex flex-wrap gap-8 lg:gap-16 items-center">
               {/* Left Content */}
               <div className="space-y-8 lg:w-1/2">
@@ -60,7 +60,7 @@ export default function Component() {
                 <AnimatedSection animation="fadeInUp" delay={600}>
                   <div className="mono-code">
                     <p className="text-base sm:text-md text-black leading-relaxed">
-                      {t("hero.description")} 
+                      {t("hero.description")}
                     </p>
                   </div>
                 </AnimatedSection>
@@ -83,7 +83,11 @@ export default function Component() {
 
               {/* Right Terminal-style Scene */}
               <div className="flex-1 flex flex-col justify-center">
-                <AnimatedSection animation="fadeInRight" className="relative" delay={600}>
+                <AnimatedSection
+                  animation="fadeInRight"
+                  className="relative"
+                  delay={600}
+                >
                   {/* Main Terminal Window    */}
                   <div className=" bg-white border-4 border-black">
                     {/* Terminal Header */}
@@ -99,16 +103,22 @@ export default function Component() {
                     </div>
 
                     {/* Terminal Content */}
-                    <div className="p-3 sm:p-4 lg:p-6 space-y-2 sm:space-y-4 text-xs sm:text-sm terminal-content" style={{ textTransform: 'none' }}>
+                    <div
+                      className="p-3 sm:p-4 lg:p-6 space-y-2 sm:space-y-4 text-xs sm:text-sm terminal-content"
+                      style={{ textTransform: "none" }}
+                    >
                       <div>
                         <span className="text-gray-600">$</span> {t("hero.cmd")}
                       </div>
                       <div className="text-gray-600">{t("hero.info")}</div>
-                      <div className="text-gray-600">{t("hero.transcription")}</div>
+                      <div className="text-gray-600">
+                        {t("hero.transcription")}
+                      </div>
                       <div className="text-gray-600">{t("hero.summary")}</div>
                       <div className="text-gray-600">{t("hero.quiz")}</div>
                       <div>
-                        <span className="text-gray-600">$</span> <span className="animate-pulse">_</span>
+                        <span className="text-gray-600">$</span>{" "}
+                        <span className="animate-pulse">_</span>
                       </div>
                     </div>
 
@@ -119,9 +129,13 @@ export default function Component() {
                           <div className="w-6 h-6 bg-black flex items-center justify-center">
                             <Brain className="h-4 w-4 text-white" />
                           </div>
-                          <div className="font-bold text-xs uppercase">{t("hero.motor")}</div>
+                          <div className="font-bold text-xs uppercase">
+                            {t("hero.motor")}
+                          </div>
                         </div>
-                        <p className="text-xs text-gray-700">{t("hero.motorDesc")}</p>
+                        <p className="text-xs text-gray-700">
+                          {t("hero.motorDesc")}
+                        </p>
                       </div>
 
                       <div className="mono-card p-4 bg-white floating-card">
@@ -129,9 +143,13 @@ export default function Component() {
                           <div className="w-6 h-6 bg-black flex items-center justify-center">
                             <Zap className="h-4 w-4 text-white" />
                           </div>
-                          <span className="font-bold text-xs uppercase">{t("hero.insights")}</span>
+                          <span className="font-bold text-xs uppercase">
+                            {t("hero.insights")}
+                          </span>
                         </div>
-                        <p className="text-xs text-gray-700">{t("hero.insightsDesc")}</p>
+                        <p className="text-xs text-gray-700">
+                          {t("hero.insightsDesc")}
+                        </p>
                       </div>
 
                       <div className="mono-card p-4 bg-white floating-card">
@@ -139,9 +157,13 @@ export default function Component() {
                           <div className="w-6 h-6 bg-black flex items-center justify-center">
                             <Users className="h-4 w-4 text-white" />
                           </div>
-                          <span className="font-bold text-xs uppercase">{t("hero.community")}</span>
+                          <span className="font-bold text-xs uppercase">
+                            {t("hero.community")}
+                          </span>
                         </div>
-                        <p className="text-xs text-gray-700">{t("hero.communityDesc")}</p>
+                        <p className="text-xs text-gray-700">
+                          {t("hero.communityDesc")}
+                        </p>
                       </div>
 
                       <div className="mono-card p-4 bg-white floating-card">
@@ -149,24 +171,36 @@ export default function Component() {
                           <div className="w-6 h-6 bg-black flex items-center justify-center">
                             <Laptop className="h-4 w-4 text-white" />
                           </div>
-                          <span className="font-bold text-xs uppercase">{t("hero.development")}</span>
+                          <span className="font-bold text-xs uppercase">
+                            {t("hero.development")}
+                          </span>
                         </div>
-                        <p className="text-xs text-gray-700">{t("hero.developmentDesc")}</p>
+                        <p className="text-xs text-gray-700">
+                          {t("hero.developmentDesc")}
+                        </p>
                       </div>
                     </div>
 
                     {/* Floating Feature Cards */}
                     <div className="absolute inset-0 p-4 sm:p-6 lg:p-8 hidden lg:block">
                       {/* AI Card */}
-                      <AnimatedSection className="relative" animation="scaleIn" delay={1000}>
+                      <AnimatedSection
+                        className="relative"
+                        animation="scaleIn"
+                        delay={1000}
+                      >
                         <div className="absolute top-56 left-0 w-48 mono-card p-4 bg-white">
                           <div className="flex items-center space-x-2 mb-2">
                             <div className="w-6 h-6 bg-black flex items-center justify-center">
                               <Brain className="h-4 w-4 text-white" />
                             </div>
-                            <span className="font-bold text-xs uppercase">{t("hero.motorDesk")}</span>
+                            <span className="font-bold text-xs uppercase">
+                              {t("hero.motorDesk")}
+                            </span>
                           </div>
-                          <p className="text-xs text-gray-700">{t("hero.motorDescDesk")}</p>
+                          <p className="text-xs text-gray-700">
+                            {t("hero.motorDescDesk")}
+                          </p>
                         </div>
                       </AnimatedSection>
 
@@ -177,9 +211,13 @@ export default function Component() {
                             <div className="w-6 h-6 bg-black flex items-center justify-center">
                               <Zap className="h-4 w-4 text-white" />
                             </div>
-                            <span className="font-bold text-xs uppercase">{t("hero.insightsDesk")}</span>
+                            <span className="font-bold text-xs uppercase">
+                              {t("hero.insightsDesk")}
+                            </span>
                           </div>
-                          <p className="text-xs text-gray-700">{t("hero.insightsDescDesk")}</p>
+                          <p className="text-xs text-gray-700">
+                            {t("hero.insightsDescDesk")}
+                          </p>
                         </div>
                       </AnimatedSection>
 
@@ -190,9 +228,13 @@ export default function Component() {
                             <div className="w-6 h-6 bg-black flex items-center justify-center">
                               <Users className="h-4 w-4 text-white" />
                             </div>
-                            <span className="font-bold text-xs uppercase">{t("hero.communityDesk")}</span>
+                            <span className="font-bold text-xs uppercase">
+                              {t("hero.communityDesk")}
+                            </span>
                           </div>
-                          <p className="text-xs text-gray-700">{t("hero.communityDescDesk")}</p>
+                          <p className="text-xs text-gray-700">
+                            {t("hero.communityDescDesk")}
+                          </p>
                         </div>
                       </AnimatedSection>
 
@@ -203,9 +245,13 @@ export default function Component() {
                             <div className="w-6 h-6 bg-black flex items-center justify-center">
                               <Laptop className="h-4 w-4 text-white" />
                             </div>
-                            <span className="font-bold text-xs uppercase">{t("hero.developmentDesk")}</span>
+                            <span className="font-bold text-xs uppercase">
+                              {t("hero.developmentDesk")}
+                            </span>
                           </div>
-                          <p className="text-xs text-gray-700">{t("hero.developmentDescDesk")}</p>
+                          <p className="text-xs text-gray-700">
+                            {t("hero.developmentDescDesk")}
+                          </p>
                         </div>
                       </AnimatedSection>
                     </div>
@@ -215,19 +261,31 @@ export default function Component() {
             </div>
 
             {/* Stats - TODO: Real stats (No se renderiza?)*/}
-            <AnimatedSection animation="fadeInUp" delay={1800} className="hidden">
+            <AnimatedSection
+              animation="fadeInUp"
+              delay={1800}
+              className="hidden"
+            >
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto mt-12 sm:mt-20 pt-8 sm:pt-16 border-t-2 border-black">
                 <div className="text-center mono-card p-6">
-                  <div className="text-3xl font-bold text-black mb-2">10,000+</div>
-                  <div className="text-gray-600 uppercase tracking-wide text-sm">USUARIOS ACTIVOS</div>
+                  <div className="text-3xl font-bold text-black mb-2">
+                    10,000+
+                  </div>
+                  <div className="text-gray-600 uppercase tracking-wide text-sm">
+                    USUARIOS ACTIVOS
+                  </div>
                 </div>
                 <div className="text-center mono-card p-6">
                   <div className="text-3xl font-bold text-black mb-2">50M+</div>
-                  <div className="text-gray-600 uppercase tracking-wide text-sm">MINUTOS PROCESADOS</div>
+                  <div className="text-gray-600 uppercase tracking-wide text-sm">
+                    MINUTOS PROCESADOS
+                  </div>
                 </div>
                 <div className="text-center mono-card p-6">
                   <div className="text-3xl font-bold text-black mb-2">98%</div>
-                  <div className="text-gray-600 uppercase tracking-wide text-sm">PRECISIÓN IA</div>
+                  <div className="text-gray-600 uppercase tracking-wide text-sm">
+                    PRECISIÓN IA
+                  </div>
                 </div>
               </div>
             </AnimatedSection>
@@ -235,7 +293,10 @@ export default function Component() {
         </section>
 
         {/* Features Section */}
-        <section id="features" className="relative mx-8 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-white">
+        <section
+          id="features"
+          className="relative mx-8 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-white"
+        >
           <div className="max-w-6xl mx-auto">
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-20">
@@ -295,7 +356,9 @@ export default function Component() {
                       </div>
                       <div className="w-4 h-4 bg-black mx-auto"></div>
                     </div>
-                    <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">{t("featureSection.cardTwo.title")}</h3>
+                    <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">
+                      {t("featureSection.cardTwo.title")}
+                    </h3>
                     <div className="mono-code text-left mb-4">
                       <p className="text-sm text-black">
                         {t("featureSection.cardTwo.description")}
@@ -328,7 +391,9 @@ export default function Component() {
                       </div>
                       <div className="w-4 h-4 bg-black mx-auto"></div>
                     </div>
-                    <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">{t("featureSection.cardThree.title")}</h3>
+                    <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">
+                      {t("featureSection.cardThree.title")}
+                    </h3>
                     <div className="mono-code text-left mb-4">
                       <p className="text-sm text-black">
                         {t("featureSection.cardThree.description")}
@@ -372,7 +437,9 @@ export default function Component() {
                   <div className="w-12 h-12 mx-auto mb-4 bg-black flex items-center justify-center">
                     <Clock className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="text-lg font-bold mb-3 text-black uppercase tracking-wide">{t("benefitsSection.cardOne.title")}</h3>
+                  <h3 className="text-lg font-bold mb-3 text-black uppercase tracking-wide">
+                    {t("benefitsSection.cardOne.title")}
+                  </h3>
                   <p className="text-sm text-gray-600">
                     {t("benefitsSection.cardOne.description")}
                   </p>
@@ -384,7 +451,9 @@ export default function Component() {
                   <div className="w-12 h-12 mx-auto mb-4 bg-black flex items-center justify-center">
                     <Shield className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="text-lg font-bold mb-3 text-black uppercase tracking-wide">{t("benefitsSection.cardTwo.title")}</h3>
+                  <h3 className="text-lg font-bold mb-3 text-black uppercase tracking-wide">
+                    {t("benefitsSection.cardTwo.title")}
+                  </h3>
                   <p className="text-sm text-gray-600">
                     {t("benefitsSection.cardTwo.description")}
                   </p>
@@ -396,8 +465,12 @@ export default function Component() {
                   <div className="w-12 h-12 mx-auto mb-4 bg-black flex items-center justify-center">
                     <Users className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="text-lg font-bold mb-3 text-black uppercase tracking-wide">{t("benefitsSection.cardThree.title")}</h3>
-                  <p className="text-sm text-gray-600">{t("benefitsSection.cardThree.description")}</p>
+                  <h3 className="text-lg font-bold mb-3 text-black uppercase tracking-wide">
+                    {t("benefitsSection.cardThree.title")}
+                  </h3>
+                  <p className="text-sm text-gray-600">
+                    {t("benefitsSection.cardThree.description")}
+                  </p>
                 </div>
               </AnimatedSection>
 
@@ -406,8 +479,12 @@ export default function Component() {
                   <div className="w-12 h-12 mx-auto mb-4 bg-black flex items-center justify-center">
                     <Globe className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="text-lg font-bold mb-3 text-black uppercase tracking-wide">{t("benefitsSection.cardFour.title")}</h3>
-                  <p className="text-sm text-gray-600">{t("benefitsSection.cardFour.description")}</p>
+                  <h3 className="text-lg font-bold mb-3 text-black uppercase tracking-wide">
+                    {t("benefitsSection.cardFour.title")}
+                  </h3>
+                  <p className="text-sm text-gray-600">
+                    {t("benefitsSection.cardFour.description")}
+                  </p>
                 </div>
               </AnimatedSection>
             </div>
@@ -415,7 +492,10 @@ export default function Component() {
         </section>
 
         {/* How it Works Section */}
-        <section id="how-it-works" className="relative mx-8 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-white">
+        <section
+          id="how-it-works"
+          className="relative mx-8 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-white"
+        >
           <div className="max-w-6xl mx-auto">
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-20">
@@ -437,7 +517,9 @@ export default function Component() {
                   <div className="w-20 h-20 mx-auto bg-black flex items-center justify-center mb-6">
                     <span className="text-2xl font-bold text-white">1</span>
                   </div>
-                  <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">{t("howItWorksSection.cardOne.title")}</h3>
+                  <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">
+                    {t("howItWorksSection.cardOne.title")}
+                  </h3>
                   <div className="mono-code text-left">
                     <div className="text-xs text-gray-600 mb-1">// ENTRADA</div>
                     <p className="text-sm text-black">
@@ -445,14 +527,18 @@ export default function Component() {
                     </p>
                   </div>
                   <div className="flex lg:hidden justify-center my-4">
-                    <div className="text-2xl font-bold text-black rotate-90">→</div>
+                    <div className="text-2xl font-bold text-black rotate-90">
+                      →
+                    </div>
                   </div>
                 </div>
               </AnimatedSection>
 
               <div className="hidden lg:flex justify-center">
                 <AnimatedSection animation="fadeIn" delay={400}>
-                  <div className="text-2xl lg:text-4xl font-bold text-black">→</div>
+                  <div className="text-2xl lg:text-4xl font-bold text-black">
+                    →
+                  </div>
                 </AnimatedSection>
               </div>
 
@@ -461,22 +547,30 @@ export default function Component() {
                   <div className="w-20 h-20 mx-auto bg-black flex items-center justify-center mb-6">
                     <span className="text-2xl font-bold text-white">2</span>
                   </div>
-                  <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">{t("howItWorksSection.cardTwo.title")}</h3>
+                  <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">
+                    {t("howItWorksSection.cardTwo.title")}
+                  </h3>
                   <div className="mono-code text-left">
-                    <div className="text-xs text-gray-600 mb-1">// PROCESAMIENTO</div>
+                    <div className="text-xs text-gray-600 mb-1">
+                      // PROCESAMIENTO
+                    </div>
                     <p className="text-sm text-black">
                       {t("howItWorksSection.cardTwo.description")}
                     </p>
                   </div>
                   <div className="flex lg:hidden justify-center my-4">
-                    <div className="text-2xl font-bold text-black rotate-90">→</div>
+                    <div className="text-2xl font-bold text-black rotate-90">
+                      →
+                    </div>
                   </div>
                 </div>
               </AnimatedSection>
 
               <div className="hidden lg:flex justify-center">
                 <AnimatedSection animation="fadeIn" delay={800}>
-                  <div className="text-2xl lg:text-4xl font-bold text-black">→</div>
+                  <div className="text-2xl lg:text-4xl font-bold text-black">
+                    →
+                  </div>
                 </AnimatedSection>
               </div>
 
@@ -485,7 +579,9 @@ export default function Component() {
                   <div className="w-20 h-20 mx-auto bg-black flex items-center justify-center mb-6">
                     <span className="text-2xl font-bold text-white">3</span>
                   </div>
-                  <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">{t("howItWorksSection.cardThree.title")}</h3>
+                  <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">
+                    {t("howItWorksSection.cardThree.title")}
+                  </h3>
                   <div className="mono-code text-left">
                     <div className="text-xs text-gray-600 mb-1">// SALIDA</div>
                     <p className="text-sm text-black">
@@ -493,7 +589,9 @@ export default function Component() {
                     </p>
                   </div>
                   <div className="flex lg:hidden justify-center my-4">
-                    <div className="text-2xl font-bold text-black rotate-90">&nbsp;</div>
+                    <div className="text-2xl font-bold text-black rotate-90">
+                      &nbsp;
+                    </div>
                   </div>
                 </div>
               </AnimatedSection>
@@ -502,7 +600,10 @@ export default function Component() {
         </section>
 
         {/* Testimonials Section - TODO: Real testimonials (No se está renderizando actualmente) */}
-        <section id="testimonials" className="relative hidden mx-8 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-gray-50">
+        <section
+          id="testimonials"
+          className="relative hidden mx-8 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-gray-50"
+        >
           <div className="max-w-6xl mx-auto">
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-20">
@@ -520,10 +621,13 @@ export default function Component() {
                       <div className="text-black text-lg">★★★★★</div>
                     </div>
                     <div className="mono-code mb-4">
-                      <div className="text-xs text-gray-600 mb-1">// RESEÑA</div>
+                      <div className="text-xs text-gray-600 mb-1">
+                        // RESEÑA
+                      </div>
                       <p className="text-sm text-black">
-                        "AI Learn ha revolucionado la forma en que proceso las conferencias. Ahora puedo convertir horas
-                        de audio en resúmenes útiles en minutos."
+                        "AI Learn ha revolucionado la forma en que proceso las
+                        conferencias. Ahora puedo convertir horas de audio en
+                        resúmenes útiles en minutos."
                       </p>
                     </div>
                     <div className="flex items-center">
@@ -531,8 +635,12 @@ export default function Component() {
                         <span className="text-white font-bold text-sm">MR</span>
                       </div>
                       <div>
-                        <div className="font-bold text-black text-sm uppercase">MARÍA RODRÍGUEZ</div>
-                        <div className="text-gray-600 text-xs uppercase">ESTUDIANTE DE MEDICINA</div>
+                        <div className="font-bold text-black text-sm uppercase">
+                          MARÍA RODRÍGUEZ
+                        </div>
+                        <div className="text-gray-600 text-xs uppercase">
+                          ESTUDIANTE DE MEDICINA
+                        </div>
                       </div>
                     </div>
                   </CardContent>
@@ -546,10 +654,13 @@ export default function Component() {
                       <div className="text-black text-lg">★★★★★</div>
                     </div>
                     <div className="mono-code mb-4">
-                      <div className="text-xs text-gray-600 mb-1">// RESEÑA</div>
+                      <div className="text-xs text-gray-600 mb-1">
+                        // RESEÑA
+                      </div>
                       <p className="text-sm text-black">
-                        "Como profesor, uso AI Learn para crear material de estudio a partir de mis clases. Los quizzes
-                        generados son increíblemente precisos."
+                        "Como profesor, uso AI Learn para crear material de
+                        estudio a partir de mis clases. Los quizzes generados
+                        son increíblemente precisos."
                       </p>
                     </div>
                     <div className="flex items-center">
@@ -557,8 +668,12 @@ export default function Component() {
                         <span className="text-white font-bold text-sm">CL</span>
                       </div>
                       <div>
-                        <div className="font-bold text-black text-sm uppercase">CARLOS LÓPEZ</div>
-                        <div className="text-gray-600 text-xs uppercase">PROFESOR UNIVERSITARIO</div>
+                        <div className="font-bold text-black text-sm uppercase">
+                          CARLOS LÓPEZ
+                        </div>
+                        <div className="text-gray-600 text-xs uppercase">
+                          PROFESOR UNIVERSITARIO
+                        </div>
                       </div>
                     </div>
                   </CardContent>
@@ -572,10 +687,13 @@ export default function Component() {
                       <div className="text-black text-lg">★★★★★</div>
                     </div>
                     <div className="mono-code mb-4">
-                      <div className="text-xs text-gray-600 mb-1">// RESEÑA</div>
+                      <div className="text-xs text-gray-600 mb-1">
+                        // RESEÑA
+                      </div>
                       <p className="text-sm text-black">
-                        "La precisión de la transcripción es impresionante. He mejorado mi productividad en un 300%
-                        desde que uso AI Learn."
+                        "La precisión de la transcripción es impresionante. He
+                        mejorado mi productividad en un 300% desde que uso AI
+                        Learn."
                       </p>
                     </div>
                     <div className="flex items-center">
@@ -583,8 +701,12 @@ export default function Component() {
                         <span className="text-white font-bold text-sm">AS</span>
                       </div>
                       <div>
-                        <div className="font-bold text-black text-sm uppercase">ANA SILVA</div>
-                        <div className="text-gray-600 text-xs uppercase">CONSULTORA EMPRESARIAL</div>
+                        <div className="font-bold text-black text-sm uppercase">
+                          ANA SILVA
+                        </div>
+                        <div className="text-gray-600 text-xs uppercase">
+                          CONSULTORA EMPRESARIAL
+                        </div>
                       </div>
                     </div>
                   </CardContent>
@@ -595,7 +717,10 @@ export default function Component() {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="relative mx-8 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-white">
+        <section
+          id="pricing"
+          className="relative mx-8 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-white"
+        >
           <div className="max-w-5xl mx-auto">
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-20">
@@ -618,13 +743,19 @@ export default function Component() {
                     {t("pricingSection.popularity")}
                   </div>
                   <CardContent className="p-8 text-center">
-                    <h3 className="text-2xl font-bold mb-4 text-black uppercase tracking-wide">{t("pricingSection.cardOne.title")}</h3>
+                    <h3 className="text-2xl font-bold mb-4 text-black uppercase tracking-wide">
+                      {t("pricingSection.cardOne.title")}
+                    </h3>
                     <div className="text-4xl font-bold mb-6 text-black">
                       $19<span className="text-lg text-gray-600">/MES</span>
                     </div>
                     <div className="mono-code mb-6">
-                      <div className="text-xs text-gray-600 mb-1">// OBJETIVO</div>
-                      <p className="text-sm text-black">{t("pricingSection.cardOne.description")}</p>
+                      <div className="text-xs text-gray-600 mb-1">
+                        // OBJETIVO
+                      </div>
+                      <p className="text-sm text-black">
+                        {t("pricingSection.cardOne.description")}
+                      </p>
                     </div>
                     <ul className="space-y-3 mb-8 text-left text-sm">
                       <li className="flex items-center">
@@ -668,13 +799,19 @@ export default function Component() {
               <AnimatedSection animation="fadeInRight" delay={400}>
                 <Card className="mono-card">
                   <CardContent className="p-8 text-center">
-                    <h3 className="text-2xl font-bold mb-4 text-black uppercase tracking-wide">{t("pricingSection.cardTwo.title")}</h3>
+                    <h3 className="text-2xl font-bold mb-4 text-black uppercase tracking-wide">
+                      {t("pricingSection.cardTwo.title")}
+                    </h3>
                     <div className="text-4xl font-bold mb-6 text-black">
                       $99<span className="text-lg text-gray-600">/MES</span>
                     </div>
                     <div className="mono-code mb-6">
-                      <div className="text-xs text-gray-600 mb-1">// OBJETIVO</div>
-                      <p className="text-sm text-black">{t("pricingSection.cardTwo.description")}</p>
+                      <div className="text-xs text-gray-600 mb-1">
+                        // OBJETIVO
+                      </div>
+                      <p className="text-sm text-black">
+                        {t("pricingSection.cardTwo.description")}
+                      </p>
                     </div>
                     <ul className="space-y-3 mb-8 text-left text-sm">
                       <li className="flex items-center">
@@ -702,8 +839,12 @@ export default function Component() {
                         {t("pricingSection.cardTwo.bulletPoint6")}
                       </li>
                     </ul>
-                    <Button className="w-full mono-button py-4 text-lg font-medium">{t("pricingSection.cardTwo.button")}</Button>
-                    <p className="text-xs text-gray-500 mt-4 uppercase tracking-wide">{t("pricingSection.cardTwo.info")}</p>
+                    <Button className="w-full mono-button py-4 text-lg font-medium">
+                      {t("pricingSection.cardTwo.button")}
+                    </Button>
+                    <p className="text-xs text-gray-500 mt-4 uppercase tracking-wide">
+                      {t("pricingSection.cardTwo.info")}
+                    </p>
                   </CardContent>
                 </Card>
               </AnimatedSection>
@@ -712,7 +853,10 @@ export default function Component() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="relative mx-8 not-last:px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-gray-50">
+        <section
+          id="contact"
+          className="relative mx-8 not-last:px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-gray-50"
+        >
           <div className="max-w-6xl mx-auto">
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-20">
@@ -737,9 +881,15 @@ export default function Component() {
                         <Mail className="h-5 w-5 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-lg font-bold text-black mb-2 uppercase">{t("contactSection.cardOne.title")}</h3>
-                        <p className="text-gray-600 font-mono">{t("contactSection.cardOne.description")}</p>
-                        <p className="text-gray-600 font-mono">{t("contactSection.cardOne.detail")}</p>
+                        <h3 className="text-lg font-bold text-black mb-2 uppercase">
+                          {t("contactSection.cardOne.title")}
+                        </h3>
+                        <p className="text-gray-600 font-mono">
+                          {t("contactSection.cardOne.description")}
+                        </p>
+                        <p className="text-gray-600 font-mono">
+                          {t("contactSection.cardOne.detail")}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -750,9 +900,15 @@ export default function Component() {
                         <Phone className="h-5 w-5 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-lg font-bold text-black mb-2 uppercase">{t("contactSection.cardTwo.title")}</h3>
-                        <p className="text-gray-600 font-mono">{t("contactSection.cardTwo.description")}</p>
-                        <p className="text-gray-500 text-sm uppercase">{t("contactSection.cardTwo.detail")}</p>
+                        <h3 className="text-lg font-bold text-black mb-2 uppercase">
+                          {t("contactSection.cardTwo.title")}
+                        </h3>
+                        <p className="text-gray-600 font-mono">
+                          {t("contactSection.cardTwo.description")}
+                        </p>
+                        <p className="text-gray-500 text-sm uppercase">
+                          {t("contactSection.cardTwo.detail")}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -763,19 +919,29 @@ export default function Component() {
                         <MapPin className="h-5 w-5 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-lg font-bold text-black mb-2 uppercase">{t("contactSection.cardThree.title")}</h3>
-                        <p className="text-gray-600 font-mono">{t("contactSection.cardThree.description")}</p>
-                        <p className="text-gray-600 font-mono">{t("contactSection.cardThree.detail")}</p>
+                        <h3 className="text-lg font-bold text-black mb-2 uppercase">
+                          {t("contactSection.cardThree.title")}
+                        </h3>
+                        <p className="text-gray-600 font-mono">
+                          {t("contactSection.cardThree.description")}
+                        </p>
+                        <p className="text-gray-600 font-mono">
+                          {t("contactSection.cardThree.detail")}
+                        </p>
                       </div>
                     </div>
                   </div>
 
                   <div className="mono-card p-6">
-                    <h3 className="text-lg font-bold text-black mb-3 uppercase">{t("contactSection.cardFour.title")}</h3>
+                    <h3 className="text-lg font-bold text-black mb-3 uppercase">
+                      {t("contactSection.cardFour.title")}
+                    </h3>
                     <p className="text-gray-600 mb-4 text-sm">
                       {t("contactSection.cardFour.description")}
                     </p>
-                    <Button className="mono-button">{t("contactSection.cardFour.button")}</Button>
+                    <Button className="mono-button">
+                      {t("contactSection.cardFour.button")}
+                    </Button>
                   </div>
                 </div>
               </AnimatedSection>
@@ -799,7 +965,9 @@ export default function Component() {
                   {t("learnHowToUseSection.title")}
                 </h2>
                 <div className="mono-code mb-12 max-w-3xl mx-auto">
-                  <div className="text-sm text-gray-600 mb-2">// LLAMADA A LA ACCIÓN</div>
+                  <div className="text-sm text-gray-600 mb-2">
+                    // LLAMADA A LA ACCIÓN
+                  </div>
                   <p className="text-sm text-black leading-relaxed">
                     {t("learnHowToUseSection.description")}
                   </p>
@@ -834,7 +1002,9 @@ export default function Component() {
                   <div className="w-8 h-8 bg-black flex items-center justify-center">
                     <Brain className="h-5 w-5 text-white" />
                   </div>
-                  <span className="text-xl font-bold text-black uppercase tracking-wider">{t("footer.colOne.title")}</span>
+                  <span className="text-xl font-bold text-black uppercase tracking-wider">
+                    {t("footer.colOne.title")}
+                  </span>
                 </div>
                 <div className="mono-code mb-4">
                   <div className="text-xs text-gray-600 mb-1">// MISIÓN</div>
@@ -856,25 +1026,39 @@ export default function Component() {
               </div>
 
               <div>
-                <h4 className="font-bold text-black mb-4 uppercase tracking-wide">{t("footer.colTwo.title")}</h4>
+                <h4 className="font-bold text-black mb-4 uppercase tracking-wide">
+                  {t("footer.colTwo.title")}
+                </h4>
                 <ul className="space-y-2 text-gray-600 text-sm">
                   <li>
-                    <a href="#features" className="hover:text-black transition-colors uppercase">
+                    <a
+                      href="#features"
+                      className="hover:text-black transition-colors uppercase"
+                    >
                       {t("footer.colTwo.rowOne")}
                     </a>
                   </li>
                   <li>
-                    <a href="#pricing" className="hover:text-black transition-colors uppercase">
+                    <a
+                      href="#pricing"
+                      className="hover:text-black transition-colors uppercase"
+                    >
                       {t("footer.colTwo.rowTwo")}
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-black transition-colors uppercase">
+                    <a
+                      href="#"
+                      className="hover:text-black transition-colors uppercase"
+                    >
                       {t("footer.colTwo.rowThree")}
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-black transition-colors uppercase">
+                    <a
+                      href="#"
+                      className="hover:text-black transition-colors uppercase"
+                    >
                       {t("footer.colTwo.rowFour")}
                     </a>
                   </li>
@@ -882,25 +1066,39 @@ export default function Component() {
               </div>
 
               <div>
-                <h4 className="font-bold text-black mb-4 uppercase tracking-wide">{t("footer.colThree.title")}</h4>
+                <h4 className="font-bold text-black mb-4 uppercase tracking-wide">
+                  {t("footer.colThree.title")}
+                </h4>
                 <ul className="space-y-2 text-gray-600 text-sm">
                   <li>
-                    <a href="#" className="hover:text-black transition-colors uppercase">
+                    <a
+                      href="#"
+                      className="hover:text-black transition-colors uppercase"
+                    >
                       {t("footer.colThree.rowOne")}
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-black transition-colors uppercase">
+                    <a
+                      href="#"
+                      className="hover:text-black transition-colors uppercase"
+                    >
                       {t("footer.colThree.rowTwo")}
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-black transition-colors uppercase">
+                    <a
+                      href="#"
+                      className="hover:text-black transition-colors uppercase"
+                    >
                       {t("footer.colThree.rowThree")}
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-black transition-colors uppercase">
+                    <a
+                      href="#"
+                      className="hover:text-black transition-colors uppercase"
+                    >
                       {t("footer.colThree.rowFour")}
                     </a>
                   </li>
@@ -908,25 +1106,39 @@ export default function Component() {
               </div>
 
               <div>
-                <h4 className="font-bold text-black mb-4 uppercase tracking-wide">{t("footer.colFour.title")}</h4>
+                <h4 className="font-bold text-black mb-4 uppercase tracking-wide">
+                  {t("footer.colFour.title")}
+                </h4>
                 <ul className="space-y-2 text-gray-600 text-sm">
                   <li>
-                    <a href="#" className="hover:text-black transition-colors uppercase">
+                    <a
+                      href="#"
+                      className="hover:text-black transition-colors uppercase"
+                    >
                       {t("footer.colFour.rowOne")}
                     </a>
                   </li>
                   <li>
-                    <a href="#contact" className="hover:text-black transition-colors uppercase">
+                    <a
+                      href="#contact"
+                      className="hover:text-black transition-colors uppercase"
+                    >
                       {t("footer.colFour.rowTwo")}
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-black transition-colors uppercase">
+                    <a
+                      href="#"
+                      className="hover:text-black transition-colors uppercase"
+                    >
                       {t("footer.colFour.rowThree")}
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-black transition-colors uppercase">
+                    <a
+                      href="#"
+                      className="hover:text-black transition-colors uppercase"
+                    >
                       {t("footer.colFour.rowFour")}
                     </a>
                   </li>
@@ -945,11 +1157,14 @@ export default function Component() {
         </footer>
 
         {/* Onboarding Modal */}
-        <OnboardingModal isOpen={isOnboardingOpen} onClose={() => setIsOnboardingOpen(false)} />
+        <OnboardingModal
+          isOpen={isOnboardingOpen}
+          onClose={() => setIsOnboardingOpen(false)}
+        />
       </div>
-          {/* <div>
+      {/* <div>
       <Phone3D imageUrl='step1.png' />
     </div> */}
     </>
-  )
+  );
 }

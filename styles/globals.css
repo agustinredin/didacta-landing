@@ -223,6 +223,8 @@
 }
 
 .mono-button {
+  cursor: pointer;
+  text-transform: uppercase;
   background: white;
   border: 2px solid black;
   color: black;
@@ -237,6 +239,8 @@
 }
 
 .mono-button-primary {
+  cursor: pointer;
+  text-transform: uppercase;
   background: black;
   border: 2px solid black;
   color: white;

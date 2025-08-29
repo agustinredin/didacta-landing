@@ -5,7 +5,7 @@
     "howItWorks": "Cómo funciona",
     "testimonials": "Testimonios",
     "pricing": "Precios",
-    "tryForFree": "Probar gratis"
+    "tryFree": "Probar gratis"
   },
   "commands": {
     "processing": "[INFO] Procesando archivo de audio...",
@@ -215,5 +215,4 @@
     },
     "copyright": "© 2024 AI LEARNING PLATFORM. TRANSFORMANDO EL FUTURO DEL APRENDIZAJE."
   }
-
 }

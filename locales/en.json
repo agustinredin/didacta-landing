@@ -5,7 +5,7 @@
     "howItWorks": "How it works",
     "testimonials": "Testimonials",
     "pricing": "Pricing",
-    "tryForFree": "Try for free"
+    "tryFree": "Try for free"
   },
   "commands": {
     "processing": "[INFO] Processing audio file...",
