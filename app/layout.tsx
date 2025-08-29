@@ -3,7 +3,6 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import "@/styles/globals.css";
 import "@/styles/performance-optimizations.css";
-import { I18nProvider } from "@/lib/i18n";
 
 export const metadata: Metadata = {
   icons: {
@@ -12,18 +11,18 @@ export const metadata: Metadata = {
   },
   title: "Didacta - IA para estudiantes",
   description:
-    "Didacta is a web app that transforms classes into actionable knowledge. With AI-powered transcription, summaries, and quizzes, it helps students learn faster and teachers manage content efficiently.",
+    "Didacta es una aplicación web que transforma las clases en conocimiento accionable. Con transcripciones, resúmenes y cuestionarios impulsados por IA, ayuda a los estudiantes a aprender más rápido y a los docentes a gestionar contenido de forma eficiente.",
   generator: "v0.app",
   keywords: [
     "Didacta",
-    "AI LMS",
-    "learning platform",
-    "student productivity",
-    "class transcriptions",
-    "AI summaries",
-    "AI quizzes",
-    "virtual campus",
-    "education technology",
+    "IA LMS",
+    "plataforma de aprendizaje",
+    "productividad estudiantil",
+    "transcripciones de clases",
+    "resúmenes con IA",
+    "quizzes con IA",
+    "campus virtual",
+    "tecnología educativa",
     "edtech",
   ],
   authors: [
@@ -33,12 +32,12 @@ export const metadata: Metadata = {
     },
   ],
   openGraph: {
-    title: "Didacta - Convert your classes into knowledge",
+    title: "Didacta - Convertí tus clases en conocimiento",
     description:
-      "An AI-powered learning platform for students and teachers. Transcribe, summarize, and validate knowledge with ease.",
+      "Una plataforma de aprendizaje impulsada por IA para estudiantes y docentes. Transcribe, resume y valida conocimientos con facilidad.",
     // url: "https://didacta.ai",
     siteName: "Didacta",
-    locale: "en_US",
+    locale: "es_ES",
     type: "website",
   },
 };
@@ -49,7 +48,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <head>
         <style>{`
 html {
@@ -59,9 +58,7 @@ html {
 }
         `}</style>
       </head>
-      <body>
-        <I18nProvider>{children}</I18nProvider>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

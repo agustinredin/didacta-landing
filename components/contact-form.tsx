@@ -6,7 +6,6 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Send, CheckCircle } from "lucide-react"
-import { useI18n } from "@/lib/i18n"
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -18,8 +17,7 @@ export function ContactForm() {
 
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
-  const { t } = useI18n()
-
+  
 const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault()
   setIsSubmitting(true)
@@ -85,7 +83,7 @@ const handleSubmit = async (e: React.FormEvent) => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             <div>
               <label htmlFor="name" className="block text-sm font-bold text-black mb-2 uppercase tracking-wide">
-                {t("contactForm.inputOne.label")}
+                NOMBRE COMPLETO *
               </label>
               <input
                 type="text"
@@ -95,12 +93,12 @@ const handleSubmit = async (e: React.FormEvent) => {
                 value={formData.name}
                 onChange={handleChange}
                 className="w-full px-4 py-3 mono-input transition-all duration-200"
-                placeholder={t("contactForm.inputOne.placeHolder")}
+                placeholder="TU NOMBRE"
               />
             </div>
             <div>
               <label htmlFor="email" className="block text-sm font-bold text-black mb-2 uppercase tracking-wide">
-                {t("contactForm.inputTwo.label")}
+                EMAIL *
               </label>
               <input
                 type="email"
@@ -110,14 +108,14 @@ const handleSubmit = async (e: React.FormEvent) => {
                 value={formData.email}
                 onChange={handleChange}
                 className="w-full px-4 py-3 mono-input transition-all duration-200"
-                placeholder={t("contactForm.inputTwo.placeHolder")}
+                placeholder="TU@EMAIL.COM"
               />
             </div>
           </div>
 
           <div>
             <label htmlFor="company" className="block text-sm font-bold text-black mb-2 uppercase tracking-wide">
-              {t("contactForm.inputThree.label")}
+              EMPRESA (OPCIONAL)
             </label>
             <input
               type="text"
@@ -126,13 +124,13 @@ const handleSubmit = async (e: React.FormEvent) => {
               value={formData.company}
               onChange={handleChange}
               className="w-full px-4 py-3 mono-input transition-all duration-200"
-              placeholder={t("contactForm.inputThree.placeHolder")}
+              placeholder="NOMBRE DE TU EMPRESA"
             />
           </div>
 
           <div>
             <label htmlFor="message" className="block text-sm font-bold text-black mb-2 uppercase tracking-wide">
-              {t("contactForm.inputFour.label")}
+              MENSAJE *
             </label>
             <textarea
               id="message"
@@ -142,7 +140,7 @@ const handleSubmit = async (e: React.FormEvent) => {
               value={formData.message}
               onChange={handleChange}
               className="w-full px-4 py-3 mono-input resize-none transition-all duration-200"
-              placeholder={t("contactForm.inputFour.label")}
+              placeholder="MENSAJE *"
             />
           </div>
 
@@ -150,12 +148,12 @@ const handleSubmit = async (e: React.FormEvent) => {
             {isSubmitting ? (
               <div className="flex items-center justify-center">
                 <div className="animate-spin w-5 h-5 border-2 border-white border-t-transparent mr-2"></div>
-{t("contactForm.isSubmiting")}              
+ENVIANDO...              
 </div>
             ) : (
               <>
                 <Send className="mr-2 h-5 w-5" />
-                {t("contactForm.button")}
+                ENVIAR MENSAJE
               </>
             )}
           </Button>

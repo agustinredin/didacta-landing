@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Zap, Brain } from "lucide-react";
-import { useI18n } from "@/lib/i18n";
 import Logo from "./Logo";
 
 interface NavbarProps {
@@ -12,8 +11,7 @@ interface NavbarProps {
 
 export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const { t, lang, switchLang } = useI18n();
-
+  
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b-2 border-black">
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
@@ -28,7 +26,7 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
               <Logo className="text-white" /> 
             </div>
             <span className="text-lg sm:text-xl font-bold text-black uppercase tracking-wider">
-              {t("navbar.logo")}
+              A definir
             </span> */}
           </div>
 
@@ -38,25 +36,25 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
               href="#features"
               className="text-black hover:bg-black hover:text-white px-3 py-2 transition-colors font-medium uppercase tracking-wide"
             >
-              {t("navbar.features")}
+              Características
             </a>
             <a
               href="#how-it-works"
               className="text-black hover:bg-black hover:text-white px-3 py-2 transition-colors font-medium uppercase tracking-wide"
             >
-              {t("navbar.howItWorks")}
+              Cómo funciona
             </a>
             <a
               href="#testimonials"
               className="text-black hover:bg-black hover:text-white px-3 py-2 transition-colors font-medium uppercase tracking-wide"
             >
-              {t("navbar.testimonials")}
+              Testimonios
             </a>
             <a
               href="#pricing"
               className="text-black hover:bg-black hover:text-white px-3 py-2 transition-colors font-medium uppercase tracking-wide"
             >
-              {t("navbar.pricing")}
+              Precios
             </a>
           </div>
 
@@ -69,14 +67,7 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
                 className="mono-button-primary"
               >
                 <Zap className="mr-2 h-4 w-4" />
-                {t("navbar.tryFree")}
-              </Button>
-              <Button
-                size="sm"
-                onClick={() => switchLang(lang === "en" ? "es" : "en")}
-                className="mono-button"
-              >
-                {lang === "en" ? "EN" : "ES"}
+                Probar gratis
               </Button>
             </div>
             <div className="md:lg:hidden">
@@ -103,28 +94,28 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
                 className="block px-3 py-2 text-black hover:bg-black hover:text-white transition-colors font-medium uppercase tracking-wide"
                 onClick={() => setIsOpen(false)}
               >
-                {t("navbar.features")}
+                Características
               </a>
               <a
                 href="#how-it-works"
                 className="block px-3 py-2 text-black hover:bg-black hover:text-white transition-colors font-medium uppercase tracking-wide"
                 onClick={() => setIsOpen(false)}
               >
-                {t("navbar.howItWorks")}
+                Cómo funciona
               </a>
               <a
                 href="#testimonials"
                 className="block px-3 py-2 text-black hover:bg-black hover:text-white transition-colors font-medium uppercase tracking-wide"
                 onClick={() => setIsOpen(false)}
               >
-                {t("navbar.testimonials")}
+                Testimonios
               </a>
               <a
                 href="#pricing"
                 className="block px-3 py-2 text-black hover:bg-black hover:text-white transition-colors font-medium uppercase tracking-wide"
                 onClick={() => setIsOpen(false)}
               >
-                {t("navbar.pricing")}
+                Precios
               </a>
               <div className="md: hidden px-3 py-2">
                 <Button
@@ -136,16 +127,8 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
                   className="w-full mono-button-primary"
                 >
                   <Zap className="mr-2 h-4 w-4" />
-                  {t("navbar.tryFree")}
+                  Probar gratis
                 </Button>
-              </div>
-              <div className="md:hidden px-3 py-2">
-                <button
-                  onClick={() => switchLang(lang === "en" ? "es" : "en")}
-                  className="w-full border border-black px-3 py-2 text-black uppercase text-sm"
-                >
-                  {lang === "en" ? "ES" : "EN"}
-                </button>
               </div>
             </div>
           </div>
