@@ -25,6 +25,10 @@ import {
   MapPin,
 } from "lucide-react";
 import { useState } from "react";
+import {
+  StickyScrollHowItWorks,
+  howItWorksContent,
+} from "./components/sticky-scroll-how-it-works";
 import Phone3D from "./components/phone";
 
 export default function Component() {
@@ -508,8 +512,8 @@ export default function Component() {
           </div>
         </section>
 
-        {/* How it Works Section */}
-        <section
+        {/* How it Works Section - old - 110 lineas */}
+        {/* <section
           id="how-it-works"
           className="relative mx-8 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-white"
         >
@@ -561,7 +565,7 @@ export default function Component() {
                 </AnimatedSection>
               </div> */}
 
-              <AnimatedSection animation="fadeInUp" delay={600}>
+        {/* <AnimatedSection animation="fadeInUp" delay={600}>
                 <div className="text-center mono-card p-8">
                   <div className="w-20 h-20 mx-auto bg-black flex items-center justify-center mb-6">
                     <span className="text-2xl font-bold text-white">2</span>
@@ -584,9 +588,9 @@ export default function Component() {
                     </div>
                   </div>
                 </div>
-              </AnimatedSection>
+              </AnimatedSection> */}
 
-              {/* <div className="hidden lg:flex justify-center">
+        {/* <div className="hidden lg:flex justify-center">
                 <AnimatedSection animation="fadeIn" delay={800}>
                   <div className="text-2xl lg:text-4xl font-bold text-black">
                     →
@@ -594,7 +598,7 @@ export default function Component() {
                 </AnimatedSection>
               </div> */}
 
-              <AnimatedSection animation="fadeInRight" delay={1000}>
+        {/* <AnimatedSection animation="fadeInRight" delay={1000}>
                 <div className="text-center mono-card p-8">
                   <div className="w-20 h-20 mx-auto bg-black flex items-center justify-center mb-6">
                     <span className="text-2xl font-bold text-white">3</span>
@@ -615,8 +619,37 @@ export default function Component() {
                     </div>
                   </div>
                 </div>
-              </AnimatedSection>
-            </div>
+              </AnimatedSection> */}
+        {/* </div>
+          </div> */}
+        {/* </section> */}
+
+        {/* How it Works Section - NEW STICKY SCROLL VERSION */}
+        <section
+          id="how-it-works"
+          className="relative mx-8 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-gray-50"
+        >
+          <div className="max-w-7xl mx-auto">
+            <AnimatedSection animation="fadeInUp">
+              <div className="text-center mb-12">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-black tracking-tight uppercase">
+                  ¿CÓMO FUNCIONA?
+                </h2>
+                <div className="mono-code max-w-3xl mx-auto">
+                  <div className="text-sm text-gray-600 mb-2">
+                    // PROCESO INTERACTIVO
+                  </div>
+                  <p className="text-sm text-black">
+                    Descubre paso a paso cómo transformamos tu audio en
+                    conocimiento estructurado
+                  </p>
+                </div>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection animation="fadeInUp" delay={200}>
+              <StickyScrollHowItWorks content={howItWorksContent} />
+            </AnimatedSection>
           </div>
         </section>
 
