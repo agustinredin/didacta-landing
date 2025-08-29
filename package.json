@@ -1,6 +1,10 @@
 {
   "name": "didacta-landing",
   "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agustinredin/didacta-landing.git"
+  },
   "scripts": {
     "build": "next build",
     "dev": "next dev",
