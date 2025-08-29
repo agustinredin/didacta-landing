@@ -25,7 +25,7 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
             </div>
 
             {/* <div className="w-12 flex items-center justify-center">
-              <Logo className="text-white" /> 
+              <Logo className="text-white" test /> 
             </div>
             <span className="text-lg sm:text-xl font-bold text-black uppercase tracking-wider">
               {t("navbar.logo")}
