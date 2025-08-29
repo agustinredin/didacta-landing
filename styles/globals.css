@@ -211,6 +211,7 @@
 
 /* Monospace card styles */
 .mono-card {
+  height: 100%;
   background: white;
   border: 2px solid black;
   box-shadow: 4px 4px 0px black;
@@ -287,7 +288,7 @@ html {
 
 /* Offset for fixed navbar */
 section[id] {
-  scroll-margin-top: 80px;
+  scroll-margin-top: calc(var(--spacing) * 20);
 }
 
 /* Remove all rounded corners globally */
@@ -347,6 +348,7 @@ section[id] {
     bottom: auto !important;
     margin: 0.5rem 0;
     width: 100% !important;
+    height: fit-content !important;
   }
 
   /* Stack terminal cards vertically on mobile */

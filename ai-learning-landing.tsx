@@ -29,7 +29,7 @@ import Phone3D from "./components/phone";
 
 export default function Component() {
   const [isOnboardingOpen, setIsOnboardingOpen] = useState(false);
-  
+
   return (
     <>
       <SEOHead />
@@ -58,7 +58,10 @@ export default function Component() {
                 <AnimatedSection animation="fadeInUp" delay={600}>
                   <div className="mono-code">
                     <p className="text-base sm:text-md text-black leading-relaxed">
-                      Presta atencion en clase y deja que la IA facilite tu aprendizaje. Nuestra aplicación genera resumenes y cuestionarios inteligentes para estudiar de manera más efectiva.
+                      Presta atencion en clase y deja que la IA facilite tu
+                      aprendizaje. Nuestra aplicación genera resumenes y
+                      cuestionarios inteligentes para estudiar de manera más
+                      efectiva.
                     </p>
                   </div>
                 </AnimatedSection>
@@ -106,14 +109,21 @@ export default function Component() {
                       style={{ textTransform: "none" }}
                     >
                       <div>
-                        <span className="text-gray-600">$</span> ai-learn --procesar audio.mp3
+                        <span className="text-gray-600">$</span> ai-learn
+                        --procesar audio.mp3
                       </div>
-                      <div className="text-gray-600">[Info] Procesando archivo de audio...</div>
+                      <div className="text-gray-600">
+                        [Info] Procesando archivo de audio...
+                      </div>
                       <div className="text-gray-600">
                         [Éxito] Transcripción completa: 98% de precisión
                       </div>
-                      <div className="text-gray-600">[Éxito] Resumen generado: 5 conceptos clave</div>
-                      <div className="text-gray-600">[Éxito] Quiz creado: 10 preguntas</div>
+                      <div className="text-gray-600">
+                        [Éxito] Resumen generado: 5 conceptos clave
+                      </div>
+                      <div className="text-gray-600">
+                        [Éxito] Quiz creado: 10 preguntas
+                      </div>
                       <div>
                         <span className="text-gray-600">$</span>{" "}
                         <span className="animate-pulse">_</span>
@@ -187,7 +197,7 @@ export default function Component() {
                         animation="scaleIn"
                         delay={1000}
                       >
-                        <div className="absolute top-56 left-0 w-48 mono-card p-4 bg-white">
+                        <div className="absolute top-56 !h-fit left-0 w-48 mono-card p-4 bg-white">
                           <div className="flex items-center space-x-2 mb-2">
                             <div className="w-6 h-6 bg-black flex items-center justify-center">
                               <Brain className="h-4 w-4 text-white" />
@@ -204,7 +214,7 @@ export default function Component() {
 
                       {/* Analytics Card */}
                       <AnimatedSection animation="scaleIn" delay={1200}>
-                        <div className="absolute top-72 right-0 w-44 mono-card p-4 bg-white">
+                        <div className="absolute top-72 !h-fit right-0 w-44 mono-card p-4 bg-white">
                           <div className="flex items-center space-x-2 mb-2">
                             <div className="w-6 h-6 bg-black flex items-center justify-center">
                               <Zap className="h-4 w-4 text-white" />
@@ -221,7 +231,7 @@ export default function Component() {
 
                       {/* Community Card */}
                       <AnimatedSection animation="scaleIn" delay={1400}>
-                        <div className="absolute -top-40 left-2 w-48 mono-card p-4 bg-white">
+                        <div className="absolute -top-40 !h-fit left-2 w-48 mono-card p-4 bg-white">
                           <div className="flex items-center space-x-2 mb-2">
                             <div className="w-6 h-6 bg-black flex items-center justify-center">
                               <Users className="h-4 w-4 text-white" />
@@ -238,7 +248,7 @@ export default function Component() {
 
                       {/* Development Card */}
                       <AnimatedSection animation="scaleIn" delay={1600}>
-                        <div className="absolute -top-24 -right-12 w-44 mono-card p-4 bg-white">
+                        <div className="absolute -top-24 !h-fit -right-12 w-44 mono-card p-4 bg-white">
                           <div className="flex items-center space-x-2 mb-2">
                             <div className="w-6 h-6 bg-black flex items-center justify-center">
                               <Laptop className="h-4 w-4 text-white" />
@@ -290,6 +300,80 @@ export default function Component() {
           </div>
         </section>
 
+        {/* Benefits Section */}
+        <section className="relative mx-8 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-gray-50">
+          <div className="max-w-6xl mx-auto">
+            <AnimatedSection animation="fadeInUp">
+              <div className="text-center mb-20">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-black tracking-tight uppercase">
+                  ¿POR QUÉ ELEGIR AI LEARN?
+                </h2>
+              </div>
+            </AnimatedSection>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+              <AnimatedSection animation="scaleIn" delay={200}>
+                <div className="text-center mono-card h-full p-6">
+                  <div className="w-12 h-12 mx-auto mb-4 bg-black flex items-center justify-center">
+                    <Clock className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold mb-3 text-black uppercase tracking-wide">
+                    AHORRA TIEMPO
+                  </h3>
+                  <p className="text-sm text-gray-600">
+                    Procesa horas de audio en minutos y obtén resúmenes
+                    instantáneos
+                  </p>
+                </div>
+              </AnimatedSection>
+
+              <AnimatedSection animation="scaleIn" delay={400}>
+                <div className="text-center mono-card h-full p-6">
+                  <div className="w-12 h-12 mx-auto mb-4 bg-black flex items-center justify-center">
+                    <Shield className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold mb-3 text-black uppercase tracking-wide">
+                    SEGURO Y PRIVADO
+                  </h3>
+                  <p className="text-sm text-gray-600">
+                    Tus datos están protegidos con encriptación de nivel
+                    empresarial
+                  </p>
+                </div>
+              </AnimatedSection>
+
+              <AnimatedSection animation="scaleIn" delay={600}>
+                <div className="text-center mono-card h-full p-6">
+                  <div className="w-12 h-12 mx-auto mb-4 bg-black flex items-center justify-center">
+                    <Users className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold mb-3 text-black uppercase tracking-wide">
+                    COLABORATIVO
+                  </h3>
+                  <p className="text-sm text-gray-600">
+                    Comparte y colabora en proyectos de aprendizaje con tu
+                    equipo
+                  </p>
+                </div>
+              </AnimatedSection>
+
+              <AnimatedSection animation="scaleIn" delay={800}>
+                <div className="text-center mono-card h-full p-6">
+                  <div className="w-12 h-12 mx-auto mb-4 bg-black flex items-center justify-center">
+                    <Globe className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold mb-3 text-black uppercase tracking-wide">
+                    MULTIPLATAFORMA
+                  </h3>
+                  <p className="text-sm text-gray-600">
+                    Accede desde cualquier dispositivo, en cualquier lugar
+                  </p>
+                </div>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
         {/* Features Section */}
         <section
           id="features"
@@ -303,7 +387,8 @@ export default function Component() {
                 </h2>
                 <div className="mono-code max-w-3xl mx-auto">
                   <p className="text-sm text-black">
-                    Descubre cómo nuestra tecnología de IA revoluciona la forma en que aprendes y procesas información
+                    Descubre cómo nuestra tecnología de IA revoluciona la forma
+                    en que aprendes y procesas información
                   </p>
                 </div>
               </div>
@@ -320,11 +405,13 @@ export default function Component() {
                       <div className="w-4 h-4 bg-black mx-auto"></div>
                     </div>
                     <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">
-                      TRANSCRIPCIÓN INTELIGENTE
+                      TRANSCRIPCIÓN
                     </h3>
                     <div className="mono-code text-left mb-4">
                       <p className="text-sm text-black">
-                        Convierte automáticamente cualquier audio en texto preciso usando tecnología de reconocimientode voz avanzada con IA.
+                        Convierte automáticamente cualquier audio en texto
+                        preciso usando tecnología de reconocimiento de voz con
+                        IA.
                       </p>
                     </div>
                     <ul className="text-xs text-gray-600 space-y-2 text-left">
@@ -359,7 +446,9 @@ export default function Component() {
                     </h3>
                     <div className="mono-code text-left mb-4">
                       <p className="text-sm text-black">
-                        Extrae automáticamente las ideas clave y conceptos importantes usando modelos de lenguaje deúltima generación.
+                        Extrae automáticamente las ideas clave y conceptos
+                        importantes usando modelos de lenguaje de última
+                        generación.
                       </p>
                     </div>
                     <ul className="text-xs text-gray-600 space-y-2 text-left">
@@ -394,7 +483,8 @@ export default function Component() {
                     </h3>
                     <div className="mono-code text-left mb-4">
                       <p className="text-sm text-black">
-                        Genera automáticamente cuestionarios personalizados que refuerzan el aprendizaje y evalúan lacomprensión.
+                        Genera automáticamente cuestionarios personalizados que
+                        refuerzan el aprendizaje y evalúan la comprensión.
                       </p>
                     </div>
                     <ul className="text-xs text-gray-600 space-y-2 text-left">
@@ -418,77 +508,6 @@ export default function Component() {
           </div>
         </section>
 
-        {/* Benefits Section */}
-        <section className="relative mx-8 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-gray-50">
-          <div className="max-w-6xl mx-auto">
-            <AnimatedSection animation="fadeInUp">
-              <div className="text-center mb-20">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-black tracking-tight uppercase">
-                  ¿POR QUÉ ELEGIR AI LEARN?
-                </h2>
-              </div>
-            </AnimatedSection>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-              <AnimatedSection animation="scaleIn" delay={200}>
-                <div className="text-center mono-card p-6">
-                  <div className="w-12 h-12 mx-auto mb-4 bg-black flex items-center justify-center">
-                    <Clock className="h-6 w-6 text-white" />
-                  </div>
-                  <h3 className="text-lg font-bold mb-3 text-black uppercase tracking-wide">
-                    AHORRA TIEMPO
-                  </h3>
-                  <p className="text-sm text-gray-600">
-                    Procesa horas de audio en minutos y obtén resúmenes instantáneos
-                  </p>
-                </div>
-              </AnimatedSection>
-
-              <AnimatedSection animation="scaleIn" delay={400}>
-                <div className="text-center mono-card p-6">
-                  <div className="w-12 h-12 mx-auto mb-4 bg-black flex items-center justify-center">
-                    <Shield className="h-6 w-6 text-white" />
-                  </div>
-                  <h3 className="text-lg font-bold mb-3 text-black uppercase tracking-wide">
-                    SEGURO Y PRIVADO
-                  </h3>
-                  <p className="text-sm text-gray-600">
-                    Tus datos están protegidos con encriptación de nivel empresarial
-                  </p>
-                </div>
-              </AnimatedSection>
-
-              <AnimatedSection animation="scaleIn" delay={600}>
-                <div className="text-center mono-card p-6">
-                  <div className="w-12 h-12 mx-auto mb-4 bg-black flex items-center justify-center">
-                    <Users className="h-6 w-6 text-white" />
-                  </div>
-                  <h3 className="text-lg font-bold mb-3 text-black uppercase tracking-wide">
-                    COLABORATIVO
-                  </h3>
-                  <p className="text-sm text-gray-600">
-                    Comparte y colabora en proyectos de aprendizaje con tu equipo
-                  </p>
-                </div>
-              </AnimatedSection>
-
-              <AnimatedSection animation="scaleIn" delay={800}>
-                <div className="text-center mono-card p-6">
-                  <div className="w-12 h-12 mx-auto mb-4 bg-black flex items-center justify-center">
-                    <Globe className="h-6 w-6 text-white" />
-                  </div>
-                  <h3 className="text-lg font-bold mb-3 text-black uppercase tracking-wide">
-                    MULTIPLATAFORMA
-                  </h3>
-                  <p className="text-sm text-gray-600">
-                    Accede desde cualquier dispositivo, en cualquier lugar
-                  </p>
-                </div>
-              </AnimatedSection>
-            </div>
-          </div>
-        </section>
-
         {/* How it Works Section */}
         <section
           id="how-it-works"
@@ -503,7 +522,8 @@ export default function Component() {
                 <div className="mono-code max-w-3xl mx-auto">
                   <div className="text-sm text-gray-600 mb-2">// PROCESO</div>
                   <p className="text-sm text-black">
-                    Tres simples pasos para transformar tu audio en conocimiento estructurado
+                    Tres simples pasos para transformar tu audio en conocimiento
+                    estructurado
                   </p>
                 </div>
               </div>
@@ -521,7 +541,8 @@ export default function Component() {
                   <div className="mono-code text-left">
                     <div className="text-xs text-gray-600 mb-1">// ENTRADA</div>
                     <p className="text-sm text-black">
-                      Sube tu archivo de audio, graba directamente o conecta tu micrófono para sesiones en vivo
+                      Sube tu archivo de audio, graba directamente o conecta tu
+                      micrófono para sesiones en vivo
                     </p>
                   </div>
                   <div className="flex lg:hidden justify-center my-4">
@@ -532,13 +553,13 @@ export default function Component() {
                 </div>
               </AnimatedSection>
 
-              <div className="hidden lg:flex justify-center">
+              {/* <div className="hidden lg:flex justify-center">
                 <AnimatedSection animation="fadeIn" delay={400}>
                   <div className="text-2xl lg:text-4xl font-bold text-black">
                     →
                   </div>
                 </AnimatedSection>
-              </div>
+              </div> */}
 
               <AnimatedSection animation="fadeInUp" delay={600}>
                 <div className="text-center mono-card p-8">
@@ -553,7 +574,8 @@ export default function Component() {
                       // PROCESAMIENTO
                     </div>
                     <p className="text-sm text-black">
-                      Nuestra IA transcribe, analiza el contenido y extrae las ideas clave usando algoritmos avanzados
+                      Nuestra IA transcribe, analiza el contenido y extrae las
+                      ideas clave usando algoritmos avanzados
                     </p>
                   </div>
                   <div className="flex lg:hidden justify-center my-4">
@@ -564,13 +586,13 @@ export default function Component() {
                 </div>
               </AnimatedSection>
 
-              <div className="hidden lg:flex justify-center">
+              {/* <div className="hidden lg:flex justify-center">
                 <AnimatedSection animation="fadeIn" delay={800}>
                   <div className="text-2xl lg:text-4xl font-bold text-black">
                     →
                   </div>
                 </AnimatedSection>
-              </div>
+              </div> */}
 
               <AnimatedSection animation="fadeInRight" delay={1000}>
                 <div className="text-center mono-card p-8">
@@ -583,7 +605,8 @@ export default function Component() {
                   <div className="mono-code text-left">
                     <div className="text-xs text-gray-600 mb-1">// SALIDA</div>
                     <p className="text-sm text-black">
-                      Recibe resúmenes estructurados, quizzes personalizados y material de estudio optimizado
+                      Recibe resúmenes estructurados, quizzes personalizados y
+                      material de estudio optimizado
                     </p>
                   </div>
                   <div className="flex lg:hidden justify-center my-4">
@@ -728,7 +751,8 @@ export default function Component() {
                 <div className="mono-code max-w-3xl mx-auto">
                   <div className="text-sm text-gray-600 mb-2">// OPCIONES</div>
                   <p className="text-sm text-black">
-                    Elige el plan perfecto para tu nivel de uso y comienza a transformar tu aprendizaje hoy mismo
+                    Elige el plan perfecto para tu nivel de uso y comienza a
+                    transformar tu aprendizaje hoy mismo
                   </p>
                 </div>
               </div>
@@ -850,6 +874,48 @@ export default function Component() {
           </div>
         </section>
 
+        {/* Final CTA Section */}
+        <section className="relative mx-8 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-white">
+          <div className="max-w-4xl mx-auto text-center">
+            <AnimatedSection animation="scaleIn">
+              <div className="mono-card p-8 sm:p-12 lg:p-16 border-4 border-black">
+                <div className="w-16 h-16 mx-auto mb-8 bg-black flex items-center justify-center">
+                  <Sparkles className="h-8 w-8 text-white" />
+                </div>
+                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-8 tracking-tight uppercase">
+                  ARRANCÁ A USAR NUESTRO ASISTENTE HOY
+                </h2>
+                <div className="mono-code mb-12 max-w-3xl mx-auto">
+                  <div className="text-sm text-gray-600 mb-2">
+                    // LLAMADA A LA ACCIÓN
+                  </div>
+                  <p className="text-sm text-black leading-relaxed">
+                    Únete a miles de estudiantes y profesionales que ya están
+                    transformando su forma de aprender con IA. El futuro del
+                    aprendizaje personalizado está aquí.
+                  </p>
+                </div>
+                <div className="flex flex-wrap flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
+                  <Button
+                    size="lg"
+                    onClick={() => setIsOnboardingOpen(true)}
+                    className="text-lg px-12 py-6 mono-button-primary"
+                  >
+                    <Target className="mr-2 h-5 w-5" />
+                    EMPEZAR A APRENDER GRATIS
+                  </Button>
+                  {/* TODO <Button size="lg" className="text-lg px-12 py-6 mono-button">
+                    <Download className="mr-2 h-5 w-5" />
+                    DESCARGAR APP
+                  </Button>
+                    DESCARGAR APP
+                  </Button> */}
+                </div>
+              </div>
+            </AnimatedSection>
+          </div>
+        </section>
+
         {/* Contact Section */}
         <section
           id="contact"
@@ -864,7 +930,8 @@ export default function Component() {
                 <div className="mono-code max-w-3xl mx-auto">
                   <div className="text-sm text-gray-600 mb-2">// SOPORTE</div>
                   <p className="text-sm text-black">
-                    Nuestro equipo está aquí para ayudarte. Envíanos un mensaje y te responderemos lo antes posible.
+                    Nuestro equipo está aquí para ayudarte. Envíanos un mensaje
+                    y te responderemos lo antes posible.
                   </p>
                 </div>
               </div>
@@ -930,17 +997,16 @@ export default function Component() {
                     </div>
                   </div>
 
-                  <div className="mono-card p-6">
+                  {/* <div className="mono-card p-6">
                     <h3 className="text-lg font-bold text-black mb-3 uppercase">
                       ¿NECESITAS AYUDA INMEDIATA?
                     </h3>
                     <p className="text-gray-600 mb-4 text-sm">
-                      Visita nuestro centro de ayuda para encontrar respuestas a las preguntas más frecuentes
+                      Visita nuestro centro de ayuda para encontrar respuestas a
+                      las preguntas más frecuentes
                     </p>
-                    <Button className="mono-button">
-                      CENTRO DE AYUDA
-                    </Button>
-                  </div>
+                    <Button className="mono-button">CENTRO DE AYUDA</Button>
+                  </div> */}
                 </div>
               </AnimatedSection>
 
@@ -948,46 +1014,6 @@ export default function Component() {
                 <ContactForm />
               </AnimatedSection>
             </div>
-          </div>
-        </section>
-
-        {/* Final CTA Section */}
-        <section className="relative mx-8 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-white">
-          <div className="max-w-4xl mx-auto text-center">
-            <AnimatedSection animation="scaleIn">
-              <div className="mono-card p-8 sm:p-12 lg:p-16 border-4 border-black">
-                <div className="w-16 h-16 mx-auto mb-8 bg-black flex items-center justify-center">
-                  <Sparkles className="h-8 w-8 text-white" />
-                </div>
-                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-8 tracking-tight uppercase">
-                  ARRANCÁ A USAR NUESTRO ASISTENTE HOY
-                </h2>
-                <div className="mono-code mb-12 max-w-3xl mx-auto">
-                  <div className="text-sm text-gray-600 mb-2">
-                    // LLAMADA A LA ACCIÓN
-                  </div>
-                  <p className="text-sm text-black leading-relaxed">
-                    Únete a miles de estudiantes y profesionales que ya están transformando su forma de aprender con IA. El futuro del aprendizaje personalizado está aquí.
-                  </p>
-                </div>
-                <div className="flex flex-wrap flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
-                  <Button
-                    size="lg"
-                    onClick={() => setIsOnboardingOpen(true)}
-                    className="text-lg px-12 py-6 mono-button-primary"
-                  >
-                    <Target className="mr-2 h-5 w-5" />
-                    EMPEZAR A APRENDER GRATIS
-                  </Button>
-                  {/* TODO <Button size="lg" className="text-lg px-12 py-6 mono-button">
-                    <Download className="mr-2 h-5 w-5" />
-                    DESCARGAR APP
-                  </Button>
-                    DESCARGAR APP
-                  </Button> */}
-                </div>
-              </div>
-            </AnimatedSection>
           </div>
         </section>
 
@@ -1007,7 +1033,8 @@ export default function Component() {
                 <div className="mono-code mb-4">
                   <div className="text-xs text-gray-600 mb-1">// MISIÓN</div>
                   <p className="text-sm text-black">
-                    Transformando el futuro del aprendizaje con inteligencia artificial avanzada.
+                    Transformando el futuro del aprendizaje con inteligencia
+                    artificial avanzada.
                   </p>
                 </div>
                 <div className="flex space-x-4">
@@ -1147,7 +1174,8 @@ export default function Component() {
             <div className="border-t-2 border-black pt-8 text-center">
               <div className="mono-code">
                 <p className="text-sm text-black uppercase tracking-wide">
-                  © 2024 AI LEARNING PLATFORM. TRANSFORMANDO EL FUTURO DEL APRENDIZAJE.
+                  © 2024 AI LEARNING PLATFORM. TRANSFORMANDO EL FUTURO DEL
+                  APRENDIZAJE.
                 </p>
               </div>
             </div>

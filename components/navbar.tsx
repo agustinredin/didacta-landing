@@ -11,13 +11,13 @@ interface NavbarProps {
 
 export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
-  
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b-2 border-black">
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-3 h-48">
+          <div className="flex items-center space-x-3">
             <div className="w-60 flex items-center justify-center">
               <Logo className="text-white" />
             </div>
@@ -31,7 +31,7 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-4 xl:space-x-8">
+          <div className="hidden lg:flex items-center lg:mt-2 space-x-4 xl:space-x-8">
             <a
               href="#features"
               className="text-black hover:bg-black hover:text-white px-3 py-2 transition-colors font-medium uppercase tracking-wide"
