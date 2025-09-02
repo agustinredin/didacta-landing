@@ -1,8 +1,12 @@
+import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import "@/styles/globals.css";
 import "@/styles/performance-optimizations.css";
+import { ClientTranslator } from "@/app/lib/ClientTranslator";
+import type { Dict } from "@/app/lib/translateMarkers";
+import en from "@/locale/locale.json";
 
 export const metadata: Metadata = {
   icons: {
@@ -45,10 +49,12 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
+  const dict: Dict = en;
+
   return (
-    <html lang="es">
+    <html lang="en">
       <head>
         <style>{`
 html {
@@ -58,7 +64,9 @@ html {
 }
         `}</style>
       </head>
-      <body>{children}</body>
+      <body>
+        <ClientTranslator dict={dict}>{children}</ClientTranslator>
+      </body>
     </html>
   );
 }
