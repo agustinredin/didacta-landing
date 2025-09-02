@@ -1,5 +1,5 @@
-import Component from "../ai-learning-landing"
-import { BrowserCompatibilityNotice } from "../components/browser-compatibility-notice"
+import Component from "@/ai-learning-landing";
+import { BrowserCompatibilityNotice } from "@/components/browser-compatibility-notice";
 
 export default function Page() {
   return (
@@ -7,5 +7,5 @@ export default function Page() {
       <Component />
       <BrowserCompatibilityNotice />
     </>
-  )
+  );
 }
