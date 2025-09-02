@@ -58,7 +58,7 @@ export const StickyScrollHowItWorks = ({
 
     return (
     <motion.div
-      className="relative flex min-h-screen justify-center space-x-10 py-10 px-16"
+      className="relative flex min-h-screen justify-center space-x-10 px-16"
       ref={ref}
     >
       <div className="div relative flex items-start px-4">
@@ -187,7 +187,7 @@ const Step2Content = () => (
           <span className="text-sm">Análisis de contenido...</span>
         </div>
         <div className="flex items-center space-x-2">
-          <div className="w-4 h-4 border-2 border-black border-t-transparent animate-spin"></div>
+          <div className="w-4 h-4 rounded-full border-2 border-black border-t-transparent animate-spin" style={{borderRadius: "50% !important"}}></div>
           <span className="text-sm">Extrayendo conceptos clave</span>
         </div>
       </div>
