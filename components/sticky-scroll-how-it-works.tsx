@@ -30,8 +30,8 @@ export const StickyScrollHowItWorks = ({
   const [activeCard, setActiveCard] = React.useState(0);
   const ref = useRef<any>(null);
   const { scrollYProgress } = useScroll({
-    container: ref,
-    offset: ["start start", "end start"],
+    target: ref,
+    offset: ["start center", "end start"],
   });
   const cardLength = content.length;
 
@@ -56,15 +56,15 @@ export const StickyScrollHowItWorks = ({
     "#f1f5f9", // slate-100
   ];
 
-  return (
+    return (
     <motion.div
-      className="relative flex h-[40rem] justify-center space-x-10 overflow-y-auto p-10"
+      className="relative flex min-h-screen justify-center space-x-10 px-16"
       ref={ref}
     >
       <div className="div relative flex items-start px-4">
         <div className="max-w-2xl">
           {content.map((item, index) => (
-            <div key={item.title + index} className="my-20">
+            <div key={item.title + index} className="my-48">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={{
@@ -107,33 +107,42 @@ export const StickyScrollHowItWorks = ({
               </motion.div>
             </div>
           ))}
-          <div className="h-40" />
+          <div className="h-60" />
         </div>
       </div>
 
-      <div
-        className={cn(
-          "sticky top-10 hidden h-80 w-96 overflow-hidden bg-white border-4 border-black lg:block",
-          contentClassName
-        )}
-      >
-        <motion.div
-          key={activeCard}
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="h-full w-full"
-        >
-          {content[activeCard].content}
-        </motion.div>
+      <div className="hidden lg:block w-full max-w-md relative">
+        {content.map((item, index) => (
+          <motion.div
+            key={`content-${index}`}
+            initial={{ opacity: 0, x: 50 }}
+            animate={{
+              opacity: activeCard === index ? 1 : 0.3,
+              x: activeCard === index ? 0 : 20,
+            }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className={`absolute w-full ${
+              activeCard === index ? "pointer-events-auto" : "pointer-events-none"
+            }`}
+            style={{ 
+              top: `${top_calc(index)}rem`,
+              transform: activeCard === index ? 'translateX(0)' : 'translateX(100px)'
+            }}
+          >
+            <div className="min-h-[20rem] w-full mono-card overflow-hidden">
+              {item.content}
+            </div>
+          </motion.div>
+        ))}
       </div>
+
     </motion.div>
   );
 };
 
 // Content components for each step
 const Step1Content = () => (
-  <div className="h-full w-full bg-white p-6 flex flex-col justify-center items-center">
+  <div className="min-h-[20rem] w-full bg-white p-6 flex flex-col justify-center items-center">
     <div className="mono-card p-6 w-full">
       <div className="flex items-center space-x-3 mb-4">
         <Upload className="h-8 w-8 text-black" />
@@ -162,7 +171,7 @@ const Step1Content = () => (
 );
 
 const Step2Content = () => (
-  <div className="h-full w-full bg-white p-6 flex flex-col justify-center">
+  <div className="min-h-[20rem] w-full bg-white p-6 flex flex-col justify-center">
     <div className="mono-card p-6 w-full">
       <div className="flex items-center space-x-3 mb-4">
         <Brain className="h-8 w-8 text-black" />
@@ -178,7 +187,7 @@ const Step2Content = () => (
           <span className="text-sm">Análisis de contenido...</span>
         </div>
         <div className="flex items-center space-x-2">
-          <div className="w-4 h-4 border-2 border-black border-t-transparent animate-spin"></div>
+          <div className="w-4 h-4 rounded-full border-2 border-black border-t-transparent animate-spin" style={{borderRadius: "50% !important"}}></div>
           <span className="text-sm">Extrayendo conceptos clave</span>
         </div>
       </div>
@@ -191,17 +200,13 @@ const Step2Content = () => (
 );
 
 const Step3Content = () => (
-  <div className="h-full w-full bg-white p-6 flex flex-col justify-center">
+  <div className="min-h-[20rem] w-full bg-white p-6 flex flex-col justify-center">
     <div className="mono-card p-6 w-full">
       <div className="flex items-center space-x-3 mb-4">
         <FileText className="h-8 w-8 text-black" />
         <span className="font-bold uppercase">RESULTADO</span>
       </div>
       <div className="space-y-3">
-        <div className="mono-card p-3 bg-gray-50">
-          <div className="text-xs font-bold mb-1">RESUMEN</div>
-          <div className="text-xs">5 conceptos principales identificados</div>
-        </div>
         <div className="mono-card p-3 bg-gray-50">
           <div className="text-xs font-bold mb-1">TRANSCRIPCIÓN</div>
           <div className="text-xs">Texto completo con timestamps</div>
@@ -247,3 +252,8 @@ export const howItWorksContent: HowItWorksContent[] = [
     content: <Step3Content />,
   },
 ];
+
+//esto es un crimen
+function top_calc(index: number) {
+    return -1.325 * index * index + 34.525 * index + 13.5;
+}

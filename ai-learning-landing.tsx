@@ -627,9 +627,9 @@ export default function Component() {
         {/* How it Works Section - NEW STICKY SCROLL VERSION */}
         <section
           id="how-it-works"
-          className="relative mx-8 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-gray-50"
+          className="relative bg-gray-50"
         >
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-12">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-black tracking-tight uppercase">
@@ -646,11 +646,11 @@ export default function Component() {
                 </div>
               </div>
             </AnimatedSection>
-
-            <AnimatedSection animation="fadeInUp" delay={200}>
-              <StickyScrollHowItWorks content={howItWorksContent} />
-            </AnimatedSection>
           </div>
+
+          <AnimatedSection animation="fadeInUp" delay={200}>
+            <StickyScrollHowItWorks content={howItWorksContent} />
+          </AnimatedSection>
         </section>
 
         {/* Testimonials Section - TODO: Real testimonials (No se está renderizando actualmente) */}
