@@ -4,9 +4,6 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import "@/styles/globals.css";
 import "@/styles/performance-optimizations.css";
-import { ClientTranslator } from "@/app/lib/ClientTranslator";
-import type { Dict } from "@/app/lib/translateMarkers";
-import en from "@/locale/locale.json";
 
 export const metadata: Metadata = {
   icons: {
@@ -51,8 +48,6 @@ export default function RootLayout({
 }: Readonly<{
   children: ReactNode;
 }>) {
-  const dict: Dict = en;
-
   return (
     <html lang="en">
       <head>
@@ -65,7 +60,7 @@ html {
         `}</style>
       </head>
       <body>
-        <ClientTranslator dict={dict}>{children}</ClientTranslator>
+        <main>{children}</main>
       </body>
     </html>
   );

@@ -30,12 +30,13 @@ import {
   howItWorksContent,
 } from "./components/sticky-scroll-how-it-works";
 import Phone3D from "./components/phone";
+import { ClientTranslator } from "@/lib/ClientTranslator";
+import en from "./locale/locale.json";
 
 export default function Component() {
   const [isOnboardingOpen, setIsOnboardingOpen] = useState(false);
-
   return (
-    <>
+    <ClientTranslator dict={en}>
       <SEOHead />
       <div className="min-h-screen bg-white text-black font-mono">
         {/* Navbar */}
@@ -146,7 +147,8 @@ export default function Component() {
                           </div>
                         </div>
                         <p className="text-xs text-gray-700">
-                          [[[Algoritmos avanzados para procesamiento inteligente.]]]
+                          [[[Algoritmos avanzados para procesamiento
+                          inteligente.]]]
                         </p>
                       </div>
 
@@ -211,7 +213,8 @@ export default function Component() {
                             </span>
                           </div>
                           <p className="text-xs text-gray-700">
-                            [[[Algoritmos avanzados para procesamiento inteligente.]]]
+                            [[[Algoritmos avanzados para procesamiento
+                            inteligente.]]]
                           </p>
                         </div>
                       </AnimatedSection>
@@ -288,7 +291,9 @@ export default function Component() {
                   </div>
                 </div>
                 <div className="text-center mono-card p-6">
-                  <div className="text-3xl font-bold text-black mb-2">[[[50M+]]]</div>
+                  <div className="text-3xl font-bold text-black mb-2">
+                    [[[50M+]]]
+                  </div>
                   <div className="text-gray-600 uppercase tracking-wide text-sm">
                     [[[MINUTOS PROCESADOS]]]
                   </div>
@@ -391,8 +396,8 @@ export default function Component() {
                 </h2>
                 <div className="mono-code max-w-3xl mx-auto">
                   <p className="text-sm text-black">
-                    [[[Descubre cómo nuestra tecnología de IA revoluciona la forma
-                    en que aprendes y procesas información]]]
+                    [[[Descubre cómo nuestra tecnología de IA revoluciona la
+                    forma en que aprendes y procesas información]]]
                   </p>
                 </div>
               </div>
@@ -487,8 +492,9 @@ export default function Component() {
                     </h3>
                     <div className="mono-code text-left mb-4">
                       <p className="text-sm text-black">
-                        [[[Genera automáticamente cuestionarios personalizados que
-                        refuerzan el aprendizaje y evalúan la comprensión.]]]
+                        [[[Genera automáticamente cuestionarios personalizados
+                        que refuerzan el aprendizaje y evalúan la
+                        comprensión.]]]
                       </p>
                     </div>
                     <ul className="text-xs text-gray-600 space-y-2 text-left">
@@ -625,10 +631,7 @@ export default function Component() {
         {/* </section> */}
 
         {/* How it Works Section - NEW STICKY SCROLL VERSION */}
-        <section
-          id="how-it-works"
-          className="relative bg-gray-50"
-        >
+        <section id="how-it-works" className="relative bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-12">
@@ -679,14 +682,16 @@ export default function Component() {
                         [[[// RESEÑA]]]
                       </div>
                       <p className="text-sm text-black">
-                        [[["AI Learn ha revolucionado la forma en que proceso las
-                        conferencias. Ahora puedo convertir horas de audio en
-                        resúmenes útiles en minutos."]]]
+                        [[["AI Learn ha revolucionado la forma en que proceso
+                        las conferencias. Ahora puedo convertir horas de audio
+                        en resúmenes útiles en minutos."]]]
                       </p>
                     </div>
                     <div className="flex items-center">
                       <div className="w-10 h-10 bg-black flex items-center justify-center mr-3">
-                        <span className="text-white font-bold text-sm">[[[MR]]]</span>
+                        <span className="text-white font-bold text-sm">
+                          [[[MR]]]
+                        </span>
                       </div>
                       <div>
                         <div className="font-bold text-black text-sm uppercase">
@@ -745,8 +750,8 @@ export default function Component() {
                         [[[// RESEÑA]]]
                       </div>
                       <p className="text-sm text-black">
-                        [[["La precisión de la transcripción es impresionante. He
-                        mejorado mi productividad en un 300% desde que uso AI
+                        [[["La precisión de la transcripción es impresionante.
+                        He mejorado mi productividad en un 300% desde que uso AI
                         Learn."]]]
                       </p>
                     </div>
@@ -782,7 +787,9 @@ export default function Component() {
                   [[[PLANES DE PRECIOS]]]
                 </h2>
                 <div className="mono-code max-w-3xl mx-auto">
-                  <div className="text-sm text-gray-600 mb-2">[[[// OPCIONES]]]</div>
+                  <div className="text-sm text-gray-600 mb-2">
+                    [[[// OPCIONES]]]
+                  </div>
                   <p className="text-sm text-black">
                     [[[Elige el plan perfecto para tu nivel de uso y comienza a
                     transformar tu aprendizaje hoy mismo]]]
@@ -802,7 +809,8 @@ export default function Component() {
                       [[[PLAN PRO]]]
                     </h3>
                     <div className="text-4xl font-bold mb-6 text-black">
-                      [[[$19]]]<span className="text-lg text-gray-600">/MES</span>
+                      [[[$19]]]
+                      <span className="text-lg text-gray-600">/MES</span>
                     </div>
                     <div className="mono-code mb-6">
                       <div className="text-xs text-gray-600 mb-1">
@@ -858,7 +866,8 @@ export default function Component() {
                       [[[PLAN EMPRESA]]]
                     </h3>
                     <div className="text-4xl font-bold mb-6 text-black">
-                      [[[$99]]]<span className="text-lg text-gray-600">/MES</span>
+                      [[[$99]]]
+                      <span className="text-lg text-gray-600">/MES</span>
                     </div>
                     <div className="mono-code mb-6">
                       <div className="text-xs text-gray-600 mb-1">
@@ -961,10 +970,12 @@ export default function Component() {
                   [[[CONTACTÁNOS]]]
                 </h2>
                 <div className="mono-code max-w-3xl mx-auto">
-                  <div className="text-sm text-gray-600 mb-2">[[[// SOPORTE]]]</div>
+                  <div className="text-sm text-gray-600 mb-2">
+                    [[[// SOPORTE]]]
+                  </div>
                   <p className="text-sm text-black">
-                    [[[Nuestro equipo está aquí para ayudarte. Envíanos un mensaje
-                    y te responderemos lo antes posible.]]]
+                    [[[Nuestro equipo está aquí para ayudarte. Envíanos un
+                    mensaje y te responderemos lo antes posible.]]]
                   </p>
                 </div>
               </div>
@@ -1064,7 +1075,9 @@ export default function Component() {
                   </span>
                 </div>
                 <div className="mono-code mb-4">
-                  <div className="text-xs text-gray-600 mb-1">[[[// MISIÓN]]]</div>
+                  <div className="text-xs text-gray-600 mb-1">
+                    [[[// MISIÓN]]]
+                  </div>
                   <p className="text-sm text-black">
                     [[[Transformando el futuro del aprendizaje con inteligencia
                     artificial avanzada.]]]
@@ -1224,6 +1237,6 @@ export default function Component() {
       {/* <div>
       <Phone3D imageUrl='step1.png' />
     </div> */}
-    </>
+    </ClientTranslator>
   );
 }
