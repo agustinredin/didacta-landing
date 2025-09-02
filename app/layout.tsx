@@ -4,7 +4,8 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import "@/styles/globals.css";
 import "@/styles/performance-optimizations.css";
-import { translateTree, type Dict } from "@/app/lib/translateMarkers";
+import { ClientTranslator } from "@/app/lib/ClientTranslator";
+import type { Dict } from "@/app/lib/translateMarkers";
 import en from "@/locale/locale.json";
 
 export const metadata: Metadata = {
@@ -51,7 +52,6 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   const dict: Dict = en;
-  const translated = translateTree(children, dict);
 
   return (
     <html lang="en">
@@ -64,7 +64,9 @@ html {
 }
         `}</style>
       </head>
-      <body>{translated}</body>
+      <body>
+        <ClientTranslator dict={dict}>{children}</ClientTranslator>
+      </body>
     </html>
   );
 }
