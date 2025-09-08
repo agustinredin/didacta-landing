@@ -50,23 +50,23 @@ export default function Component() {
               <div className="space-y-8 lg:w-1/2">
                 <AnimatedSection animation="fadeIn" delay={200}>
                   <div className="text-sm font-medium text-black mb-6 tracking-widest uppercase border-2 border-black bg-white px-4 py-2 inline-block">
-                    [[[01. Transforma tu aprendizaje]]]
+                    01. Transforma tu aprendizaje
                   </div>
                 </AnimatedSection>
 
                 <AnimatedSection animation="fadeInUp" delay={400}>
                   <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-black tracking-tight uppercase">
-                    [[[Convertí tus clases en conocimiento]]]
+                    Convertí tus clases en conocimiento
                   </h1>
                 </AnimatedSection>
 
                 <AnimatedSection animation="fadeInUp" delay={600}>
                   <div className="mono-code">
                     <p className="text-base sm:text-md text-black leading-relaxed">
-                      [[[Presta atencion en clase y deja que la IA facilite tu
+                      Presta atencion en clase y deja que la IA facilite tu
                       aprendizaje. Nuestra aplicación genera resumenes y
                       cuestionarios inteligentes para estudiar de manera más
-                      efectiva.]]]
+                      efectiva.
                     </p>
                   </div>
                 </AnimatedSection>
@@ -76,12 +76,12 @@ export default function Component() {
                     <Button
                       size="lg"
                       onClick={() => setIsOnboardingOpen(true)}
-                      className="text-lg px-8 py-4 mono-button-primary"
+                      className="text-lg px-8 py-4 mono-button-orange border border-orange"
                     >
-                      [[[Empezar gratis]]]
+                      Empezar gratis
                     </Button>
                     <Button size="lg" className="text-lg px-8 py-4 mono-button">
-                      [[[Saber más]]]
+                      <a href="#features">Saber más</a>
                     </Button>
                   </div>
                 </AnimatedSection>
@@ -99,7 +99,7 @@ export default function Component() {
                     {/* Terminal Header */}
                     <div className="bg-black text-white p-4 font-mono text-sm">
                       <div className="flex items-center justify-between">
-                        <span>[[[Terminal AI Learn]]]</span>
+                        <span>Terminal AI Learn</span>
                         <div className="flex space-x-2">
                           <div className="w-3 h-3 bg-white"></div>
                           <div className="w-3 h-3 bg-white"></div>
@@ -114,24 +114,24 @@ export default function Component() {
                       style={{ textTransform: "none" }}
                     >
                       <div>
-                        <span className="text-gray-600">$</span> [[[ai-learn
-                        --procesar audio.mp3]]]
+                        <span className="text-gray-600">$</span> ai-learn
+                        --procesar audio.mp3
                       </div>
                       <div className="text-gray-600">
-                        [[[[Info] Procesando archivo de audio...]]]
+                        [Info] Procesando archivo de audio...
                       </div>
                       <div className="text-gray-600">
-                        [[[[Éxito] Transcripción completa: 98% de precisión]]]
+                        [Éxito] Transcripción completa: 98% de precisión
                       </div>
                       <div className="text-gray-600">
-                        [[[[Éxito] Resumen generado: 5 conceptos clave]]]
+                        [Éxito] Resumen generado: 5 conceptos clave
                       </div>
                       <div className="text-gray-600">
-                        [[[[Éxito] Quiz creado: 10 preguntas]]]
+                        [Éxito] Quiz creado: 10 preguntas
                       </div>
                       <div>
                         <span className="text-gray-600">$</span>{" "}
-                        <span className="animate-pulse">[[[_]]]</span>
+                        <span className="animate-pulse">_</span>
                       </div>
                     </div>
 
@@ -143,12 +143,11 @@ export default function Component() {
                             <Brain className="h-4 w-4 text-white" />
                           </div>
                           <div className="font-bold text-xs uppercase">
-                            [[[MOTOR IA]]]
+                            MOTOR IA
                           </div>
                         </div>
                         <p className="text-xs text-gray-700">
-                          [[[Algoritmos avanzados para procesamiento
-                          inteligente.]]]
+                          Algoritmos avanzados para procesamiento inteligente.
                         </p>
                       </div>
 
@@ -162,7 +161,7 @@ export default function Component() {
                           </span>
                         </div>
                         <p className="text-xs text-gray-700">
-                          [[[Insights de datos en tiempo real.]]]
+                          Insights de datos en tiempo real.
                         </p>
                       </div>
 
@@ -172,11 +171,11 @@ export default function Component() {
                             <Users className="h-4 w-4 text-white" />
                           </div>
                           <span className="font-bold text-xs uppercase">
-                            [[[COMUNIDAD]]]
+                            COMUNIDAD
                           </span>
                         </div>
                         <p className="text-xs text-gray-700">
-                          [[[Únete a una comunidad activa de estudiantes.]]]
+                          Únete a una comunidad activa de estudiantes.
                         </p>
                       </div>
 
@@ -186,11 +185,11 @@ export default function Component() {
                             <Laptop className="h-4 w-4 text-white" />
                           </div>
                           <span className="font-bold text-xs uppercase">
-                            [[[DESARROLLO]]]
+                            DESARROLLO
                           </span>
                         </div>
                         <p className="text-xs text-gray-700">
-                          [[[Mejores ciclos de desarrollo.]]]
+                          Mejores ciclos de desarrollo.
                         </p>
                       </div>
                     </div>
@@ -209,12 +208,11 @@ export default function Component() {
                               <Brain className="h-4 w-4 text-white" />
                             </div>
                             <span className="font-bold text-xs uppercase">
-                              [[[MOTOR IA]]]
+                              MOTOR IA
                             </span>
                           </div>
                           <p className="text-xs text-gray-700">
-                            [[[Algoritmos avanzados para procesamiento
-                            inteligente.]]]
+                            Algoritmos avanzados para procesamiento inteligente.
                           </p>
                         </div>
                       </AnimatedSection>
@@ -231,7 +229,7 @@ export default function Component() {
                             </span>
                           </div>
                           <p className="text-xs text-gray-700">
-                            [[[Insights de datos en tiempo real.]]]
+                            Insights de datos en tiempo real.
                           </p>
                         </div>
                       </AnimatedSection>
@@ -244,11 +242,11 @@ export default function Component() {
                               <Users className="h-4 w-4 text-white" />
                             </div>
                             <span className="font-bold text-xs uppercase">
-                              [[[COMUNIDAD]]]
+                              COMUNIDAD
                             </span>
                           </div>
                           <p className="text-xs text-gray-700">
-                            [[[Únete a una comunidad activa de estudiantes.]]]
+                            Únete a una comunidad activa de estudiantes.
                           </p>
                         </div>
                       </AnimatedSection>
@@ -261,11 +259,11 @@ export default function Component() {
                               <Laptop className="h-4 w-4 text-white" />
                             </div>
                             <span className="font-bold text-xs uppercase">
-                              [[[DESARROLLO]]]
+                              DESARROLLO
                             </span>
                           </div>
                           <p className="text-xs text-gray-700">
-                            [[[Mejores ciclos de desarrollo.]]]
+                            Mejores ciclos de desarrollo.
                           </p>
                         </div>
                       </AnimatedSection>
@@ -284,24 +282,22 @@ export default function Component() {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto mt-12 sm:mt-20 pt-8 sm:pt-16 border-t-2 border-black">
                 <div className="text-center mono-card p-6">
                   <div className="text-3xl font-bold text-black mb-2">
-                    [[[10,000+]]]
+                    10,000+
                   </div>
                   <div className="text-gray-600 uppercase tracking-wide text-sm">
-                    [[[USUARIOS ACTIVOS]]]
+                    USUARIOS ACTIVOS
                   </div>
                 </div>
                 <div className="text-center mono-card p-6">
-                  <div className="text-3xl font-bold text-black mb-2">
-                    [[[50M+]]]
-                  </div>
+                  <div className="text-3xl font-bold text-black mb-2">50M+</div>
                   <div className="text-gray-600 uppercase tracking-wide text-sm">
-                    [[[MINUTOS PROCESADOS]]]
+                    MINUTOS PROCESADOS
                   </div>
                 </div>
                 <div className="text-center mono-card p-6">
                   <div className="text-3xl font-bold text-black mb-2">98%</div>
                   <div className="text-gray-600 uppercase tracking-wide text-sm">
-                    [[[PRECISIÓN IA]]]
+                    PRECISIÓN IA
                   </div>
                 </div>
               </div>
@@ -310,12 +306,12 @@ export default function Component() {
         </section>
 
         {/* Benefits Section */}
-        <section className="relative mx-8 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-gray-50">
+        <section className="relative px-6 sm:px-8 lg:px-12 py-16 sm:py-24 lg:py-32 bg-gray-50">
           <div className="max-w-6xl mx-auto">
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-20">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-black tracking-tight uppercase">
-                  [[[¿POR QUÉ ELEGIR AI LEARN?]]]
+                  ¿POR QUÉ ELEGIR AI LEARN?
                 </h2>
               </div>
             </AnimatedSection>
@@ -327,11 +323,11 @@ export default function Component() {
                     <Clock className="h-6 w-6 text-white" />
                   </div>
                   <h3 className="text-lg font-bold mb-3 text-black uppercase tracking-wide">
-                    [[[AHORRA TIEMPO]]]
+                    AHORRA TIEMPO
                   </h3>
                   <p className="text-sm text-gray-600">
-                    [[[Procesa horas de audio en minutos y obtén resúmenes
-                    instantáneos]]]
+                    Procesa horas de audio en minutos y obtén resúmenes
+                    instantáneos
                   </p>
                 </div>
               </AnimatedSection>
@@ -342,11 +338,11 @@ export default function Component() {
                     <Shield className="h-6 w-6 text-white" />
                   </div>
                   <h3 className="text-lg font-bold mb-3 text-black uppercase tracking-wide">
-                    [[[SEGURO Y PRIVADO]]]
+                    SEGURO Y PRIVADO
                   </h3>
                   <p className="text-sm text-gray-600">
-                    [[[Tus datos están protegidos con encriptación de nivel
-                    empresarial]]]
+                    Tus datos están protegidos con encriptación de nivel
+                    empresarial
                   </p>
                 </div>
               </AnimatedSection>
@@ -357,11 +353,11 @@ export default function Component() {
                     <Users className="h-6 w-6 text-white" />
                   </div>
                   <h3 className="text-lg font-bold mb-3 text-black uppercase tracking-wide">
-                    [[[COLABORATIVO]]]
+                    COLABORATIVO
                   </h3>
                   <p className="text-sm text-gray-600">
-                    [[[Comparte y colabora en proyectos de aprendizaje con tu
-                    equipo]]]
+                    Comparte y colabora en proyectos de aprendizaje con tu
+                    equipo
                   </p>
                 </div>
               </AnimatedSection>
@@ -372,10 +368,10 @@ export default function Component() {
                     <Globe className="h-6 w-6 text-white" />
                   </div>
                   <h3 className="text-lg font-bold mb-3 text-black uppercase tracking-wide">
-                    [[[MULTIPLATAFORMA]]]
+                    MULTIPLATAFORMA
                   </h3>
                   <p className="text-sm text-gray-600">
-                    [[[Accede desde cualquier dispositivo, en cualquier lugar]]]
+                    Accede desde cualquier dispositivo, en cualquier lugar
                   </p>
                 </div>
               </AnimatedSection>
@@ -392,18 +388,18 @@ export default function Component() {
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-20">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-black tracking-tight uppercase">
-                  [[[CARACTERÍSTICAS PRINCIPALES]]]
+                  CARACTERÍSTICAS PRINCIPALES
                 </h2>
                 <div className="mono-code max-w-3xl mx-auto">
                   <p className="text-sm text-black">
-                    [[[Descubre cómo nuestra tecnología de IA revoluciona la
-                    forma en que aprendes y procesas información]]]
+                    Descubre cómo nuestra tecnología de IA revoluciona la forma
+                    en que aprendes y procesas información
                   </p>
                 </div>
               </div>
             </AnimatedSection>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10 py-8">
               <AnimatedSection animation="fadeInLeft" delay={200}>
                 <Card className="mono-card h-full">
                   <CardContent className="p-8 text-center">
@@ -418,23 +414,23 @@ export default function Component() {
                     </h3>
                     <div className="mono-code text-left mb-4">
                       <p className="text-sm text-black">
-                        [[[Convierte automáticamente cualquier audio en texto
+                        Convierte automáticamente cualquier audio en texto
                         preciso usando tecnología de reconocimiento de voz con
-                        IA.]]]
+                        IA.
                       </p>
                     </div>
                     <ul className="text-xs text-gray-600 space-y-2 text-left">
                       <li className="flex items-center">
                         <div className="w-2 h-2 bg-black mr-2"></div>
-                        [[[SOPORTE PARA 50+ IDIOMAS]]]
+                        SOPORTE PARA 50+ IDIOMAS
                       </li>
                       <li className="flex items-center">
                         <div className="w-2 h-2 bg-black mr-2"></div>
-                        [[[98% DE PRECISIÓN]]]
+                        98% DE PRECISIÓN
                       </li>
                       <li className="flex items-center">
                         <div className="w-2 h-2 bg-black mr-2"></div>
-                        [[[PROCESAMIENTO EN TIEMPO REAL]]]
+                        PROCESAMIENTO EN TIEMPO REAL
                       </li>
                     </ul>
                   </CardContent>
@@ -442,7 +438,7 @@ export default function Component() {
               </AnimatedSection>
 
               <AnimatedSection animation="fadeInUp" delay={400}>
-                <Card className="mono-card h-full">
+                <Card className="mono-card-highlight h-full lg:-translate-y-8">
                   <CardContent className="p-8 text-center">
                     <div className="mb-6">
                       <div className="w-16 h-16 mx-auto bg-black flex items-center justify-center mb-4">
@@ -451,27 +447,27 @@ export default function Component() {
                       <div className="w-4 h-4 bg-black mx-auto"></div>
                     </div>
                     <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">
-                      [[[RESUMEN CON IA]]]
+                      RESUMEN CON IA
                     </h3>
                     <div className="mono-code text-left mb-4">
                       <p className="text-sm text-black">
-                        [[[Extrae automáticamente las ideas clave y conceptos
+                        Extrae automáticamente las ideas clave y conceptos
                         importantes usando modelos de lenguaje de última
-                        generación.]]]
+                        generación.
                       </p>
                     </div>
                     <ul className="text-xs text-gray-600 space-y-2 text-left">
                       <li className="flex items-center">
                         <div className="w-2 h-2 bg-black mr-2"></div>
-                        [[[RESÚMENES PERSONALIZADOS]]]
+                        RESÚMENES PERSONALIZADOS
                       </li>
                       <li className="flex items-center">
                         <div className="w-2 h-2 bg-black mr-2"></div>
-                        [[[EXTRACCIÓN DE CONCEPTOS CLAVE]]]
+                        EXTRACCIÓN DE CONCEPTOS CLAVE
                       </li>
                       <li className="flex items-center">
                         <div className="w-2 h-2 bg-black mr-2"></div>
-                        [[[ANÁLISIS DE SENTIMIENTOS]]]
+                        ANÁLISIS DE SENTIMIENTOS
                       </li>
                     </ul>
                   </CardContent>
@@ -488,27 +484,26 @@ export default function Component() {
                       <div className="w-4 h-4 bg-black mx-auto"></div>
                     </div>
                     <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">
-                      [[[QUIZZES INTERACTIVOS]]]
+                      QUIZZES INTERACTIVOS
                     </h3>
                     <div className="mono-code text-left mb-4">
                       <p className="text-sm text-black">
-                        [[[Genera automáticamente cuestionarios personalizados
-                        que refuerzan el aprendizaje y evalúan la
-                        comprensión.]]]
+                        Genera automáticamente cuestionarios personalizados que
+                        refuerzan el aprendizaje y evalúan la comprensión.
                       </p>
                     </div>
                     <ul className="text-xs text-gray-600 space-y-2 text-left">
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        [[[PREGUNTAS ADAPTATIVAS]]]
+                        PREGUNTAS ADAPTATIVAS
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        [[[RETROALIMENTACIÓN INSTANTÁNEA]]]
+                        RETROALIMENTACIÓN INSTANTÁNEA
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        [[[SEGUIMIENTO DE PROGRESO]]]
+                        SEGUIMIENTO DE PROGRESO
                       </li>
                     </ul>
                   </CardContent>
@@ -524,10 +519,10 @@ export default function Component() {
           className="relative mx-8 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-white"
         >
           <div className="max-w-6xl mx-auto">
-            <AnimatedSection animation="fadeInUp">
+                <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-20">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-black tracking-tight uppercase">
-                  [[[¿CÓMO FUNCIONA?]]]
+                  ¿CÓMO FUNCIONA?
                 </h2>
                 <div className="mono-code max-w-3xl mx-auto">
                   <div className="text-sm text-gray-600 mb-2">// PROCESO</div>
@@ -636,15 +631,15 @@ export default function Component() {
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-12">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-black tracking-tight uppercase">
-                  [[[¿CÓMO FUNCIONA?]]]
+                  ¿CÓMO FUNCIONA?
                 </h2>
                 <div className="mono-code max-w-3xl mx-auto">
                   <div className="text-sm text-gray-600 mb-2">
-                    [[[// PROCESO INTERACTIVO]]]
+                    // PROCESO INTERACTIVO
                   </div>
                   <p className="text-sm text-black">
-                    [[[Descubre paso a paso cómo transformamos tu audio en
-                    conocimiento estructurado]]]
+                    Descubre paso a paso cómo transformamos tu audio en
+                    conocimiento estructurado
                   </p>
                 </div>
               </div>
@@ -665,7 +660,7 @@ export default function Component() {
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-20">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-black tracking-tight uppercase">
-                  [[[TESTIMONIOS DE USUARIOS]]]
+                  TESTIMONIOS DE USUARIOS
                 </h2>
               </div>
             </AnimatedSection>
@@ -675,30 +670,28 @@ export default function Component() {
                 <Card className="mono-card h-full">
                   <CardContent className="p-6">
                     <div className="flex items-center mb-4">
-                      <div className="text-black text-lg">[[[★★★★★]]]</div>
+                      <div className="text-black text-lg">★★★★★</div>
                     </div>
                     <div className="mono-code mb-4">
                       <div className="text-xs text-gray-600 mb-1">
-                        [[[// RESEÑA]]]
+                        // RESEÑA
                       </div>
                       <p className="text-sm text-black">
-                        [[["AI Learn ha revolucionado la forma en que proceso
-                        las conferencias. Ahora puedo convertir horas de audio
-                        en resúmenes útiles en minutos."]]]
+                        "AI Learn ha revolucionado la forma en que proceso las
+                        conferencias. Ahora puedo convertir horas de audio en
+                        resúmenes útiles en minutos."
                       </p>
                     </div>
                     <div className="flex items-center">
                       <div className="w-10 h-10 bg-black flex items-center justify-center mr-3">
-                        <span className="text-white font-bold text-sm">
-                          [[[MR]]]
-                        </span>
+                        <span className="text-white font-bold text-sm">MR</span>
                       </div>
                       <div>
                         <div className="font-bold text-black text-sm uppercase">
-                          [[[MARÍA RODRÍGUEZ]]]
+                          MARÍA RODRÍGUEZ
                         </div>
                         <div className="text-gray-600 text-xs uppercase">
-                          [[[ESTUDIANTE DE MEDICINA]]]
+                          ESTUDIANTE DE MEDICINA
                         </div>
                       </div>
                     </div>
@@ -710,16 +703,16 @@ export default function Component() {
                 <Card className="mono-card h-full">
                   <CardContent className="p-6">
                     <div className="flex items-center mb-4">
-                      <div className="text-black text-lg">[[[★★★★★]]]</div>
+                      <div className="text-black text-lg">★★★★★</div>
                     </div>
                     <div className="mono-code mb-4">
                       <div className="text-xs text-gray-600 mb-1">
-                        [[[// RESEÑA]]]
+                        // RESEÑA
                       </div>
                       <p className="text-sm text-black">
-                        [[["Como profesor, uso AI Learn para crear material de
+                        "Como profesor, uso AI Learn para crear material de
                         estudio a partir de mis clases. Los quizzes generados
-                        son increíblemente precisos."]]]
+                        son increíblemente precisos."
                       </p>
                     </div>
                     <div className="flex items-center">
@@ -728,10 +721,10 @@ export default function Component() {
                       </div>
                       <div>
                         <div className="font-bold text-black text-sm uppercase">
-                          [[[CARLOS LÓPEZ]]]
+                          CARLOS LÓPEZ
                         </div>
                         <div className="text-gray-600 text-xs uppercase">
-                          [[[PROFESOR UNIVERSITARIO]]]
+                          PROFESOR UNIVERSITARIO
                         </div>
                       </div>
                     </div>
@@ -743,16 +736,16 @@ export default function Component() {
                 <Card className="mono-card h-full">
                   <CardContent className="p-6">
                     <div className="flex items-center mb-4">
-                      <div className="text-black text-lg">[[[★★★★★]]]</div>
+                      <div className="text-black text-lg">★★★★★</div>
                     </div>
                     <div className="mono-code mb-4">
                       <div className="text-xs text-gray-600 mb-1">
-                        [[[// RESEÑA]]]
+                        // RESEÑA
                       </div>
                       <p className="text-sm text-black">
-                        [[["La precisión de la transcripción es impresionante.
-                        He mejorado mi productividad en un 300% desde que uso AI
-                        Learn."]]]
+                        "La precisión de la transcripción es impresionante. He
+                        mejorado mi productividad en un 300% desde que uso AI
+                        Learn."
                       </p>
                     </div>
                     <div className="flex items-center">
@@ -761,10 +754,10 @@ export default function Component() {
                       </div>
                       <div>
                         <div className="font-bold text-black text-sm uppercase">
-                          [[[ANA SILVA]]]
+                          ANA SILVA
                         </div>
                         <div className="text-gray-600 text-xs uppercase">
-                          [[[CONSULTORA EMPRESARIAL]]]
+                          CONSULTORA EMPRESARIAL
                         </div>
                       </div>
                     </div>
@@ -784,15 +777,14 @@ export default function Component() {
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-20">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-black tracking-tight uppercase">
-                  [[[PLANES DE PRECIOS]]]
+                  PLANES DE PRECIOS
                 </h2>
                 <div className="mono-code max-w-3xl mx-auto">
-                  <div className="text-sm text-gray-600 mb-2">
-                    [[[// OPCIONES]]]
-                  </div>
+                  <div className="text-sm text-gray-600 mb-2">// OPCIONES</div>
                   <p className="text-sm text-black">
-                    [[[Elige el plan perfecto para tu nivel de uso y comienza a
-                    transformar tu aprendizaje hoy mismo]]]
+                    Queremos dar lo mejor a nuestros usuarios. El verdadero
+                    valor está en transformar tus notas y audios en conocimiento
+                    accionable, generando un impacto real en tu aprendizaje.
                   </p>
                 </div>
               </div>
@@ -801,59 +793,59 @@ export default function Component() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto">
               <AnimatedSection animation="fadeInLeft" delay={200}>
                 <Card className="mono-card border-4 border-black relative">
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-black text-white px-6 py-2 text-sm font-bold uppercase tracking-wide">
-                    [[[MÁS POPULAR]]]
-                  </div>
                   <CardContent className="p-8 text-center">
                     <h3 className="text-2xl font-bold mb-4 text-black uppercase tracking-wide">
-                      [[[PLAN PRO]]]
+                      PLAN FREE
                     </h3>
-                    <div className="text-4xl font-bold mb-6 text-black">
-                      [[[$19]]]
-                      <span className="text-lg text-gray-600">/MES</span>
+                    <div className="text-4xl font-bold mb-6 text-green-800">
+                      GRATIS
                     </div>
                     <div className="mono-code mb-6">
                       <div className="text-xs text-gray-600 mb-1">
-                        [[[// OBJETIVO]]]
+                        // OBJETIVO
                       </div>
                       <p className="text-sm text-black">
-                        [[[Perfecto para estudiantes y profesionales]]]
+                        Familiarizarte con el asistente
                       </p>
                     </div>
                     <ul className="space-y-3 mb-8 text-left text-sm">
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        [[[50 HORAS DE AUDIO/MES]]]
+                        300 TOKENS
+                      </li>
+                      <li className="flex items-center">
+                        <div className="w-3 h-3 bg-black mr-3"></div>5 HORAS DE
+                        AUDIO/MES
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        [[[TRANSCRIPCIÓN AVANZADA CON IA]]]
+                        TRANSCRIPCIÓN AVANZADA CON IA
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        [[[RESÚMENES INTELIGENTES PERSONALIZADOS]]]
+                        RESÚMENES INTELIGENTES PERSONALIZADOS
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        [[[QUIZZES ILIMITADOS ADAPTATIVOS]]]
+                        QUIZZES ILIMITADOS ADAPTATIVOS
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        [[[SOPORTE PRIORITARIO 24/7]]]
+                        SOPORTE PRIORITARIO 24/7
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        [[[EXPORTACIÓN EN MÚLTIPLES FORMATOS]]]
+                        EXPORTACIÓN EN MÚLTIPLES FORMATOS
                       </li>
                     </ul>
                     <Button
                       onClick={() => setIsOnboardingOpen(true)}
                       className="w-full mono-button-primary py-4 text-lg font-medium"
                     >
-                      [[[COMENZAR PRUEBA GRATIS]]]
+                      COMENZAR PRUEBA GRATIS
                     </Button>
                     <p className="text-xs text-gray-500 mt-4 uppercase tracking-wide">
-                      [[[14 DÍAS GRATIS CANCELA CUANDO QUIERAS]]]
+                      14 DÍAS GRATIS CANCELA CUANDO QUIERAS
                     </p>
                   </CardContent>
                 </Card>
@@ -861,53 +853,56 @@ export default function Component() {
 
               <AnimatedSection animation="fadeInRight" delay={400}>
                 <Card className="mono-card">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-black text-white px-6 py-2 text-sm font-bold uppercase tracking-wide">
+                    VERSIÓN ILIMITADA
+                  </div>
                   <CardContent className="p-8 text-center">
                     <h3 className="text-2xl font-bold mb-4 text-black uppercase tracking-wide">
-                      [[[PLAN EMPRESA]]]
+                      PLAN EMPRESA
                     </h3>
                     <div className="text-4xl font-bold mb-6 text-black">
-                      [[[$99]]]
+                      $99
                       <span className="text-lg text-gray-600">/MES</span>
                     </div>
                     <div className="mono-code mb-6">
                       <div className="text-xs text-gray-600 mb-1">
-                        [[[// OBJETIVO]]]
+                        // OBJETIVO
                       </div>
                       <p className="text-sm text-black">
-                        [[[Para equipos y organizaciones]]]
+                        Para equipos y organizaciones
                       </p>
                     </div>
                     <ul className="space-y-3 mb-8 text-left text-sm">
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        [[[AUDIO ILIMITADO PARA TODO EL EQUIPO]]]
+                        AUDIO ILIMITADO PARA TODO EL EQUIPO
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        [[[IA PERSONALIZADA PARA TU INDUSTRIA]]]
+                        IA PERSONALIZADA PARA TU INDUSTRIA
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        [[[INTEGRACIONES API COMPLETAS]]]
+                        INTEGRACIONES API COMPLETAS
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        [[[EQUIPOS Y COLABORACIÓN ILIMITADA]]]
+                        EQUIPOS Y COLABORACIÓN ILIMITADA
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        [[[SOPORTE DEDICADO Y ONBOARDING]]]
+                        SOPORTE DEDICADO Y ONBOARDING
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        [[[ANÁLISIS AVANZADOS Y REPORTES]]]
+                        ANÁLISIS AVANZADOS Y REPORTES
                       </li>
                     </ul>
                     <Button className="w-full mono-button py-4 text-lg font-medium">
-                      [[[CONTACTAR VENTAS]]]
+                      CONTACTAR VENTAS
                     </Button>
                     <p className="text-xs text-gray-500 mt-4 uppercase tracking-wide">
-                      [[[DEMO PERSONALIZADA INCLUIDA]]]
+                      DEMO PERSONALIZADA INCLUIDA
                     </p>
                   </CardContent>
                 </Card>
@@ -920,21 +915,21 @@ export default function Component() {
         <section className="relative mx-8 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-white">
           <div className="max-w-4xl mx-auto text-center">
             <AnimatedSection animation="scaleIn">
-              <div className="mono-card p-8 sm:p-12 lg:p-16 border-4 border-black">
-                <div className="w-16 h-16 mx-auto mb-8 bg-black flex items-center justify-center">
+              <div className="p-8 sm:p-12 lg:p-16">
+                <div className="w-16 h-16 mx-auto mb-8 bg-orange flex items-center justify-center">
                   <Sparkles className="h-8 w-8 text-white" />
                 </div>
                 <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-8 tracking-tight uppercase">
-                  [[[ARRANCÁ A USAR NUESTRO ASISTENTE HOY]]]
+                  ARRANCÁ A USAR NUESTRO ASISTENTE HOY
                 </h2>
                 <div className="mono-code mb-12 max-w-3xl mx-auto">
                   <div className="text-sm text-gray-600 mb-2">
-                    [[[// LLAMADA A LA ACCIÓN]]]
+                    // MEJORÁ TU APRENDIZAJE
                   </div>
                   <p className="text-sm text-black leading-relaxed">
-                    Únete a miles de estudiantes y profesionales que ya están
+                    Unite a estudiantes y profesionales que ya están
                     transformando su forma de aprender con IA. El futuro del
-                    aprendizaje personalizado está aquí.
+                    aprendizaje personalizado está acá.
                   </p>
                 </div>
                 <div className="flex flex-wrap flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
@@ -944,7 +939,7 @@ export default function Component() {
                     className="text-lg px-12 py-6 mono-button-primary"
                   >
                     <Target className="mr-2 h-5 w-5" />
-                    [[[EMPEZAR A APRENDER GRATIS]]]
+                    EMPEZÁ A APRENDER GRATIS
                   </Button>
                   {/* TODO <Button size="lg" className="text-lg px-12 py-6 mono-button">
                     <Download className="mr-2 h-5 w-5" />
@@ -961,28 +956,28 @@ export default function Component() {
         {/* Contact Section */}
         <section
           id="contact"
-          className="relative mx-8 not-last:px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-gray-50"
+          className="relative not-last:px-6 sm:px-8 lg:px-12 py-16 sm:py-24 lg:py-32 bg-gray-50"
         >
           <div className="max-w-6xl mx-auto">
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-20">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-black tracking-tight uppercase">
-                  [[[CONTACTÁNOS]]]
+                  CONTACTANOS
                 </h2>
                 <div className="mono-code max-w-3xl mx-auto">
-                  <div className="text-sm text-gray-600 mb-2">
-                    [[[// SOPORTE]]]
-                  </div>
+                  <div className="text-sm text-gray-600 mb-2">// SOPORTE</div>
                   <p className="text-sm text-black">
-                    [[[Nuestro equipo está aquí para ayudarte. Envíanos un
-                    mensaje y te responderemos lo antes posible.]]]
+                    Nuestro equipo está acá para ayudarte. Envianos un mensaje y
+                    te responderemos lo antes posible.
                   </p>
                 </div>
               </div>
             </AnimatedSection>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-              <AnimatedSection animation="fadeInLeft" delay={200}>
+            {/* TODO: Llenar con mail una vez comprado un dominio */}
+            {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start"> */}
+            <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 lg:gap-12 max-w-4xl m-auto">
+              {/* <AnimatedSection animation="fadeInLeft" delay={200}>
                 <div className="space-y-6">
                   <div className="mono-card p-6">
                     <div className="flex items-start space-x-4">
@@ -991,13 +986,13 @@ export default function Component() {
                       </div>
                       <div>
                         <h3 className="text-lg font-bold text-black mb-2 uppercase">
-                          [[[EMAIL]]]
+                          EMAIL
                         </h3>
                         <p className="text-gray-600 font-mono">
-                          [[[hola@ailearn.com]]]
+                          hola@ailearn.com
                         </p>
                         <p className="text-gray-600 font-mono">
-                          [[[soporte@ailearn.com]]]
+                          soporte@ailearn.com
                         </p>
                       </div>
                     </div>
@@ -1010,13 +1005,13 @@ export default function Component() {
                       </div>
                       <div>
                         <h3 className="text-lg font-bold text-black mb-2 uppercase">
-                          [[[TELÉFONO]]]
+                          TELÉFONO
                         </h3>
                         <p className="text-gray-600 font-mono">
-                          [[[+1 (555) 123-4567]]]
+                          +1 (555) 123-4567
                         </p>
                         <p className="text-gray-500 text-sm uppercase">
-                          [[[LUN-VIE, 9:00-18:00]]]
+                          LUN-VIE, 9:00-18:00
                         </p>
                       </div>
                     </div>
@@ -1029,19 +1024,19 @@ export default function Component() {
                       </div>
                       <div>
                         <h3 className="text-lg font-bold text-black mb-2 uppercase">
-                          [[[OFICINA]]]
+                          OFICINA
                         </h3>
                         <p className="text-gray-600 font-mono">
-                          [[[123 Innovation Street]]]
+                          123 Innovation Street
                         </p>
                         <p className="text-gray-600 font-mono">
-                          [[[Tech Valley, CA 94000]]]
+                          Tech Valley, CA 94000
                         </p>
                       </div>
                     </div>
                   </div>
 
-                  {/* <div className="mono-card p-6">
+                  <div className="mono-card p-6">
                     <h3 className="text-lg font-bold text-black mb-3 uppercase">
                       ¿NECESITAS AYUDA INMEDIATA?
                     </h3>
@@ -1049,12 +1044,12 @@ export default function Component() {
                       Visita nuestro centro de ayuda para encontrar respuestas a
                       las preguntas más frecuentes
                     </p>
-                    <Button className="mono-button">[[[CENTRO DE AYUDA]]]</Button>
-                  </div> */}
+                    <Button className="mono-button">CENTRO DE AYUDA</Button>
+                  </div>
                 </div>
-              </AnimatedSection>
+              </AnimatedSection> */}
 
-              <AnimatedSection animation="fadeInRight" delay={400}>
+              <AnimatedSection animation="fadeInUp" delay={400}>
                 <ContactForm />
               </AnimatedSection>
             </div>
@@ -1062,166 +1057,12 @@ export default function Component() {
         </section>
 
         {/* Footer */}
-        <footer className="relative mx-8 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 border-t-2 border-black bg-gray-50">
+        <footer className="relative px-6 sm:px-8 lg:px-12 py-16 sm:py-24 lg:py-32 border-t-2 border-black bg-gray-50">
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8">
-              <div>
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-8 h-8 bg-black flex items-center justify-center">
-                    <Brain className="h-5 w-5 text-white" />
-                  </div>
-                  <span className="text-xl font-bold text-black uppercase tracking-wider">
-                    AI LEARN
-                  </span>
-                </div>
-                <div className="mono-code mb-4">
-                  <div className="text-xs text-gray-600 mb-1">
-                    [[[// MISIÓN]]]
-                  </div>
-                  <p className="text-sm text-black">
-                    [[[Transformando el futuro del aprendizaje con inteligencia
-                    artificial avanzada.]]]
-                  </p>
-                </div>
-                <div className="flex space-x-4">
-                  <div className="w-8 h-8 bg-black flex items-center justify-center cursor-pointer hover:bg-gray-700 transition-colors">
-                    <Smartphone className="h-4 w-4 text-white" />
-                  </div>
-                  <div className="w-8 h-8 bg-black flex items-center justify-center cursor-pointer hover:bg-gray-700 transition-colors">
-                    <Laptop className="h-4 w-4 text-white" />
-                  </div>
-                  <div className="w-8 h-8 bg-black flex items-center justify-center cursor-pointer hover:bg-gray-700 transition-colors">
-                    <Globe className="h-4 w-4 text-white" />
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <h4 className="font-bold text-black mb-4 uppercase tracking-wide">
-                  [[[PRODUCTO]]]
-                </h4>
-                <ul className="space-y-2 text-gray-600 text-sm">
-                  <li>
-                    <a
-                      href="#features"
-                      className="hover:text-black transition-colors uppercase"
-                    >
-                      CARACTERÍSTICAS
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#pricing"
-                      className="hover:text-black transition-colors uppercase"
-                    >
-                      PRECIOS
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:text-black transition-colors uppercase"
-                    >
-                      API
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:text-black transition-colors uppercase"
-                    >
-                      INTEGRACIONES
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h4 className="font-bold text-black mb-4 uppercase tracking-wide">
-                  [[[RECURSOS]]]
-                </h4>
-                <ul className="space-y-2 text-gray-600 text-sm">
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:text-black transition-colors uppercase"
-                    >
-                      [[[DOCUMENTACIÓN]]]
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:text-black transition-colors uppercase"
-                    >
-                      [[[TUTORIALES]]]
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:text-black transition-colors uppercase"
-                    >
-                      [[[BLOG]]]
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:text-black transition-colors uppercase"
-                    >
-                      [[[COMUNIDAD]]]
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h4 className="font-bold text-black mb-4 uppercase tracking-wide">
-                  SOPORTE
-                </h4>
-                <ul className="space-y-2 text-gray-600 text-sm">
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:text-black transition-colors uppercase"
-                    >
-                      [[[CENTRO DE AYUDA]]]
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#contact"
-                      className="hover:text-black transition-colors uppercase"
-                    >
-                      [[[CONTACTO]]]
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:text-black transition-colors uppercase"
-                    >
-                      [[[ESTADO DEL SISTEMA]]]
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="hover:text-black transition-colors uppercase"
-                    >
-                      [[[TÉRMINOS DE SERVICIO]]]
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="border-t-2 border-black pt-8 text-center">
+            <div className="text-center">
               <div className="mono-code">
                 <p className="text-sm text-black uppercase tracking-wide">
-                  [[[© 2024 AI LEARNING PLATFORM. TRANSFORMANDO EL FUTURO DEL
-                  APRENDIZAJE.]]]
+                  © 2025 DIDACTA AI. CONVIRTIENDO TUS CLASES EN CONOCIMIENTO.
                 </p>
               </div>
             </div>

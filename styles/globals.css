@@ -6,6 +6,7 @@
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
+  --orange: oklch(0.7 0.2 45);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
@@ -77,6 +78,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-orange: var(--orange);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
   --color-popover: var(--popover);
@@ -122,7 +124,7 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
-    border-radius: 0 !important; /* Force remove all border radius */
+   /* border-radius: 0 !important; TODO unbug */
   }
   body {
     @apply bg-background text-foreground;
@@ -211,16 +213,25 @@
 
 /* Monospace card styles */
 .mono-card {
-  height: 100%;
   background: white;
-  border: 2px solid black;
+  border: 3px solid black;
   box-shadow: 4px 4px 0px black;
-  border-radius: 1rem;
+}
+
+.mono-card-highlight {
+    background: white;
+    border: 3px solid black;
+    box-shadow: 6px 6px 0px var(--orange);
 }
 
 .mono-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px black;
+}
+
+.mono-card-highlight:hover {
   transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0px black;
+  box-shadow: 8px 8px 0px var(--orange);
 }
 
 .mono-button {
@@ -246,7 +257,6 @@
   border: 2px solid black;
   color: white;
   font-weight: 600;
-  /* text-transform: uppercase; */
   letter-spacing: 0.05em;
 }
 
@@ -254,6 +264,24 @@
   background: white;
   color: black;
 }
+
+.mono-button-orange {
+  cursor: pointer;
+  text-transform: uppercase;
+  background: var(--orange);
+  color: var(--color-white);
+  border: 2px solid var(--orange);
+  font-weight: 600;
+  /* text-transform: uppercase; */
+  letter-spacing: 0.05em;
+}
+
+.mono-button-orange:hover {
+  background: transparent;
+  color: black;
+  border: 2px solid black;
+}
+
 
 /* Terminal-style input */
 .mono-input {
@@ -292,7 +320,7 @@ section[id] {
 }
 
 /* Remove all rounded corners globally */
-.rounded-none {
+/* .rounded-none {
   border-radius: 0 !important;
 }
 .rounded-sm {
@@ -318,7 +346,7 @@ section[id] {
 }
 .rounded-full {
   border-radius: 0 !important;
-}
+} */
 
 /* Responsive utilities */
 @media (max-width: 640px) {

@@ -8,7 +8,7 @@ import "@/styles/performance-optimizations.css";
 export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
-    shortcut: "/Logo_n_f_t.png",
+    shortcut: "/09 favicon.png",
   },
   title: "Didacta - IA para estudiantes",
   description:

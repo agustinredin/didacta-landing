@@ -1,5 +1,8 @@
 {
-    "extends": "next",
+    "extends": [
+        "next",
+        "next/core-web-vitals"
+    ],
     "rules": {
         "react/jsx-no-comment-textnodes": "off"
     }

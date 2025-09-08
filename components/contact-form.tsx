@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Send, CheckCircle } from "lucide-react"
+import { useEffect, useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Send, CheckCircle } from "lucide-react";
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -13,49 +13,55 @@ export function ContactForm() {
     email: "",
     company: "",
     message: "",
-  })
+  });
 
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
-  
-const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault()
-  setIsSubmitting(true)
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  try {
-    const res = await fetch("/api/send", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    })
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
 
-    if (!res.ok) {
-      throw new Error("Error al enviar el formulario")
+    try {
+      const res = await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) {
+        throw new Error("Error al enviar el formulario");
+      }
+
+      const data = await res.json();
+
+      setIsSubmitted(true);
+      setFormData({ name: "", email: "", company: "", message: "" });
+
+      sessionStorage.setItem("contactFormSubmittedName", formData.name);
+    } catch (err) {
+      alert("Hubo un error al enviar el mensaje. Intenta nuevamente.");
+    } finally {
+      setIsSubmitting(false);
     }
+  };
 
-    const data = await res.json()
+  useEffect(() => {
+    if (sessionStorage.getItem("contactFormSubmittedName")) {
+      setIsSubmitted(true);
+    }
+  }, []);
 
-    setIsSubmitted(true)
-    setFormData({ name: "", email: "", company: "", message: "" })
-
-    setTimeout(() => {
-      setIsSubmitted(false)
-    }, 3000)
-  } catch (err) {
-    alert("Hubo un error al enviar el mensaje. Intenta nuevamente.")
-  } finally {
-    setIsSubmitting(false)
-  }
-}
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
-    })
-  }
+    });
+  };
 
   if (isSubmitted) {
     return (
@@ -64,16 +70,20 @@ const handleSubmit = async (e: React.FormEvent) => {
           <div className="w-16 h-16 bg-black mx-auto mb-6 flex items-center justify-center">
             <CheckCircle className="h-8 w-8 text-white" />
           </div>
-          <h3 className="text-2xl font-bold text-black mb-4 uppercase tracking-wide">¡MENSAJE ENVIADO!</h3>
+          <h3 className="text-2xl font-bold text-black mb-4 uppercase tracking-wide">
+            ¡MENSAJE ENVIADO,{" "}
+            {sessionStorage.getItem("contactFormSubmittedName")}!
+          </h3>
           <div className="mono-code">
             <div className="text-xs text-gray-600 mb-1">// ÉXITO</div>
             <p className="text-sm text-black">
-              Gracias por contactarnos. Nuestro equipo se pondrá en contacto contigo pronto.
+              Gracias por contactarnos. Nuestro equipo se pondrá en contacto
+              contigo pronto.
             </p>
           </div>
         </CardContent>
       </Card>
-    )
+    );
   }
 
   return (
@@ -82,7 +92,10 @@ const handleSubmit = async (e: React.FormEvent) => {
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-bold text-black mb-2 uppercase tracking-wide">
+              <label
+                htmlFor="name"
+                className="block text-sm font-bold text-black mb-2 uppercase tracking-wide"
+              >
                 NOMBRE COMPLETO *
               </label>
               <input
@@ -90,6 +103,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                 id="name"
                 name="name"
                 required
+                maxLength={30}
                 value={formData.name}
                 onChange={handleChange}
                 className="w-full px-4 py-3 mono-input transition-all duration-200"
@@ -97,7 +111,10 @@ const handleSubmit = async (e: React.FormEvent) => {
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-sm font-bold text-black mb-2 uppercase tracking-wide">
+              <label
+                htmlFor="email"
+                className="block text-sm font-bold text-black mb-2 uppercase tracking-wide"
+              >
                 EMAIL *
               </label>
               <input
@@ -114,7 +131,10 @@ const handleSubmit = async (e: React.FormEvent) => {
           </div>
 
           <div>
-            <label htmlFor="company" className="block text-sm font-bold text-black mb-2 uppercase tracking-wide">
+            <label
+              htmlFor="company"
+              className="block text-sm font-bold text-black mb-2 uppercase tracking-wide"
+            >
               EMPRESA (OPCIONAL)
             </label>
             <input
@@ -129,7 +149,10 @@ const handleSubmit = async (e: React.FormEvent) => {
           </div>
 
           <div>
-            <label htmlFor="message" className="block text-sm font-bold text-black mb-2 uppercase tracking-wide">
+            <label
+              htmlFor="message"
+              className="block text-sm font-bold text-black mb-2 uppercase tracking-wide"
+            >
               MENSAJE *
             </label>
             <textarea
@@ -144,12 +167,16 @@ const handleSubmit = async (e: React.FormEvent) => {
             />
           </div>
 
-          <Button type="submit" disabled={isSubmitting} className="w-full mono-button-primary py-4 text-lg font-medium">
+          <Button
+            type="submit"
+            disabled={isSubmitting}
+            className="w-full mono-button-primary py-4 text-lg font-medium"
+          >
             {isSubmitting ? (
               <div className="flex items-center justify-center">
-                <div className="animate-spin w-5 h-5 border-2 border-white border-t-transparent mr-2"></div>
-ENVIANDO...              
-</div>
+                <div className="animate-spin w-5 h-5 border-2 rounded-full border-white border-t-transparent mr-2"></div>
+                ENVIANDO...
+              </div>
             ) : (
               <>
                 <Send className="mr-2 h-5 w-5" />
@@ -160,5 +187,5 @@ ENVIANDO...
         </form>
       </CardContent>
     </Card>
-  )
+  );
 }
