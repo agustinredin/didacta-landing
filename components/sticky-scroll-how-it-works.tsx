@@ -56,7 +56,7 @@ export const StickyScrollHowItWorks = ({
     "#f1f5f9", // slate-100
   ];
 
-    return (
+  return (
     <motion.div
       className="relative flex min-h-screen justify-center space-x-10 px-16"
       ref={ref}
@@ -122,11 +122,14 @@ export const StickyScrollHowItWorks = ({
             }}
             transition={{ duration: 0.5, ease: "easeOut" }}
             className={`absolute w-full ${
-              activeCard === index ? "pointer-events-auto" : "pointer-events-none"
+              activeCard === index
+                ? "pointer-events-auto"
+                : "pointer-events-none"
             }`}
-            style={{ 
+            style={{
               top: `${top_calc(index)}rem`,
-              transform: activeCard === index ? 'translateX(0)' : 'translateX(100px)'
+              transform:
+                activeCard === index ? "translateX(0)" : "translateX(100px)",
             }}
           >
             <div className="min-h-[20rem] w-full mono-card overflow-hidden">
@@ -135,7 +138,6 @@ export const StickyScrollHowItWorks = ({
           </motion.div>
         ))}
       </div>
-
     </motion.div>
   );
 };
@@ -155,11 +157,11 @@ const Step1Content = () => (
         </div>
         <div className="flex items-center space-x-2">
           <div className="w-3 h-3 bg-black"></div>
-          <span className="text-sm">clase_matematicas.wav</span>
+          <span className="text-sm">clase_matematica.wav</span>
         </div>
         <div className="flex items-center space-x-2">
           <div className="w-3 h-3 bg-black"></div>
-          <span className="text-sm">conferencia.m4a</span>
+          <span className="text-sm">clase_virtual_martes.m4a</span>
         </div>
       </div>
     </div>
@@ -175,7 +177,7 @@ const Step2Content = () => (
     <div className="mono-card p-6 w-full">
       <div className="flex items-center space-x-3 mb-4">
         <Brain className="h-8 w-8 text-black" />
-        <span className="font-bold uppercase">PROCESANDO IA</span>
+        <span className="font-bold uppercase">PROCESO DE IA</span>
       </div>
       <div className="space-y-4">
         <div className="flex items-center space-x-2">
@@ -187,7 +189,10 @@ const Step2Content = () => (
           <span className="text-sm">Análisis de contenido...</span>
         </div>
         <div className="flex items-center space-x-2">
-          <div className="w-4 h-4 rounded-full border-2 border-black border-t-transparent animate-spin" style={{borderRadius: "50% !important"}}></div>
+          <div
+            className="w-4 h-4 rounded-full border-2 border-black border-t-transparent animate-spin"
+            style={{ borderRadius: "50% !important" }}
+          ></div>
           <span className="text-sm">Extrayendo conceptos clave</span>
         </div>
       </div>
@@ -229,15 +234,15 @@ const Step3Content = () => (
 export const howItWorksContent: HowItWorksContent[] = [
   {
     step: 1,
-    title: "PROPORCIONA AUDIO",
+    title: "PROPORCIONÁ AUDIO",
     description:
-      "Sube tu archivo de audio, graba directamente desde tu dispositivo o conecta tu micrófono para sesiones en vivo. Soportamos múltiples formatos de audio.",
+      "Subí tu archivo de audio, grabá directamente desde tu dispositivo o conectá tu micrófono para sesiones en vivo. Soportamos múltiples formatos de audio.",
     icon: <Mic className="h-6 w-6 text-white" />,
     content: <Step1Content />,
   },
   {
     step: 2,
-    title: "IA PROCESA",
+    title: "DEJÁ QUE LA IA TRABAJE",
     description:
       "Nuestra inteligencia artificial transcribe el audio, analiza el contenido y extrae las ideas clave usando algoritmos de procesamiento de lenguaje natural avanzados.",
     icon: <Brain className="h-6 w-6 text-white" />,
@@ -245,9 +250,9 @@ export const howItWorksContent: HowItWorksContent[] = [
   },
   {
     step: 3,
-    title: "APRENDE ACTIVAMENTE",
+    title: "APRENDÉ ACTIVAMENTE",
     description:
-      "Recibe resúmenes estructurados, quizzes personalizados y material de estudio optimizado. Todo listo para potenciar tu aprendizaje de manera efectiva.",
+      "Recibí resúmenes estructurados, quizzes personalizados y material de estudio optimizado. Todo listo para potenciar tu aprendizaje de manera efectiva.",
     icon: <MessageSquareQuote className="h-6 w-6 text-white" />,
     content: <Step3Content />,
   },
@@ -255,5 +260,5 @@ export const howItWorksContent: HowItWorksContent[] = [
 
 //esto es un crimen
 function top_calc(index: number) {
-    return -1.325 * index * index + 34.525 * index + 13.5;
+  return -1.325 * index * index + 34.525 * index + 13.5;
 }

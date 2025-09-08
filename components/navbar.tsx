@@ -61,8 +61,8 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
                 onClick={() => setIsOnboardingOpen?.(true)}
                 className="mono-button-primary px-3 py-2"
               >
-                <Zap className="mr-2 h-4 w-4 group-hover:fill-orange" />
-                Probar gratis
+                <Zap className="mr-2 h-6 w-6 group-hover:fill-orange" />
+                Crear cuenta
               </Button>
             </div>
             <div className="md:lg:hidden">
@@ -112,7 +112,7 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
               >
                 Contacto
               </a>
-              <div className="md:hidden py-2">
+              <div className="md:hidden py-2 group">
                 <Button
                   size="sm"
                   onClick={() => {
@@ -121,7 +121,7 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
                   }}
                   className="w-full mono-button-primary"
                 >
-                  <Zap className="mr-2 h-4 w-4" />
+                  <Zap className="mr-2 h-6 w-6 group-hover:fill-orange" />
                   Probar gratis
                 </Button>
               </div>

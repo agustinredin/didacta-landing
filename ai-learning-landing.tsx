@@ -23,6 +23,9 @@ import {
   Mail,
   Phone,
   MapPin,
+  FileText,
+  ListChecks,
+  GraduationCap,
 } from "lucide-react";
 import { useState } from "react";
 import {
@@ -32,6 +35,7 @@ import {
 import Phone3D from "./components/phone";
 import { ClientTranslator } from "@/lib/ClientTranslator";
 import en from "./locale/locale.json";
+import CustomTerminal from "./components/custom-terminal";
 
 export default function Component() {
   const [isOnboardingOpen, setIsOnboardingOpen] = useState(false);
@@ -63,7 +67,7 @@ export default function Component() {
                 <AnimatedSection animation="fadeInUp" delay={600}>
                   <div className="mono-code">
                     <p className="text-base sm:text-md text-black leading-relaxed">
-                      Presta atencion en clase y deja que la IA facilite tu
+                      Prestá atencion en clase y deja que la IA facilite tu
                       aprendizaje. Nuestra aplicación genera resumenes y
                       cuestionarios inteligentes para estudiar de manera más
                       efectiva.
@@ -88,189 +92,7 @@ export default function Component() {
               </div>
 
               {/* Right Terminal-style Scene */}
-              <div className="flex-1 flex flex-col justify-center">
-                <AnimatedSection
-                  animation="fadeInRight"
-                  className="relative"
-                  delay={600}
-                >
-                  {/* Main Terminal Window    */}
-                  <div className=" bg-white border-4 border-black">
-                    {/* Terminal Header */}
-                    <div className="bg-black text-white p-4 font-mono text-sm">
-                      <div className="flex items-center justify-between">
-                        <span>Terminal AI Learn</span>
-                        <div className="flex space-x-2">
-                          <div className="w-3 h-3 bg-white"></div>
-                          <div className="w-3 h-3 bg-white"></div>
-                          <div className="w-3 h-3 bg-white"></div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Terminal Content */}
-                    <div
-                      className="p-3 sm:p-4 lg:p-6 space-y-2 sm:space-y-4 text-xs sm:text-sm terminal-content"
-                      style={{ textTransform: "none" }}
-                    >
-                      <div>
-                        <span className="text-gray-600">$</span> ai-learn
-                        --procesar audio.mp3
-                      </div>
-                      <div className="text-gray-600">
-                        [Info] Procesando archivo de audio...
-                      </div>
-                      <div className="text-gray-600">
-                        [Éxito] Transcripción completa: 98% de precisión
-                      </div>
-                      <div className="text-gray-600">
-                        [Éxito] Resumen generado: 5 conceptos clave
-                      </div>
-                      <div className="text-gray-600">
-                        [Éxito] Quiz creado: 10 preguntas
-                      </div>
-                      <div>
-                        <span className="text-gray-600">$</span>{" "}
-                        <span className="animate-pulse">_</span>
-                      </div>
-                    </div>
-
-                    {/* Mobile Terminal Cards */}
-                    <div className="lg:hidden px-4 my-8 space-y-4 terminal-cards">
-                      <div className="mono-card p-4 bg-white floating-card">
-                        <div className="flex items-center space-x-2 mb-2">
-                          <div className="w-6 h-6 bg-black flex items-center justify-center">
-                            <Brain className="h-4 w-4 text-white" />
-                          </div>
-                          <div className="font-bold text-xs uppercase">
-                            MOTOR IA
-                          </div>
-                        </div>
-                        <p className="text-xs text-gray-700">
-                          Algoritmos avanzados para procesamiento inteligente.
-                        </p>
-                      </div>
-
-                      <div className="mono-card p-4 bg-white floating-card">
-                        <div className="flex items-center space-x-2 mb-2">
-                          <div className="w-6 h-6 bg-black flex items-center justify-center">
-                            <Zap className="h-4 w-4 text-white" />
-                          </div>
-                          <span className="font-bold text-xs uppercase">
-                            ANÁLISIS
-                          </span>
-                        </div>
-                        <p className="text-xs text-gray-700">
-                          Insights de datos en tiempo real.
-                        </p>
-                      </div>
-
-                      <div className="mono-card p-4 bg-white floating-card">
-                        <div className="flex items-center space-x-2 mb-2">
-                          <div className="w-6 h-6 bg-black flex items-center justify-center">
-                            <Users className="h-4 w-4 text-white" />
-                          </div>
-                          <span className="font-bold text-xs uppercase">
-                            COMUNIDAD
-                          </span>
-                        </div>
-                        <p className="text-xs text-gray-700">
-                          Únete a una comunidad activa de estudiantes.
-                        </p>
-                      </div>
-
-                      <div className="mono-card p-4 bg-white floating-card">
-                        <div className="flex items-center space-x-2 mb-2">
-                          <div className="w-6 h-6 bg-black flex items-center justify-center">
-                            <Laptop className="h-4 w-4 text-white" />
-                          </div>
-                          <span className="font-bold text-xs uppercase">
-                            DESARROLLO
-                          </span>
-                        </div>
-                        <p className="text-xs text-gray-700">
-                          Mejores ciclos de desarrollo.
-                        </p>
-                      </div>
-                    </div>
-
-                    {/* Floating Feature Cards */}
-                    <div className="absolute inset-0 p-4 sm:p-6 lg:p-8 hidden lg:block">
-                      {/* AI Card */}
-                      <AnimatedSection
-                        className="relative"
-                        animation="scaleIn"
-                        delay={1000}
-                      >
-                        <div className="absolute top-56 !h-fit left-0 w-48 mono-card p-4 bg-white">
-                          <div className="flex items-center space-x-2 mb-2">
-                            <div className="w-6 h-6 bg-black flex items-center justify-center">
-                              <Brain className="h-4 w-4 text-white" />
-                            </div>
-                            <span className="font-bold text-xs uppercase">
-                              MOTOR IA
-                            </span>
-                          </div>
-                          <p className="text-xs text-gray-700">
-                            Algoritmos avanzados para procesamiento inteligente.
-                          </p>
-                        </div>
-                      </AnimatedSection>
-
-                      {/* Analytics Card */}
-                      <AnimatedSection animation="scaleIn" delay={1200}>
-                        <div className="absolute top-72 !h-fit right-0 w-44 mono-card p-4 bg-white">
-                          <div className="flex items-center space-x-2 mb-2">
-                            <div className="w-6 h-6 bg-black flex items-center justify-center">
-                              <Zap className="h-4 w-4 text-white" />
-                            </div>
-                            <span className="font-bold text-xs uppercase">
-                              ANÁLISIS
-                            </span>
-                          </div>
-                          <p className="text-xs text-gray-700">
-                            Insights de datos en tiempo real.
-                          </p>
-                        </div>
-                      </AnimatedSection>
-
-                      {/* Community Card */}
-                      <AnimatedSection animation="scaleIn" delay={1400}>
-                        <div className="absolute -top-40 !h-fit left-2 w-48 mono-card p-4 bg-white">
-                          <div className="flex items-center space-x-2 mb-2">
-                            <div className="w-6 h-6 bg-black flex items-center justify-center">
-                              <Users className="h-4 w-4 text-white" />
-                            </div>
-                            <span className="font-bold text-xs uppercase">
-                              COMUNIDAD
-                            </span>
-                          </div>
-                          <p className="text-xs text-gray-700">
-                            Únete a una comunidad activa de estudiantes.
-                          </p>
-                        </div>
-                      </AnimatedSection>
-
-                      {/* Development Card */}
-                      <AnimatedSection animation="scaleIn" delay={1600}>
-                        <div className="absolute -top-24 !h-fit -right-12 w-44 mono-card p-4 bg-white">
-                          <div className="flex items-center space-x-2 mb-2">
-                            <div className="w-6 h-6 bg-black flex items-center justify-center">
-                              <Laptop className="h-4 w-4 text-white" />
-                            </div>
-                            <span className="font-bold text-xs uppercase">
-                              DESARROLLO
-                            </span>
-                          </div>
-                          <p className="text-xs text-gray-700">
-                            Mejores ciclos de desarrollo.
-                          </p>
-                        </div>
-                      </AnimatedSection>
-                    </div>
-                  </div>
-                </AnimatedSection>
-              </div>
+              <CustomTerminal />
             </div>
 
             {/* Stats - TODO: Real stats (No se renderiza?)*/}
@@ -311,7 +133,7 @@ export default function Component() {
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-20">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-black tracking-tight uppercase">
-                  ¿POR QUÉ ELEGIR AI LEARN?
+                  ¿POR QUÉ ELEGIRNOS?
                 </h2>
               </div>
             </AnimatedSection>
@@ -323,10 +145,10 @@ export default function Component() {
                     <Clock className="h-6 w-6 text-white" />
                   </div>
                   <h3 className="text-lg font-bold mb-3 text-black uppercase tracking-wide">
-                    AHORRA TIEMPO
+                    AHORRÁ TIEMPO
                   </h3>
                   <p className="text-sm text-gray-600">
-                    Procesa horas de audio en minutos y obtén resúmenes
+                    Procesá horas de audio en minutos y obtené resúmenes
                     instantáneos
                   </p>
                 </div>
@@ -341,8 +163,7 @@ export default function Component() {
                     SEGURO Y PRIVADO
                   </h3>
                   <p className="text-sm text-gray-600">
-                    Tus datos están protegidos con encriptación de nivel
-                    empresarial
+                    Tus datos y tus archivos están encriptados y seguros
                   </p>
                 </div>
               </AnimatedSection>
@@ -356,8 +177,8 @@ export default function Component() {
                     COLABORATIVO
                   </h3>
                   <p className="text-sm text-gray-600">
-                    Comparte y colabora en proyectos de aprendizaje con tu
-                    equipo
+                    Exportá y compartí el contenido en diversos formatos a tus
+                    compañeros
                   </p>
                 </div>
               </AnimatedSection>
@@ -371,7 +192,7 @@ export default function Component() {
                     MULTIPLATAFORMA
                   </h3>
                   <p className="text-sm text-gray-600">
-                    Accede desde cualquier dispositivo, en cualquier lugar
+                    Accedé desde cualquier dispositivo y en cualquier lugar
                   </p>
                 </div>
               </AnimatedSection>
@@ -392,14 +213,14 @@ export default function Component() {
                 </h2>
                 <div className="mono-code max-w-3xl mx-auto">
                   <p className="text-sm text-black">
-                    Descubre cómo nuestra tecnología de IA revoluciona la forma
-                    en que aprendes y procesas información
+                    Descubrí cómo nuestro uso de la IA revoluciona la forma en
+                    que aprendés
                   </p>
                 </div>
               </div>
             </AnimatedSection>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10 py-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 lg:gap-10 py-8">
               <AnimatedSection animation="fadeInLeft" delay={200}>
                 <Card className="mono-card h-full">
                   <CardContent className="p-8 text-center">
@@ -414,9 +235,8 @@ export default function Component() {
                     </h3>
                     <div className="mono-code text-left mb-4">
                       <p className="text-sm text-black">
-                        Convierte automáticamente cualquier audio en texto
-                        preciso usando tecnología de reconocimiento de voz con
-                        IA.
+                        Grabá o subí tu audio y convertilo en texto preciso
+                        usando tecnología de reconocimiento de voz.
                       </p>
                     </div>
                     <ul className="text-xs text-gray-600 space-y-2 text-left">
@@ -438,7 +258,7 @@ export default function Component() {
               </AnimatedSection>
 
               <AnimatedSection animation="fadeInUp" delay={400}>
-                <Card className="mono-card-highlight h-full lg:-translate-y-8">
+                <Card className="mono-card-highlight h-full xl:-translate-y-8">
                   <CardContent className="p-8 text-center">
                     <div className="mb-6">
                       <div className="w-16 h-16 mx-auto bg-black flex items-center justify-center mb-4">
@@ -451,9 +271,8 @@ export default function Component() {
                     </h3>
                     <div className="mono-code text-left mb-4">
                       <p className="text-sm text-black">
-                        Extrae automáticamente las ideas clave y conceptos
-                        importantes usando modelos de lenguaje de última
-                        generación.
+                        Extraé automáticamente las ideas clave y conceptos
+                        importantes.
                       </p>
                     </div>
                     <ul className="text-xs text-gray-600 space-y-2 text-left">
@@ -467,48 +286,54 @@ export default function Component() {
                       </li>
                       <li className="flex items-center">
                         <div className="w-2 h-2 bg-black mr-2"></div>
-                        ANÁLISIS DE SENTIMIENTOS
+                        ANÁLISIS CONTEXTUAL SEGÚN TEMA
                       </li>
                     </ul>
                   </CardContent>
                 </Card>
               </AnimatedSection>
 
-              <AnimatedSection animation="fadeInRight" delay={600}>
-                <Card className="mono-card h-full">
-                  <CardContent className="p-8 text-center">
-                    <div className="mb-6">
-                      <div className="w-16 h-16 mx-auto bg-black flex items-center justify-center mb-4">
-                        <MessageSquareQuote className="h-8 w-8 text-white" />
+              <div className="md:max-xl:col-span-2">
+                <AnimatedSection
+                  animation="fadeInRight"
+                  delay={600}
+                  className="md:max-xl:w-1/2 md:max-xl:m-auto"
+                >
+                  <Card className="mono-card h-full">
+                    <CardContent className="p-8 text-center">
+                      <div className="mb-6">
+                        <div className="w-16 h-16 mx-auto bg-black flex items-center justify-center mb-4">
+                          <MessageSquareQuote className="h-8 w-8 text-white" />
+                        </div>
+                        <div className="w-4 h-4 bg-black mx-auto"></div>
                       </div>
-                      <div className="w-4 h-4 bg-black mx-auto"></div>
-                    </div>
-                    <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">
-                      QUIZZES INTERACTIVOS
-                    </h3>
-                    <div className="mono-code text-left mb-4">
-                      <p className="text-sm text-black">
-                        Genera automáticamente cuestionarios personalizados que
-                        refuerzan el aprendizaje y evalúan la comprensión.
-                      </p>
-                    </div>
-                    <ul className="text-xs text-gray-600 space-y-2 text-left">
-                      <li className="flex items-center">
-                        <div className="w-3 h-3 bg-black mr-3"></div>
-                        PREGUNTAS ADAPTATIVAS
-                      </li>
-                      <li className="flex items-center">
-                        <div className="w-3 h-3 bg-black mr-3"></div>
-                        RETROALIMENTACIÓN INSTANTÁNEA
-                      </li>
-                      <li className="flex items-center">
-                        <div className="w-3 h-3 bg-black mr-3"></div>
-                        SEGUIMIENTO DE PROGRESO
-                      </li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </AnimatedSection>
+                      <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">
+                        QUIZZES INTERACTIVOS
+                      </h3>
+                      <div className="mono-code text-left mb-4">
+                        <p className="text-sm text-black">
+                          Generá automáticamente cuestionarios personalizados
+                          que refuerzan el aprendizaje y evalúan la comprensión.
+                        </p>
+                      </div>
+                      <ul className="text-xs text-gray-600 space-y-2 text-left">
+                        <li className="flex items-center">
+                          <div className="w-3 h-3 bg-black mr-3"></div>
+                          PREGUNTAS ADAPTATIVAS
+                        </li>
+                        <li className="flex items-center">
+                          <div className="w-3 h-3 bg-black mr-3"></div>
+                          RETROALIMENTACIÓN INSTANTÁNEA
+                        </li>
+                        <li className="flex items-center">
+                          <div className="w-3 h-3 bg-black mr-3"></div>
+                          SEGUIMIENTO DE PROGRESO
+                        </li>
+                      </ul>
+                    </CardContent>
+                  </Card>
+                </AnimatedSection>
+              </div>
             </div>
           </div>
         </section>
@@ -638,8 +463,8 @@ export default function Component() {
                     // PROCESO INTERACTIVO
                   </div>
                   <p className="text-sm text-black">
-                    Descubre paso a paso cómo transformamos tu audio en
-                    conocimiento estructurado
+                    Descubrí paso a paso cómo transformamos la información de
+                    tus clases en conocimiento
                   </p>
                 </div>
               </div>
@@ -811,57 +636,57 @@ export default function Component() {
                     <ul className="space-y-3 mb-8 text-left text-sm">
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        300 TOKENS
+                        ASISTENTE DE IA AVANZADO{" "}
+                        <span className="text-gray-600"> &nbsp;(GPT-5)</span>
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>5 HORAS DE
-                        AUDIO/MES
+                        TRANSCRIPCIÓN
+                        <span className="text-gray-600 text-sm">/MES</span>
+                      </li>
+                      <li className="flex items-center">
+                        <div className="w-3 h-3 bg-black mr-3"></div>500 PÁGINAS
+                        DE BIBLIOGRAFÍA
+                        <span className="text-gray-600 text-sm">/MES</span>
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        TRANSCRIPCIÓN AVANZADA CON IA
+                        ESCANEO DE PDF O TEXTO MANUSCRITO
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
                         RESÚMENES INTELIGENTES PERSONALIZADOS
                       </li>
-                      <li className="flex items-center">
-                        <div className="w-3 h-3 bg-black mr-3"></div>
-                        QUIZZES ILIMITADOS ADAPTATIVOS
-                      </li>
-                      <li className="flex items-center">
-                        <div className="w-3 h-3 bg-black mr-3"></div>
-                        SOPORTE PRIORITARIO 24/7
-                      </li>
-                      <li className="flex items-center">
-                        <div className="w-3 h-3 bg-black mr-3"></div>
-                        EXPORTACIÓN EN MÚLTIPLES FORMATOS
-                      </li>
                     </ul>
                     <Button
                       onClick={() => setIsOnboardingOpen(true)}
-                      className="w-full mono-button-primary py-4 text-lg font-medium"
+                      className="w-full mono-button py-4 text-lg font-medium"
                     >
-                      COMENZAR PRUEBA GRATIS
+                      CREAR CUENTA GRATIS
                     </Button>
                     <p className="text-xs text-gray-500 mt-4 uppercase tracking-wide">
-                      14 DÍAS GRATIS CANCELA CUANDO QUIERAS
+                      ONBOARDING INTERACTIVO DISPONIBLE
                     </p>
                   </CardContent>
                 </Card>
               </AnimatedSection>
 
               <AnimatedSection animation="fadeInRight" delay={400}>
-                <Card className="mono-card">
+                <Card className="mono-card relative">
+                  <img
+                    src="MP_RGB_HANDSHAKE_pluma_vertical.svg"
+                    alt="Icono de MP"
+                    className="inline-block w-16 h-16 ml-2 invert-25 absolute top-4 right-4"
+                  />
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-black text-white px-6 py-2 text-sm font-bold uppercase tracking-wide">
                     VERSIÓN ILIMITADA
                   </div>
                   <CardContent className="p-8 text-center">
                     <h3 className="text-2xl font-bold mb-4 text-black uppercase tracking-wide">
-                      PLAN EMPRESA
+                      PLAN PLUS
                     </h3>
                     <div className="text-4xl font-bold mb-6 text-black">
-                      $99
+                      $10.000
                       <span className="text-lg text-gray-600">/MES</span>
                     </div>
                     <div className="mono-code mb-6">
@@ -874,35 +699,33 @@ export default function Component() {
                     </div>
                     <ul className="space-y-3 mb-8 text-left text-sm">
                       <li className="flex items-center">
-                        <div className="w-3 h-3 bg-black mr-3"></div>
-                        AUDIO ILIMITADO PARA TODO EL EQUIPO
+                        <div className="w-3 h-3 bg-orange mr-3"></div>
+                        TODO LO DISPONIBLE EN FREE, MÁS...
+                      </li>
+                      <li className="flex items-center">
+                        <div className="w-3 h-3 bg-black mr-3"></div>15 HORAS DE
+                        TRANSCRIPCIÓN
+                        <span className="text-gray-600 text-sm">/MES</span>
+                      </li>
+                      <li className="flex items-center">
+                        <div className="w-3 h-3 bg-black mr-3"></div>1000
+                        PÁGINAS DE BIBLIOGRAFÍA
+                        <span className="text-gray-600 text-sm">/MES</span>
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        IA PERSONALIZADA PARA TU INDUSTRIA
+                        QUIZZES ILIMITADOS ADAPTATIVOS
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        INTEGRACIONES API COMPLETAS
-                      </li>
-                      <li className="flex items-center">
-                        <div className="w-3 h-3 bg-black mr-3"></div>
-                        EQUIPOS Y COLABORACIÓN ILIMITADA
-                      </li>
-                      <li className="flex items-center">
-                        <div className="w-3 h-3 bg-black mr-3"></div>
-                        SOPORTE DEDICADO Y ONBOARDING
-                      </li>
-                      <li className="flex items-center">
-                        <div className="w-3 h-3 bg-black mr-3"></div>
-                        ANÁLISIS AVANZADOS Y REPORTES
+                        SOPORTE PRIORITARIO 24/7
                       </li>
                     </ul>
-                    <Button className="w-full mono-button py-4 text-lg font-medium">
-                      CONTACTAR VENTAS
+                    <Button className="w-full mono-button-primary py-4 text-lg font-medium">
+                      IR A PLATAFORMA
                     </Button>
                     <p className="text-xs text-gray-500 mt-4 uppercase tracking-wide">
-                      DEMO PERSONALIZADA INCLUIDA
+                      CANCELÁ CUANDO QUIERAS
                     </p>
                   </CardContent>
                 </Card>
@@ -916,7 +739,7 @@ export default function Component() {
           <div className="max-w-4xl mx-auto text-center">
             <AnimatedSection animation="scaleIn">
               <div className="p-8 sm:p-12 lg:p-16">
-                <div className="w-16 h-16 mx-auto mb-8 bg-orange flex items-center justify-center">
+                <div className="w-16 h-16 mx-auto mb-8 flex items-center justify-center">
                   <Sparkles className="h-8 w-8 text-white" />
                 </div>
                 <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-8 tracking-tight uppercase">
@@ -936,9 +759,8 @@ export default function Component() {
                   <Button
                     size="lg"
                     onClick={() => setIsOnboardingOpen(true)}
-                    className="text-lg px-12 py-6 mono-button-primary"
+                    className="text-lg px-8 py-4 mono-button-orange border border-orange"
                   >
-                    <Target className="mr-2 h-5 w-5" />
                     EMPEZÁ A APRENDER GRATIS
                   </Button>
                   {/* TODO <Button size="lg" className="text-lg px-12 py-6 mono-button">
