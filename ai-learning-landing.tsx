@@ -768,6 +768,64 @@ export default function Component() {
           </div>
         </section>
 
+        {/* Token System Section */}
+        <section
+          id="tokens"
+          className="relative mx-8 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-gray-50"
+        >
+          <div className="max-w-5xl mx-auto">
+            <AnimatedSection animation="fadeInUp">
+              <div className="text-center mb-12">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-black tracking-tight uppercase">
+                  SISTEMA DE TOKENS
+                </h2>
+                <div className="mono-code max-w-3xl mx-auto">
+                  <div className="text-sm text-gray-600 mb-2">// MONETIZACIÓN</div>
+                  <p className="text-sm text-black">
+                    Cada token es una unidad de crédito que equivale a 1.000
+                    tokens de IA. Usás tokens cada vez que transcribís audio o
+                    procesás texto con nuestros modelos.
+                  </p>
+                </div>
+              </div>
+            </AnimatedSection>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto">
+              <AnimatedSection animation="fadeInLeft" delay={200}>
+                <Card className="mono-card h-full">
+                  <CardContent className="p-8 text-center">
+                    <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">
+                      PLAN FREE
+                    </h3>
+                    <p className="text-sm text-black mb-4">
+                      100 tokens mensuales = 100.000 tokens de IA
+                    </p>
+                    <p className="text-sm text-gray-600">
+                      Ideal para probar la app con varias horas de audio y
+                      cientos de páginas de texto cada mes.
+                    </p>
+                  </CardContent>
+                </Card>
+              </AnimatedSection>
+              <AnimatedSection animation="fadeInRight" delay={400}>
+                <Card className="mono-card h-full">
+                  <CardContent className="p-8 text-center">
+                    <h3 className="text-xl font-bold mb-4 text-black uppercase tracking-wide">
+                      PLAN PRO
+                    </h3>
+                    <p className="text-sm text-black mb-4">
+                      500 tokens mensuales = 500.000 tokens de IA
+                    </p>
+                    <p className="text-sm text-gray-600">
+                      Pensado para uso diario: más horas de audio, más páginas y
+                      prioridad en el procesamiento.
+                    </p>
+                  </CardContent>
+                </Card>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
         {/* Pricing Section */}
         <section
           id="pricing"
@@ -811,7 +869,7 @@ export default function Component() {
                     <ul className="space-y-3 mb-8 text-left text-sm">
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
-                        300 TOKENS
+                        100 TOKENS
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>5 HORAS DE

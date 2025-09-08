@@ -136,6 +136,14 @@
   "Características": "Features",
   "Cómo funciona": "How it works",
   "Testimonios": "Testimonials",
-  "Precios": "Pricing"  
+  "Precios": "Pricing",
+  "SISTEMA DE TOKENS": "TOKEN SYSTEM",
+  "// MONETIZACIÓN": "// MONETIZATION",
+  "Cada token es una unidad de crédito que equivale a 1.000 tokens de IA. Usás tokens cada vez que transcribís audio o procesás texto con nuestros modelos.": "Each token is a credit worth 1,000 AI tokens. You spend tokens each time you transcribe audio or process text with our models.",
+  "PLAN FREE": "FREE PLAN",
+  "100 tokens mensuales = 100.000 tokens de IA": "100 monthly tokens = 100,000 AI tokens",
+  "Ideal para probar la app con varias horas de audio y cientos de páginas de texto cada mes.": "Ideal for trying the app with several hours of audio and hundreds of pages of text each month.",
+  "500 tokens mensuales = 500.000 tokens de IA": "500 monthly tokens = 500,000 AI tokens",
+  "Pensado para uso diario: más horas de audio, más páginas y prioridad en el procesamiento.": "Designed for daily use: more hours of audio, more pages and higher processing priority."
 }
 
