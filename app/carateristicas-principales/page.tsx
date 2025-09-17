@@ -41,11 +41,6 @@ const coreFeatures = [
         description:
           "El motor corrige muletillas, normaliza abreviaturas y mantiene el tono formal o coloquial según la materia.",
       },
-      {
-        label: "Marcado temporal preciso",
-        description:
-          "Insertamos timestamps cada 20 segundos con enlaces directos al reproductor para navegar la sesión en segundos.",
-      },
     ],
     outcomes: [
       "Obtené transcripciones listas para editar en Google Docs, Notion o PDF en menos de cinco minutos por hora de audio.",
@@ -71,11 +66,6 @@ const coreFeatures = [
         label: "Glosario instantáneo",
         description:
           "Extraemos definiciones, fórmulas y referencias bibliográficas asociadas a cada tema para que tengas contexto al instante.",
-      },
-      {
-        label: "Detección de lagunas",
-        description:
-          "Resaltamos conceptos poco cubiertos y sugerimos materiales complementarios con base en tu historial de estudio.",
       },
     ],
     outcomes: [
@@ -103,11 +93,6 @@ const coreFeatures = [
         description:
           "Pasá de sesiones libres con pistas a evaluaciones cronometradas con control de intentos, todo sin salir de Didacta.",
       },
-      {
-        label: "Analytics en vivo",
-        description:
-          "Visualizá dónde aparecen los errores frecuentes y recibí sugerencias de contenidos para reforzar.",
-      },
     ],
     outcomes: [
       "Entrega quizzes con retroalimentación inmediata en el campus virtual o exportalos en PDF para clases presenciales.",
@@ -134,11 +119,6 @@ const coreFeatures = [
         description:
           "Seleccioná páginas o párrafos específicos y generá versiones abreviadas con anotaciones y notas al margen.",
       },
-      {
-        label: "Versionado instantáneo",
-        description:
-          "Guardá diferentes cortes por tema, semana o unidad y restáuralos cuando cambie el programa sin rehacer el trabajo.",
-      },
     ],
     outcomes: [
       "Prepará colecciones de lectura enfocadas para parciales, finales o talleres prácticos en cuestión de minutos.",
@@ -164,11 +144,6 @@ const coreFeatures = [
         label: "Visualización colaborativa",
         description:
           "Invitá a tu equipo, agreguen comentarios, tareas y enlaces externos directamente sobre cada nodo.",
-      },
-      {
-        label: "Sincronización con notas",
-        description:
-          "Cada nodo mantiene enlaces bidireccionales con la transcripción, el resumen y los recortes de PDF correspondientes.",
       },
     ],
     outcomes: [
