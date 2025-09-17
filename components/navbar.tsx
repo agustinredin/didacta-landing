@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Zap, Brain } from "lucide-react";
@@ -18,40 +19,40 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex items-center space-x-3 w-fit">
-            <a href="/" className="flex items-center justify-center">
+            <Link href="/" className="flex items-center justify-center">
               <Logo className="text-white w-8" />
               <span className="tracking-tight font-bold text-xl ml-4 mt-1">
                 Didacta
               </span>
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center lg:mt-2 space-x-4 xl:space-x-8">
-            <a
-              href="#features"
+            <Link
+              href="/carateristicas-principales"
               className="text-black hover:bg-black hover:text-white px-3 py-2 transition-colors font-medium uppercase tracking-wide"
             >
               Características
-            </a>
-            <a
-              href="#how-it-works"
+            </Link>
+            <Link
+              href="/#how-it-works"
               className="text-black hover:bg-black hover:text-white px-3 py-2 transition-colors font-medium uppercase tracking-wide"
             >
               Cómo funciona
-            </a>
-            <a
-              href="#pricing"
+            </Link>
+            <Link
+              href="/#pricing"
               className="text-black hover:bg-black hover:text-white px-3 py-2 transition-colors font-medium uppercase tracking-wide"
             >
               Precios
-            </a>
-            <a
-              href="#contact"
+            </Link>
+            <Link
+              href="/#contact"
               className="text-black hover:bg-black hover:text-white px-3 py-2 transition-colors font-medium uppercase tracking-wide"
             >
               Contacto
-            </a>
+            </Link>
           </div>
 
           {/* Medium screen navigation */}
@@ -84,34 +85,34 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
         {isOpen && (
           <div className="lg:hidden border-t-2 border-black bg-white">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <a
-                href="#features"
+              <Link
+                href="/carateristicas-principales"
                 className="block px-3 py-2 text-black hover:bg-black hover:text-white transition-colors font-medium uppercase tracking-wide"
                 onClick={() => setIsOpen(false)}
               >
                 Características
-              </a>
-              <a
-                href="#how-it-works"
+              </Link>
+              <Link
+                href="/#how-it-works"
                 className="block px-3 py-2 text-black hover:bg-black hover:text-white transition-colors font-medium uppercase tracking-wide"
                 onClick={() => setIsOpen(false)}
               >
                 Cómo funciona
-              </a>
-              <a
-                href="#pricing"
+              </Link>
+              <Link
+                href="/#pricing"
                 className="block px-3 py-2 text-black hover:bg-black hover:text-white transition-colors font-medium uppercase tracking-wide"
                 onClick={() => setIsOpen(false)}
               >
                 Precios
-              </a>
-              <a
-                href="#contact"
+              </Link>
+              <Link
+                href="/#contact"
                 className="block px-3 py-2 text-black hover:bg-black hover:text-white transition-colors font-medium uppercase tracking-wide"
                 onClick={() => setIsOpen(false)}
               >
                 Contacto
-              </a>
+              </Link>
               <div className="md:hidden py-2 group">
                 <Button
                   size="sm"
