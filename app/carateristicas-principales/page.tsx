@@ -34,12 +34,12 @@ const coreFeatures = [
       {
         label: "Identificación de oradores",
         description:
-          "Detectamos automáticamente quién habla en cada instante, ideal para paneles, tutorías grupales o clases híbridas.",
+          "Detección automática de speakers con diarización por tramos y etiquetado en la línea de tiempo. Exportación por voz (resúmenes, citas y tareas por orador) y fusión de segmentos cuando hay interrupciones o solapamientos.",
       },
       {
         label: "Limpieza contextual",
         description:
-          "El motor corrige muletillas, normaliza abreviaturas y mantiene el tono formal o coloquial según la materia.",
+          "Normalización de muletillas, abreviaturas y puntuación con perfiles por materia (formal, coloquial o técnico). Conserva ejemplos clave y marca incertidumbres con etiquetas de revisión para corrección rápida.",
       },
     ],
     outcomes: [
@@ -60,12 +60,12 @@ const coreFeatures = [
       {
         label: "Resúmenes multinivel",
         description:
-          "Generamos versiones ejecutivas, detalladas y orientadas a práctica para que cada miembro del equipo estudie como prefiera.",
+          "Capas ejecutiva, detallada y orientada a práctica con control de granularidad. Inserta citas y marcas de tiempo para volver al audio/fragmento original sin perder traza de fuentes.",
       },
       {
         label: "Glosario instantáneo",
         description:
-          "Extraemos definiciones, fórmulas y referencias bibliográficas asociadas a cada tema para que tengas contexto al instante.",
+          "Extracción de definiciones, fórmulas, símbolos y bibliografía por tema. Enlazado cruzado entre términos y creación automática de “tarjetas” reutilizables por curso.",
       },
     ],
     outcomes: [
@@ -86,12 +86,12 @@ const coreFeatures = [
       {
         label: "Bancos adaptativos",
         description:
-          "Creamos pools de preguntas con distintos niveles cognitivos (recordar, aplicar, analizar) y los distribuimos según tu progreso.",
+          "Pools de preguntas por nivel cognitivo (recordar, aplicar, analizar) con ajuste dinámico según desempeño. Registra métricas por objetivo de aprendizaje y propone refuerzos donde hay brechas.",
       },
       {
         label: "Modo práctica y examen",
         description:
-          "Pasá de sesiones libres con pistas a evaluaciones cronometradas con control de intentos, todo sin salir de Didacta.",
+          "Sesiones guiadas con pistas, solución paso a paso y feedback inmediato. Exámenes cronometrados con intentos, barajado de ítems y bloqueo de navegación para evaluación justa.",
       },
     ],
     outcomes: [
@@ -112,12 +112,12 @@ const coreFeatures = [
       {
         label: "Segmentación semántica",
         description:
-          "Reconocemos títulos, subtítulos, gráficos y cuadros para separar contenidos de forma inteligente, incluso cuando el PDF no tiene índice.",
+          "Detección de títulos, subtítulos, tablas, figuras y cuadros aun sin índice. Reconstrucción de estructura lógica del PDF y generación de secciones navegables con saltos precisos.",
       },
       {
         label: "Recortes inteligentes",
         description:
-          "Seleccioná páginas o párrafos específicos y generá versiones abreviadas con anotaciones y notas al margen.",
+          "Selección de páginas o párrafos para compilar resúmenes abreviados con notas al margen. Mantiene enlaces al documento completo y conserva contexto para ampliar cuando sea necesario.",
       },
     ],
     outcomes: [
@@ -138,12 +138,12 @@ const coreFeatures = [
       {
         label: "Jerarquía automática",
         description:
-          "La IA identifica temas principales, subtemas y ejemplos para ordenar el mapa en capas claras y fáciles de explorar.",
+          "Mapa de temas con niveles, subtemas y ejemplos ordenados por relevancia. Permite colapsar/expandir ramas y reordenar prioridades sin romper la consistencia del contenido.",
       },
       {
         label: "Visualización colaborativa",
         description:
-          "Invitá a tu equipo, agreguen comentarios, tareas y enlaces externos directamente sobre cada nodo.",
+          "Comentarios, tareas y enlaces directamente sobre cada nodo con historial de cambios. Roles y permisos por curso para edición controlada y seguimiento de contribuciones.",
       },
     ],
     outcomes: [
@@ -247,9 +247,10 @@ export default function CarateristicasPrincipalesPage() {
               TODO LO QUE LA PLATAFORMA HACE POR VOS
             </h1>
             <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-              Esta página concentra cada módulo de Didacta y cómo interactúan entre sí. Amplía la
-              descripción que ves en la home con escenarios reales, beneficios tácticos y nuevas
-              funciones como Cortar PDF y Generar Mapa Mental.
+              Esta página concentra cada módulo de Didacta y cómo interactúan
+              entre sí. Amplía la descripción que ves en la home con escenarios
+              reales, beneficios tácticos y nuevas funciones como Cortar PDF y
+              Generar Mapa Mental.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 pt-4">
               <Button
@@ -339,8 +340,9 @@ export default function CarateristicasPrincipalesPage() {
                 ASÍ SE ARTICULAN TODAS LAS CARATERISTICAS
               </h2>
               <p className="mt-4 text-sm sm:text-base text-gray-700 leading-relaxed max-w-3xl mx-auto">
-                La potencia de Didacta surge de combinar las capacidades principales. Cada fase del flujo
-                garantiza que la información llegue a tu equipo a tiempo, en el formato correcto y con
+                La potencia de Didacta surge de combinar las capacidades
+                principales. Cada fase del flujo garantiza que la información
+                llegue a tu equipo a tiempo, en el formato correcto y con
                 seguimiento continuo.
               </p>
             </div>
@@ -356,7 +358,9 @@ export default function CarateristicasPrincipalesPage() {
                       <h3 className="text-xl font-bold uppercase tracking-tight text-black">
                         {phase.title}
                       </h3>
-                      <p className="text-sm text-gray-700 leading-relaxed">{phase.description}</p>
+                      <p className="text-sm text-gray-700 leading-relaxed">
+                        {phase.description}
+                      </p>
                       <ul className="list-disc list-inside space-y-2 text-xs sm:text-sm text-black leading-relaxed">
                         {phase.bulletPoints.map((point) => (
                           <li key={point}>{point}</li>
@@ -377,8 +381,9 @@ export default function CarateristicasPrincipalesPage() {
                 PLANES DE ACCIÓN SEGÚN TU ROL
               </h2>
               <p className="mt-4 text-sm sm:text-base text-gray-700 leading-relaxed max-w-3xl mx-auto">
-                Activá las carateristicas que necesitás según el objetivo de tu equipo. Cada combinación
-                aprovecha la automatización para liberar tiempo de preparación y profundizar el aprendizaje.
+                Activá las carateristicas que necesitás según el objetivo de tu
+                equipo. Cada combinación aprovecha la automatización para
+                liberar tiempo de preparación y profundizar el aprendizaje.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -393,7 +398,9 @@ export default function CarateristicasPrincipalesPage() {
                       <h3 className="text-xl font-bold uppercase tracking-tight text-black">
                         {role.title}
                       </h3>
-                      <p className="text-sm text-gray-700 leading-relaxed">{role.description}</p>
+                      <p className="text-sm text-gray-700 leading-relaxed">
+                        {role.description}
+                      </p>
                       <ul className="list-disc list-inside space-y-2 text-xs sm:text-sm text-black leading-relaxed">
                         {role.gains.map((gain) => (
                           <li key={gain}>{gain}</li>
@@ -415,8 +422,9 @@ export default function CarateristicasPrincipalesPage() {
                   PREPARÁ TU PRÓXIMA CLASE CON DIDACTA
                 </h2>
                 <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
-                  Transcribí una clase, generá un resumen, cortá los PDFs clave y visualizá todo en un mapa
-                  mental en cuestión de minutos. Nuestra automatización se encarga de mantener cada recurso
+                  Transcribí una clase, generá un resumen, cortá los PDFs clave
+                  y visualizá todo en un mapa mental en cuestión de minutos.
+                  Nuestra automatización se encarga de mantener cada recurso
                   alineado y listo para compartir.
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
