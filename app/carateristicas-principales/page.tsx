@@ -296,9 +296,19 @@ export default function CarateristicasPrincipalesPage() {
                             <p key={paragraph}>{paragraph}</p>
                           ))}
                         </div>
+                        <div className="border-2 border-black bg-white p-4">
+                          <div className="text-xs text-gray-600 uppercase tracking-[0.3em] mb-2">
+                            RESULTADOS DIRECTOS
+                          </div>
+                          <ul className="list-disc list-inside space-y-2 text-sm text-black leading-relaxed">
+                            {feature.outcomes.map((outcome) => (
+                              <li key={outcome}>{outcome}</li>
+                            ))}
+                          </ul>
+                        </div>
                       </div>
-                      <div className="lg:w-2/5 space-y-6">
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div className="lg:w-2/5">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
                           {feature.capabilities.map((capability) => (
                             <div
                               key={capability.label}
@@ -312,16 +322,6 @@ export default function CarateristicasPrincipalesPage() {
                               </p>
                             </div>
                           ))}
-                        </div>
-                        <div className="border-2 border-black bg-white p-4">
-                          <div className="text-xs text-gray-600 uppercase tracking-[0.3em] mb-2">
-                            RESULTADOS DIRECTOS
-                          </div>
-                          <ul className="list-disc list-inside space-y-2 text-sm text-black leading-relaxed">
-                            {feature.outcomes.map((outcome) => (
-                              <li key={outcome}>{outcome}</li>
-                            ))}
-                          </ul>
                         </div>
                       </div>
                     </div>
