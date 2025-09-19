@@ -95,7 +95,7 @@ const coreFeatures = [
       },
     ],
     outcomes: [
-      "Entrega quizzes con retroalimentación inmediata en el campus virtual o exportalos en PDF para clases presenciales.",
+      "Entregá quizzes con retroalimentación inmediata en el campus virtual o exportalos en PDF para clases presenciales.",
       "Generá rutas de estudio personalizadas según los resultados de cada estudiante.",
       "Usá el historial para medir mejora entre parciales y finales sin planillas manuales.",
     ],

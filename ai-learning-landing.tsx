@@ -67,7 +67,7 @@ export default function Component() {
                 <AnimatedSection animation="fadeInUp" delay={600}>
                   <div className="mono-code">
                     <p className="text-base sm:text-md text-black leading-relaxed">
-                      Prestá atencion en clase y deja que la IA facilite tu
+                      Prestá atencion en clase y dejá que la IA facilite tu
                       aprendizaje. Nuestra aplicación genera resumenes y
                       cuestionarios inteligentes para estudiar de manera más
                       efectiva.

@@ -422,7 +422,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
               className="text-white hover:bg-white hover:text-black p-2 transition-colors"
               disabled={isSubmitting}
             >
-              <X className="h-6 w-6" />
+              <X className="h-6 w-6 cursor-pointer" />
             </button>
           </div>
 
