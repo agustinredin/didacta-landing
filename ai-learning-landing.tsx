@@ -85,7 +85,7 @@ export default function Component() {
                       Empezar gratis
                     </Button>
                     <Button size="lg" className="text-lg px-8 py-4 mono-button">
-                      <a href="#features">Saber más</a>
+                      <a href="/caracteristicas-principales">Saber más</a>
                     </Button>
                   </div>
                 </AnimatedSection>
@@ -332,6 +332,9 @@ export default function Component() {
                       </ul>
                     </CardContent>
                   </Card>
+                  <Button size="lg" className="text-lg px-8 py-4 mono-button">
+                    <a href="/caracteristicas-principales">Ver todas</a>
+                  </Button>
                 </AnimatedSection>
               </div>
             </div>
