@@ -332,12 +332,16 @@ export default function Component() {
                       </ul>
                     </CardContent>
                   </Card>
-                  <Button size="lg" className="text-lg px-8 py-4 mono-button">
-                    <a href="/caracteristicas-principales">Ver todas</a>
-                  </Button>
                 </AnimatedSection>
               </div>
             </div>
+            <AnimatedSection animation="fadeInUp">
+              <div className="text-center my-10">
+                <Button size="lg" className="text-lg px-10 py-6 mono-button">
+                  <a href="/caracteristicas-principales">Ver todas</a>
+                </Button>
+              </div>
+            </AnimatedSection>
           </div>
         </section>
 

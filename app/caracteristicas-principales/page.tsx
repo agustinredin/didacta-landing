@@ -226,7 +226,7 @@ const roleBenefits = [
   },
 ];
 
-export default function CarateristicasPrincipalesPage() {
+export default function CaracteristicasPrincipalesPage() {
   const [isOnboardingOpen, setIsOnboardingOpen] = useState(false);
 
   return (
@@ -241,7 +241,7 @@ export default function CarateristicasPrincipalesPage() {
         <AnimatedSection animation="fadeInUp">
           <div className="max-w-5xl mx-auto text-center space-y-6">
             <div className="inline-block border-2 border-black px-4 py-2 uppercase tracking-widest text-sm">
-              02. CARATERISTICAS PRINCIPALES
+              02. CARAcTERISTICAS PRINCIPALES
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight uppercase">
               TODO LO QUE LA PLATAFORMA HACE POR VOS
@@ -337,7 +337,7 @@ export default function CarateristicasPrincipalesPage() {
           <AnimatedSection animation="fadeInUp">
             <div className="text-center mb-12">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold uppercase tracking-tight text-black">
-                ASÍ SE ARTICULAN TODAS LAS CARATERISTICAS
+                ASÍ SE ARTICULAN TODAS LAS CARACTERISTICAS
               </h2>
               <p className="mt-4 text-sm sm:text-base text-gray-700 leading-relaxed max-w-3xl mx-auto">
                 La potencia de Didacta surge de combinar las capacidades
@@ -381,7 +381,7 @@ export default function CarateristicasPrincipalesPage() {
                 PLANES DE ACCIÓN SEGÚN TU ROL
               </h2>
               <p className="mt-4 text-sm sm:text-base text-gray-700 leading-relaxed max-w-3xl mx-auto">
-                Activá las carateristicas que necesitás según el objetivo de tu
+                Activá las caracteristicas que necesitás según el objetivo de tu
                 equipo. Cada combinación aprovecha la automatización para
                 liberar tiempo de preparación y profundizar el aprendizaje.
               </p>

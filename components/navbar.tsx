@@ -30,7 +30,7 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center lg:mt-2 space-x-4 xl:space-x-8">
             <Link
-              href="/carateristicas-principales"
+              href="/caracteristicas-principales"
               className="text-black hover:bg-black hover:text-white px-3 py-2 transition-colors font-medium uppercase tracking-wide"
             >
               Características
@@ -86,7 +86,7 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
           <div className="lg:hidden border-t-2 border-black bg-white">
             <div className="px-2 pt-2 pb-3 space-y-1">
               <Link
-                href="/carateristicas-principales"
+                href="/caracteristicas-principales"
                 className="block px-3 py-2 text-black hover:bg-black hover:text-white transition-colors font-medium uppercase tracking-wide"
                 onClick={() => setIsOpen(false)}
               >
