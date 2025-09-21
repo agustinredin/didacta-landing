@@ -18,10 +18,10 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-3 w-fit">
+          <div className="flex items-center space-x-3 w-fit mt-1">
             <Link href="/" className="flex items-center justify-center">
-              <Logo className="text-white w-8" />
-              <span className="tracking-tight font-bold text-xl ml-4 mt-1">
+              <Logo className="text-white w-12" />
+              <span className="tracking-[-0.06em] font-black text-2xl">
                 Didacta
               </span>
             </Link>

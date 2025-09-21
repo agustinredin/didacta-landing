@@ -34,12 +34,11 @@ interface FormData {
 const STEPS = [
   {
     id: 1,
-    title: "BIENVENIDA",
-    description: "COMIENZA TU VIAJE DE APRENDIZAJE",
+    title: "ONBOARDING",
   },
-  { id: 2, title: "INFORMACIÓN", description: "CUÉNTANOS SOBRE TI" },
-  { id: 3, title: "SEGURIDAD", description: "PROTEGE TU CUENTA" },
-  { id: 4, title: "CONFIRMACIÓN", description: "REVISA Y CONFIRMA" },
+  { id: 2, title: "INFORMACIÓN" },
+  { id: 3, title: "SEGURIDAD" },
+  { id: 4, title: "CONFIRMACIÓN" },
 ];
 export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
   const [currentStep, setCurrentStep] = useState(1);
@@ -171,7 +170,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
           <div className="space-y-6">
             <div className="text-center mb-8">
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2 text-black uppercase tracking-wide">
-                CUÉNTANOS SOBRE TI
+                Empecemos
               </h2>
               <div className="mono-code">
                 <div className="text-xs text-gray-600 mb-1">
@@ -357,12 +356,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
 
       case 4:
         return (
-          <div className="text-center space-y-8">
-            <div className="relative">
-              <div className="w-24 h-24 mx-auto bg-black flex items-center justify-center mb-6">
-                <Check className="h-12 w-12 text-white" />
-              </div>
-            </div>
+          <div className="text-center space-y-8 my-4">
             <div>
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 text-black uppercase tracking-wide">
                 ¡TU CUENTA ESTÁ LISTA!
@@ -403,7 +397,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
       <Card className="w-full max-w-sm sm:max-w-lg lg:max-w-2xl bg-white border-4 border-black mx-4 !p-0">
         <CardContent className="p-0">
           {/* Header */}
-          <div className="flex items-center justify-between p-4 sm:p-6 border-b-2 border-black bg-black text-white">
+          <div className="flex items-center justify-between p-4 sm:p-6 border-b-2 border-black bg-black text-white modal-header">
             <div className="flex items-center space-x-4">
               <div className="w-8 h-8 bg-white flex items-center justify-center">
                 <Brain className="h-5 w-5 text-black" />
@@ -427,7 +421,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
           </div>
 
           {/* Progress Bar */}
-          <div className="px-4 sm:px-6 py-3 sm:py-4 bg-gray-50 border-b-2 border-black">
+          <div className="px-4 sm:px-6 py-3 sm:py-4 bg-gray-50 border-b-2 border-black custom-mediaquery-fitheight modal-progress">
             <div className="flex items-center mb-2">
               {STEPS.map((step, index) => (
                 <div
@@ -465,19 +459,16 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
               <h3 className="font-bold text-black uppercase tracking-wide">
                 {STEPS[currentStep - 1]?.title}
               </h3>
-              <p className="text-sm text-gray-600 uppercase tracking-wide">
-                {STEPS[currentStep - 1]?.description}
-              </p>
             </div>
           </div>
 
           {/* Content */}
-          <div className="p-4 sm:p-6 lg:p-8 min-h-[300px] sm:min-h-[400px] flex items-center">
+          <div className="p-4 min-h-[300px] sm:min-h-[400px] flex items-center modal-content">
             <div className="w-full">{renderStep()}</div>
           </div>
 
           {/* Footer */}
-          <div className="flex items-center justify-between p-4 sm:p-6 border-t-2 border-black bg-gray-50">
+          <div className="flex items-center justify-between p-4 sm:p-6 border-t-2 border-black bg-gray-50 modal-footer">
             {currentStep != 4 ? (
               <Button
                 onClick={prevStep}
@@ -532,6 +523,26 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
           </div>
         </CardContent>
       </Card>
+      <style jsx>{`
+        @media (max-height: 900px) {
+          .modal-header {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+          }
+          .modal-progress {
+            padding-top: 0.25rem;
+            padding-bottom: 0.25rem;
+          }
+          .modal-content {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+          }
+          .modal-footer {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+          }
+        }
+      `}</style>
     </div>
   );
 }

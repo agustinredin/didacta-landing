@@ -548,3 +548,9 @@ section[id] {
   height: 100%;
   object-fit: cover;
 } */
+
+@media screen and (max-height: 900px) and (orientation: landscape) {
+  .custom-mediaquery-fitheight{
+    display: none;
+  }
+}
