@@ -100,8 +100,8 @@ export const StickyScrollHowItWorks = ({
                 }}
                 className="mono-code"
               >
-                <div className="text-sm text-gray-600 mb-2">// PROCESO</div>
-                <p className="text-black max-w-3xl text-xl leading-relaxed p-3">
+                <div className="text-lg md:text-md text-gray-600 mb-2">// PROCESO</div>
+                <p className="text-black text-[1.4rem] md:text-xl leading-relaxed p-9 md:p-3">
                   {item.description}
                 </p>
               </motion.div>

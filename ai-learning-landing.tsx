@@ -625,7 +625,7 @@ export default function Component() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto">
               <AnimatedSection animation="fadeInLeft" delay={200}>
                 <Card className="mono-card border-4 border-black relative">
-                  <CardContent className="p-8 text-center">
+                  <CardContent className="p-4 md:p-8 text-center">
                     <h3 className="text-2xl font-bold mb-4 text-black uppercase tracking-wide">
                       PLAN FREE
                     </h3>
@@ -640,7 +640,7 @@ export default function Component() {
                         Familiarizarte con el asistente
                       </p>
                     </div>
-                    <ul className="space-y-3 mb-8 text-left text-sm">
+                    <ul className="space-y-3 mb-8 text-left text-xs sm:text-sm">
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black mr-3"></div>
                         ASISTENTE DE IA AVANZADO{" "}
@@ -667,7 +667,7 @@ export default function Component() {
                     </ul>
                     <Button
                       onClick={() => setIsOnboardingOpen(true)}
-                      className="w-full mono-button py-4 text-lg font-medium"
+                      className="w-full mono-button px-2 py-4 text-md font-medium"
                     >
                       CREAR CUENTA GRATIS
                     </Button>
@@ -685,10 +685,10 @@ export default function Component() {
                     alt="Icono de MP"
                     className="inline-block w-16 h-16 ml-2 invert-25 absolute top-4 right-4"
                   />
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-black text-white px-6 py-2 text-sm font-bold uppercase tracking-wide">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-black text-white px-2 md:px-4 py-2 text-xs md:text-sm font-bold uppercase tracking-wide">
                     VERSIÓN ILIMITADA
                   </div>
-                  <CardContent className="p-8 text-center">
+                  <CardContent className="p-4 md:p-8 text-center">
                     <h3 className="text-2xl font-bold mb-4 text-black uppercase tracking-wide">
                       PLAN PLUS
                     </h3>
@@ -704,7 +704,7 @@ export default function Component() {
                         Para equipos y organizaciones
                       </p>
                     </div>
-                    <ul className="space-y-3 mb-8 text-left text-sm">
+                    <ul className="space-y-3 mb-8 text-left text-xs sm:text-sm">
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-orange mr-3"></div>
                         TODO LO DISPONIBLE EN FREE, MÁS...
@@ -728,7 +728,7 @@ export default function Component() {
                         SOPORTE PRIORITARIO 24/7
                       </li>
                     </ul>
-                    <Button className="w-full mono-button-primary py-4 text-lg font-medium">
+                    <Button className="w-full mono-button-primary py-4 text-sm sm:text-lg font-medium">
                       IR A PLATAFORMA
                     </Button>
                     <p className="text-xs text-gray-500 mt-4 uppercase tracking-wide">
