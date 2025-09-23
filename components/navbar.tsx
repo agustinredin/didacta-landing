@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Zap, Brain } from "lucide-react";
 import { Logo, LogoLetra } from "./Logo";
+import ThemeChanger from "./theme-changer";
 
 interface NavbarProps {
   setIsOnboardingOpen?: (open: boolean) => void;
@@ -14,14 +15,14 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b-2 border-black">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-black border-b-2 border-black">
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex items-center space-x-3 w-fit mt-1">
             <Link href="/" className="flex items-center justify-center">
               <Logo className="text-white w-12" />
-              <span className="tracking-[-0.06em] font-black text-2xl">
+              <span className="tracking-[-0.06em] font-black text-2xl dark:text-white">
                 Didacta
               </span>
             </Link>
@@ -31,28 +32,29 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
           <div className="hidden lg:flex items-center lg:mt-2 space-x-4 xl:space-x-8">
             <Link
               href="/caracteristicas-principales"
-              className="text-black hover:bg-black hover:text-white px-3 py-2 transition-colors font-medium uppercase tracking-wide"
+              className="dark:text-white text-black hover:bg-black hover:text-white px-3 py-2 transition-colors font-medium uppercase tracking-wide"
             >
               Características
             </Link>
             <Link
               href="/#how-it-works"
-              className="text-black hover:bg-black hover:text-white px-3 py-2 transition-colors font-medium uppercase tracking-wide"
+              className="dark:text-white text-black hover:bg-black hover:text-white px-3 py-2 transition-colors font-medium uppercase tracking-wide"
             >
               Cómo funciona
             </Link>
             <Link
               href="/#pricing"
-              className="text-black hover:bg-black hover:text-white px-3 py-2 transition-colors font-medium uppercase tracking-wide"
+              className="dark:text-white text-black hover:bg-black hover:text-white px-3 py-2 transition-colors font-medium uppercase tracking-wide"
             >
               Precios
             </Link>
             <Link
               href="/#contact"
-              className="text-black hover:bg-black hover:text-white px-3 py-2 transition-colors font-medium uppercase tracking-wide"
+              className="dark:text-white text-black hover:bg-black hover:text-white px-3 py-2 transition-colors font-medium uppercase tracking-wide"
             >
               Contacto
             </Link>
+                    <ThemeChanger/>
           </div>
 
           {/* Medium screen navigation */}

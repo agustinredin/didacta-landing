@@ -57,7 +57,7 @@ export default function Component() {
                     01. Transforma tu aprendizaje
                   </div>
                 </AnimatedSection>
-
+                  
                 <AnimatedSection animation="fadeInUp" delay={400}>
                   <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-black tracking-tight uppercase">
                     Convertí tus clases en conocimiento
@@ -885,7 +885,6 @@ export default function Component() {
             </div>
           </div>
         </section>
-
         {/* Footer */}
         <footer className="relative px-6 sm:px-8 lg:px-12 py-16 sm:py-24 lg:py-32 border-t-2 border-black bg-gray-50">
           <div className="max-w-6xl mx-auto">

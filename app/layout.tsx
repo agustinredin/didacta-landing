@@ -4,6 +4,7 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import "@/styles/globals.css";
 import "@/styles/performance-optimizations.css";
+import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
   icons: {
@@ -60,7 +61,9 @@ html {
         `}</style>
       </head>
       <body>
+            <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true}>
         <main>{children}</main>
+      </ThemeProvider>
       </body>
     </html>
   );
