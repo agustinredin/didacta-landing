@@ -49,7 +49,11 @@ export function ContactForm() {
   };
 
   useEffect(() => {
-    if (sessionStorage.getItem("contactFormSubmittedName")) {
+    if (
+      sessionStorage.getItem("contactFormSubmittedName") &&
+      sessionStorage.getItem("contactFormSubmittedName") !== "" &&
+      sessionStorage.getItem("contactFormSubmittedName") !== "null"
+    ) {
       setIsSubmitted(true);
     }
   }, []);
@@ -77,8 +81,8 @@ export function ContactForm() {
           <div className="mono-code">
             <div className="text-xs text-gray-600 mb-1">// ÉXITO</div>
             <p className="text-sm text-black">
-              Gracias por contactarnos. Nuestro equipo se pondrá en contacto
-              contigo pronto.
+              Gracias por contactarnos. Nuestro equipo se va a poner en contacto
+              vos.
             </p>
           </div>
         </CardContent>
