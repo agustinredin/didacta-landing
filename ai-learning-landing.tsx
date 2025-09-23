@@ -766,9 +766,10 @@ export default function Component() {
                   <Button
                     size="lg"
                     onClick={() => setIsOnboardingOpen(true)}
-                    className="text-lg px-8 py-4 mono-button-orange border border-orange"
+                    className="text-xs sm:text-sm md:text-lg px-12 py-6 mono-button-primary"
                   >
-                    EMPEZÁ A APRENDER GRATIS
+                    <Target className="h-5 w-5" />
+                    EMPEZAR A APRENDER GRATIS
                   </Button>
                   {/* TODO <Button size="lg" className="text-lg px-12 py-6 mono-button">
                     <Download className="mr-2 h-5 w-5" />
