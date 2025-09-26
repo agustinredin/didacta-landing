@@ -151,12 +151,12 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
               </div> */}
             </div>
             <div>
-              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 text-black uppercase tracking-wide">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 text-black dark:text-white uppercase tracking-wide">
                 BIENVENIDO
               </h2>
               <div className="mono-code max-w-xs sm:max-w-sm mx-auto">
-                <div className="text-xs text-gray-600 mb-2">// DESCRIPCIÓN</div>
-                <p className="text-sm text-black leading-relaxed">
+                <div className="text-xs text-gray-600 dark:text-gray-300 mb-2">// DESCRIPCIÓN</div>
+                <p className="text-sm text-black dark:text-white leading-relaxed">
                   Convierte tus grabaciones en aprendizaje personalizado con el
                   poder de la inteligencia artificial
                 </p>
@@ -169,14 +169,14 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
         return (
           <div className="space-y-6">
             <div className="text-center mb-8">
-              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2 text-black uppercase tracking-wide">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2 text-black dark:text-white uppercase tracking-wide">
                 Empecemos
               </h2>
               <div className="mono-code">
-                <div className="text-xs text-gray-600 mb-1">
+                <div className="text-xs text-gray-600 dark:text-gray-300 mb-1">
                   // ENTRADA REQUERIDA
                 </div>
-                <p className="text-sm text-black">
+                <p className="text-sm text-black dark:text-white">
                   Necesitamos algunos datos básicos para personalizar tu
                   experiencia
                 </p>
@@ -184,7 +184,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
             </div>
             <div className="space-y-4">
               <div>
-                <label className="block text-sm font-bold text-black mb-2 uppercase tracking-wide">
+                <label className="block text-sm font-bold text-black dark:text-white mb-2 uppercase tracking-wide">
                   NOMBRE COMPLETO
                 </label>
                 <input
@@ -193,7 +193,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
                   }
-                  className={`w-full px-4 py-3 mono-input transition-all duration-200 ${
+                  className={`w-full px-4 py-3 mono-input transition-all duration-200 dark:text-black ${
                     errors.name ? "border-red-500 bg-red-50" : ""
                   }`}
                   placeholder="TU NOMBRE COMPLETO"
@@ -205,7 +205,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
                 )}
               </div>
               <div>
-                <label className="block text-sm font-bold text-black mb-2 uppercase tracking-wide">
+                <label className="block text-sm font-bold text-black dark:text-white mb-2 uppercase tracking-wide">
                   EMAIL
                 </label>
                 <input
@@ -214,7 +214,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
                   }
-                  className={`w-full px-4 py-3 mono-input transition-all duration-200 ${
+                  className={`w-full px-4 py-3 mono-input transition-all duration-200 dark:text-black ${
                     errors.email ? "border-red-500 bg-red-50" : ""
                   }`}
                   placeholder="TU@EMAIL.COM"
@@ -233,19 +233,19 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
         return (
           <div className="space-y-6">
             <div className="text-center mb-8">
-              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2 text-black uppercase tracking-wide">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2 text-black dark:text-white uppercase tracking-wide">
                 PROTEGE TU CUENTA
               </h2>
               <div className="mono-code">
-                <div className="text-xs text-gray-600 mb-1">// SEGURIDAD</div>
-                <p className="text-sm text-black">
+                <div className="text-xs text-gray-600 dark:text-gray-300 mb-1">// SEGURIDAD</div>
+                <p className="text-sm text-black dark:text-white">
                   Crea una contraseña segura para mantener tus datos protegidos
                 </p>
               </div>
             </div>
             <div className="space-y-4">
               <div>
-                <label className="block text-sm font-bold text-black mb-2 uppercase tracking-wide">
+                <label className="block text-sm font-bold text-black dark:text-white mb-2 uppercase tracking-wide">
                   CONTRASEÑA
                 </label>
                 <div className="relative">
@@ -255,7 +255,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
                     onChange={(e) =>
                       setFormData({ ...formData, password: e.target.value })
                     }
-                    className={`w-full px-4 py-3 pr-12 mono-input transition-all duration-200 ${
+                    className={`w-full px-4 py-3 pr-12 mono-input transition-all duration-200 dark:text-black ${
                       errors.password ? "border-red-500 bg-red-50" : ""
                     }`}
                     placeholder="MÍNIMO 8 CARACTERES"
@@ -272,7 +272,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
                     )}
                   </button>
                 </div>
-                <label className="block text-sm font-bold text-black mb-2 uppercase tracking-wide mt-4">
+                <label className="block text-sm font-bold text-black dark:text-white mb-2 uppercase tracking-wide mt-4">
                   REPETIR CONTRASEÑA
                 </label>
                 <div className="relative">
@@ -285,7 +285,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
                         confirmPassword: e.target.value,
                       })
                     }
-                    className={`w-full px-4 py-3 pr-12 mono-input transition-all duration-200 ${
+                    className={`w-full px-4 py-3 pr-12 mono-input transition-all duration-200 dark:text-black ${
                       errors.password ? "border-red-500 bg-red-50" : ""
                     }`}
                   />
@@ -293,7 +293,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
                 {formData.password && (
                   <div className="mt-2">
                     <div className="flex items-center space-x-2 mb-1">
-                      <div className="flex-1 bg-gray-200 h-2 border border-black">
+                      <div className="flex-1 bg-gray-200 dark:bg-black h-2 border border-black dark:border-white">
                         <div
                           className={`h-full transition-all duration-300 ${passwordStrength.color}`}
                           style={{
@@ -301,7 +301,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
                           }}
                         />
                       </div>
-                      <span className="text-sm font-bold text-black uppercase tracking-wide">
+                      <span className="text-sm font-bold text-black dark:text-white uppercase tracking-wide">
                         {passwordStrength.label}
                       </span>
                     </div>
@@ -314,11 +314,11 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
                 )}
               </div>
               <div className="mono-code">
-                <h4 className="text-sm font-bold text-black mb-2 uppercase">
+                <h4 className="text-sm font-bold text-black dark:text-gray-300 mb-2 uppercase">
                   // REQUISITOS DE CONTRASEÑA
                 </h4>
                 <ul className="text-sm text-black space-y-1">
-                  <li className="flex items-center">
+                  <li className="flex items-center dark:text-white">
                     <div
                       className={`w-3 h-3 mr-2 ${
                         formData.password.length >= 8
@@ -328,7 +328,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
                     ></div>
                     AL MENOS 8 CARACTERES
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex items-center dark:text-white">
                     <div
                       className={`w-3 h-3 mr-2 ${
                         /[A-Z]/.test(formData.password)
@@ -338,7 +338,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
                     ></div>
                     UNA LETRA MAYÚSCULA
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex items-center dark:text-white">
                     <div
                       className={`w-3 h-3 mr-2 ${
                         /[0-9]/.test(formData.password)
@@ -358,29 +358,29 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
         return (
           <div className="text-center space-y-8 my-4">
             <div>
-              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 text-black uppercase tracking-wide">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 text-black dark:text-white uppercase tracking-wide">
                 ¡TU CUENTA ESTÁ LISTA!
               </h2>
               <div className="mono-code max-w-md mx-auto mb-8">
-                <div className="text-xs text-gray-600 mb-2">// ÉXITO</div>
-                <p className="text-sm text-black leading-relaxed">
+                <div className="text-xs text-gray-600 dark:text-gray-300 mb-2">// ÉXITO</div>
+                <p className="text-sm text-black dark:text-white leading-relaxed">
                   Bienvenido a AI Learn, <b>{formData.name.trim()}</b>. Estás
                   listo para comenzar tu viaje de aprendizaje personalizado.
                 </p>
               </div>
             </div>
             <div className="mono-card p-6 text-left max-w-md mx-auto">
-              <h3 className="font-bold text-black mb-4 uppercase tracking-wide">
+              <h3 className="font-bold text-black dark:text-white mb-4 uppercase tracking-wide">
                 // RESUMEN DE CUENTA
               </h3>
               <div className="space-y-2 text-sm font-mono">
                 <div className="flex justify-between">
-                  <span className="text-gray-600 uppercase">NOMBRE:</span>
-                  <span className="font-bold text-black">{formData.name}</span>
+                  <span className="text-gray-600 dark:text-gray-300 uppercase">NOMBRE:</span>
+                  <span className="font-bold text-black dark:text-white">{formData.name}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600 uppercase">EMAIL:</span>
-                  <span className="font-bold text-black">{formData.email}</span>
+                  <span className="text-gray-600 dark:text-gray-300 uppercase">EMAIL:</span>
+                  <span className="font-bold text-black dark:text-white">{formData.email}</span>
                 </div>
               </div>
             </div>
@@ -394,16 +394,16 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
 
   return (
     <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-      <Card className="w-full max-w-sm sm:max-w-lg lg:max-w-2xl bg-white border-4 border-black mx-4 !p-0">
+      <Card className="w-full max-w-sm sm:max-w-lg lg:max-w-2xl bg-white dark:bg-black border-4 border-black dark:border-white mx-4 !p-0">
         <CardContent className="p-0">
           {/* Header */}
-          <div className="flex items-center justify-between p-4 sm:p-6 border-b-2 border-black bg-black text-white modal-header">
+          <div className="flex items-center justify-between p-4 sm:p-6 border-b-2 border-black dark:border-white bg-black dark:bg-white text-white dark:text-black modal-header">
             <div className="flex items-center space-x-4">
-              <div className="w-8 h-8 bg-white flex items-center justify-center">
-                <Brain className="h-5 w-5 text-black" />
+              <div className="w-8 h-8 bg-white dark:bg-black flex items-center justify-center">
+                <Brain className="h-5 w-5 text-black dark:text-white" />
               </div>
               <div>
-                <h1 className="text-lg font-bold uppercase tracking-wide">
+                <h1 className="text-lg font-bold uppercase tracking-wide text-white dark:text-black">
                   AI LEARN
                 </h1>
                 <p className="text-sm uppercase tracking-wide">
@@ -413,7 +413,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
             </div>
             <button
               onClick={onClose}
-              className="text-white hover:bg-white hover:text-black p-2 transition-colors"
+              className="text-white dark:text-black hover:bg-white dark:hover:bg-black hover:text-black dark:hover:text-white p-2 transition-colors"
               disabled={isSubmitting}
             >
               <X className="h-6 w-6 cursor-pointer" />
@@ -421,7 +421,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
           </div>
 
           {/* Progress Bar */}
-          <div className="px-4 sm:px-6 py-3 sm:py-4 bg-gray-50 border-b-2 border-black custom-mediaquery-fitheight modal-progress">
+          <div className="px-4 sm:px-6 py-3 sm:py-4 bg-gray-50 dark:bg-black border-b-2 border-black dark:border-white custom-mediaquery-fitheight modal-progress">
             <div className="flex items-center mb-2">
               {STEPS.map((step, index) => (
                 <div
@@ -433,10 +433,10 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
                   <div
                     className={`w-8 h-8 flex items-center justify-center text-sm font-bold transition-all duration-300 border-2 border-black ${
                       currentStep > step.id
-                        ? "bg-black text-white"
+                        ? "bg-black dark:bg-white text-white dark:text-black"
                         : currentStep === step.id
-                        ? "bg-black text-white"
-                        : "bg-white text-black"
+                        ? "bg-black dark:bg-white text-white dark:text-black"
+                        : "bg-white text-black dark:bg-black dark:text-white"
                     }`}
                   >
                     {currentStep > step.id ? (
@@ -447,8 +447,8 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
                   </div>
                   {index < STEPS.length - 1 && (
                     <div
-                      className={`grow h-1 mx-2 transition-all duration-300 border border-black ${
-                        currentStep > step.id ? "bg-black" : "bg-white"
+                      className={`grow h-1 mx-2 transition-all duration-300 border border-black dark:border-white ${
+                        currentStep > step.id ? "bg-black dark:bg-white" : "bg-white dark:bg-black"
                       }`}
                     />
                   )}
@@ -456,7 +456,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
               ))}
             </div>
             <div className="text-center">
-              <h3 className="font-bold text-black uppercase tracking-wide">
+              <h3 className="font-bold text-black dark:text-white uppercase tracking-wide">
                 {STEPS[currentStep - 1]?.title}
               </h3>
             </div>
@@ -468,7 +468,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
           </div>
 
           {/* Footer */}
-          <div className="flex items-center justify-between p-4 sm:p-6 border-t-2 border-black bg-gray-50 modal-footer">
+          <div className="flex items-center justify-between p-4 sm:p-6 border-t-2 border-black dark:border-white bg-gray-50 dark:bg-black modal-footer">
             {currentStep != 4 ? (
               <Button
                 onClick={prevStep}

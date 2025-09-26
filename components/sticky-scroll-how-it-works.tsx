@@ -62,7 +62,7 @@ export const StickyScrollHowItWorks = ({
       ref={ref}
     >
       <div className="div relative flex items-start px-4">
-        <div className="max-w-2xl">
+        <div className="max-w-2xl ">
           {content.map((item, index) => (
             <div key={item.title + index} className="my-48">
               <motion.div
@@ -73,12 +73,12 @@ export const StickyScrollHowItWorks = ({
                 }}
                 className="flex items-center space-x-4 mb-6"
               >
-                <div className="w-16 h-16 bg-black flex items-center justify-center">
-                  <span className="text-2xl font-bold text-white">
+                <div className="w-16 h-16 bg-black dark:bg-white flex items-center justify-center">
+                  <span className="text-2xl font-bold text-white dark:text-black">
                     {item.step}
                   </span>
                 </div>
-                <div className="w-12 h-12 bg-black flex items-center justify-center">
+                <div className="w-12 h-12 bg-black dark:bg-white flex items-center justify-center">
                   {item.icon}
                 </div>
               </motion.div>
@@ -88,7 +88,7 @@ export const StickyScrollHowItWorks = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-3xl font-bold text-black uppercase tracking-wide mb-4"
+                className="text-3xl font-bold text-black dark:text-white uppercase tracking-wide mb-4"
               >
                 {item.title}
               </motion.h2>
@@ -100,8 +100,8 @@ export const StickyScrollHowItWorks = ({
                 }}
                 className="mono-code"
               >
-                <div className="text-lg md:text-md text-gray-600 mb-2">// PROCESO</div>
-                <p className="text-black text-[1.4rem] md:text-xl leading-relaxed p-9 md:p-3">
+                <div className="text-lg md:text-md text-gray-600 dark:text-gray-300 mb-2">// PROCESO</div>
+                <p className="text-black dark:text-white text-[1.4rem] md:text-xl leading-relaxed p-9 md:p-3">
                   {item.description}
                 </p>
               </motion.div>

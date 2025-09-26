@@ -47,7 +47,7 @@ export default function Component() {
         <Navbar setIsOnboardingOpen={setIsOnboardingOpen} />
 
         {/* Header/Hero Section */}
-        <section className="relative mx-8 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:pb-32 lg:pt-48 bg-white dark:bg-black">
+        <section className="relative px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:pb-32 lg:pt-48 bg-white dark:bg-black">
           <div className="max-w-7xl mx-auto my-16 lg:my-12 w-full">
             <div className="flex flex-wrap gap-8 lg:gap-16 items-center">
               {/* Left Content */}
@@ -203,7 +203,7 @@ export default function Component() {
         {/* Features Section */}
         <section
           id="features"
-          className="relative mx-8 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-white dark:bg-black"
+          className="relative px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-white dark:bg-black"
         >
           <div className="max-w-6xl mx-auto">
             <AnimatedSection animation="fadeInUp">
@@ -486,7 +486,7 @@ export default function Component() {
         {/* Testimonials Section - TODO: Real testimonials (No se está renderizando actualmente) */}
         <section
           id="testimonials"
-          className="relative hidden mx-8 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-gray-50"
+          className="relative hidden px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-gray-50"
         >
           <div className="max-w-6xl mx-auto">
             <AnimatedSection animation="fadeInUp">
@@ -603,17 +603,17 @@ export default function Component() {
         {/* Pricing Section */}
         <section
           id="pricing"
-          className="relative mx-8 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-white"
+          className="relative px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-white dark:bg-black"
         >
           <div className="max-w-5xl mx-auto">
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-20">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-black tracking-tight uppercase">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-black dark:text-white tracking-tight uppercase">
                   PLANES DE PRECIOS
                 </h2>
                 <div className="mono-code max-w-3xl mx-auto">
-                  <div className="text-sm text-gray-600 mb-2">// OPCIONES</div>
-                  <p className="text-sm text-black">
+                  <div className="text-sm text-gray-600 dark:text-gray-300 mb-2">// OPCIONES</div>
+                  <p className="text-sm text-black dark:text-white">
                     Queremos dar lo mejor a nuestros usuarios. El verdadero
                     valor está en transformar tus notas y audios en conocimiento
                     accionable, generando un impacto real en tu aprendizaje.
@@ -624,44 +624,44 @@ export default function Component() {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto">
               <AnimatedSection animation="fadeInLeft" delay={200}>
-                <Card className="mono-card border-4 border-black relative">
+                <Card className="mono-card border-4 border-black dark:border-white relative">
                   <CardContent className="p-4 md:p-8 text-center">
-                    <h3 className="text-2xl font-bold mb-4 text-black uppercase tracking-wide">
+                    <h3 className="text-2xl font-bold mb-4 text-black dark:text-white uppercase tracking-wide">
                       PLAN FREE
                     </h3>
-                    <div className="text-4xl font-bold mb-6 text-green-800">
+                    <div className="text-4xl font-bold mb-6 text-green-800 dark:text-green-400">
                       GRATIS
                     </div>
                     <div className="mono-code mb-6">
-                      <div className="text-xs text-gray-600 mb-1">
+                      <div className="text-xs text-gray-600 dark:text-gray-300 mb-1">
                         // OBJETIVO
                       </div>
-                      <p className="text-sm text-black">
+                      <p className="text-sm text-black dark:text-white">
                         Familiarizarte con el asistente
                       </p>
                     </div>
                     <ul className="space-y-3 mb-8 text-left text-xs sm:text-sm">
                       <li className="flex items-center">
-                        <div className="w-3 h-3 bg-black mr-3"></div>
+                        <div className="w-3 h-3 bg-black dark:bg-white mr-3"></div>
                         ASISTENTE DE IA AVANZADO{" "}
-                        <span className="text-gray-600"> &nbsp;(GPT-5)</span>
+                        <span className="text-gray-600 dark:text-gray-300"> &nbsp;(GPT-5)</span>
                       </li>
                       <li className="flex items-center">
-                        <div className="w-3 h-3 bg-black mr-3"></div>5 HORAS DE
+                        <div className="w-3 h-3 bg-black dark:bg-white mr-3"></div>5 HORAS DE
                         TRANSCRIPCIÓN
-                        <span className="text-gray-600 text-sm">/MES</span>
+                        <span className="text-gray-600 dark:text-gray-300 text-sm">/MES</span>
                       </li>
                       <li className="flex items-center">
-                        <div className="w-3 h-3 bg-black mr-3"></div>500 PÁGINAS
+                        <div className="w-3 h-3 bg-black dark:bg-white mr-3"></div>500 PÁGINAS
                         DE BIBLIOGRAFÍA
-                        <span className="text-gray-600 text-sm">/MES</span>
+                        <span className="text-gray-600 dark:text-gray-300 text-sm">/MES</span>
                       </li>
                       <li className="flex items-center">
-                        <div className="w-3 h-3 bg-black mr-3"></div>
+                        <div className="w-3 h-3 bg-black dark:bg-white mr-3"></div>
                         ESCANEO DE PDF O TEXTO MANUSCRITO
                       </li>
                       <li className="flex items-center">
-                        <div className="w-3 h-3 bg-black mr-3"></div>
+                        <div className="w-3 h-3 bg-black dark:bg-white mr-3"></div>
                         RESÚMENES INTELIGENTES PERSONALIZADOS
                       </li>
                     </ul>
@@ -671,7 +671,7 @@ export default function Component() {
                     >
                       CREAR CUENTA GRATIS
                     </Button>
-                    <p className="text-xs text-gray-500 mt-4 uppercase tracking-wide">
+                    <p className="text-xs text-gray-500 dark:text-gray-200 mt-4 uppercase tracking-wide">
                       ONBOARDING INTERACTIVO DISPONIBLE
                     </p>
                   </CardContent>
@@ -685,22 +685,22 @@ export default function Component() {
                     alt="Icono de MP"
                     className="inline-block w-16 h-16 ml-2 invert-25 absolute top-4 right-4"
                   />
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-black text-white px-2 md:px-4 py-2 text-xs md:text-sm font-bold uppercase tracking-wide">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-black dark:bg-white text-white dark:text-black px-2 md:px-4 py-2 text-xs md:text-sm font-bold uppercase tracking-wide">
                     VERSIÓN ILIMITADA
                   </div>
                   <CardContent className="p-4 md:p-8 text-center">
-                    <h3 className="text-2xl font-bold mb-4 text-black uppercase tracking-wide">
+                    <h3 className="text-2xl font-bold mb-4 text-black dark:text-white uppercase tracking-wide">
                       PLAN PLUS
                     </h3>
-                    <div className="text-4xl font-bold mb-6 text-black">
+                    <div className="text-4xl font-bold mb-6 text-black dark:text-white">
                       $10.000
-                      <span className="text-lg text-gray-600">/MES</span>
+                      <span className="text-lg text-gray-600 dark:text-gray-300">/MES</span>
                     </div>
                     <div className="mono-code mb-6">
-                      <div className="text-xs text-gray-600 mb-1">
+                      <div className="text-xs text-gray-600 dark:text-gray-300 mb-1">
                         // OBJETIVO
                       </div>
-                      <p className="text-sm text-black">
+                      <p className="text-sm text-black dark:text-white">
                         Para equipos y organizaciones
                       </p>
                     </div>
@@ -710,28 +710,28 @@ export default function Component() {
                         TODO LO DISPONIBLE EN FREE, MÁS...
                       </li>
                       <li className="flex items-center">
-                        <div className="w-3 h-3 bg-black mr-3"></div>15 HORAS DE
+                        <div className="w-3 h-3 bg-black dark:bg-white mr-3"></div>15 HORAS DE
                         TRANSCRIPCIÓN
-                        <span className="text-gray-600 text-sm">/MES</span>
+                        <span className="text-gray-600 dark:text-gray-300 text-sm">/MES</span>
                       </li>
                       <li className="flex items-center">
-                        <div className="w-3 h-3 bg-black mr-3"></div>1000
+                        <div className="w-3 h-3 bg-black dark:bg-white mr-3"></div>1000
                         PÁGINAS DE BIBLIOGRAFÍA
-                        <span className="text-gray-600 text-sm">/MES</span>
+                        <span className="text-gray-600 dark:text-gray-300 text-sm">/MES</span>
                       </li>
                       <li className="flex items-center">
-                        <div className="w-3 h-3 bg-black mr-3"></div>
+                        <div className="w-3 h-3 bg-black dark:bg-white mr-3"></div>
                         QUIZZES ILIMITADOS ADAPTATIVOS
                       </li>
                       <li className="flex items-center">
-                        <div className="w-3 h-3 bg-black mr-3"></div>
+                        <div className="w-3 h-3 bg-black dark:bg-white mr-3"></div>
                         SOPORTE PRIORITARIO 24/7
                       </li>
                     </ul>
                     <Button className="w-full mono-button-primary py-4 text-sm sm:text-lg font-medium">
                       IR A PLATAFORMA
                     </Button>
-                    <p className="text-xs text-gray-500 mt-4 uppercase tracking-wide">
+                    <p className="text-xs text-gray-500 dark:text-gray-200 mt-4 uppercase tracking-wide">
                       CANCELÁ CUANDO QUIERAS
                     </p>
                   </CardContent>
@@ -742,21 +742,21 @@ export default function Component() {
         </section>
 
         {/* Final CTA Section */}
-        <section className="relative mx-8 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-white">
+        <section className="relative px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-white dark:bg-black">
           <div className="max-w-4xl mx-auto text-center">
             <AnimatedSection animation="scaleIn">
               <div className="p-8 sm:p-12 lg:p-16">
-                <div className="w-16 h-16 mx-auto mb-8 flex items-center justify-center">
-                  <Sparkles className="h-8 w-8 text-white" />
+                <div className="w-16 h-16 mx-auto mb-8 flex items-center justify-center bg-black dark:bg-white">
+                  <Sparkles className="h-8 w-8 text-white dark:text-black" />
                 </div>
-                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-8 tracking-tight uppercase">
+                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-8 tracking-tight uppercase dark:text-white">
                   ARRANCÁ A USAR NUESTRO ASISTENTE HOY
                 </h2>
                 <div className="mono-code mb-12 max-w-3xl mx-auto">
-                  <div className="text-sm text-gray-600 mb-2">
+                  <div className="text-sm text-gray-600 dark:text-gray-300 mb-2">
                     // MEJORÁ TU APRENDIZAJE
                   </div>
-                  <p className="text-sm text-black leading-relaxed">
+                  <p className="text-sm text-black dark:text-white leading-relaxed">
                     Unite a estudiantes y profesionales que ya están
                     transformando su forma de aprender con IA. El futuro del
                     aprendizaje personalizado está acá.
@@ -786,17 +786,17 @@ export default function Component() {
         {/* Contact Section */}
         <section
           id="contact"
-          className="relative not-last:px-6 sm:px-8 lg:px-12 py-16 sm:py-24 lg:py-32 bg-gray-50"
+          className="relative not-last:px-6 sm:px-8 lg:px-12 py-16 sm:py-24 lg:py-32 bg-gray-50 dark:bg-black"
         >
           <div className="max-w-6xl mx-auto">
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-20">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-black tracking-tight uppercase">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-black dark:text-white tracking-tight uppercase">
                   CONTACTANOS
                 </h2>
                 <div className="mono-code max-w-3xl mx-auto">
-                  <div className="text-sm text-gray-600 mb-2">// SOPORTE</div>
-                  <p className="text-sm text-black">
+                  <div className="text-sm text-gray-600 dark:text-gray-300 mb-2">// SOPORTE</div>
+                  <p className="text-sm text-black dark:text-white">
                     Nuestro equipo está acá para ayudarte. Envianos un mensaje y
                     te responderemos lo antes posible.
                   </p>
@@ -886,11 +886,11 @@ export default function Component() {
           </div>
         </section>
         {/* Footer */}
-        <footer className="relative px-6 sm:px-8 lg:px-12 py-16 sm:py-24 lg:py-32 border-t-2 border-black bg-gray-50">
+        <footer className="relative px-6 sm:px-8 lg:px-12 py-16 sm:py-24 lg:py-32 border-t-2 border-black dark:border-white bg-gray-50 dark:bg-black">
           <div className="max-w-6xl mx-auto">
             <div className="text-center">
               <div className="mono-code">
-                <p className="text-sm text-black uppercase tracking-wide">
+                <p className="text-sm text-black dark:text-white uppercase tracking-wide">
                   © 2025 DIDACTA AI. CONVIRTIENDO TUS CLASES EN CONOCIMIENTO.
                 </p>
               </div>

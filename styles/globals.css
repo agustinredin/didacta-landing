@@ -320,11 +320,11 @@
 }
 
 .mono-button-primary:hover {
-  @apply bg-white text-black;
+  @apply bg-white text-black ;
 }
 
 .dark .mono-button-primary {
-  @apply bg-white text-black;
+  @apply bg-white text-black hover:border-white;
 }
 
 .dark .mono-button-primary:hover {
