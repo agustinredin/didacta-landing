@@ -3,78 +3,6 @@
 
 @custom-variant dark (&:is(.dark *));
 
-:root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --orange: oklch(0.7 0.2 45);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --radius: 0rem; /* Remove all border radius */
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
-}
-
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.145 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.269 0 0);
-  --input: oklch(0.269 0 0);
-  --ring: oklch(0.439 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(0.269 0 0);
-  --sidebar-ring: oklch(0.439 0 0);
-}
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -113,7 +41,80 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+   --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --orange: oklch(0.7 0.2 45);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0rem; /* Remove all border radius */
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
 }
+
+.dark {
+  --color-white: #ebeaea;
+  --color-black: #131212;
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+
 
 @layer utilities {
   .text-balance {
@@ -213,73 +214,105 @@
 
 /* Monospace card styles */
 .mono-card {
-  background: white;
-  border: 3px solid black;
-  box-shadow: 4px 4px 0px black;
+  @apply bg-white border-3 border-black shadow-[4px_4px_0px_black] transition-transform;
+}
+
+.dark .mono-card {
+  @apply bg-black border-white shadow-[4px_4px_0px_white]
 }
 
 .mono-card-highlight {
-    background: white;
-    border: 3px solid black;
-    box-shadow: 6px 6px 0px var(--orange);
+  @apply bg-white border-3 border-black shadow-[6px_6px_0px_var(--orange)] transition-transform;
+}
+
+.dark .mono-card-highlight {
+  @apply bg-black border-white shadow-[6px_6px_0px_var(--orange)]
 }
 
 .mono-card:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: 6px 6px 0px black;
+  @apply transform-gpu -translate-x-[2px] -translate-y-[2px] shadow-[6px_6px_0px_black];
+}
+
+.dark .mono-card:hover {
+  @apply shadow-[6px_6px_0px_white];
 }
 
 .mono-card-highlight:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 8px 8px 0px var(--orange);
+  @apply transform-gpu -translate-x-[2px] -translate-y-[2px] shadow-[8px_8px_0px_var(--orange)];
+}
+
+
+@media (hover: none) and (pointer: coarse) {
+  .mono-button,
+  .mono-button-primary {
+    min-height: 44px;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .mono-input {
+    min-height: 44px;
+    padding: 0.75rem 1rem;
+  }
+
+
+
+  /* Improve navbar touch targets */
+  nav a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+  }
 }
 
 .mono-button {
-  cursor: pointer;
-  text-transform: uppercase;
-  background: white;
-  border: 2px solid black;
-  color: black;
-  font-weight: 600;
-  /* text-transform: uppercase; */
-  letter-spacing: 0.05em;
+  @apply cursor-pointer uppercase bg-white border-2 border-black text-black font-semibold tracking-widest;
 }
 
 .mono-button:hover {
-  background: black;
-  color: white;
+  @apply bg-black text-white;
 }
 
+.dark .mono-button {
+  @apply bg-black text-white border-white;
+}
+
+.dark .mono-button:hover {
+  @apply bg-white text-black;
+}
+
+
 .mono-button-primary {
-  cursor: pointer;
-  text-transform: uppercase;
-  background: black;
-  border: 2px solid black;
-  color: white;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  @apply cursor-pointer uppercase bg-black border-2 border-black text-white font-semibold tracking-widest;
 }
 
 .mono-button-primary:hover {
-  background: white;
-  color: black;
+  @apply bg-white text-black ;
 }
 
+.dark .mono-button-primary {
+  @apply bg-white text-black hover:border-white;
+}
+
+.dark .mono-button-primary:hover {
+  @apply bg-black text-white;
+}
+
+
 .mono-button-orange {
-  cursor: pointer;
-  text-transform: uppercase;
-  background: var(--orange);
-  color: var(--color-white);
-  border: 2px solid var(--orange);
-  font-weight: 600;
-  /* text-transform: uppercase; */
-  letter-spacing: 0.05em;
+  @apply cursor-pointer uppercase bg-[var(--orange)] border-2 border-[var(--orange)] text-[var(--color-white)] font-semibold tracking-widest;
 }
 
 .mono-button-orange:hover {
-  background: transparent;
-  color: black;
-  border: 2px solid black;
+  @apply bg-transparent text-black border-black;
+}
+
+.dark .mono-button-orange {
+    @apply bg-orange text-white border-orange-500;
+}
+
+.dark .mono-button-orange:hover {
+  @apply bg-[var(--white)] text-[var(--color-orange)] border-[var(--white)];
 }
 
 
@@ -291,6 +324,10 @@
   font-weight: 500;
 }
 
+ .dark .mono-input {
+    @apply dark:bg-black dark:border-2 dark:border-white
+  }
+
 .mono-input:focus {
   outline: none;
   box-shadow: inset 2px 2px 0px rgba(0, 0, 0, 0.1);
@@ -298,11 +335,11 @@
 
 /* Code block style */
 .mono-code {
-  background: #f5f5f5;
-  border: 2px solid black;
-  /* font-family: var(--font-sans); */
-  padding: 1rem;
-  text-transform: none;
+  @apply bg-[#f5f5f5] border-2 border-black p-4 normal-case
+}
+
+.dark .mono-code {
+  @apply bg-black text-white border-white
 }
 
 .terminal-content {
@@ -351,18 +388,15 @@ section[id] {
 /* Responsive utilities */
 @media (max-width: 640px) {
   .mono-card {
-    box-shadow: 2px 2px 0px black;
+    @apply shadow-[2px_2px_0px_black];
   }
 
   .mono-card:hover {
-    transform: translate(-1px, -1px);
-    box-shadow: 3px 3px 0px black;
+    @apply transform-gpu -translate-x-[1px] -translate-y-[1px] shadow-[3px_3px_0px_black];
   }
 
-  /* Reduce terminal content on mobile */
   .terminal-content {
-    font-size: 0.75rem;
-    line-height: 1.2;
+    @apply text-[0.75rem] leading-[1.2];
   }
 }
 
@@ -390,37 +424,16 @@ section[id] {
 }
 
 /* Improve touch targets on mobile */
-@media (hover: none) and (pointer: coarse) {
-  .mono-button,
-  .mono-button-primary {
-    min-height: 44px;
-    padding: 0.75rem 1.5rem;
-  }
 
-  .mono-input {
-    min-height: 44px;
-    padding: 0.75rem 1rem;
-  }
-
-  /* Improve navbar touch targets */
-  nav a {
-    min-height: 44px;
-    display: flex;
-    align-items: center;
-    padding: 0.75rem 1rem;
-  }
-}
 
 /* Responsive typography */
 @media (max-width: 640px) {
   .mono-code {
-    padding: 0.75rem;
-    font-size: 0.875rem;
+    @apply p-3 text-[0.875rem];
   }
 
-  /* Smaller cards on mobile */
   .mono-card {
-    padding: 1rem;
+    @apply p-4;
   }
 }
 

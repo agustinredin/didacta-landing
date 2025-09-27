@@ -4,6 +4,7 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import "@/styles/globals.css";
 import "@/styles/performance-optimizations.css";
+import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
   icons: {
@@ -51,7 +52,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <style>{`
+        <style>
+          {`
 html {
   font-family: ${GeistSans.style.fontFamily};
   --font-mono: ${GeistMono.style.fontFamily};
@@ -60,7 +62,9 @@ html {
         `}</style>
       </head>
       <body>
-        <main>{children}</main>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true}>
+          <main>{children}</main>
+        </ThemeProvider>
       </body>
     </html>
   );

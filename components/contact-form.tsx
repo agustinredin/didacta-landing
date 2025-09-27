@@ -69,18 +69,18 @@ export function ContactForm() {
 
   if (isSubmitted) {
     return (
-      <Card className="mono-card border-2 border-black">
+      <Card className="mono-card border-2 border-black dark:border-white">
         <CardContent className="p-6 sm:p-8 lg:p-12 text-center">
-          <div className="w-16 h-16 bg-black mx-auto mb-6 flex items-center justify-center">
-            <CheckCircle className="h-8 w-8 text-white" />
+          <div className="w-16 h-16 bg-black dark:bg-white mx-auto mb-6 flex items-center justify-center">
+            <CheckCircle className="h-8 w-8 text-white dark:text-black" />
           </div>
-          <h3 className="text-2xl font-bold text-black mb-4 uppercase tracking-wide">
+          <h3 className="text-2xl font-bold text-black dark:text-white mb-4 uppercase tracking-wide">
             ¡MENSAJE ENVIADO,{" "}
             {sessionStorage.getItem("contactFormSubmittedName")}!
           </h3>
           <div className="mono-code">
-            <div className="text-xs text-gray-600 mb-1">// ÉXITO</div>
-            <p className="text-sm text-black">
+            <div className="text-xs text-gray-600 dark:text-gray-300 mb-1">// ÉXITO</div>
+            <p className="text-sm text-black dark:text-white">
               Gracias por contactarnos. Nuestro equipo se va a poner en contacto
               vos.
             </p>
@@ -91,14 +91,14 @@ export function ContactForm() {
   }
 
   return (
-    <Card className="mono-card border-2 border-black">
+    <Card className="mono-card border-2 border-black dark:border-white">
       <CardContent className="p-4 sm:p-6 lg:p-8">
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             <div>
               <label
                 htmlFor="name"
-                className="block text-sm font-bold text-black mb-2 uppercase tracking-wide"
+                className="block text-sm font-bold text-black dark:text-white mb-2 uppercase tracking-wide"
               >
                 NOMBRE COMPLETO *
               </label>
@@ -110,14 +110,14 @@ export function ContactForm() {
                 maxLength={30}
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full px-4 py-3 mono-input transition-all duration-200"
+                className="w-full px-4 py-3 mono-input transition-all duration-200 dark:text-white"
                 placeholder="TU NOMBRE"
               />
             </div>
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-bold text-black mb-2 uppercase tracking-wide"
+                className="block text-sm font-bold text-black dark:text-white mb-2 uppercase tracking-wide"
               >
                 EMAIL *
               </label>
@@ -128,7 +128,7 @@ export function ContactForm() {
                 required
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-4 py-3 mono-input transition-all duration-200"
+                className="w-full px-4 py-3 mono-input transition-all duration-200 dark:text-white"
                 placeholder="TU@EMAIL.COM"
               />
             </div>
@@ -137,7 +137,7 @@ export function ContactForm() {
           <div>
             <label
               htmlFor="company"
-              className="block text-sm font-bold text-black mb-2 uppercase tracking-wide"
+              className="block text-sm font-bold text-black dark:text-white mb-2 uppercase tracking-wide"
             >
               EMPRESA (OPCIONAL)
             </label>
@@ -147,7 +147,7 @@ export function ContactForm() {
               name="company"
               value={formData.company}
               onChange={handleChange}
-              className="w-full px-4 py-3 mono-input transition-all duration-200"
+              className="w-full px-4 py-3 mono-input transition-all duration-200 dark:text-white"
               placeholder="NOMBRE DE TU EMPRESA"
             />
           </div>
@@ -155,7 +155,7 @@ export function ContactForm() {
           <div>
             <label
               htmlFor="message"
-              className="block text-sm font-bold text-black mb-2 uppercase tracking-wide"
+              className="block text-sm font-bold text-black dark:text-white mb-2 uppercase tracking-wide"
             >
               MENSAJE *
             </label>
@@ -166,7 +166,7 @@ export function ContactForm() {
               rows={5}
               value={formData.message}
               onChange={handleChange}
-              className="w-full px-4 py-3 mono-input resize-none transition-all duration-200"
+              className="w-full px-4 py-3 mono-input resize-none transition-all duration-200 dark:text-white"
               placeholder="MENSAJE *"
             />
           </div>
@@ -178,7 +178,7 @@ export function ContactForm() {
           >
             {isSubmitting ? (
               <div className="flex items-center justify-center">
-                <div className="animate-spin w-5 h-5 border-2 rounded-full border-white border-t-transparent mr-2"></div>
+                <div className="animate-spin w-5 h-5 border-2 rounded-full border-white dark:border-black border-t-transparent mr-2"></div>
                 ENVIANDO...
               </div>
             ) : (
