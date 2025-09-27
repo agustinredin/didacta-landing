@@ -52,7 +52,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <style>{`
+        <style>
+          {`
 html {
   font-family: ${GeistSans.style.fontFamily};
   --font-mono: ${GeistMono.style.fontFamily};
@@ -61,9 +62,9 @@ html {
         `}</style>
       </head>
       <body>
-            <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true}>
-        <main>{children}</main>
-      </ThemeProvider>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true}>
+          <main>{children}</main>
+        </ThemeProvider>
       </body>
     </html>
   );

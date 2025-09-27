@@ -193,7 +193,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
                   }
-                  className={`w-full px-4 py-3 mono-input transition-all duration-200 dark:text-black ${
+                  className={`w-full px-4 py-3 mono-input transition-all duration-200 dark:text-white ${
                     errors.name ? "border-red-500 bg-red-50" : ""
                   }`}
                   placeholder="TU NOMBRE COMPLETO"
@@ -214,7 +214,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
                   }
-                  className={`w-full px-4 py-3 mono-input transition-all duration-200 dark:text-black ${
+                  className={`w-full px-4 py-3 mono-input transition-all duration-200 dark:text-white ${
                     errors.email ? "border-red-500 bg-red-50" : ""
                   }`}
                   placeholder="TU@EMAIL.COM"
@@ -255,7 +255,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
                     onChange={(e) =>
                       setFormData({ ...formData, password: e.target.value })
                     }
-                    className={`w-full px-4 py-3 pr-12 mono-input transition-all duration-200 dark:text-black ${
+                    className={`w-full px-4 py-3 pr-12 mono-input transition-all duration-200 dark:text-white ${
                       errors.password ? "border-red-500 bg-red-50" : ""
                     }`}
                     placeholder="MÍNIMO 8 CARACTERES"
@@ -285,7 +285,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
                         confirmPassword: e.target.value,
                       })
                     }
-                    className={`w-full px-4 py-3 pr-12 mono-input transition-all duration-200 dark:text-black ${
+                    className={`w-full px-4 py-3 pr-12 mono-input transition-all duration-200 dark:text-white ${
                       errors.password ? "border-red-500 bg-red-50" : ""
                     }`}
                   />

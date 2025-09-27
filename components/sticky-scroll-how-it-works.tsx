@@ -260,5 +260,5 @@ export const howItWorksContent: HowItWorksContent[] = [
 
 //esto es un crimen
 function top_calc(index: number) {
-  return -1.325 * index * index + 34.525 * index + 13.5;
+  return -0.8 * index * index + 34.525 * index + 17;
 }

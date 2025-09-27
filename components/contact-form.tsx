@@ -110,7 +110,7 @@ export function ContactForm() {
                 maxLength={30}
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full px-4 py-3 mono-input transition-all duration-200 dark:text-black"
+                className="w-full px-4 py-3 mono-input transition-all duration-200 dark:text-white"
                 placeholder="TU NOMBRE"
               />
             </div>
@@ -128,7 +128,7 @@ export function ContactForm() {
                 required
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-4 py-3 mono-input transition-all duration-200 dark:text-black"
+                className="w-full px-4 py-3 mono-input transition-all duration-200 dark:text-white"
                 placeholder="TU@EMAIL.COM"
               />
             </div>
@@ -147,7 +147,7 @@ export function ContactForm() {
               name="company"
               value={formData.company}
               onChange={handleChange}
-              className="w-full px-4 py-3 mono-input transition-all duration-200 dark:text-black"
+              className="w-full px-4 py-3 mono-input transition-all duration-200 dark:text-white"
               placeholder="NOMBRE DE TU EMPRESA"
             />
           </div>
@@ -166,7 +166,7 @@ export function ContactForm() {
               rows={5}
               value={formData.message}
               onChange={handleChange}
-              className="w-full px-4 py-3 mono-input resize-none transition-all duration-200 dark:text-black"
+              className="w-full px-4 py-3 mono-input resize-none transition-all duration-200 dark:text-white"
               placeholder="MENSAJE *"
             />
           </div>

@@ -57,7 +57,7 @@ export default function Component() {
                     01. Transforma tu aprendizaje
                   </div>
                 </AnimatedSection>
-                  
+
                 <AnimatedSection animation="fadeInUp" delay={400}>
                   <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-black dark:text-white tracking-tight uppercase">
                     Convertí tus clases en conocimiento

@@ -68,49 +68,51 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
                 Crear cuenta
               </Button>
             </div>
-            <div className="md:lg:hidden">
+            <div className="md:lg:hidden flex gap-12 items-center">
+                <ThemeChanger className="mt-1"/>
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="text-black hover:bg-black hover:text-white p-2 transition-colors"
               >
                 {isOpen ? (
-                  <X className="h-6 w-6" />
+                  <X className="h-6 w-6 dark:stroke-white" />
                 ) : (
-                  <Menu className="h-6 w-6" />
+                  <Menu className="h-6 w-6 dark:stroke-white" />
                 )}
               </button>
             </div>
           </div>
         </div>
 
+
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden border-t-2 border-black bg-white">
+          <div className="lg:hidden border-t-2 border-black dark:border-white dark:bg-black bg-white">
             <div className="px-2 pt-2 pb-3 space-y-1">
               <Link
                 href="/caracteristicas-principales"
-                className="block px-3 py-2 text-black hover:bg-black hover:text-white transition-colors font-medium uppercase tracking-wide"
+                className="block px-3 py-2 text-black dark:text-white hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-colors font-medium uppercase tracking-wide"
                 onClick={() => setIsOpen(false)}
               >
                 Características
               </Link>
               <Link
                 href="/#how-it-works"
-                className="block px-3 py-2 text-black hover:bg-black hover:text-white transition-colors font-medium uppercase tracking-wide"
+                className="block px-3 py-2 text-black dark:text-white hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-colors font-medium uppercase tracking-wide"
                 onClick={() => setIsOpen(false)}
               >
                 Cómo funciona
               </Link>
               <Link
                 href="/#pricing"
-                className="block px-3 py-2 text-black hover:bg-black hover:text-white transition-colors font-medium uppercase tracking-wide"
+                className="block px-3 py-2 text-black dark:text-white hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-colors font-medium uppercase tracking-wide"
                 onClick={() => setIsOpen(false)}
               >
                 Precios
               </Link>
               <Link
                 href="/#contact"
-                className="block px-3 py-2 text-black hover:bg-black hover:text-white transition-colors font-medium uppercase tracking-wide"
+                className="block px-3 py-2 text-black dark:text-white hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-colors font-medium uppercase tracking-wide"
                 onClick={() => setIsOpen(false)}
               >
                 Contacto
@@ -131,6 +133,7 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
             </div>
           </div>
         )}
+        
       </div>
     </nav>
   );
