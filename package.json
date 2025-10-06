@@ -10,7 +10,8 @@
     "dev": "next dev",
     "lint": "next lint",
     "start": "next start",
-    "clean-cache": "rm -rf .next"
+    "clean-cache": "rm -rf .next",
+    "clear-cache": "rm -rf .next"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

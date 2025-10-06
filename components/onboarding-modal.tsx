@@ -157,7 +157,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
               <div className="mono-code max-w-xs sm:max-w-sm mx-auto">
                 <div className="text-xs text-gray-600 mb-2">// DESCRIPCIÓN</div>
                 <p className="text-sm text-black leading-relaxed">
-                  Convierte tus grabaciones en aprendizaje personalizado con el
+                  Convertí tus grabaciones en aprendizaje personalizado con el
                   poder de la inteligencia artificial
                 </p>
               </div>
@@ -239,7 +239,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
               <div className="mono-code">
                 <div className="text-xs text-gray-600 mb-1">// SEGURIDAD</div>
                 <p className="text-sm text-black">
-                  Crea una contraseña segura para mantener tus datos protegidos
+                  Creá una contraseña segura para mantener tus datos protegidos
                 </p>
               </div>
             </div>
@@ -364,7 +364,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
               <div className="mono-code max-w-md mx-auto mb-8">
                 <div className="text-xs text-gray-600 mb-2">// ÉXITO</div>
                 <p className="text-sm text-black leading-relaxed">
-                  Bienvenido a AI Learn, <b>{formData.name.trim()}</b>. Estás
+                  Bienvenido a Didacta, <b>{formData.name.trim()}</b>. Estás
                   listo para comenzar tu viaje de aprendizaje personalizado.
                 </p>
               </div>
