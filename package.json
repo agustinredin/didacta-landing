@@ -7,7 +7,7 @@
     "url": "git+https://github.com/agustinredin/didacta-landing.git"
   },
   "scripts": {
-    "build": "DIDACTA_ENV=production pip install awscli || true && node sync-env.js && next build",
+    "build": "DIDACTA_ENV=production node sync-env.js && next build",
     "dev": "npm run clean-cache && node sync-env.js && next dev",
     "lint": "next lint",
     "start": "node sync-env.js && next start",
@@ -15,6 +15,7 @@
     "clear-cache": "rm -rf .next"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.901.0",
     "@hookform/resolvers": "^3.10.0",
     "@radix-ui/react-accordion": "1.2.2",
     "@radix-ui/react-alert-dialog": "1.1.4",
