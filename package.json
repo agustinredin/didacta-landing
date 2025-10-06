@@ -7,8 +7,8 @@
     "url": "git+https://github.com/agustinredin/didacta-landing.git"
   },
   "scripts": {
-    "build": "DIDACTA_ENV=production npm install aws --save-dev || true && node sync-env.js && next build",
-    "dev": "npm install aws --save-dev || true && npm run clean-cache && node sync-env.js && next dev",
+    "build": "DIDACTA_ENV=production npm install && npm install aws --save-dev || true && node sync-env.js && next build",
+    "dev": "npm install && npm install aws --save-dev || true && npm run clean-cache && node sync-env.js && next dev",
     "lint": "next lint",
     "start": "node sync-env.js && next start",
     "clean-cache": "rm -rf .next",
