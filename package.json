@@ -1,15 +1,16 @@
 {
   "name": "didacta-landing",
   "version": "0.1.0",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/agustinredin/didacta-landing.git"
   },
   "scripts": {
-    "build": "next build",
-    "dev": "next dev",
+    "build": "DIDACTA_ENV=production node sync-env.js && next build",
+    "dev": "npm run clean-cache && node sync-env.js && next dev",
     "lint": "next lint",
-    "start": "next start",
+    "start": "node sync-env.js && next start",
     "clean-cache": "rm -rf .next",
     "clear-cache": "rm -rf .next"
   },
@@ -43,6 +44,7 @@
     "@radix-ui/react-toggle-group": "1.1.1",
     "@radix-ui/react-tooltip": "1.1.6",
     "autoprefixer": "^10.4.21",
+    "aws": "^0.0.3-2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "1.0.4",
