@@ -10,7 +10,7 @@ Access to debugging this project's files and environment is restricted due to re
 
 - 1: Configure AWS CLI with (1) Access Key ID and (2) Secret Access Key
 
-```
+```bash
 AWS Access Key ID [****************XXXX]: *(1)*
 AWS Secret Access Key [****************XXXX]: *(2)*
 Default region name [us-east-2]: [Enter]
