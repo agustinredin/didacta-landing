@@ -72,6 +72,8 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
     switch (step) {
       case 2:
         if (!formData.name.trim()) newErrors.name = "EL NOMBRE ES REQUERIDO";
+        if (formData.name.trim().length < 4)
+          newErrors.name = "EL NOMBRE DEBE TENER AL MENOS 4 CARACTERES";
         if (!formData.email.trim()) newErrors.email = "EL EMAIL ES REQUERIDO";
         else if (!/\S+@\S+\.\S+/.test(formData.email))
           newErrors.email = "EMAIL INVÁLIDO";
@@ -85,6 +87,8 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
           newErrors.password = "DEBE CONTENER AL MENOS UNA MAYÚSCULA";
         else if (!/[0-9]/.test(formData.password))
           newErrors.password = "DEBE CONTENER AL MENOS UN NÚMERO";
+        else if (!/[\W_]/.test(formData.password))
+          newErrors.password = "DEBE CONTENER AL MENOS UN CARÁCTER ESPECIAL";
         else if (formData.password !== formData.confirmPassword)
           newErrors.password = "LAS CONTRASEÑAS NO COINCIDEN";
         break;
@@ -110,14 +114,16 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
 
     setIsSubmitting(true);
 
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-    sessionStorage.setItem(
-      "onboarding",
-      JSON.stringify({
+    await fetch(process.env.API_URL + "/api/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
         name: formData.name,
         email: formData.email,
-      })
-    );
+      }),
+    });
     setIsSubmitting(false);
     setCurrentStep(4);
   };
@@ -347,6 +353,16 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
                       }`}
                     ></div>
                     UN NÚMERO
+                  </li>
+                  <li className="flex items-center">
+                    <div
+                      className={`w-3 h-3 mr-2 ${
+                        /[\W_]/.test(formData.password)
+                          ? "bg-green-700"
+                          : "bg-gray-300"
+                      }`}
+                    ></div>
+                    UN CARÁCTER ESPECIAL
                   </li>
                 </ul>
               </div>

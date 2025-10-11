@@ -30,6 +30,7 @@ function downloadWithCLI(bucket, key, dest) {
 
 async function main() {
     const envChoice = process.env.DIDACTA_ENV === "production" ? "production" : "development";
+    console.log(envChoice, process.env.DIDACTA_ENV);
     const bucket = "didacta";
     const isVercel = !!process.env.VERCEL;
 
@@ -65,7 +66,9 @@ async function main() {
     console.log(`Sincronización completada (${envChoice}).`);
 }
 
-main().catch((err) => {
-    console.error("Error general en sync-env:", err);
-    process.exit(1);
-});
+main()
+    .then(() => process.exit(0))
+    .catch((err) => {
+        console.error("Error general en sync-env:", err)
+        process.exit(1)
+    })
