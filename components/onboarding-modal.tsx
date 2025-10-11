@@ -342,7 +342,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
                           : "bg-gray-300"
                       }`}
                     ></div>
-                    UNA LETRA MAYÚSCULA
+                    AL MENOS UNA LETRA MAYÚSCULA
                   </li>
                   <li className="flex items-center">
                     <div
@@ -352,7 +352,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
                           : "bg-gray-300"
                       }`}
                     ></div>
-                    UN NÚMERO
+                    AL MENOS UN NÚMERO
                   </li>
                   <li className="flex items-center">
                     <div
@@ -362,7 +362,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
                           : "bg-gray-300"
                       }`}
                     ></div>
-                    UN CARÁCTER ESPECIAL
+                    AL MENOS UN CARÁCTER ESPECIAL
                   </li>
                 </ul>
               </div>
