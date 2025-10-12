@@ -62,7 +62,7 @@ export const StickyScrollHowItWorks = ({
       ref={ref}
     >
       <div className="div relative flex items-start px-4">
-        <div className="max-w-2xl">
+        <div className="max-w-2xl ">
           {content.map((item, index) => (
             <div key={item.title + index} className="my-48">
               <motion.div
@@ -73,12 +73,12 @@ export const StickyScrollHowItWorks = ({
                 }}
                 className="flex items-center space-x-4 mb-6"
               >
-                <div className="w-16 h-16 bg-black flex items-center justify-center">
-                  <span className="text-2xl font-bold text-white">
+                <div className="w-16 h-16 bg-black dark:bg-white flex items-center justify-center">
+                  <span className="text-2xl font-bold text-white dark:text-black">
                     {item.step}
                   </span>
                 </div>
-                <div className="w-12 h-12 bg-black flex items-center justify-center">
+                <div className="w-12 h-12 bg-black dark:bg-white flex items-center justify-center">
                   {item.icon}
                 </div>
               </motion.div>
@@ -88,7 +88,7 @@ export const StickyScrollHowItWorks = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-3xl font-bold text-black uppercase tracking-wide mb-4"
+                className="text-3xl font-bold text-black dark:text-white uppercase tracking-wide mb-4"
               >
                 {item.title}
               </motion.h2>
@@ -100,8 +100,8 @@ export const StickyScrollHowItWorks = ({
                 }}
                 className="mono-code"
               >
-                <div className="text-lg md:text-md text-gray-600 mb-2">// PROCESO</div>
-                <p className="text-black text-[1.4rem] md:text-xl leading-relaxed p-9 md:p-3">
+                <div className="text-lg md:text-md text-gray-600 dark:text-gray-300 mb-2">// PROCESO</div>
+                <p className="text-black dark:text-white text-[1.4rem] md:text-xl leading-relaxed p-9 md:p-3">
                   {item.description}
                 </p>
               </motion.div>
@@ -144,89 +144,89 @@ export const StickyScrollHowItWorks = ({
 
 // Content components for each step
 const Step1Content = () => (
-  <div className="min-h-[20rem] w-full bg-white p-6 flex flex-col justify-center items-center">
+  <div className="min-h-[20rem] w-full bg-white dark:bg-black p-6 flex flex-col justify-center items-center">
     <div className="mono-card p-6 w-full">
       <div className="flex items-center space-x-3 mb-4">
-        <Upload className="h-8 w-8 text-black" />
-        <span className="font-bold uppercase">SUBIR ARCHIVO</span>
+        <Upload className="h-8 w-8 text-black dark:text-white" />
+        <span className="font-bold uppercase dark:text-white">SUBIR ARCHIVO</span>
       </div>
       <div className="space-y-3">
         <div className="flex items-center space-x-2">
-          <div className="w-3 h-3 bg-black"></div>
-          <span className="text-sm">audio.mp3</span>
+          <div className="w-3 h-3 bg-black dark:bg-white"></div>
+          <span className="text-sm dark:text-white">audio.mp3</span>
         </div>
         <div className="flex items-center space-x-2">
-          <div className="w-3 h-3 bg-black"></div>
-          <span className="text-sm">clase_matematica.wav</span>
+          <div className="w-3 h-3 bg-black dark:bg-white"></div>
+          <span className="text-sm dark:text-white">clase_matematica.wav</span>
         </div>
         <div className="flex items-center space-x-2">
-          <div className="w-3 h-3 bg-black"></div>
-          <span className="text-sm">clase_virtual_martes.m4a</span>
+          <div className="w-3 h-3 bg-black dark:bg-white"></div>
+          <span className="text-sm dark:text-white">clase_virtual_martes.m4a</span>
         </div>
       </div>
     </div>
     <div className="mt-4 text-center">
-      <div className="text-xs text-gray-600 mb-1">// FORMATOS SOPORTADOS</div>
-      <div className="text-sm font-mono">MP3, WAV, M4A, FLAC</div>
+      <div className="text-xs text-gray-600 dark:text-gray-400 mb-1">// FORMATOS SOPORTADOS</div>
+      <div className="text-sm font-mono dark:text-white">MP3, WAV, M4A, FLAC</div>
     </div>
   </div>
 );
 
 const Step2Content = () => (
-  <div className="min-h-[20rem] w-full bg-white p-6 flex flex-col justify-center">
+  <div className="min-h-[20rem] w-full bg-white dark:bg-black p-6 flex flex-col justify-center">
     <div className="mono-card p-6 w-full">
       <div className="flex items-center space-x-3 mb-4">
-        <Brain className="h-8 w-8 text-black" />
-        <span className="font-bold uppercase">PROCESO DE IA</span>
+        <Brain className="h-8 w-8 text-black dark:text-white" />
+        <span className="font-bold uppercase dark:text-white">PROCESO DE IA</span>
       </div>
       <div className="space-y-4">
         <div className="flex items-center space-x-2">
-          <CheckCircle className="h-4 w-4 text-black" />
-          <span className="text-sm">Transcripción: 98% completa</span>
+          <CheckCircle className="h-4 w-4 text-black dark:text-white" />
+          <span className="text-sm dark:text-white">Transcripción: 98% completa</span>
         </div>
         <div className="flex items-center space-x-2">
-          <Waveform className="h-4 w-4 text-black animate-pulse" />
-          <span className="text-sm">Análisis de contenido...</span>
+          <Waveform className="h-4 w-4 text-black dark:text-white animate-pulse" />
+          <span className="text-sm dark:text-white">Análisis de contenido...</span>
         </div>
         <div className="flex items-center space-x-2">
           <div
-            className="w-4 h-4 rounded-full border-2 border-black border-t-transparent animate-spin"
+            className="w-4 h-4 rounded-full border-2 border-black dark:border-white border-t-transparent animate-spin"
             style={{ borderRadius: "50% !important" }}
           ></div>
-          <span className="text-sm">Extrayendo conceptos clave</span>
+          <span className="text-sm dark:text-white">Extrayendo conceptos clave</span>
         </div>
       </div>
     </div>
     <div className="mt-4 text-center">
-      <div className="text-xs text-gray-600 mb-1">// TIEMPO PROMEDIO</div>
-      <div className="text-sm font-mono">2-5 MINUTOS</div>
+      <div className="text-xs text-gray-600 dark:text-gray-400 mb-1">// TIEMPO PROMEDIO</div>
+      <div className="text-sm font-mono dark:text-white">2-5 MINUTOS</div>
     </div>
   </div>
 );
 
 const Step3Content = () => (
-  <div className="min-h-[20rem] w-full bg-white p-6 flex flex-col justify-center">
+  <div className="min-h-[20rem] w-full bg-white dark:bg-black p-6 flex flex-col justify-center">
     <div className="mono-card p-6 w-full">
       <div className="flex items-center space-x-3 mb-4">
-        <FileText className="h-8 w-8 text-black" />
-        <span className="font-bold uppercase">RESULTADO</span>
+        <FileText className="h-8 w-8 text-black dark:text-white" />
+        <span className="font-bold uppercase dark:text-white">RESULTADO</span>
       </div>
       <div className="space-y-3">
         <div className="mono-card p-3 bg-gray-50">
-          <div className="text-xs font-bold mb-1">TRANSCRIPCIÓN</div>
-          <div className="text-xs">Texto completo con timestamps</div>
+          <div className="text-xs font-bold mb-1 dark:text-white">TRANSCRIPCIÓN</div>
+          <div className="text-xs dark:text-white">Texto completo con timestamps</div>
         </div>
         <div className="mono-card p-3 bg-gray-50">
-          <div className="text-xs font-bold mb-1">QUIZ</div>
-          <div className="text-xs">10 preguntas generadas</div>
+          <div className="text-xs font-bold mb-1 dark:text-white">QUIZ</div>
+          <div className="text-xs dark:text-white">10 preguntas generadas</div>
         </div>
       </div>
     </div>
     <div className="mt-4 text-center">
-      <div className="text-xs text-gray-600 mb-1">
+      <div className="text-xs text-gray-600 dark:text-gray-400 mb-1">
         // FORMATOS DE EXPORTACIÓN
       </div>
-      <div className="text-sm font-mono">PDF, DOCX, TXT</div>
+      <div className="text-sm font-mono dark:text-white">PDF, DOCX, TXT</div>
     </div>
   </div>
 );
@@ -237,7 +237,7 @@ export const howItWorksContent: HowItWorksContent[] = [
     title: "PROPORCIONÁ AUDIO",
     description:
       "Subí tu archivo de audio, grabá directamente desde tu dispositivo o conectá tu micrófono para sesiones en vivo. Soportamos múltiples formatos de audio.",
-    icon: <Mic className="h-6 w-6 text-white" />,
+    icon: <Mic className="h-6 w-6 text-white dark:text-black" />,
     content: <Step1Content />,
   },
   {
@@ -245,7 +245,7 @@ export const howItWorksContent: HowItWorksContent[] = [
     title: "DEJÁ QUE LA IA TRABAJE",
     description:
       "Nuestra inteligencia artificial transcribe el audio, analiza el contenido y extrae las ideas clave usando algoritmos de procesamiento de lenguaje natural avanzados.",
-    icon: <Brain className="h-6 w-6 text-white" />,
+    icon: <Brain className="h-6 w-6 text-white dark:text-black" />,
     content: <Step2Content />,
   },
   {
@@ -253,12 +253,12 @@ export const howItWorksContent: HowItWorksContent[] = [
     title: "APRENDÉ ACTIVAMENTE",
     description:
       "Recibí resúmenes estructurados, quizzes personalizados y material de estudio optimizado. Todo listo para potenciar tu aprendizaje de manera efectiva.",
-    icon: <MessageSquareQuote className="h-6 w-6 text-white" />,
+    icon: <MessageSquareQuote className="h-6 w-6 text-white dark:text-black" />,
     content: <Step3Content />,
   },
 ];
 
 //esto es un crimen
 function top_calc(index: number) {
-  return -1.325 * index * index + 34.525 * index + 13.5;
+  return -0.8 * index * index + 34.525 * index + 17;
 }

@@ -230,7 +230,7 @@ export default function CaracteristicasPrincipalesPage() {
   const [isOnboardingOpen, setIsOnboardingOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-white text-black font-mono">
+    <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white font-mono">
       <Navbar setIsOnboardingOpen={setIsOnboardingOpen} />
       <OnboardingModal
         isOpen={isOnboardingOpen}
@@ -240,13 +240,13 @@ export default function CaracteristicasPrincipalesPage() {
       <div className="pt-28 pb-24 px-4 sm:px-6 lg:px-8">
         <AnimatedSection animation="fadeInUp">
           <div className="max-w-5xl mx-auto text-center space-y-6">
-            <div className="inline-block border-2 border-black px-4 py-2 uppercase tracking-widest text-sm">
+            <div className="inline-block border-2 border-black dark:border-white px-4 py-2 uppercase tracking-widest text-sm">
               02. CARAcTERISTICAS PRINCIPALES
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight uppercase">
               TODO LO QUE LA PLATAFORMA HACE POR VOS
             </h1>
-            <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               Esta página concentra cada módulo de Didacta y cómo interactúan
               entre sí. Amplía la descripción que ves en la home con escenarios
               reales, beneficios tácticos y nuevas funciones como Cortar PDF y
@@ -280,28 +280,28 @@ export default function CaracteristicasPrincipalesPage() {
                     <div className="flex flex-col lg:flex-row gap-10">
                       <div className="lg:w-3/5 space-y-6">
                         <div className="flex items-center gap-4">
-                          <div className="w-16 h-16 bg-black flex items-center justify-center">
-                            <Icon className="h-8 w-8 text-white" />
+                          <div className="w-16 h-16 bg-black dark:bg-white flex items-center justify-center">
+                            <Icon className="h-8 w-8 text-white dark:text-black" />
                           </div>
                           <div>
-                            <div className="text-xs text-gray-600 uppercase tracking-[0.3em]">
+                            <div className="text-xs text-gray-600 dark:text-gray-300 uppercase tracking-[0.3em]">
                               {feature.tagline}
                             </div>
-                            <h2 className="text-2xl sm:text-3xl font-bold text-black uppercase tracking-tight">
+                            <h2 className="text-2xl sm:text-3xl font-bold text-black dark:text-white uppercase tracking-tight">
                               {feature.title}
                             </h2>
                           </div>
                         </div>
-                        <div className="space-y-4 text-sm sm:text-base text-gray-800 leading-relaxed">
+                        <div className="space-y-4 text-sm sm:text-base text-gray-800 dark:text-gray-400 leading-relaxed">
                           {feature.description.map((paragraph) => (
                             <p key={paragraph}>{paragraph}</p>
                           ))}
                         </div>
-                        <div className="border-2 border-black bg-white p-4">
-                          <div className="text-xs text-gray-600 uppercase tracking-[0.3em] mb-2">
+                        <div className="border-2 border-black dark:border-white bg-white dark:bg-black p-4">
+                          <div className="text-xs text-gray-600 dark:text-gray-300 uppercase tracking-[0.3em] mb-2">
                             RESULTADOS DIRECTOS
                           </div>
-                          <ul className="list-disc list-inside space-y-2 text-sm text-black leading-relaxed">
+                          <ul className="list-disc list-inside space-y-2 text-sm text-black dark:text-white leading-relaxed">
                             {feature.outcomes.map((outcome) => (
                               <li key={outcome}>{outcome}</li>
                             ))}
@@ -313,12 +313,12 @@ export default function CaracteristicasPrincipalesPage() {
                           {feature.capabilities.map((capability) => (
                             <div
                               key={capability.label}
-                              className="border-2 border-black bg-gray-50 p-4 h-full flex flex-col"
+                              className="border-2 border-black dark:border-white bg-gray-50 dark:bg-black p-4 h-full flex flex-col"
                             >
-                              <h3 className="text-sm font-bold uppercase tracking-wide text-black mb-2">
+                              <h3 className="text-sm font-bold uppercase tracking-wide text-black dark:text-white mb-2">
                                 {capability.label}
                               </h3>
-                              <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
+                              <p className="text-xs sm:text-sm text-gray-700 dark:text-gray-400 leading-relaxed">
                                 {capability.description}
                               </p>
                             </div>
@@ -336,10 +336,10 @@ export default function CaracteristicasPrincipalesPage() {
         <section className="max-w-6xl mx-auto mt-24">
           <AnimatedSection animation="fadeInUp">
             <div className="text-center mb-12">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold uppercase tracking-tight text-black">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold uppercase tracking-tight text-black dark:text-white">
                 ASÍ SE ARTICULAN TODAS LAS CARACTERISTICAS
               </h2>
-              <p className="mt-4 text-sm sm:text-base text-gray-700 leading-relaxed max-w-3xl mx-auto">
+              <p className="mt-4 text-sm sm:text-base text-gray-700 dark:text-gray-400 leading-relaxed max-w-3xl mx-auto">
                 La potencia de Didacta surge de combinar las capacidades
                 principales. Cada fase del flujo garantiza que la información
                 llegue a tu equipo a tiempo, en el formato correcto y con
@@ -352,16 +352,16 @@ export default function CaracteristicasPrincipalesPage() {
                 return (
                   <Card key={phase.title} className="mono-card h-full">
                     <CardContent className="p-8 space-y-4">
-                      <div className="w-14 h-14 bg-black flex items-center justify-center">
-                        <Icon className="h-7 w-7 text-white" />
+                      <div className="w-14 h-14 bg-black dark:bg-white flex items-center justify-center">
+                        <Icon className="h-7 w-7 text-white dark:text-black" />
                       </div>
-                      <h3 className="text-xl font-bold uppercase tracking-tight text-black">
+                      <h3 className="text-xl font-bold uppercase tracking-tight text-black dark:text-white">
                         {phase.title}
                       </h3>
-                      <p className="text-sm text-gray-700 leading-relaxed">
+                      <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
                         {phase.description}
                       </p>
-                      <ul className="list-disc list-inside space-y-2 text-xs sm:text-sm text-black leading-relaxed">
+                      <ul className="list-disc list-inside space-y-2 text-xs sm:text-sm text-black dark:text-white leading-relaxed">
                         {phase.bulletPoints.map((point) => (
                           <li key={point}>{point}</li>
                         ))}
@@ -377,10 +377,10 @@ export default function CaracteristicasPrincipalesPage() {
         <section className="max-w-6xl mx-auto mt-24">
           <AnimatedSection animation="fadeInUp">
             <div className="text-center mb-12">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold uppercase tracking-tight text-black">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold uppercase tracking-tight text-black dark:text-white">
                 PLANES DE ACCIÓN SEGÚN TU ROL
               </h2>
-              <p className="mt-4 text-sm sm:text-base text-gray-700 leading-relaxed max-w-3xl mx-auto">
+              <p className="mt-4 text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto">
                 Activá las caracteristicas que necesitás según el objetivo de tu
                 equipo. Cada combinación aprovecha la automatización para
                 liberar tiempo de preparación y profundizar el aprendizaje.
@@ -392,16 +392,16 @@ export default function CaracteristicasPrincipalesPage() {
                 return (
                   <Card key={role.title} className="mono-card h-full">
                     <CardContent className="p-8 space-y-4">
-                      <div className="w-14 h-14 bg-black flex items-center justify-center">
-                        <Icon className="h-7 w-7 text-white" />
+                      <div className="w-14 h-14 bg-black dark:bg-white flex items-center justify-center">
+                        <Icon className="h-7 w-7 text-white dark:text-black" />
                       </div>
-                      <h3 className="text-xl font-bold uppercase tracking-tight text-black">
+                      <h3 className="text-xl font-bold uppercase tracking-tight text-black dark:text-white">
                         {role.title}
                       </h3>
-                      <p className="text-sm text-gray-700 leading-relaxed">
+                      <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
                         {role.description}
                       </p>
-                      <ul className="list-disc list-inside space-y-2 text-xs sm:text-sm text-black leading-relaxed">
+                      <ul className="list-disc list-inside space-y-2 text-xs sm:text-sm text-black dark:text-white leading-relaxed">
                         {role.gains.map((gain) => (
                           <li key={gain}>{gain}</li>
                         ))}
@@ -418,10 +418,10 @@ export default function CaracteristicasPrincipalesPage() {
           <AnimatedSection animation="fadeInUp">
             <Card className="mono-card-highlight">
               <CardContent className="p-10 sm:p-14 text-center space-y-6">
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold uppercase tracking-tight text-black">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold uppercase tracking-tight text-black dark:text-white">
                   PREPARÁ TU PRÓXIMA CLASE CON DIDACTA
                 </h2>
-                <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
                   Transcribí una clase, generá un resumen, cortá los PDFs clave
                   y visualizá todo en un mapa mental en cuestión de minutos.
                   Nuestra automatización se encarga de mantener cada recurso
