@@ -1,6 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import {
+  useEffect,
+  useState,
+  useRef,
+  type ClipboardEvent,
+  type KeyboardEvent,
+} from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -37,8 +43,9 @@ const STEPS = [
     title: "ONBOARDING",
   },
   { id: 2, title: "INFORMACIÓN" },
-  { id: 3, title: "SEGURIDAD" },
-  { id: 4, title: "CONFIRMACIÓN" },
+  { id: 3, title: "VERIFICACIÓN" },
+  { id: 4, title: "SEGURIDAD" },
+  { id: 5, title: "CONFIRMACIÓN" },
 ];
 export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
   const [currentStep, setCurrentStep] = useState(1);
@@ -52,6 +59,16 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
   const [showPassword, setShowPassword] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSendingVerification, setIsSendingVerification] = useState(false);
+  const [isVerifyingCode, setIsVerifyingCode] = useState(false);
+  const [verificationEmailError, setVerificationEmailError] = useState<
+    string | null
+  >(null);
+  const [codeError, setCodeError] = useState<string | null>(null);
+  const [verificationCode, setVerificationCode] = useState<string[]>(
+    Array(5).fill("")
+  );
+  const codeInputRefs = useRef<(HTMLInputElement | null)[]>([]);
 
   useEffect(() => {
     let onboardingData = sessionStorage.getItem("onboarding");
@@ -61,12 +78,22 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
       name: JSON.parse(onboardingData).name,
       email: JSON.parse(onboardingData).email,
     });
-    setCurrentStep(4);
+    setCurrentStep(5);
   }, []);
+
+  useEffect(() => {
+    if (currentStep === 4) {
+      const timeout = setTimeout(() => {
+        codeInputRefs.current[0]?.focus();
+      }, 150);
+
+      return () => clearTimeout(timeout);
+    }
+  }, [currentStep]);
 
   if (!isOpen) return null;
 
-  const validateStep = (step: number): boolean => {
+  const validateStep = async (step: number): Promise<boolean> => {
     const newErrors: Record<string, string> = {};
 
     switch (step) {
@@ -91,6 +118,9 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
           newErrors.password = "DEBE CONTENER AL MENOS UN CARÁCTER ESPECIAL";
         else if (formData.password !== formData.confirmPassword)
           newErrors.password = "LAS CONTRASEÑAS NO COINCIDEN";
+        if (!(await sendVerificationEmail())) {
+          return false;
+        }
         break;
     }
 
@@ -98,8 +128,117 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
     return Object.keys(newErrors).length === 0;
   };
 
-  const nextStep = () => {
-    if (validateStep(currentStep)) {
+  const sendVerificationEmail = async () => {
+    setIsSendingVerification(true);
+    setVerificationEmailError(null);
+    setCodeError(null);
+
+    try {
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/api/auth/verification-email`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: formData.email,
+            name: formData.name,
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        let message = "NO SE PUDO ENVIAR EL CÓDIGO";
+        try {
+          const data = await response.json();
+          if (data?.message) message = data.message;
+          if (response?.status === 409) {
+            message = `EMAIL YA REGISTRADO. <a href='/${process.env.NEXT_PUBLIC_APP_URL}' class='underline text-blue-600' target='_blank'>INICIAR SESIÓN</a>`;
+            let error = new Error(message);
+            throw error;
+          }
+        } catch (error) {
+          // ignore json parsing error
+        }
+
+        throw new Error(message);
+      }
+
+      setVerificationCode(Array(5).fill(""));
+      return true;
+    } catch (error) {
+      setVerificationEmailError(
+        error instanceof Error ? error.message : "NO SE PUDO ENVIAR EL CÓDIGO"
+      );
+      return false;
+    } finally {
+      setIsSendingVerification(false);
+    }
+  };
+
+  const verifyCode = async () => {
+    const code = verificationCode.join("");
+    if (code.length !== 5) {
+      setCodeError("INGRESÁ LOS 5 DÍGITOS DEL CÓDIGO");
+      return;
+    }
+
+    setIsVerifyingCode(true);
+    setCodeError(null);
+
+    try {
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/api/auth/register`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: formData.email,
+            code,
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        let message = "EL CÓDIGO INGRESADO ES INVÁLIDO";
+        try {
+          const data = await response.json();
+          if (data?.message) message = data.message;
+        } catch (error) {
+          // ignore json parsing error
+        }
+        throw new Error(message);
+      }
+
+      setCurrentStep(5);
+      sessionStorage.setItem(
+        "onboarding",
+        JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+        })
+      );
+    } catch (error) {
+      setCodeError(
+        error instanceof Error
+          ? error.message
+          : "NO SE PUDO VERIFICAR EL CÓDIGO"
+      );
+    } finally {
+      setIsVerifyingCode(false);
+    }
+  };
+
+  const nextStep = async () => {
+    if (currentStep === 4) {
+      await verifyCode();
+      return;
+    }
+
+    if (await validateStep(currentStep)) {
       setCurrentStep((prev) => Math.min(prev + 1, STEPS.length));
     }
   };
@@ -107,25 +246,85 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
   const prevStep = () => {
     setCurrentStep((prev) => Math.max(prev - 1, 1));
     setErrors({});
+    if (currentStep === 3) {
+      setVerificationCode(Array(5).fill(""));
+      setCodeError(null);
+    }
+    if (currentStep === 2) {
+      setVerificationEmailError(null);
+    }
   };
 
   const handleSubmit = async () => {
-    if (!validateStep(3)) return;
+    if (!(await validateStep(4))) return;
 
     setIsSubmitting(true);
 
-    await fetch(process.env.API_URL + "/api/register", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: formData.name,
-        email: formData.email,
-      }),
-    });
-    setIsSubmitting(false);
-    setCurrentStep(4);
+    // await fetch(process.env.NEXT_PUBLIC_API_URL + "/api/auth/register", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({
+    //     name: formData.name,
+    //     email: formData.email,
+    //   }),
+    // });
+    // setIsSubmitting(false);
+    // setCurrentStep(5);
+  };
+
+  const handleCodeChange = (index: number, value: string) => {
+    if (!/^\d?$/.test(value)) return;
+
+    const nextCode = [...verificationCode];
+    nextCode[index] = value;
+    setVerificationCode(nextCode);
+    setCodeError(null);
+
+    if (value && index < verificationCode.length - 1) {
+      codeInputRefs.current[index + 1]?.focus();
+    }
+  };
+
+  const handleCodeKeyDown = (
+    index: number,
+    event: KeyboardEvent<HTMLInputElement>
+  ) => {
+    if (event.key === "Backspace" && !verificationCode[index] && index > 0) {
+      codeInputRefs.current[index - 1]?.focus();
+    }
+
+    if (event.key === "ArrowLeft" && index > 0) {
+      event.preventDefault();
+      codeInputRefs.current[index - 1]?.focus();
+    }
+
+    if (event.key === "ArrowRight" && index < verificationCode.length - 1) {
+      event.preventDefault();
+      codeInputRefs.current[index + 1]?.focus();
+    }
+
+    if (event.key === "Enter" && currentStep === 4) {
+      event.preventDefault();
+      void verifyCode();
+    }
+  };
+
+  const handleCodePaste = (event: ClipboardEvent<HTMLInputElement>) => {
+    event.preventDefault();
+    const pasted = event.clipboardData.getData("text").replace(/\D/g, "");
+    if (!pasted) return;
+
+    const nextCode = [...verificationCode];
+    for (let i = 0; i < verificationCode.length; i++) {
+      nextCode[i] = pasted[i] ?? "";
+    }
+    setVerificationCode(nextCode);
+    setCodeError(null);
+
+    const focusIndex = Math.min(pasted.length, verificationCode.length - 1);
+    codeInputRefs.current[focusIndex]?.focus();
   };
 
   const getPasswordValidity = (password: string) => {
@@ -196,9 +395,10 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
                 <input
                   type="text"
                   value={formData.name}
-                  onChange={(e) =>
-                    setFormData({ ...formData, name: e.target.value })
-                  }
+                  onChange={(e) => {
+                    setFormData({ ...formData, name: e.target.value });
+                    setVerificationEmailError(null);
+                  }}
                   className={`w-full px-4 py-3 mono-input transition-all duration-200 ${
                     errors.name ? "border-red-500 bg-red-50" : ""
                   }`}
@@ -217,9 +417,10 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
                 <input
                   type="email"
                   value={formData.email}
-                  onChange={(e) =>
-                    setFormData({ ...formData, email: e.target.value })
-                  }
+                  onChange={(e) => {
+                    setFormData({ ...formData, email: e.target.value });
+                    setVerificationEmailError(null);
+                  }}
                   className={`w-full px-4 py-3 mono-input transition-all duration-200 ${
                     errors.email ? "border-red-500 bg-red-50" : ""
                   }`}
@@ -229,6 +430,12 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
                   <p className="text-red-500 text-sm mt-1 font-mono uppercase">
                     {errors.email}
                   </p>
+                )}
+                {verificationEmailError && (
+                  <div
+                    className="text-red-500 text-sm mt-3 font-mono uppercase"
+                    dangerouslySetInnerHTML={{ __html: verificationEmailError }}
+                  ></div>
                 )}
               </div>
             </div>
@@ -318,6 +525,12 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
                     {errors.password}
                   </p>
                 )}
+                {verificationEmailError && (
+                  <div
+                    className="text-red-500 text-sm mt-3 font-mono uppercase"
+                    dangerouslySetInnerHTML={{ __html: verificationEmailError }}
+                  ></div>
+                )}
               </div>
               <div className="mono-code">
                 <h4 className="text-sm font-bold text-black mb-2 uppercase">
@@ -371,6 +584,54 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
         );
 
       case 4:
+        return (
+          <div className="space-y-6">
+            <div className="text-center mb-8">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2 text-black uppercase tracking-wide">
+                VERIFICÁ TU EMAIL
+              </h2>
+              <div className="mono-code">
+                <div className="text-xs text-gray-600 mb-1">// VALIDACIÓN</div>
+                <p className="text-sm text-black">
+                  Ingresá el código de 5 dígitos que enviamos a
+                  <br />
+                  <span className="font-bold">{formData.email}</span>
+                </p>
+              </div>
+            </div>
+            <div className="flex justify-center space-x-3">
+              {verificationCode.map((digit, index) => (
+                <input
+                  key={index}
+                  ref={(element) => {
+                    codeInputRefs.current[index] = element;
+                  }}
+                  type="text"
+                  inputMode="numeric"
+                  autoComplete="one-time-code"
+                  maxLength={1}
+                  className="w-12 h-14 sm:w-14 sm:h-16 text-center text-2xl font-mono border-2 border-black focus:outline-none focus:ring-2 focus:ring-black"
+                  value={digit}
+                  onChange={(event) =>
+                    handleCodeChange(index, event.target.value)
+                  }
+                  onKeyDown={(event) => handleCodeKeyDown(index, event)}
+                  onPaste={handleCodePaste}
+                />
+              ))}
+            </div>
+            {codeError && (
+              <p className="text-center text-red-500 text-sm font-mono uppercase">
+                {codeError}
+              </p>
+            )}
+            <div className="mono-code text-center text-xs text-gray-600">
+              <p>// CONSEJO: Revisá tu carpeta de spam si no lo encontrás</p>
+            </div>
+          </div>
+        );
+
+      case 5:
         return (
           <div className="text-center space-y-8 my-4">
             <div>
@@ -430,7 +691,9 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
             <button
               onClick={onClose}
               className="text-white hover:bg-white hover:text-black p-2 transition-colors"
-              disabled={isSubmitting}
+              disabled={
+                isSubmitting || isSendingVerification || isVerifyingCode
+              }
             >
               <X className="h-6 w-6 cursor-pointer" />
             </button>
@@ -485,10 +748,12 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
 
           {/* Footer */}
           <div className="flex items-center justify-between p-4 sm:p-6 border-t-2 border-black bg-gray-50 modal-footer">
-            {currentStep != 4 ? (
+            {currentStep > 1 && currentStep < STEPS.length ? (
               <Button
                 onClick={prevStep}
-                disabled={currentStep === 1 || isSubmitting}
+                disabled={
+                  isSubmitting || isSendingVerification || isVerifyingCode
+                }
                 className="mono-button flex items-center space-x-2"
               >
                 <ArrowLeft className="h-4 w-4" />
@@ -496,20 +761,43 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
               </Button>
             ) : null}
 
-            {currentStep < 3 ? (
+            {currentStep === 1 || currentStep === 2 || currentStep == 3 ? (
               <Button
                 onClick={nextStep}
-                disabled={isSubmitting}
-                className="mono-button-primary flex items-center space-x-2"
+                disabled={
+                  isSubmitting || isSendingVerification || isVerifyingCode
+                }
+                className="mono-button-primary flex items-center space-x-2 !ml-auto"
               >
                 <span>SIGUIENTE</span>
                 <ArrowRight className="h-4 w-4" />
               </Button>
-            ) : currentStep === 3 ? (
+            ) : currentStep === 4 ? (
+              <Button
+                onClick={nextStep}
+                disabled={isVerifyingCode}
+                className="mono-button-primary flex items-center space-x-2 ml-auto"
+              >
+                {isVerifyingCode ? (
+                  <>
+                    <div
+                      className="animate-spin w-4 h-4 border-2 !rounded-full border-white border-t-transparent"
+                      style={{ borderRadius: "50% !important" }}
+                    />
+                    <span>VERIFICANDO...</span>
+                  </>
+                ) : (
+                  <>
+                    <span>VERIFICAR CÓDIGO</span>
+                    <ArrowRight className="h-4 w-4" />
+                  </>
+                )}
+              </Button>
+            ) : currentStep === 4 ? (
               <Button
                 onClick={handleSubmit}
                 disabled={isSubmitting}
-                className="mono-button-primary flex items-center space-x-2"
+                className="mono-button-primary flex items-center space-x-2 ml-auto"
               >
                 {isSubmitting ? (
                   <>
@@ -527,14 +815,22 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
                 )}
               </Button>
             ) : (
-              //TODO: redir to app
-              <Button
-                onClick={onClose}
-                className="mono-button-primary flex items-center space-x-2 ml-auto"
+              <a
+                className="flex items-center space-x-2 ml-auto"
+                target="_blank"
+                href={
+                  process.env.NEXT_PUBLIC_APP_URL || "https://didacta-ai.com"
+                }
+                rel="noreferrer"
               >
-                <span>COMENZAR A APRENDER</span>
-                <Zap className="h-4 w-4" />
-              </Button>
+                <Button
+                  onClick={onClose}
+                  className="mono-button-primary flex items-center space-x-2 ml-auto"
+                >
+                  <span>COMENZAR A APRENDER</span>
+                  <Zap className="h-4 w-4" />
+                </Button>
+              </a>
             )}
           </div>
         </CardContent>

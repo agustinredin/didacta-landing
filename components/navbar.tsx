@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Zap, Brain } from "lucide-react";
+import { Menu, X, Zap, Brain, LinkIcon } from "lucide-react";
 import { Logo, LogoLetra } from "./Logo";
 
 interface NavbarProps {
@@ -12,6 +12,16 @@ interface NavbarProps {
 
 export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [onboardingData, setOnboardingData] = useState(null);
+
+  useEffect(() => {
+    let onboardingCookie = sessionStorage.getItem("onboarding");
+    if (!onboardingCookie) return;
+    setOnboardingData({
+      name: JSON.parse(onboardingCookie).name,
+      email: JSON.parse(onboardingCookie).email,
+    });
+  }, []);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b-2 border-black">
@@ -58,13 +68,26 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
           {/* Medium screen navigation */}
           <div className="flex items-center space-x-2 lg:mt-2">
             <div className="hidden md:flex items-center gap-4 group">
-              <Button
-                onClick={() => setIsOnboardingOpen?.(true)}
-                className="mono-button-primary px-3 py-2"
-              >
-                <Zap className="mr-2 h-6 w-6 group-hover:fill-orange" />
-                Crear cuenta
-              </Button>
+              {/* solve this not being defined when rendered in the server */}
+              {typeof window !== "undefined" && onboardingData ? (
+                <a href={process.env.NEXT_PUBLIC_APP_URL} target="_blank">
+                  <Button
+                    onClick={() => setIsOnboardingOpen?.(true)}
+                    className="mono-button-orange px-3 py-2"
+                  >
+                    <LinkIcon className="mr-2 h-6 w-6 group-hover:stroke-orange" />
+                    Ir a plataforma
+                  </Button>
+                </a>
+              ) : (
+                <Button
+                  onClick={() => setIsOnboardingOpen?.(true)}
+                  className="mono-button-primary px-3 py-2"
+                >
+                  <Zap className="mr-2 h-6 w-6 group-hover:fill-orange" />
+                  Crear cuenta
+                </Button>
+              )}
             </div>
             <div className="md:lg:hidden">
               <button

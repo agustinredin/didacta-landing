@@ -728,7 +728,7 @@ export default function Component() {
                         SOPORTE PRIORITARIO 24/7
                       </li>
                     </ul>
-                    <Button className="w-full mono-button-primary py-4 text-sm sm:text-lg font-medium">
+                    <Button className="w-full mono-button-secondary py-4 text-sm sm:text-lg font-medium">
                       IR A PLATAFORMA
                     </Button>
                     <p className="text-xs text-gray-500 mt-4 uppercase tracking-wide">
