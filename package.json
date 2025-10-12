@@ -1,18 +1,21 @@
 {
   "name": "didacta-landing",
   "version": "0.1.0",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/agustinredin/didacta-landing.git"
   },
   "scripts": {
-    "build": "next build",
-    "dev": "next dev",
+    "build": "DIDACTA_ENV=production node sync-env.js && next build",
+    "dev": "npm run clean-cache && node sync-env.js && next dev",
     "lint": "next lint",
-    "start": "next start",
-    "clean-cache": "rm -rf .next"
+    "start": "node sync-env.js && next start",
+    "clean-cache": "rm -rf .next",
+    "clear-cache": "rm -rf .next"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.901.0",
     "@hookform/resolvers": "^3.10.0",
     "@radix-ui/react-accordion": "1.2.2",
     "@radix-ui/react-alert-dialog": "1.1.4",
@@ -42,6 +45,7 @@
     "@radix-ui/react-toggle-group": "1.1.1",
     "@radix-ui/react-tooltip": "1.1.6",
     "autoprefixer": "^10.4.21",
+    "aws": "^0.0.3-2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "1.0.4",
@@ -74,6 +78,7 @@
     "@types/node": "^22.17.2",
     "@types/react": "^19.1.11",
     "@types/react-dom": "^19.1.7",
+    "aws-cli": "^0.0.2",
     "eslint": "^9.34.0",
     "eslint-config-next": "^15.5.2",
     "postcss": "^8.5.6",
