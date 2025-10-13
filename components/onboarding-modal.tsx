@@ -360,7 +360,9 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
                 BIENVENIDO
               </h2>
               <div className="mono-code max-w-xs sm:max-w-sm mx-auto">
-                <div className="text-xs text-gray-600 dark:text-gray-300 mb-2">// DESCRIPCIÓN</div>
+                <div className="text-xs text-gray-600 dark:text-gray-300 mb-2">
+                  // DESCRIPCIÓN
+                </div>
                 <p className="text-sm text-black dark:text-white leading-relaxed">
                   Convierte tus grabaciones en aprendizaje personalizado con el
                   poder de la inteligencia artificial
@@ -450,7 +452,9 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
                 PROTEGE TU CUENTA
               </h2>
               <div className="mono-code">
-                <div className="text-xs text-gray-600 dark:text-gray-300 mb-1">// SEGURIDAD</div>
+                <div className="text-xs text-gray-600 dark:text-gray-300 mb-1">
+                  // SEGURIDAD
+                </div>
                 <p className="text-sm text-black dark:text-white">
                   Crea una contraseña segura para mantener tus datos protegidos
                 </p>
@@ -567,7 +571,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
                     ></div>
                     AL MENOS UN NÚMERO
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex items-center dark:text-white">
                     <div
                       className={`w-3 h-3 mr-2 ${
                         /[\W_]/.test(formData.password)
@@ -587,12 +591,14 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
         return (
           <div className="space-y-6">
             <div className="text-center mb-8">
-              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2 text-black uppercase tracking-wide">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2 text-black dark:text-white uppercase tracking-wide">
                 VERIFICÁ TU EMAIL
               </h2>
               <div className="mono-code">
-                <div className="text-xs text-gray-600 mb-1">// VALIDACIÓN</div>
-                <p className="text-sm text-black">
+                <div className="text-xs text-gray-600 dark:text-gray-400 mb-1">
+                  // VALIDACIÓN
+                </div>
+                <p className="text-sm text-black dark:text-white">
                   Ingresá el código de 5 dígitos que enviamos a
                   <br />
                   <span className="font-bold">{formData.email}</span>
@@ -610,7 +616,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
                   inputMode="numeric"
                   autoComplete="one-time-code"
                   maxLength={1}
-                  className="w-12 h-14 sm:w-14 sm:h-16 text-center text-2xl font-mono border-2 border-black focus:outline-none focus:ring-2 focus:ring-black"
+                  className="w-12 h-14 sm:w-14 sm:h-16 text-center text-2xl font-mono border-2 border-black dark:border-white focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white"
                   value={digit}
                   onChange={(event) =>
                     handleCodeChange(index, event.target.value)
@@ -625,7 +631,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
                 {codeError}
               </p>
             )}
-            <div className="mono-code text-center text-xs text-gray-600">
+            <div className="text-center text-xs text-gray-600 dark:text-gray-400">
               <p>// CONSEJO: Revisá tu carpeta de spam si no lo encontrás</p>
             </div>
           </div>
@@ -639,7 +645,9 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
                 ¡TU CUENTA ESTÁ LISTA!
               </h2>
               <div className="mono-code max-w-md mx-auto mb-8">
-                <div className="text-xs text-gray-600 dark:text-gray-300 mb-2">// ÉXITO</div>
+                <div className="text-xs text-gray-600 dark:text-gray-300 mb-2">
+                  // ÉXITO
+                </div>
                 <p className="text-sm text-black dark:text-white leading-relaxed">
                   Bienvenido a Didacta, <b>{formData.name.trim()}</b>. Estás
                   listo para comenzar tu viaje de aprendizaje personalizado.
@@ -652,12 +660,20 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
               </h3>
               <div className="space-y-2 text-sm font-mono">
                 <div className="flex justify-between">
-                  <span className="text-gray-600 dark:text-gray-300 uppercase">NOMBRE:</span>
-                  <span className="font-bold text-black dark:text-white">{formData.name}</span>
+                  <span className="text-gray-600 dark:text-gray-300 uppercase">
+                    NOMBRE:
+                  </span>
+                  <span className="font-bold text-black dark:text-white">
+                    {formData.name}
+                  </span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600 dark:text-gray-300 uppercase">EMAIL:</span>
-                  <span className="font-bold text-black dark:text-white">{formData.email}</span>
+                  <span className="text-gray-600 dark:text-gray-300 uppercase">
+                    EMAIL:
+                  </span>
+                  <span className="font-bold text-black dark:text-white">
+                    {formData.email}
+                  </span>
                 </div>
               </div>
             </div>
@@ -727,7 +743,9 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
                   {index < STEPS.length - 1 && (
                     <div
                       className={`grow h-1 mx-2 transition-all duration-300 border border-black dark:border-white ${
-                        currentStep > step.id ? "bg-black dark:bg-white" : "bg-white dark:bg-black"
+                        currentStep > step.id
+                          ? "bg-black dark:bg-white"
+                          : "bg-white dark:bg-black"
                       }`}
                     />
                   )}

@@ -2,9 +2,9 @@
 
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import {Sun, Moon} from 'lucide-react'
+import { Sun, Moon } from "lucide-react";
 
-export default function ThemeSwitcher({...props}) {
+export default function ThemeChanger({ ...props }) {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -14,19 +14,21 @@ export default function ThemeSwitcher({...props}) {
   const isDark = theme === "dark";
 
   return (
-    <div {...props}>
-    <button
+    <div
+      className="fixed bottom-6 right-8 z-50 mono-card p-4 transition-all duration-75 opacity-75 hover:opacity-100"
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className={`h-6 flex items-center transition-colors duration-300 dark:text-white space-x-4 cursor-pointer`}
     >
-      <div
-        className={`transform transition-transform duration-300 ${
-          isDark ? "translate-x-0" : "translate-x-1"
-        }`}
-      >{isDark ? <Moon /> : <Sun />}</div>
-          <label className="font-medium dark:text-white cursor-pointer">{isDark ? "OSCURO" : "CLARO"}</label>
-    </button>
+      <div {...props}>
+        <button
+          className={`h-6 flex items-center transition-colors duration-300 dark:text-white space-x-4 cursor-pointer`}
+        >
+          <div>{isDark ? <Moon /> : <Sun />}</div>
+          <label className="text-left font-medium text-xs dark:text-white cursor-pointer w-16">
+            <div className="text-xs text-gray-600 mb-1">// MODO</div>
+            {isDark ? "OSCURO" : "CLARO"}
+          </label>
+        </button>
+      </div>
     </div>
-  )
+  );
 }
-

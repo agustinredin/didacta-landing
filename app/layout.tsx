@@ -5,6 +5,7 @@ import { GeistMono } from "geist/font/mono";
 import "@/styles/globals.css";
 import "@/styles/performance-optimizations.css";
 import { ThemeProvider } from "next-themes";
+import ThemeChanger from "@/components/theme-changer";
 
 export const metadata: Metadata = {
   icons: {
@@ -50,7 +51,7 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <style>
           {`
@@ -59,11 +60,17 @@ html {
   --font-mono: ${GeistMono.style.fontFamily};
   --font-sans: ${GeistSans.style.fontFamily};
 }
-        `}</style>
+        `}
+        </style>
       </head>
       <body>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem={true}
+        >
           <main>{children}</main>
+          <ThemeChanger />
         </ThemeProvider>
       </body>
     </html>

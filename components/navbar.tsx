@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Zap, Brain, LinkIcon } from "lucide-react";
 import { Logo, LogoLetra } from "./Logo";
-import ThemeChanger from "./theme-changer";
 
 interface NavbarProps {
   setIsOnboardingOpen?: (open: boolean) => void;
@@ -64,7 +63,6 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
             >
               Contacto
             </Link>
-                    <ThemeChanger/>
           </div>
 
           {/* Medium screen navigation */}
@@ -92,7 +90,6 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
               )}
             </div>
             <div className="md:lg:hidden flex gap-12 items-center">
-                <ThemeChanger className="mt-1"/>
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="text-black hover:bg-black hover:text-white p-2 transition-colors"
@@ -106,7 +103,6 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
             </div>
           </div>
         </div>
-
 
         {/* Mobile Navigation */}
         {isOpen && (
@@ -156,7 +152,6 @@ export function Navbar({ setIsOnboardingOpen }: NavbarProps) {
             </div>
           </div>
         )}
-        
       </div>
     </nav>
   );
