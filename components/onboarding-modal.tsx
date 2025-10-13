@@ -144,6 +144,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
           body: JSON.stringify({
             email: formData.email,
             name: formData.name,
+            password: formData.password,
           }),
         }
       );
@@ -177,7 +178,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
     }
   };
 
-  const verifyCode = async () => {
+  const register = async () => {
     const code = verificationCode.join("");
     if (code.length !== 5) {
       setCodeError("INGRESÁ LOS 5 DÍGITOS DEL CÓDIGO");
@@ -198,6 +199,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
           body: JSON.stringify({
             email: formData.email,
             code,
+            password: formData.password,
           }),
         }
       );
@@ -234,7 +236,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
 
   const nextStep = async () => {
     if (currentStep === 4) {
-      await verifyCode();
+      await register();
       return;
     }
 
@@ -259,19 +261,6 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
     if (!(await validateStep(4))) return;
 
     setIsSubmitting(true);
-
-    // await fetch(process.env.NEXT_PUBLIC_API_URL + "/api/auth/register", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify({
-    //     name: formData.name,
-    //     email: formData.email,
-    //   }),
-    // });
-    // setIsSubmitting(false);
-    // setCurrentStep(5);
   };
 
   const handleCodeChange = (index: number, value: string) => {
@@ -307,7 +296,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
 
     if (event.key === "Enter" && currentStep === 4) {
       event.preventDefault();
-      void verifyCode();
+      void register();
     }
   };
 
@@ -811,44 +800,25 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
                   </>
                 )}
               </Button>
-            ) : currentStep === 4 ? (
-              <Button
-                onClick={handleSubmit}
-                disabled={isSubmitting}
-                className="mono-button-primary flex items-center space-x-2 ml-auto"
-              >
-                {isSubmitting ? (
-                  <>
-                    <div
-                      className="animate-spin w-4 h-4 border-2 !rounded-full border-white border-t-transparent"
-                      style={{ borderRadius: "50% !important" }}
-                    />
-                    <span>CREANDO CUENTA...</span>
-                  </>
-                ) : (
-                  <>
-                    <span>CREAR CUENTA</span>
-                    <ArrowRight className="h-4 w-4" />
-                  </>
-                )}
-              </Button>
             ) : (
-              <a
-                className="flex items-center space-x-2 ml-auto"
-                target="_blank"
-                href={
-                  process.env.NEXT_PUBLIC_APP_URL || "https://didacta-ai.com"
-                }
-                rel="noreferrer"
-              >
-                <Button
-                  onClick={onClose}
-                  className="mono-button-primary flex items-center space-x-2 ml-auto"
+              currentStep == 5 && (
+                <a
+                  className="flex items-center space-x-2 ml-auto"
+                  target="_blank"
+                  href={
+                    process.env.NEXT_PUBLIC_APP_URL || "https://didacta-ai.com"
+                  }
+                  rel="noreferrer"
                 >
-                  <span>COMENZAR A APRENDER</span>
-                  <Zap className="h-4 w-4" />
-                </Button>
-              </a>
+                  <Button
+                    onClick={onClose}
+                    className="mono-button-primary flex items-center space-x-2 ml-auto"
+                  >
+                    <span>COMENZAR A APRENDER</span>
+                    <Zap className="h-4 w-4" />
+                  </Button>
+                </a>
+              )
             )}
           </div>
         </CardContent>

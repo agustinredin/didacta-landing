@@ -458,7 +458,10 @@ export default function Component() {
         {/* </section> */}
 
         {/* How it Works Section - NEW STICKY SCROLL VERSION */}
-        <section id="how-it-works" className="relative bg-gray-50 dark:bg-black">
+        <section
+          id="how-it-works"
+          className="relative bg-gray-50 dark:bg-black"
+        >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
             <AnimatedSection animation="fadeInUp">
               <div className="text-center mb-12">
@@ -612,7 +615,9 @@ export default function Component() {
                   PLANES DE PRECIOS
                 </h2>
                 <div className="mono-code max-w-3xl mx-auto">
-                  <div className="text-sm text-gray-600 dark:text-gray-300 mb-2">// OPCIONES</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300 mb-2">
+                    // OPCIONES
+                  </div>
                   <p className="text-sm text-black dark:text-white">
                     Queremos dar lo mejor a nuestros usuarios. El verdadero
                     valor está en transformar tus notas y audios en conocimiento
@@ -622,7 +627,7 @@ export default function Component() {
               </div>
             </AnimatedSection>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-3xl lg:max-w-4xl mx-auto">
               <AnimatedSection animation="fadeInLeft" delay={200}>
                 <Card className="mono-card border-4 border-black dark:border-white relative">
                   <CardContent className="p-4 md:p-8 text-center">
@@ -644,17 +649,24 @@ export default function Component() {
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black dark:bg-white mr-3"></div>
                         ASISTENTE DE IA AVANZADO{" "}
-                        <span className="text-gray-600 dark:text-gray-300"> &nbsp;(GPT-5)</span>
+                        <span className="text-gray-600 dark:text-gray-300">
+                          {" "}
+                          &nbsp;(GPT-5)
+                        </span>
                       </li>
                       <li className="flex items-center">
-                        <div className="w-3 h-3 bg-black dark:bg-white mr-3"></div>5 HORAS DE
-                        TRANSCRIPCIÓN
-                        <span className="text-gray-600 dark:text-gray-300 text-sm">/MES</span>
+                        <div className="w-3 h-3 bg-black dark:bg-white mr-3"></div>
+                        5 HORAS DE TRANSCRIPCIÓN
+                        <span className="text-gray-600 dark:text-gray-300 text-sm">
+                          /MES
+                        </span>
                       </li>
                       <li className="flex items-center">
-                        <div className="w-3 h-3 bg-black dark:bg-white mr-3"></div>500 PÁGINAS
-                        DE BIBLIOGRAFÍA
-                        <span className="text-gray-600 dark:text-gray-300 text-sm">/MES</span>
+                        <div className="w-3 h-3 bg-black dark:bg-white mr-3"></div>
+                        500 PÁGINAS DE BIBLIOGRAFÍA
+                        <span className="text-gray-600 dark:text-gray-300 text-sm">
+                          /MES
+                        </span>
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black dark:bg-white mr-3"></div>
@@ -694,7 +706,9 @@ export default function Component() {
                     </h3>
                     <div className="text-4xl font-bold mb-6 text-black dark:text-white">
                       $10.000
-                      <span className="text-lg text-gray-600 dark:text-gray-300">/MES</span>
+                      <span className="text-lg text-gray-600 dark:text-gray-300">
+                        /MES
+                      </span>
                     </div>
                     <div className="mono-code mb-6">
                       <div className="text-xs text-gray-600 dark:text-gray-300 mb-1">
@@ -710,14 +724,18 @@ export default function Component() {
                         TODO LO DISPONIBLE EN FREE, MÁS...
                       </li>
                       <li className="flex items-center">
-                        <div className="w-3 h-3 bg-black dark:bg-white mr-3"></div>15 HORAS DE
-                        TRANSCRIPCIÓN
-                        <span className="text-gray-600 dark:text-gray-300 text-sm">/MES</span>
+                        <div className="w-3 h-3 bg-black dark:bg-white mr-3"></div>
+                        15 HORAS DE TRANSCRIPCIÓN
+                        <span className="text-gray-600 dark:text-gray-300 text-sm">
+                          /MES
+                        </span>
                       </li>
                       <li className="flex items-center">
-                        <div className="w-3 h-3 bg-black dark:bg-white mr-3"></div>1000
-                        PÁGINAS DE BIBLIOGRAFÍA
-                        <span className="text-gray-600 dark:text-gray-300 text-sm">/MES</span>
+                        <div className="w-3 h-3 bg-black dark:bg-white mr-3"></div>
+                        1000 PÁGINAS DE BIBLIOGRAFÍA
+                        <span className="text-gray-600 dark:text-gray-300 text-sm">
+                          /MES
+                        </span>
                       </li>
                       <li className="flex items-center">
                         <div className="w-3 h-3 bg-black dark:bg-white mr-3"></div>
@@ -795,7 +813,9 @@ export default function Component() {
                   CONTACTANOS
                 </h2>
                 <div className="mono-code max-w-3xl mx-auto">
-                  <div className="text-sm text-gray-600 dark:text-gray-300 mb-2">// SOPORTE</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300 mb-2">
+                    // SOPORTE
+                  </div>
                   <p className="text-sm text-black dark:text-white">
                     Nuestro equipo está acá para ayudarte. Envianos un mensaje y
                     te responderemos lo antes posible.
