@@ -480,7 +480,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
-                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-black hover:bg-black hover:text-white p-1 transition-colors"
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-black dark:text-white hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black p-1 transition-colors"
                   >
                     {showPassword ? (
                       <EyeOff className="h-4 w-4" />
