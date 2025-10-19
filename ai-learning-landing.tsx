@@ -47,7 +47,7 @@ export default function Component() {
         <Navbar setIsOnboardingOpen={setIsOnboardingOpen} />
 
         {/* Header/Hero Section */}
-        <section className="relative px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:pb-32 lg:pt-48 bg-white dark:bg-black">
+        <section className="relative px-6 lg:px-8 py-16 sm:py-24 lg:pb-32 lg:pt-48 bg-white dark:bg-black">
           <div className="max-w-7xl mx-auto my-16 lg:my-12 w-full">
             <div className="flex flex-wrap gap-8 lg:gap-16 items-center">
               {/* Left Content */}
@@ -203,7 +203,7 @@ export default function Component() {
         {/* Features Section */}
         <section
           id="features"
-          className="relative px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-white dark:bg-black"
+          className="relative px-6 lg:px-8 py-16 sm:py-24 lg:py-32 bg-white dark:bg-black"
         >
           <div className="max-w-6xl mx-auto">
             <AnimatedSection animation="fadeInUp">
@@ -700,7 +700,7 @@ export default function Component() {
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-black dark:bg-white text-white dark:text-black px-2 md:px-4 py-2 text-xs md:text-sm font-bold uppercase tracking-wide">
                     VERSIÓN ILIMITADA
                   </div>
-                  <CardContent className="p-4 md:p-8 text-center">
+                  <CardContent className="p-8 md:p-8 text-center">
                     <h3 className="text-2xl font-bold mb-4 text-black dark:text-white uppercase tracking-wide">
                       PLAN PLUS
                     </h3>

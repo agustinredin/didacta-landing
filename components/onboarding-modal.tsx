@@ -16,7 +16,6 @@ import {
   Check,
   Eye,
   EyeOff,
-  Sparkles,
   Brain,
   Zap,
 } from "lucide-react";
@@ -135,7 +134,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
 
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/api/auth/verification-email`,
+        `${process.env.NEXT_PUBLIC_API_URL}/auth/verification-email`,
         {
           method: "POST",
           headers: {
@@ -155,7 +154,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
           const data = await response.json();
           if (data?.message) message = data.message;
           if (response?.status === 409) {
-            message = `EMAIL YA REGISTRADO. <a href='/${process.env.NEXT_PUBLIC_APP_URL}' class='underline text-blue-600' target='_blank'>INICIAR SESIÓN</a>`;
+            message = `EMAIL YA REGISTRADO. <a href='${process.env.NEXT_PUBLIC_APP_URL}' class='underline text-blue-600' target='_blank'>INICIAR SESIÓN</a>`;
             let error = new Error(message);
             throw error;
           }
@@ -190,7 +189,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
 
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/api/auth/register`,
+        `${process.env.NEXT_PUBLIC_API_URL}/auth/register`,
         {
           method: "POST",
           headers: {
@@ -686,7 +685,7 @@ export function OnboardingModal({ isOpen, onClose }: OnboardingModalProps) {
               </div>
               <div>
                 <h1 className="text-lg font-bold uppercase tracking-wide text-white dark:text-black">
-                  AI LEARN
+                  REGISTRO
                 </h1>
                 <p className="text-sm uppercase tracking-wide">
                   PASO {currentStep} DE {STEPS.length}
