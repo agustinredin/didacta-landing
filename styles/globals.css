@@ -82,8 +82,6 @@
   --color-black: #131212;
 }
 
-
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
