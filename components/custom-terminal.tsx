@@ -4,7 +4,7 @@ import { TypewriterEffect } from "./ui/typewriter-effect";
 
 const CustomTerminal = () => {
   return (
-    <div className="flex-1 flex flex-col justify-center">
+    <div className="flex-1 flex flex-col justify-center lg:mx-4">
       <AnimatedSection animation="fadeInRight" className="relative" delay={600}>
         {/* Main Terminal Window    */}
         <div className=" bg-white dark:bg-black border-4 border-black dark:border-white">
@@ -26,19 +26,31 @@ const CustomTerminal = () => {
             style={{ textTransform: "none" }}
           >
             <div className="dark:text-white">
-              <span className="text-gray-600 dark:text-gray-300">$</span> didacta-ai --procesando
-              clase_virtual_martes.m4a
+              <span className="text-gray-600 dark:text-gray-300">$</span>{" "}
+              didacta-ai --procesando clase_virtual_martes.m4a
             </div>
             {/* Typewriter status lines */}
             <div className="text-gray-600 dark:text-gray-300">
               {/* Line 1 */}
               <TypewriterEffect
                 words={[
-                  { text: "[⎆]", className: "text-gray-600 dark:text-gray-300" },
-                  { text: "Procesando", className: "text-gray-600 dark:text-gray-300" },
-                  { text: "archivo", className: "text-gray-600 dark:text-gray-300" },
+                  {
+                    text: "[⎆]",
+                    className: "text-gray-600 dark:text-gray-300",
+                  },
+                  {
+                    text: "Procesando",
+                    className: "text-gray-600 dark:text-gray-300",
+                  },
+                  {
+                    text: "archivo",
+                    className: "text-gray-600 dark:text-gray-300",
+                  },
                   { text: "de", className: "text-gray-600 dark:text-gray-300" },
-                  { text: "audio...", className: "text-gray-600 dark:text-gray-300" },
+                  {
+                    text: "audio...",
+                    className: "text-gray-600 dark:text-gray-300",
+                  },
                 ]}
                 className="text-gray-600 dark:text-gray-300"
                 startDelay={0}
@@ -49,12 +61,27 @@ const CustomTerminal = () => {
               {/* Line 2 */}
               <TypewriterEffect
                 words={[
-                  { text: "[✓]", className: "text-gray-600 dark:text-gray-300" },
-                  { text: "Transcripción", className: "text-gray-600 dark:text-gray-300" },
-                  { text: "completa:", className: "text-gray-600 dark:text-gray-300" },
-                  { text: "98%", className: "text-gray-600 dark:text-gray-300" },
+                  {
+                    text: "[✓]",
+                    className: "text-gray-600 dark:text-gray-300",
+                  },
+                  {
+                    text: "Transcripción",
+                    className: "text-gray-600 dark:text-gray-300",
+                  },
+                  {
+                    text: "completa:",
+                    className: "text-gray-600 dark:text-gray-300",
+                  },
+                  {
+                    text: "98%",
+                    className: "text-gray-600 dark:text-gray-300",
+                  },
                   { text: "de", className: "text-gray-600 dark:text-gray-300" },
-                  { text: "precisión", className: "text-gray-600 dark:text-gray-300" },
+                  {
+                    text: "precisión",
+                    className: "text-gray-600 dark:text-gray-300",
+                  },
                 ]}
                 className="text-gray-600 dark:text-gray-300"
                 startDelay={4}
@@ -65,12 +92,27 @@ const CustomTerminal = () => {
               {/* Line 3 */}
               <TypewriterEffect
                 words={[
-                  { text: "[✓]", className: "text-gray-600 dark:text-gray-300" },
-                  { text: "Resumen", className: "text-gray-600 dark:text-gray-300" },
-                  { text: "generado:", className: "text-gray-600 dark:text-gray-300" },
+                  {
+                    text: "[✓]",
+                    className: "text-gray-600 dark:text-gray-300",
+                  },
+                  {
+                    text: "Resumen",
+                    className: "text-gray-600 dark:text-gray-300",
+                  },
+                  {
+                    text: "generado:",
+                    className: "text-gray-600 dark:text-gray-300",
+                  },
                   { text: "5", className: "text-gray-600 dark:text-gray-300" },
-                  { text: "conceptos", className: "text-gray-600 dark:text-gray-300" },
-                  { text: "clave", className: "text-gray-600 dark:text-gray-300" },
+                  {
+                    text: "conceptos",
+                    className: "text-gray-600 dark:text-gray-300",
+                  },
+                  {
+                    text: "clave",
+                    className: "text-gray-600 dark:text-gray-300",
+                  },
                 ]}
                 className="text-gray-600 dark:text-gray-300"
                 startDelay={9}
@@ -81,11 +123,23 @@ const CustomTerminal = () => {
               {/* Line 4 */}
               <TypewriterEffect
                 words={[
-                  { text: "[✓]", className: "text-gray-600 dark:text-gray-300" },
-                  { text: "Quiz", className: "text-gray-600 dark:text-gray-300" },
-                  { text: "creado:", className: "text-gray-600 dark:text-gray-300" },
+                  {
+                    text: "[✓]",
+                    className: "text-gray-600 dark:text-gray-300",
+                  },
+                  {
+                    text: "Quiz",
+                    className: "text-gray-600 dark:text-gray-300",
+                  },
+                  {
+                    text: "creado:",
+                    className: "text-gray-600 dark:text-gray-300",
+                  },
                   { text: "10", className: "text-gray-600 dark:text-gray-300" },
-                  { text: "preguntas", className: "text-gray-600 dark:text-gray-300" },
+                  {
+                    text: "preguntas",
+                    className: "text-gray-600 dark:text-gray-300",
+                  },
                 ]}
                 className="text-gray-600 dark:text-gray-300"
                 startDelay={15}
@@ -104,7 +158,9 @@ const CustomTerminal = () => {
                 <div className="w-6 h-6 bg-black dark:bg-white flex items-center justify-center">
                   <Mic className="h-4 w-4 text-white dark:text-black" />
                 </div>
-                <div className="font-bold text-xs uppercase dark:text-white">TRANSCRIPCIÓN</div>
+                <div className="font-bold text-xs uppercase dark:text-white">
+                  TRANSCRIPCIÓN
+                </div>
               </div>
               <p className="text-xs text-gray-700 dark:text-gray-300">
                 Convertí audio de clase en texto claro
@@ -116,7 +172,9 @@ const CustomTerminal = () => {
                 <div className="w-6 h-6 bg-black dark:bg-white flex items-center justify-center">
                   <FileText className="h-4 w-4 text-white dark:text-black" />
                 </div>
-                <span className="font-bold text-xs uppercase dark:text-white">RESÚMENES</span>
+                <span className="font-bold text-xs uppercase dark:text-white">
+                  RESÚMENES
+                </span>
               </div>
               <p className="text-xs text-gray-700 dark:text-gray-300">
                 Síntesis automáticas para estudiar rápido
@@ -128,7 +186,9 @@ const CustomTerminal = () => {
                 <div className="w-6 h-6 bg-black dark:bg-white flex items-center justify-center">
                   <ListChecks className="h-4 w-4 text-white dark:text-black" />
                 </div>
-                <span className="font-bold text-xs uppercase dark:text-white">QUIZZES</span>
+                <span className="font-bold text-xs uppercase dark:text-white">
+                  QUIZZES
+                </span>
               </div>
               <p className="text-xs text-gray-700 dark:text-gray-300">
                 Evaluaciones dinámicas con IA integrada
@@ -140,7 +200,9 @@ const CustomTerminal = () => {
                 <div className="w-6 h-6 bg-black dark:bg-white flex items-center justify-center">
                   <GraduationCap className="h-4 w-4 text-white dark:text-black" />
                 </div>
-                <span className="font-bold text-xs uppercase dark:text-white">CAMPUS</span>
+                <span className="font-bold text-xs uppercase dark:text-white">
+                  CAMPUS
+                </span>
               </div>
               <p className="text-xs text-gray-700 dark:text-gray-300">
                 Espacio central para alumnos
@@ -156,7 +218,7 @@ const CustomTerminal = () => {
               animation="scaleIn"
               delay={1000}
             >
-              <div className="absolute top-64 !h-fit left-0 w-48 mono-card p-4 bg-white dark:bg-black">
+              <div className=" opacity-[0.9] absolute top-64 !h-fit left-0 w-48 mono-card p-4 bg-white dark:bg-black">
                 <div className="flex items-center space-x-2 mb-2">
                   <div className="w-6 h-6 bg-black dark:bg-white flex items-center justify-center">
                     <Mic className="h-4 w-4 text-white dark:text-black" />
@@ -173,12 +235,14 @@ const CustomTerminal = () => {
 
             {/* Resúmenes */}
             <AnimatedSection animation="scaleIn" delay={1200}>
-              <div className="absolute top-72 !h-fit right-0 w-44 mono-card p-4 bg-white dark:bg-black">
+              <div className=" opacity-[0.9] absolute top-72 !h-fit right-0 w-44 mono-card p-4 bg-white dark:bg-black">
                 <div className="flex items-center space-x-2 mb-2">
                   <div className="w-6 h-6 bg-black dark:bg-white flex items-center justify-center">
                     <FileText className="h-4 w-4 text-white dark:text-black" />
                   </div>
-                  <span className="font-bold text-xs uppercase dark:text-white">RESÚMENES</span>
+                  <span className="font-bold text-xs uppercase dark:text-white">
+                    RESÚMENES
+                  </span>
                 </div>
                 <p className="text-xs text-gray-700 dark:text-gray-300">
                   Síntesis automáticas para estudiar rápido
@@ -188,12 +252,14 @@ const CustomTerminal = () => {
 
             {/* Quizzes */}
             <AnimatedSection animation="scaleIn" delay={1400}>
-              <div className="absolute -top-40 !h-fit left-2 w-48 mono-card p-4 bg-white dark:bg-black">
+              <div className=" opacity-[0.9] absolute -top-40 !h-fit left-2 w-48 mono-card p-4 bg-white dark:bg-black">
                 <div className="flex items-center space-x-2 mb-2">
                   <div className="w-6 h-6 bg-black dark:bg-white flex items-center justify-center">
                     <ListChecks className="h-4 w-4 text-white dark:text-black" />
                   </div>
-                  <span className="font-bold text-xs uppercase dark:text-white">QUIZZES</span>
+                  <span className="font-bold text-xs uppercase dark:text-white">
+                    QUIZZES
+                  </span>
                 </div>
                 <p className="text-xs text-gray-700 dark:text-gray-300">
                   Evaluaciones dinámicas con IA integrada
@@ -203,12 +269,14 @@ const CustomTerminal = () => {
 
             {/* Campus */}
             <AnimatedSection animation="scaleIn" delay={1600}>
-              <div className="absolute -top-24 !h-fit -right-12 w-44 mono-card p-4 bg-white dark:bg-black">
+              <div className=" opacity-[0.9] absolute -top-24 !h-fit -right-12 w-44 mono-card p-4 bg-white dark:bg-black">
                 <div className="flex items-center space-x-2 mb-2">
                   <div className="w-6 h-6 bg-black dark:bg-white flex items-center justify-center">
                     <GraduationCap className="h-4 w-4 text-white dark:text-black" />
                   </div>
-                  <span className="font-bold text-xs uppercase dark:text-white">CAMPUS</span>
+                  <span className="font-bold text-xs uppercase dark:text-white">
+                    CAMPUS
+                  </span>
                 </div>
                 <p className="text-xs text-gray-700 dark:text-gray-300">
                   Espacio central para alumnos
